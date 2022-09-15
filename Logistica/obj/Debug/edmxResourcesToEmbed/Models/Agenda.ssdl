@@ -1,0 +1,1583 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="transportautoModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Agenda">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RazonSocial" Type="varchar" MaxLength="255" />
+    <Property Name="Actividad" Type="varchar" MaxLength="255" />
+    <Property Name="Contacto" Type="varchar" MaxLength="255" />
+    <Property Name="DNI" Type="varchar" MaxLength="10" />
+    <Property Name="Provincia" Type="varchar" MaxLength="255" />
+    <Property Name="Localidad" Type="varchar" MaxLength="255" />
+    <Property Name="Direccion" Type="varchar" MaxLength="255" />
+    <Property Name="Numero" Type="varchar" MaxLength="255" />
+    <Property Name="CP" Type="varchar" MaxLength="5" />
+    <Property Name="Telefono" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Password" Type="varchar" MaxLength="255" />
+    <Property Name="Particular_Empresa" Type="bit" />
+    <Property Name="Empresa" Type="varchar" MaxLength="255" />
+    <Property Name="CIF" Type="varchar" MaxLength="255" />
+    <Property Name="IdProvincia" Type="int" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+    <Property Name="Movil" Type="varchar" MaxLength="50" />
+    <Property Name="Creacion" Type="datetime" />
+  </EntityType>
+  <EntityType Name="aspnet_Applications">
+    <Key>
+      <PropertyRef Name="ApplicationId" />
+    </Key>
+    <Property Name="ApplicationName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredApplicationName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_Membership">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Password" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="PasswordFormat" Type="int" Nullable="false" />
+    <Property Name="PasswordSalt" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="MobilePIN" Type="nvarchar" MaxLength="16" />
+    <Property Name="Email" Type="nvarchar" MaxLength="256" />
+    <Property Name="LoweredEmail" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordQuestion" Type="nvarchar" MaxLength="256" />
+    <Property Name="PasswordAnswer" Type="nvarchar" MaxLength="128" />
+    <Property Name="IsApproved" Type="bit" Nullable="false" />
+    <Property Name="IsLockedOut" Type="bit" Nullable="false" />
+    <Property Name="CreateDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLoginDate" Type="datetime" Nullable="false" />
+    <Property Name="LastPasswordChangedDate" Type="datetime" Nullable="false" />
+    <Property Name="LastLockoutDate" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptCount" Type="int" Nullable="false" />
+    <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="datetime" Nullable="false" />
+    <Property Name="Comment" Type="ntext" />
+  </EntityType>
+  <EntityType Name="aspnet_Paths">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Path" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredPath" Type="nvarchar" MaxLength="256" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationAllUsers">
+    <Key>
+      <PropertyRef Name="PathId" />
+    </Key>
+    <Property Name="PathId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PageSettings" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_PersonalizationPerUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PathId" Type="uniqueidentifier" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="PageSettings" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Profile">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="PropertyNames" Type="ntext" Nullable="false" />
+    <Property Name="PropertyValuesString" Type="ntext" Nullable="false" />
+    <Property Name="PropertyValuesBinary" Type="image" Nullable="false" />
+    <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Roles">
+    <Key>
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredRoleName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="Description" Type="nvarchar" MaxLength="256" />
+  </EntityType>
+  <EntityType Name="aspnet_SchemaVersions">
+    <Key>
+      <PropertyRef Name="Feature" />
+      <PropertyRef Name="CompatibleSchemaVersion" />
+    </Key>
+    <Property Name="Feature" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="CompatibleSchemaVersion" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="IsCurrentVersion" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_Users">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="ApplicationId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="LoweredUserName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="MobileAlias" Type="nvarchar" MaxLength="16" />
+    <Property Name="IsAnonymous" Type="bit" Nullable="false" />
+    <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_UsersInRoles">
+    <Key>
+      <PropertyRef Name="UserId" />
+      <PropertyRef Name="RoleId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
+  </EntityType>
+  <EntityType Name="aspnet_WebEvent_Events">
+    <Key>
+      <PropertyRef Name="EventId" />
+    </Key>
+    <Property Name="EventId" Type="char" MaxLength="32" Nullable="false" />
+    <Property Name="EventTimeUtc" Type="datetime" Nullable="false" />
+    <Property Name="EventTime" Type="datetime" Nullable="false" />
+    <Property Name="EventType" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="EventSequence" Type="decimal" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="EventOccurrence" Type="decimal" Precision="19" Scale="0" Nullable="false" />
+    <Property Name="EventCode" Type="int" Nullable="false" />
+    <Property Name="EventDetailCode" Type="int" Nullable="false" />
+    <Property Name="Message" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ApplicationPath" Type="nvarchar" MaxLength="256" />
+    <Property Name="ApplicationVirtualPath" Type="nvarchar" MaxLength="256" />
+    <Property Name="MachineName" Type="nvarchar" MaxLength="256" Nullable="false" />
+    <Property Name="RequestUrl" Type="nvarchar" MaxLength="1024" />
+    <Property Name="ExceptionType" Type="nvarchar" MaxLength="256" />
+    <Property Name="Details" Type="ntext" />
+  </EntityType>
+  <EntityType Name="Empresas">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="50" />
+    <Property Name="Nif" Type="varchar" MaxLength="12" />
+    <Property Name="Direccion" Type="varchar" MaxLength="50" />
+    <Property Name="CodigoPostal" Type="varchar" MaxLength="5" />
+    <Property Name="Localidad" Type="varchar" MaxLength="255" />
+    <Property Name="Telefono" Type="varchar" MaxLength="20" />
+    <Property Name="Fax" Type="varchar" MaxLength="20" />
+    <Property Name="PathLogo" Type="varchar" MaxLength="255" />
+    <Property Name="CCCBanco" Type="char" MaxLength="4" />
+    <Property Name="CCCOficina" Type="char" MaxLength="4" />
+    <Property Name="CCCDc" Type="char" MaxLength="2" />
+    <Property Name="CCCCuenta" Type="char" MaxLength="10" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Web" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="FacturaDetalle">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumeroFactura" Type="int" />
+    <Property Name="Cantidad" Type="int" />
+    <Property Name="IdFactura" Type="int" />
+    <Property Name="IdConcepto" Type="int" />
+    <Property Name="Concepto" Type="varchar" MaxLength="255" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="PrecioUnidad" Type="float" />
+    <Property Name="PrecioTotal" Type="float" />
+    <Property Name="FechaAlta" Type="datetime" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="PorcentajeIva" Type="float" />
+    <Property Name="Estado" Type="uniqueidentifier" />
+    <Property Name="SerieFactura" Type="nvarchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="FacturaGlobal">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumeroFactura" Type="int" />
+    <Property Name="FechaEmision" Type="datetime" />
+    <Property Name="FechaVencimiento" Type="datetime" />
+    <Property Name="Departamento" Type="int" />
+    <Property Name="FechaAlta" Type="datetime" />
+    <Property Name="FechaModificacion" Type="datetime" />
+    <Property Name="IdEmpresa" Type="int" />
+    <Property Name="IdCliente" Type="uniqueidentifier" />
+    <Property Name="IdTipoIva" Type="int" />
+    <Property Name="PorcentajeIva" Type="float" />
+    <Property Name="FormaDePago" Type="varchar" MaxLength="50" />
+    <Property Name="Iva" Type="float" />
+    <Property Name="BaseIva" Type="float" />
+    <Property Name="Total" Type="float" />
+    <Property Name="TipoFactura" Type="varchar" MaxLength="1" />
+    <Property Name="IdFacturacion" Type="int" />
+    <Property Name="SerieFactura" Type="nvarchar" MaxLength="10" />
+    <Property Name="Canal" Type="nvarchar" MaxLength="255" />
+    <Property Name="Detalle" Type="nvarchar" MaxLength="255" />
+    <Property Name="Cobrado" Type="bit" />
+    <Property Name="NombreFiscal" Type="nchar" MaxLength="300" />
+    <Property Name="CIF" Type="nchar" MaxLength="20" />
+    <Property Name="DireccionFiscal" Type="nchar" MaxLength="300" />
+    <Property Name="CodigoPostalFiscal" Type="nchar" MaxLength="10" />
+    <Property Name="LocalidadFiscal" Type="nchar" MaxLength="300" />
+    <Property Name="ProvinciaFiscal" Type="nchar" MaxLength="300" />
+    <Property Name="PagoTransportista" Type="bit" />
+    <Property Name="Empresa" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="FacturaServicio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+    <Property Name="Precio" Type="float" />
+    <Property Name="TipoIva" Type="float" />
+    <Property Name="IdTipoFacturaServicio" Type="int" Nullable="false" />
+    <Property Name="TipoAnuncio" Type="varchar" MaxLength="50" />
+    <Property Name="Destacado" Type="bit" />
+    <Property Name="Carrusel" Type="bit" />
+    <Property Name="Profesional" Type="bit" />
+    <Property Name="Particular" Type="bit" />
+    <Property Name="IdNumeradoresCab" Type="int" />
+    <Property Name="IdRelacion" Type="int" />
+  </EntityType>
+  <EntityType Name="Localidades">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProvinciasId" Type="int" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="Log">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Noticias">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdAncove" Type="int" />
+    <Property Name="URL" Type="varchar(max)" />
+    <Property Name="ShortURL" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="NumeradoresCab">
+    <Key>
+      <PropertyRef Name="IdNumeradoresCab" />
+    </Key>
+    <Property Name="IdNumeradoresCab" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+    <Property Name="DescripcionFactura" Type="nvarchar" MaxLength="255" />
+    <Property Name="Canal" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="NumeradoresLin">
+    <Key>
+      <PropertyRef Name="IdNumeradoresLin" />
+    </Key>
+    <Property Name="IdNumeradoresLin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdNumeradoresCab" Type="int" Nullable="false" />
+    <Property Name="Year" Type="numeric" Precision="4" Scale="0" Nullable="false" />
+    <Property Name="Serie" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="NumeradorC" Type="int" Nullable="false" />
+    <Property Name="NumeradorA" Type="int" Nullable="false" />
+    <Property Name="Estado" Type="bit" Nullable="false" />
+    <Property Name="HojaEstilo" Type="nvarchar" MaxLength="255" />
+    <Property Name="EsFactura" Type="bit" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NumeradorTPV">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="NumPedido" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="NumeradorTransporte">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+    <Property Name="Numerador" Type="int" />
+    <Property Name="Defecto" Type="bit" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'transportauto.dbo.Pago_Transferencias' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Pago_Transferencias">
+          <Property Name="IdUsuario" Type="uniqueidentifier" />
+          <Property Name="IdPedido" Type="varchar" MaxLength="50" />
+          <Property Name="Aceptado" Type="bit" />
+          <Property Name="Fecha" Type="datetime" />
+          <Property Name="Servicio" Type="varchar(max)" />
+        </EntityType>-->
+  <EntityType Name="PagoTPV">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="IdUsuario" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Total" Type="float" Nullable="false" />
+    <Property Name="ImporteIva" Type="float" Nullable="false" />
+    <Property Name="Cantidad" Type="int" Nullable="false" />
+    <Property Name="Matriculas" Type="nvarchar" MaxLength="255" />
+    <Property Name="Base" Type="nvarchar" MaxLength="255" />
+    <Property Name="NumeroPedido" Type="nvarchar" MaxLength="12" />
+    <Property Name="TPV_Paypal" Type="bit" />
+    <Property Name="Pagado" Type="bit" />
+    <Property Name="NumeroDias" Type="int" />
+    <Property Name="TipoIva" Type="int" />
+    <Property Name="PrecioTradisaNuevo" Type="varchar" MaxLength="50" />
+    <Property Name="PrecioTradisaAntiguo" Type="varchar" MaxLength="50" />
+    <Property Name="Origen" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Paises">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Pais" Type="varchar" MaxLength="255" />
+    <Property Name="Frances" Type="varchar" MaxLength="255" />
+    <Property Name="Iso" Type="char" MaxLength="2" />
+  </EntityType>
+  <EntityType Name="Provincias">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="60" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SaldoServiciosCab">
+    <Key>
+      <PropertyRef Name="IdSaldoServiciosCab" />
+    </Key>
+    <Property Name="IdSaldoServiciosCab" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUsuarios" Type="uniqueidentifier" />
+    <Property Name="SaldoActual" Type="float" />
+    <Property Name="CreditoActual" Type="float" />
+    <Property Name="CreditoInicial" Type="float" />
+    <Property Name="CreditoIlimitado" Type="bit" />
+    <Property Name="ImporteCargo" Type="float" />
+    <Property Name="ImporteAbono" Type="float" />
+  </EntityType>
+  <EntityType Name="SaldoServiciosLin">
+    <Key>
+      <PropertyRef Name="IdSaldoServiciosLin" />
+    </Key>
+    <Property Name="IdSaldoServiciosLin" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdSaldoServiciosCab" Type="int" Nullable="false" />
+    <Property Name="IdUsuariosServicios" Type="int" Nullable="false" />
+    <Property Name="Descripcion" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="ImporteMovimiento" Type="float" Nullable="false" />
+    <Property Name="FechaMovimiento" Type="datetime" Nullable="false" />
+    <Property Name="ImporteIva" Type="float" Nullable="false" />
+    <Property Name="TransferenciaRealizada" Type="bit" Nullable="false" />
+    <Property Name="Concepto" Type="nvarchar" MaxLength="255" />
+    <Property Name="ValidacionCliente" Type="bit" />
+  </EntityType>
+  <EntityType Name="Tabla_Internacional">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Id_Int" Type="int" />
+    <Property Name="PrecioBase" Type="nvarchar" MaxLength="55" />
+    <Property Name="TransportistaBase" Type="nvarchar" MaxLength="55" />
+    <Property Name="Autolink" Type="nvarchar" MaxLength="55" />
+    <Property Name="Trapiser" Type="nvarchar" MaxLength="55" />
+    <Property Name="Boada" Type="nvarchar" MaxLength="55" />
+    <Property Name="Amaya" Type="nvarchar" MaxLength="55" />
+    <Property Name="Sintax" Type="nvarchar" MaxLength="55" />
+    <Property Name="Tradisa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Movalian" Type="nvarchar" MaxLength="55" />
+    <Property Name="Panyalon" Type="nvarchar" MaxLength="50" />
+    <Property Name="Aeclog" Type="nvarchar" MaxLength="50" />
+    <Property Name="Guadalix" Type="nvarchar" MaxLength="50" />
+    <Property Name="Thalia" Type="nvarchar" MaxLength="50" />
+    <Property Name="Grugasa" Type="varchar" MaxLength="50" />
+    <Property Name="Cliente" Type="nvarchar" MaxLength="50" />
+    <Property Name="ISOOrigen" Type="nvarchar" MaxLength="55" />
+    <Property Name="ISODestino" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaisOrigen" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaisDestino" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProvinciaOrigen" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProvinciaDestino" Type="nvarchar" MaxLength="50" />
+    <Property Name="LocalidadOrigen" Type="nvarchar" MaxLength="50" />
+    <Property Name="LocalidadDestino" Type="nvarchar" MaxLength="50" />
+    <Property Name="Tipo" Type="int" />
+    <Property Name="Largo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Alto" Type="nvarchar" MaxLength="50" />
+    <Property Name="Peso" Type="int" />
+    <Property Name="Marca" Type="nvarchar" MaxLength="50" />
+    <Property Name="Modelo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Clase" Type="nvarchar" MaxLength="50" />
+    <Property Name="LocalidadOrigenId" Type="int" />
+    <Property Name="LocalidadDestinoId" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'transportauto.dbo.Tarifas04' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Tarifas04">
+          <Property Name="ID" Type="bigint" />
+          <Property Name="Origen" Type="varchar" MaxLength="50" />
+          <Property Name="Destino" Type="varchar" MaxLength="50" />
+          <Property Name="Codigo" Type="varchar" MaxLength="50" />
+          <Property Name="TarifaReferencia" Type="money" />
+          <Property Name="Modo" Type="varchar" MaxLength="50" />
+          <Property Name="IdTransportista" Type="bigint" />
+          <Property Name="Anyo" Type="varchar" MaxLength="50" />
+          <Property Name="IdTarifa" Type="bigint" />
+          <Property Name="CargaCompleta" Type="bit" />
+        </EntityType>-->
+  <EntityType Name="TipoFacturaServicio">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="TipoIva">
+    <Key>
+      <PropertyRef Name="IdTipoIva" />
+    </Key>
+    <Property Name="IdTipoIva" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="15" />
+    <Property Name="porcentaje" Type="float" />
+    <Property Name="PorDefecto" Type="bit" />
+  </EntityType>
+  <EntityType Name="TPV">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="DS_Date" Type="varchar" MaxLength="250" />
+    <Property Name="DS_Hour" Type="varchar" MaxLength="250" />
+    <Property Name="DS_Order" Type="varchar" MaxLength="250" />
+    <Property Name="DS_Amount" Type="varchar" MaxLength="250" />
+    <Property Name="DS_MerchantCode" Type="varchar" MaxLength="250" />
+    <Property Name="DS_Terminal" Type="varchar" MaxLength="250" />
+    <Property Name="DS_Currency" Type="varchar" MaxLength="250" />
+    <Property Name="DS_Signature" Type="varchar" MaxLength="250" />
+    <Property Name="DS_TransactionType" Type="varchar" MaxLength="250" />
+    <Property Name="DS_Response" Type="varchar" MaxLength="250" />
+    <Property Name="DS_MerchantData" Type="varchar" MaxLength="250" />
+    <Property Name="DS_SecurePayment" Type="varchar" MaxLength="250" />
+    <Property Name="DS_Card_Country" Type="varchar" MaxLength="250" />
+    <Property Name="DS_AuthorisationCode" Type="varchar" MaxLength="250" />
+    <Property Name="DS_consumerLanguage" Type="varchar" MaxLength="250" />
+    <Property Name="DS_Card_Type" Type="varchar" MaxLength="250" />
+    <Property Name="Fecha" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Transporte_Baleares">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ProvinciaDestino" Type="varchar(max)" />
+    <Property Name="PuertoEmbarque" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Transporte_Canarias">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="ProvinciaDestino" Type="varchar(max)" />
+    <Property Name="PuertoEmbarque" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="Transporte_Coeficiente">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Terrestre" Type="real" />
+    <Property Name="Maritimo" Type="real" />
+    <Property Name="Tipo" Type="int" />
+  </EntityType>
+  <EntityType Name="Transporte_Coeficiente_CAT">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Marca" Type="varchar" MaxLength="255" />
+    <Property Name="Modelo" Type="varchar" MaxLength="255" />
+    <Property Name="Coeficiente" Type="real" />
+    <Property Name="Tipo" Type="int" />
+  </EntityType>
+  <EntityType Name="Transporte_Coeficiente_ReMotos">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Marca" Type="varchar" MaxLength="255" />
+    <Property Name="Modelo" Type="varchar" MaxLength="255" />
+    <Property Name="Coeficiente" Type="real" />
+    <Property Name="Tipo" Type="int" />
+  </EntityType>
+  <EntityType Name="Transporte_Estados">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Estado" Type="varchar" MaxLength="50" />
+    <Property Name="TEstado" Type="varchar" MaxLength="50" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+    <Property Name="CEstado" Type="varchar" MaxLength="50" />
+    <Property Name="CDescripcion" Type="varchar" MaxLength="50" />
+    <Property Name="FREstado" Type="varchar" MaxLength="50" />
+    <Property Name="FRDescripcion" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Transporte_Ficheros">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+    <Property Name="NombreFichero" Type="varchar(max)" />
+    <Property Name="LongitudFichero" Type="int" />
+    <Property Name="Fichero" Type="image" />
+    <Property Name="UserId" Type="uniqueidentifier" />
+    <Property Name="Fecha" Type="datetime" />
+    <Property Name="Transportista" Type="varchar(max)" />
+    <Property Name="IdTransporteCab" Type="int" />
+    <Property Name="Estado" Type="bit" />
+  </EntityType>
+  <EntityType Name="Transporte_Internacional">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Creacion" Type="datetime" />
+    <Property Name="Autolink" Type="nvarchar" MaxLength="255" />
+    <Property Name="Trapiser" Type="nvarchar" MaxLength="255" />
+    <Property Name="Boada" Type="nvarchar" MaxLength="255" />
+    <Property Name="Sintax" Type="nvarchar" MaxLength="255" />
+    <Property Name="Amaya" Type="nvarchar" MaxLength="255" />
+    <Property Name="Tradisa" Type="nvarchar" MaxLength="50" />
+    <Property Name="Movalian" Type="nvarchar" MaxLength="50" />
+    <Property Name="Panyalon" Type="nvarchar" MaxLength="255" />
+    <Property Name="Aeclog" Type="nvarchar" MaxLength="50" />
+    <Property Name="Guadalix" Type="nvarchar" MaxLength="50" />
+    <Property Name="Thalia" Type="nvarchar" MaxLength="50" />
+    <Property Name="Grugasa" Type="varchar" MaxLength="50" />
+    <Property Name="Cliente" Type="nvarchar" MaxLength="50" />
+    <Property Name="FechaEnvioTransportista" Type="datetime" />
+    <Property Name="FechaEnvioCliente" Type="datetime" />
+    <Property Name="PaisOrigen" Type="nvarchar" MaxLength="50" />
+    <Property Name="PaisDestino" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProvinciaOrigen" Type="nvarchar" MaxLength="50" />
+    <Property Name="ProvinciaDestino" Type="nvarchar" MaxLength="50" />
+    <Property Name="LocalidadOrigen" Type="nvarchar" MaxLength="50" />
+    <Property Name="LocalidadDestino" Type="nvarchar" MaxLength="50" />
+    <Property Name="NombreCliente" Type="nvarchar" MaxLength="255" />
+    <Property Name="TelefonoCliente" Type="nvarchar" MaxLength="255" />
+    <Property Name="EmailCliente" Type="nvarchar" MaxLength="255" />
+    <Property Name="CPOrigen" Type="nvarchar" MaxLength="50" />
+    <Property Name="CPDestino" Type="nvarchar" MaxLength="50" />
+    <Property Name="Marca" Type="nvarchar" MaxLength="50" />
+    <Property Name="Modelo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Largo" Type="nvarchar" MaxLength="50" />
+    <Property Name="Alto" Type="nvarchar" MaxLength="50" />
+    <Property Name="Peso" Type="nvarchar" MaxLength="50" />
+    <Property Name="Comentarios" Type="nvarchar(max)" />
+    <Property Name="Realizado" Type="bit" />
+    <Property Name="Residencia" Type="nvarchar" MaxLength="50" />
+    <Property Name="Descripcion" Type="nvarchar(max)" />
+    <Property Name="IVA" Type="bit" />
+    <Property Name="Revisado" Type="bit" />
+    <Property Name="ISOOrigen" Type="char" MaxLength="2" />
+    <Property Name="ISODestino" Type="char" MaxLength="2" />
+    <Property Name="LocalidadOrigenId" Type="int" />
+    <Property Name="LocalidadDestinoId" Type="int" />
+  </EntityType>
+  <EntityType Name="Transporte_Localidades">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IDProvincia" Type="int" />
+    <Property Name="Localidad" Type="varchar(max)" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'transportauto.dbo.Transporte_MarcasVarias' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Transporte_MarcasVarias">
+          <Property Name="ID" Type="int" />
+          <Property Name="Marca" Type="varchar(max)" />
+          <Property Name="Tipo" Type="varchar(max)" />
+        </EntityType>-->
+  <EntityType Name="Transporte_Message">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTransporteCab" Type="int" />
+    <Property Name="TipoRequest" Type="varchar" MaxLength="20" />
+    <Property Name="message_id" Type="varchar" MaxLength="20" />
+    <Property Name="message_service" Type="varchar" MaxLength="20" />
+    <Property Name="message_creation" Type="varchar" MaxLength="20" />
+    <Property Name="data_state" Type="varchar" MaxLength="20" />
+    <Property Name="data_success" Type="varchar" MaxLength="20" />
+    <Property Name="data_id" Type="varchar" MaxLength="20" />
+    <Property Name="data_description" Type="varchar" MaxLength="20" />
+    <Property Name="data_service" Type="varchar" MaxLength="20" />
+    <Property Name="data_process" Type="varchar" MaxLength="20" />
+    <Property Name="data_division" Type="varchar" MaxLength="20" />
+    <Property Name="data_logisticsGroup" Type="varchar" MaxLength="20" />
+    <Property Name="data_customer" Type="varchar" MaxLength="20" />
+    <Property Name="data_load" Type="varchar" MaxLength="20" />
+    <Property Name="data_commodity" Type="varchar" MaxLength="20" />
+    <Property Name="data_ref" Type="varchar" MaxLength="20" />
+    <Property Name="route_sequence" Type="varchar" MaxLength="20" />
+    <Property Name="route_load" Type="varchar" MaxLength="20" />
+    <Property Name="origen_type" Type="varchar" MaxLength="20" />
+    <Property Name="origen_country" Type="varchar" MaxLength="20" />
+    <Property Name="origen_code" Type="varchar" MaxLength="20" />
+    <Property Name="origen_city" Type="varchar" MaxLength="20" />
+    <Property Name="origen_latitude" Type="varchar" MaxLength="20" />
+    <Property Name="origen_longitude" Type="varchar" MaxLength="20" />
+    <Property Name="origen_postal" Type="varchar" MaxLength="20" />
+    <Property Name="origen_name" Type="varchar" MaxLength="20" />
+    <Property Name="destino_type" Type="varchar" MaxLength="20" />
+    <Property Name="destino_country" Type="varchar" MaxLength="20" />
+    <Property Name="destino_code" Type="varchar" MaxLength="20" />
+    <Property Name="destino_city" Type="varchar" MaxLength="20" />
+    <Property Name="destino_latitude" Type="varchar" MaxLength="20" />
+    <Property Name="destino_longitude" Type="varchar" MaxLength="20" />
+    <Property Name="destino_postal" Type="varchar" MaxLength="20" />
+    <Property Name="destino_name" Type="varchar" MaxLength="20" />
+    <Property Name="shipment_state" Type="varchar" MaxLength="20" />
+    <Property Name="shipment_success" Type="varchar" MaxLength="20" />
+    <Property Name="shipment_id" Type="varchar" MaxLength="20" />
+    <Property Name="shipment_service" Type="varchar" MaxLength="20" />
+    <Property Name="shipment_process" Type="varchar" MaxLength="20" />
+    <Property Name="shipment_customer" Type="varchar" MaxLength="20" />
+    <Property Name="shipment_load" Type="varchar" MaxLength="20" />
+    <Property Name="shipment_ref" Type="varchar" MaxLength="20" />
+    <Property Name="shipment_result" Type="varchar" MaxLength="20" />
+    <Property Name="shipment_division" Type="varchar" MaxLength="20" />
+    <Property Name="shipment_logisticsGroup" Type="varchar" MaxLength="20" />
+    <Property Name="shipment_commodity" Type="varchar" MaxLength="20" />
+    <Property Name="reference_value_SREF" Type="varchar" MaxLength="20" />
+    <Property Name="reference_type_SREF" Type="varchar" MaxLength="20" />
+    <Property Name="reference_value_INFO1" Type="varchar" MaxLength="20" />
+    <Property Name="reference_value_INFO2" Type="varchar" MaxLength="20" />
+    <Property Name="reference_value_INFO3" Type="varchar" MaxLength="20" />
+    <Property Name="reference_type_INFO1" Type="varchar" MaxLength="20" />
+    <Property Name="reference_type_INFO2" Type="varchar" MaxLength="20" />
+    <Property Name="reference_type_INFO3" Type="varchar" MaxLength="20" />
+    <Property Name="container_id" Type="varchar" MaxLength="20" />
+    <Property Name="container_ref" Type="varchar" MaxLength="20" />
+    <Property Name="container_model" Type="varchar" MaxLength="20" />
+    <Property Name="container_weight" Type="varchar" MaxLength="20" />
+    <Property Name="container_volume" Type="varchar" MaxLength="20" />
+    <Property Name="route1_state" Type="varchar" MaxLength="20" />
+    <Property Name="route1_sequence" Type="varchar" MaxLength="20" />
+    <Property Name="route1_load" Type="varchar" MaxLength="20" />
+    <Property Name="route1_pickDate" Type="varchar" MaxLength="20" />
+    <Property Name="route2_state" Type="varchar" MaxLength="20" />
+    <Property Name="route2_sequence" Type="varchar" MaxLength="20" />
+    <Property Name="route2_load" Type="varchar" MaxLength="20" />
+    <Property Name="route2_dropDate" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'transportauto.dbo.Transporte_Message_Historico' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Transporte_Message_Historico">
+          <Property Name="ID" Type="int" />
+          <Property Name="IdTransporteCab" Type="int" />
+          <Property Name="TipoRequest" Type="varchar" MaxLength="20" />
+          <Property Name="message_id" Type="varchar" MaxLength="20" />
+          <Property Name="message_service" Type="varchar" MaxLength="20" />
+          <Property Name="message_creation" Type="varchar" MaxLength="20" />
+          <Property Name="data_state" Type="varchar" MaxLength="20" />
+          <Property Name="data_success" Type="varchar" MaxLength="20" />
+          <Property Name="data_id" Type="varchar" MaxLength="20" />
+          <Property Name="data_description" Type="varchar" MaxLength="20" />
+          <Property Name="data_service" Type="varchar" MaxLength="20" />
+          <Property Name="data_process" Type="varchar" MaxLength="20" />
+          <Property Name="data_division" Type="varchar" MaxLength="20" />
+          <Property Name="data_logisticsGroup" Type="varchar" MaxLength="20" />
+          <Property Name="data_customer" Type="varchar" MaxLength="20" />
+          <Property Name="data_load" Type="varchar" MaxLength="20" />
+          <Property Name="data_commodity" Type="varchar" MaxLength="20" />
+          <Property Name="data_ref" Type="varchar" MaxLength="20" />
+          <Property Name="route_sequence" Type="varchar" MaxLength="20" />
+          <Property Name="route_load" Type="varchar" MaxLength="20" />
+          <Property Name="origen_type" Type="varchar" MaxLength="20" />
+          <Property Name="origen_country" Type="varchar" MaxLength="20" />
+          <Property Name="origen_code" Type="varchar" MaxLength="20" />
+          <Property Name="origen_city" Type="varchar" MaxLength="20" />
+          <Property Name="origen_latitude" Type="varchar" MaxLength="20" />
+          <Property Name="origen_longitude" Type="varchar" MaxLength="20" />
+          <Property Name="origen_postal" Type="varchar" MaxLength="20" />
+          <Property Name="origen_name" Type="varchar" MaxLength="20" />
+          <Property Name="destino_type" Type="varchar" MaxLength="20" />
+          <Property Name="destino_country" Type="varchar" MaxLength="20" />
+          <Property Name="destino_code" Type="varchar" MaxLength="20" />
+          <Property Name="destino_city" Type="varchar" MaxLength="20" />
+          <Property Name="destino_latitude" Type="varchar" MaxLength="20" />
+          <Property Name="destino_longitude" Type="varchar" MaxLength="20" />
+          <Property Name="destino_postal" Type="varchar" MaxLength="20" />
+          <Property Name="destino_name" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_state" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_success" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_id" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_service" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_process" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_customer" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_load" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_ref" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_result" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_division" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_logisticsGroup" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_commodity" Type="varchar" MaxLength="20" />
+          <Property Name="reference_value_SREF" Type="varchar" MaxLength="20" />
+          <Property Name="reference_type_SREF" Type="varchar" MaxLength="20" />
+          <Property Name="reference_value_INFO1" Type="varchar" MaxLength="20" />
+          <Property Name="reference_value_INFO2" Type="varchar" MaxLength="20" />
+          <Property Name="reference_value_INFO3" Type="varchar" MaxLength="20" />
+          <Property Name="reference_type_INFO1" Type="varchar" MaxLength="20" />
+          <Property Name="reference_type_INFO2" Type="varchar" MaxLength="20" />
+          <Property Name="reference_type_INFO3" Type="varchar" MaxLength="20" />
+          <Property Name="container_id" Type="varchar" MaxLength="20" />
+          <Property Name="container_ref" Type="varchar" MaxLength="20" />
+          <Property Name="container_model" Type="varchar" MaxLength="20" />
+          <Property Name="container_weight" Type="varchar" MaxLength="20" />
+          <Property Name="container_volume" Type="varchar" MaxLength="20" />
+          <Property Name="route1_state" Type="varchar" MaxLength="20" />
+          <Property Name="route1_sequence" Type="varchar" MaxLength="20" />
+          <Property Name="route1_load" Type="varchar" MaxLength="20" />
+          <Property Name="route1_pickDate" Type="varchar" MaxLength="20" />
+          <Property Name="route2_state" Type="varchar" MaxLength="20" />
+          <Property Name="route2_sequence" Type="varchar" MaxLength="20" />
+          <Property Name="route2_load" Type="varchar" MaxLength="20" />
+          <Property Name="route2_dropDate" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'transportauto.dbo.Transporte_Message_Historico2' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Transporte_Message_Historico2">
+          <Property Name="ID" Type="int" />
+          <Property Name="IdTransporteCab" Type="int" />
+          <Property Name="TipoRequest" Type="varchar" MaxLength="20" />
+          <Property Name="message_id" Type="varchar" MaxLength="20" />
+          <Property Name="message_service" Type="varchar" MaxLength="20" />
+          <Property Name="message_creation" Type="varchar" MaxLength="20" />
+          <Property Name="data_state" Type="varchar" MaxLength="20" />
+          <Property Name="data_success" Type="varchar" MaxLength="20" />
+          <Property Name="data_id" Type="varchar" MaxLength="20" />
+          <Property Name="data_description" Type="varchar" MaxLength="20" />
+          <Property Name="data_service" Type="varchar" MaxLength="20" />
+          <Property Name="data_process" Type="varchar" MaxLength="20" />
+          <Property Name="data_division" Type="varchar" MaxLength="20" />
+          <Property Name="data_logisticsGroup" Type="varchar" MaxLength="20" />
+          <Property Name="data_customer" Type="varchar" MaxLength="20" />
+          <Property Name="data_load" Type="varchar" MaxLength="20" />
+          <Property Name="data_commodity" Type="varchar" MaxLength="20" />
+          <Property Name="data_ref" Type="varchar" MaxLength="20" />
+          <Property Name="route_sequence" Type="varchar" MaxLength="20" />
+          <Property Name="route_load" Type="varchar" MaxLength="20" />
+          <Property Name="origen_type" Type="varchar" MaxLength="20" />
+          <Property Name="origen_country" Type="varchar" MaxLength="20" />
+          <Property Name="origen_code" Type="varchar" MaxLength="20" />
+          <Property Name="origen_city" Type="varchar" MaxLength="20" />
+          <Property Name="origen_latitude" Type="varchar" MaxLength="20" />
+          <Property Name="origen_longitude" Type="varchar" MaxLength="20" />
+          <Property Name="origen_postal" Type="varchar" MaxLength="20" />
+          <Property Name="origen_name" Type="varchar" MaxLength="20" />
+          <Property Name="destino_type" Type="varchar" MaxLength="20" />
+          <Property Name="destino_country" Type="varchar" MaxLength="20" />
+          <Property Name="destino_code" Type="varchar" MaxLength="20" />
+          <Property Name="destino_city" Type="varchar" MaxLength="20" />
+          <Property Name="destino_latitude" Type="varchar" MaxLength="20" />
+          <Property Name="destino_longitude" Type="varchar" MaxLength="20" />
+          <Property Name="destino_postal" Type="varchar" MaxLength="20" />
+          <Property Name="destino_name" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_state" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_success" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_id" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_service" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_process" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_customer" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_load" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_ref" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_result" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_division" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_logisticsGroup" Type="varchar" MaxLength="20" />
+          <Property Name="shipment_commodity" Type="varchar" MaxLength="20" />
+          <Property Name="reference_value_SREF" Type="varchar" MaxLength="20" />
+          <Property Name="reference_type_SREF" Type="varchar" MaxLength="20" />
+          <Property Name="reference_value_INFO1" Type="varchar" MaxLength="20" />
+          <Property Name="reference_value_INFO2" Type="varchar" MaxLength="20" />
+          <Property Name="reference_value_INFO3" Type="varchar" MaxLength="20" />
+          <Property Name="reference_type_INFO1" Type="varchar" MaxLength="20" />
+          <Property Name="reference_type_INFO2" Type="varchar" MaxLength="20" />
+          <Property Name="reference_type_INFO3" Type="varchar" MaxLength="20" />
+          <Property Name="container_id" Type="varchar" MaxLength="20" />
+          <Property Name="container_ref" Type="varchar" MaxLength="20" />
+          <Property Name="container_model" Type="varchar" MaxLength="20" />
+          <Property Name="container_weight" Type="varchar" MaxLength="20" />
+          <Property Name="container_volume" Type="varchar" MaxLength="20" />
+          <Property Name="route1_state" Type="varchar" MaxLength="20" />
+          <Property Name="route1_sequence" Type="varchar" MaxLength="20" />
+          <Property Name="route1_load" Type="varchar" MaxLength="20" />
+          <Property Name="route1_pickDate" Type="varchar" MaxLength="20" />
+          <Property Name="route2_state" Type="varchar" MaxLength="20" />
+          <Property Name="route2_sequence" Type="varchar" MaxLength="20" />
+          <Property Name="route2_load" Type="varchar" MaxLength="20" />
+          <Property Name="route2_dropDate" Type="varchar" MaxLength="20" />
+        </EntityType>-->
+  <EntityType Name="Transporte_Observaciones">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUsuario" Type="uniqueidentifier" />
+    <Property Name="Consulta" Type="varchar(max)" />
+    <Property Name="Respuesta" Type="varchar(max)" />
+    <Property Name="IdTransporteCab" Type="int" />
+    <Property Name="FechaConsulta" Type="datetime" />
+    <Property Name="FechaRespuesta" Type="datetime" />
+    <Property Name="AnotacionInterna" Type="bit" />
+  </EntityType>
+  <EntityType Name="Transporte_PagoTPV">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Matricula" Type="varchar" MaxLength="50" />
+    <Property Name="FechaSolicitud" Type="datetime" />
+    <Property Name="FechaDisponibilidad" Type="date" />
+    <Property Name="FechaRecogida" Type="datetime" />
+    <Property Name="RazonSocialRecogida" Type="varchar(max)" />
+    <Property Name="ContactoRecogida" Type="varchar(max)" />
+    <Property Name="TelefonoRecogida" Type="varchar" MaxLength="50" />
+    <Property Name="ProvinciaRecogida" Type="varchar(max)" />
+    <Property Name="LocalidadRecogida" Type="varchar(max)" />
+    <Property Name="DireccionRecogida" Type="varchar(max)" />
+    <Property Name="CodigoPostalRecogida" Type="varchar" MaxLength="5" />
+    <Property Name="ObservacionRecogida" Type="varchar(max)" />
+    <Property Name="FechaEntrega" Type="datetime" />
+    <Property Name="RazonSocialEntrega" Type="varchar(max)" />
+    <Property Name="ContactoEntrega" Type="varchar(max)" />
+    <Property Name="TelefonoEntrega" Type="varchar" MaxLength="50" />
+    <Property Name="DNIEntrega" Type="varchar" MaxLength="20" />
+    <Property Name="ProvinciaEntrega" Type="varchar(max)" />
+    <Property Name="LocalidadEntrega" Type="varchar(max)" />
+    <Property Name="DireccionEntrega" Type="varchar(max)" />
+    <Property Name="CodigoPostalEntrega" Type="varchar" MaxLength="5" />
+    <Property Name="ObservacionEntrega" Type="varchar(max)" />
+    <Property Name="PuertoEmbarque" Type="varchar(max)" />
+    <Property Name="TarifaPonderadaA" Type="real" />
+    <Property Name="TarifaPonderadaB" Type="real" />
+    <Property Name="TarifaPonderadaC" Type="real" />
+    <Property Name="TarifaReferenciaA" Type="real" />
+    <Property Name="TarifaReferenciaB" Type="real" />
+    <Property Name="TarifaReferenciaC" Type="real" />
+    <Property Name="SumaPonderada" Type="real" />
+    <Property Name="TransporteDirecto" Type="varchar(max)" />
+    <Property Name="TransporteIndirectoA" Type="varchar(max)" />
+    <Property Name="TransporteIndirectoB" Type="varchar(max)" />
+    <Property Name="ModoA" Type="varchar" MaxLength="50" />
+    <Property Name="ModoB" Type="varchar" MaxLength="50" />
+    <Property Name="ModoC" Type="varchar" MaxLength="50" />
+    <Property Name="EquivalenciaTerrestre" Type="real" />
+    <Property Name="EquivalenciaMaritima" Type="real" />
+    <Property Name="CoeficienteTerrestre" Type="real" />
+    <Property Name="CoeficienteMaritimo" Type="real" />
+    <Property Name="Tipo" Type="int" />
+    <Property Name="Largo" Type="int" />
+    <Property Name="Alto" Type="int" />
+    <Property Name="Peso" Type="int" />
+    <Property Name="PonderacionBasica" Type="real" />
+    <Property Name="PonderacionExpress" Type="real" />
+    <Property Name="Servicio" Type="varchar" MaxLength="50" />
+    <Property Name="PrecioBase" Type="real" />
+    <Property Name="IdTPV" Type="varchar" MaxLength="12" />
+    <Property Name="IdTVersion" Type="int" />
+    <Property Name="MatriculasDS" Type="varchar(max)" />
+    <Property Name="IdUsuario" Type="uniqueidentifier" />
+    <Property Name="Marca" Type="varchar" MaxLength="50" />
+    <Property Name="Modelo" Type="varchar" MaxLength="50" />
+    <Property Name="Clase" Type="varchar" MaxLength="50" />
+    <Property Name="Arranca" Type="bit" />
+    <Property Name="TPV_Paypal" Type="bit" />
+    <Property Name="Transportista" Type="varchar" MaxLength="255" />
+    <Property Name="NumeroDias" Type="int" />
+    <Property Name="PrecioTransportista" Type="real" />
+  </EntityType>
+  <EntityType Name="Transporte_Ponderada">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="A" Type="real" />
+    <Property Name="B" Type="real" />
+    <Property Name="C" Type="real" />
+    <Property Name="D" Type="real" />
+    <Property Name="Servicio" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'transportauto.dbo.Transporte_Provincia' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="Transporte_Provincia">
+          <Property Name="Provincia" Type="varchar(max)" />
+          <Property Name="Id" Type="int" />
+        </EntityType>-->
+  <EntityType Name="Transporte_Referencia">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Origen" Type="varchar(max)" />
+    <Property Name="Destino" Type="varchar(max)" />
+    <Property Name="Codigo" Type="varchar(max)" />
+    <Property Name="TarifaReferencia" Type="real" />
+    <Property Name="Modo" Type="varchar" MaxLength="50" />
+    <Property Name="IdTransportista" Type="int" />
+    <Property Name="Anyo" Type="varchar" MaxLength="4" />
+    <Property Name="IdTarifa" Type="int" />
+    <Property Name="CargaCompleta" Type="bit" />
+  </EntityType>
+  <EntityType Name="Transporte_Referencia2">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Origen" Type="varchar(max)" />
+    <Property Name="Destino" Type="varchar(max)" />
+    <Property Name="Codigo" Type="varchar(max)" />
+    <Property Name="TarifaReferencia" Type="real" />
+    <Property Name="Modo" Type="varchar" MaxLength="50" />
+    <Property Name="IdTransportista" Type="int" />
+    <Property Name="Anyo" Type="varchar" MaxLength="4" />
+    <Property Name="IdTarifa" Type="int" />
+    <Property Name="CargaCompleta" Type="bit" />
+  </EntityType>
+  <EntityType Name="Transporte_SeguimientoManual">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="message_creation" Type="datetime" />
+    <Property Name="CEstado" Type="varchar" MaxLength="50" />
+    <Property Name="CDescripcion" Type="varchar" MaxLength="150" />
+    <Property Name="IdTransporteCab" Type="int" />
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Transporte_Tipo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="Tipo" Type="int" />
+    <Property Name="MinL" Type="int" />
+    <Property Name="MaxL" Type="int" />
+    <Property Name="MinH" Type="int" />
+    <Property Name="MaxH" Type="int" />
+  </EntityType>
+  <EntityType Name="Transporte_Transportista">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Transportista" Type="varchar" MaxLength="50" />
+    <Property Name="RazonSocial" Type="varchar(max)" />
+    <Property Name="NIF" Type="varchar" MaxLength="50" />
+    <Property Name="Direccion" Type="varchar(max)" />
+    <Property Name="CodigoPostal" Type="varchar" MaxLength="50" />
+    <Property Name="Localidad" Type="varchar(max)" />
+    <Property Name="Telefono" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar(max)" />
+    <Property Name="Email2" Type="varchar(max)" />
+    <Property Name="Telefono2" Type="varchar(max)" />
+    <Property Name="Contacto" Type="varchar(max)" />
+    <Property Name="Contacto2" Type="varchar(max)" />
+    <Property Name="Zonas" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="TransporteCab">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUsuarios" Type="uniqueidentifier" />
+    <Property Name="IdFacturaGlobal" Type="int" />
+    <Property Name="FechaSolicitud" Type="datetime" />
+    <Property Name="Estado" Type="varchar(max)" />
+    <Property Name="IdTransporte" Type="varchar" MaxLength="50" />
+    <Property Name="PrecioBase" Type="varchar" MaxLength="50" />
+    <Property Name="IVA" Type="varchar" MaxLength="50" />
+    <Property Name="PrecioTotal" Type="varchar" MaxLength="50" />
+    <Property Name="FechaFinalizacion" Type="datetime" />
+    <Property Name="IdUsuariosServicios" Type="int" />
+    <Property Name="Modo" Type="varchar" MaxLength="50" />
+    <Property Name="Transportista" Type="varchar" MaxLength="255" />
+    <Property Name="Numerador" Type="varchar" MaxLength="50" />
+    <Property Name="PrecioTransportista" Type="varchar" MaxLength="50" />
+    <Property Name="NumeroDias" Type="int" />
+    <Property Name="PrecioTradisaNuevo" Type="varchar" MaxLength="50" />
+    <Property Name="PrecioTradisaAntiguo" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="TransporteLin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdTransporteCab" Type="int" />
+    <Property Name="Matricula" Type="varchar" MaxLength="50" />
+    <Property Name="FechaSolicitud" Type="datetime" />
+    <Property Name="IdSaldoServiciosLin" Type="int" />
+    <Property Name="FechaDisponibilidad" Type="date" />
+    <Property Name="FechaRecogida" Type="datetime" />
+    <Property Name="RazonSocialRecogida" Type="varchar(max)" />
+    <Property Name="ContactoRecogida" Type="varchar(max)" />
+    <Property Name="TelefonoRecogida" Type="varchar" MaxLength="50" />
+    <Property Name="ProvinciaRecogida" Type="varchar(max)" />
+    <Property Name="LocalidadRecogida" Type="varchar(max)" />
+    <Property Name="DireccionRecogida" Type="varchar(max)" />
+    <Property Name="CodigoPostalRecogida" Type="varchar" MaxLength="5" />
+    <Property Name="ObservacionRecogida" Type="varchar(max)" />
+    <Property Name="FechaEntrega" Type="datetime" />
+    <Property Name="RazonSocialEntrega" Type="varchar(max)" />
+    <Property Name="ContactoEntrega" Type="varchar(max)" />
+    <Property Name="TelefonoEntrega" Type="varchar" MaxLength="50" />
+    <Property Name="DNIEntrega" Type="varchar" MaxLength="20" />
+    <Property Name="ProvinciaEntrega" Type="varchar(max)" />
+    <Property Name="LocalidadEntrega" Type="varchar(max)" />
+    <Property Name="DireccionEntrega" Type="varchar(max)" />
+    <Property Name="CodigoPostalEntrega" Type="varchar" MaxLength="5" />
+    <Property Name="ObservacionEntrega" Type="varchar(max)" />
+    <Property Name="PuertoEmbarque" Type="varchar(max)" />
+    <Property Name="TarifaPonderadaA" Type="real" />
+    <Property Name="TarifaPonderadaB" Type="real" />
+    <Property Name="TarifaPonderadaC" Type="real" />
+    <Property Name="TarifaReferenciaA" Type="real" />
+    <Property Name="TarifaReferenciaB" Type="real" />
+    <Property Name="TarifaReferenciaC" Type="real" />
+    <Property Name="SumaPonderada" Type="real" />
+    <Property Name="TransporteDirecto" Type="varchar(max)" />
+    <Property Name="TransporteIndirectoA" Type="varchar(max)" />
+    <Property Name="TransporteIndirectoB" Type="varchar(max)" />
+    <Property Name="ModoA" Type="varchar" MaxLength="50" />
+    <Property Name="ModoB" Type="varchar" MaxLength="50" />
+    <Property Name="ModoC" Type="varchar" MaxLength="50" />
+    <Property Name="EquivalenciaTerrestre" Type="real" />
+    <Property Name="EquivalenciaMaritima" Type="real" />
+    <Property Name="CoeficienteTerrestre" Type="real" />
+    <Property Name="CoeficienteMaritimo" Type="real" />
+    <Property Name="Tipo" Type="int" />
+    <Property Name="Largo" Type="int" />
+    <Property Name="Alto" Type="int" />
+    <Property Name="Peso" Type="int" />
+    <Property Name="PonderacionBasica" Type="real" />
+    <Property Name="PonderacionExpress" Type="real" />
+    <Property Name="Servicio" Type="varchar" MaxLength="50" />
+    <Property Name="PrecioBase" Type="real" />
+    <Property Name="Marca" Type="varchar" MaxLength="50" />
+    <Property Name="Modelo" Type="varchar" MaxLength="50" />
+    <Property Name="Clase" Type="varchar" MaxLength="50" />
+    <Property Name="Arranca" Type="bit" />
+    <Property Name="NumeroDias" Type="int" />
+  </EntityType>
+  <EntityType Name="TransportePedidosCab">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUsuarios" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="NumeroDias" Type="int" />
+    <Property Name="Servicio" Type="varchar(max)" />
+  </EntityType>
+  <EntityType Name="TransportePedidosLin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Matricula" Type="varchar" MaxLength="50" />
+    <Property Name="FechaDisponibilidad" Type="date" />
+    <Property Name="RazonSocialRecogida" Type="varchar(max)" />
+    <Property Name="ContactoRecogida" Type="varchar(max)" />
+    <Property Name="TelefonoRecogida" Type="varchar" MaxLength="50" />
+    <Property Name="ProvinciaRecogida" Type="varchar(max)" />
+    <Property Name="LocalidadRecogida" Type="varchar(max)" />
+    <Property Name="DireccionRecogida" Type="varchar(max)" />
+    <Property Name="CodigoPostalRecogida" Type="varchar" MaxLength="5" />
+    <Property Name="ObservacionRecogida" Type="varchar(max)" />
+    <Property Name="RazonSocialEntrega" Type="varchar(max)" />
+    <Property Name="ContactoEntrega" Type="varchar(max)" />
+    <Property Name="TelefonoEntrega" Type="varchar" MaxLength="50" />
+    <Property Name="DNIEntrega" Type="varchar" MaxLength="20" />
+    <Property Name="ProvinciaEntrega" Type="varchar(max)" />
+    <Property Name="LocalidadEntrega" Type="varchar(max)" />
+    <Property Name="DireccionEntrega" Type="varchar(max)" />
+    <Property Name="CodigoPostalEntrega" Type="varchar" MaxLength="5" />
+    <Property Name="ObservacionEntrega" Type="varchar(max)" />
+    <Property Name="Tipo" Type="int" />
+    <Property Name="Largo" Type="int" />
+    <Property Name="Alto" Type="int" />
+    <Property Name="Peso" Type="int" />
+    <Property Name="Servicio" Type="varchar" MaxLength="50" />
+    <Property Name="Marca" Type="varchar" MaxLength="50" />
+    <Property Name="Modelo" Type="varchar" MaxLength="50" />
+    <Property Name="Clase" Type="varchar" MaxLength="50" />
+    <Property Name="IdPedidoCab" Type="int" />
+    <Property Name="Arranca" Type="bit" />
+  </EntityType>
+  <EntityType Name="UserInfo">
+    <Key>
+      <PropertyRef Name="UserId" />
+    </Key>
+    <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Nombre" Type="varchar" MaxLength="255" />
+    <Property Name="Actividad" Type="varchar" MaxLength="255" />
+    <Property Name="Apellidos" Type="varchar" MaxLength="255" />
+    <Property Name="DNI" Type="varchar" MaxLength="20" />
+    <Property Name="Provincia" Type="varchar" MaxLength="255" />
+    <Property Name="Localidad" Type="varchar" MaxLength="255" />
+    <Property Name="Direccion" Type="varchar" MaxLength="255" />
+    <Property Name="Numero" Type="varchar" MaxLength="255" />
+    <Property Name="CP" Type="varchar" MaxLength="10" />
+    <Property Name="Telefono" Type="varchar" MaxLength="255" />
+    <Property Name="Email" Type="varchar" MaxLength="255" />
+    <Property Name="Password" Type="varchar" MaxLength="255" />
+    <Property Name="Particular_Empresa" Type="bit" />
+    <Property Name="Empresa" Type="varchar" MaxLength="255" />
+    <Property Name="CIF" Type="varchar" MaxLength="255" />
+    <Property Name="IdProvincia" Type="int" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Observaciones" Type="varchar(max)" />
+    <Property Name="Movil" Type="varchar" MaxLength="50" />
+    <Property Name="Pais" Type="int" />
+  </EntityType>
+  <!--Errores durante la generación:
+advertencia 6013: La tabla o vista 'transportauto.dbo.UserState' no tiene definida una clave principal y no es posible inferir ninguna clave principal válida. Esta tabla o vista se ha excluido. Para usar la entidad, necesitará revisar el esquema, agregar las claves correctas y quitar sus comentarios.
+        <EntityType Name="UserState">
+          <Property Name="Id" Type="int" />
+          <Property Name="Descripcion" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+  <EntityType Name="UsuariosServicios">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdFacturaServicio" Type="int" Nullable="false" />
+    <Property Name="IdUsuario" Type="uniqueidentifier" />
+    <Property Name="Descripcion" Type="varchar" MaxLength="255" />
+    <Property Name="Precio" Type="float" />
+    <Property Name="MesesDuracion" Type="int" />
+    <Property Name="TipoAnuncio" Type="varchar" MaxLength="15" />
+    <Property Name="IdAnuncio" Type="int" />
+    <Property Name="TipoIva" Type="float" />
+    <Property Name="Cantidad" Type="int" />
+    <Property Name="TipoPublicidad" Type="varchar" MaxLength="15" />
+    <Property Name="IdPublicidad" Type="int" />
+    <Property Name="Facturado" Type="bit" />
+  </EntityType>
+  <EntityType Name="UsuariosServiciosFacturados">
+    <Key>
+      <PropertyRef Name="IdUsuariosServiciosFacturados" />
+    </Key>
+    <Property Name="IdUsuario" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="Mes" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="Year" Type="numeric" Precision="18" Scale="0" Nullable="false" />
+    <Property Name="IdUsuariosServicios" Type="int" Nullable="false" />
+    <Property Name="IdUsuariosServiciosFacturados" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdEmpresa" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="UsuariosServiciosSeguimiento">
+    <Key>
+      <PropertyRef Name="Id_SeguimientoServicios" />
+    </Key>
+    <Property Name="Id_SeguimientoServicios" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="IdUsuario" Type="uniqueidentifier" Nullable="false" />
+    <Property Name="IdFacturaServicio" Type="int" Nullable="false" />
+    <Property Name="fechaAlta" Type="smalldatetime" Nullable="false" />
+  </EntityType>
+  <Association Name="FK__aspnet_Me__Appli__21B6055D">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="Self.aspnet_Membership" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Me__UserI__22AA2996">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Membership" Type="Self.aspnet_Membership" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Membership">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pa__Appli__5AEE82B9">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Paths">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__628FA481">
+    <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="1" />
+    <End Role="aspnet_PersonalizationAllUsers" Type="Self.aspnet_PersonalizationAllUsers" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationAllUsers">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__PathI__68487DD7">
+    <End Role="aspnet_Paths" Type="Self.aspnet_Paths" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="Self.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Paths">
+        <PropertyRef Name="PathId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="PathId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pe__UserI__693CA210">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="0..1" />
+    <End Role="aspnet_PersonalizationPerUser" Type="Self.aspnet_PersonalizationPerUser" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_PersonalizationPerUser">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Pr__UserI__38996AB5">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_Profile" Type="Self.aspnet_Profile" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_Profile">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Ro__Appli__440B1D61">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Roles">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__Appli__0DAF0CB0">
+    <End Role="aspnet_Applications" Type="Self.aspnet_Applications" Multiplicity="1" />
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Applications">
+        <PropertyRef Name="ApplicationId" />
+      </Principal>
+      <Dependent Role="aspnet_Users">
+        <PropertyRef Name="ApplicationId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__RoleI__4AB81AF0">
+    <End Role="aspnet_Roles" Type="Self.aspnet_Roles" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="Self.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Roles">
+        <PropertyRef Name="RoleId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="RoleId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__aspnet_Us__UserI__49C3F6B7">
+    <End Role="aspnet_Users" Type="Self.aspnet_Users" Multiplicity="1" />
+    <End Role="aspnet_UsersInRoles" Type="Self.aspnet_UsersInRoles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="aspnet_Users">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="aspnet_UsersInRoles">
+        <PropertyRef Name="UserId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturaDetalle_FacturaGlobal">
+    <End Role="FacturaGlobal" Type="Self.FacturaGlobal" Multiplicity="0..1" />
+    <End Role="FacturaDetalle" Type="Self.FacturaDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FacturaGlobal">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FacturaDetalle">
+        <PropertyRef Name="IdFactura" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturaDetalle_FacturaServicio">
+    <End Role="FacturaServicio" Type="Self.FacturaServicio" Multiplicity="0..1" />
+    <End Role="FacturaDetalle" Type="Self.FacturaDetalle" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FacturaServicio">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FacturaDetalle">
+        <PropertyRef Name="IdConcepto" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturaGlobal_Empresas">
+    <End Role="Empresas" Type="Self.Empresas" Multiplicity="0..1" />
+    <End Role="FacturaGlobal" Type="Self.FacturaGlobal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Empresas">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FacturaGlobal">
+        <PropertyRef Name="IdEmpresa" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturaGlobal_TipoIva">
+    <End Role="TipoIva" Type="Self.TipoIva" Multiplicity="0..1" />
+    <End Role="FacturaGlobal" Type="Self.FacturaGlobal" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TipoIva">
+        <PropertyRef Name="IdTipoIva" />
+      </Principal>
+      <Dependent Role="FacturaGlobal">
+        <PropertyRef Name="IdTipoIva" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FacturaServicio_NumeradoresCab">
+    <End Role="NumeradoresCab" Type="Self.NumeradoresCab" Multiplicity="0..1" />
+    <End Role="FacturaServicio" Type="Self.FacturaServicio" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NumeradoresCab">
+        <PropertyRef Name="IdNumeradoresCab" />
+      </Principal>
+      <Dependent Role="FacturaServicio">
+        <PropertyRef Name="IdNumeradoresCab" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_NumeradoresLin_NumeradoresCab">
+    <End Role="NumeradoresCab" Type="Self.NumeradoresCab" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="NumeradoresLin" Type="Self.NumeradoresLin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="NumeradoresCab">
+        <PropertyRef Name="IdNumeradoresCab" />
+      </Principal>
+      <Dependent Role="NumeradoresLin">
+        <PropertyRef Name="IdNumeradoresCab" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_SaldoServiciosLin_SaldoServiciosCab">
+    <End Role="SaldoServiciosCab" Type="Self.SaldoServiciosCab" Multiplicity="1" />
+    <End Role="SaldoServiciosLin" Type="Self.SaldoServiciosLin" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SaldoServiciosCab">
+        <PropertyRef Name="IdSaldoServiciosCab" />
+      </Principal>
+      <Dependent Role="SaldoServiciosLin">
+        <PropertyRef Name="IdSaldoServiciosCab" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosServicios_FacturaServicio">
+    <End Role="FacturaServicio" Type="Self.FacturaServicio" Multiplicity="1" />
+    <End Role="UsuariosServicios" Type="Self.UsuariosServicios" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FacturaServicio">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UsuariosServicios">
+        <PropertyRef Name="IdFacturaServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_UsuariosServiciosSeguimiento_FacturaServicio">
+    <End Role="FacturaServicio" Type="Self.FacturaServicio" Multiplicity="1" />
+    <End Role="UsuariosServiciosSeguimiento" Type="Self.UsuariosServiciosSeguimiento" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="FacturaServicio">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="UsuariosServiciosSeguimiento">
+        <PropertyRef Name="IdFacturaServicio" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="transportautoModelStoreContainer">
+    <EntitySet Name="Agenda" EntityType="Self.Agenda" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Applications" EntityType="Self.aspnet_Applications" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Membership" EntityType="Self.aspnet_Membership" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Paths" EntityType="Self.aspnet_Paths" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_PersonalizationAllUsers" EntityType="Self.aspnet_PersonalizationAllUsers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_PersonalizationPerUser" EntityType="Self.aspnet_PersonalizationPerUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Profile" EntityType="Self.aspnet_Profile" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Roles" EntityType="Self.aspnet_Roles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_SchemaVersions" EntityType="Self.aspnet_SchemaVersions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_Users" EntityType="Self.aspnet_Users" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_UsersInRoles" EntityType="Self.aspnet_UsersInRoles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="aspnet_WebEvent_Events" EntityType="Self.aspnet_WebEvent_Events" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Empresas" EntityType="Self.Empresas" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FacturaDetalle" EntityType="Self.FacturaDetalle" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FacturaGlobal" EntityType="Self.FacturaGlobal" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FacturaServicio" EntityType="Self.FacturaServicio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Localidades" EntityType="Self.Localidades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Log" EntityType="Self.Log" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Noticias" EntityType="Self.Noticias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NumeradoresCab" EntityType="Self.NumeradoresCab" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NumeradoresLin" EntityType="Self.NumeradoresLin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NumeradorTPV" EntityType="Self.NumeradorTPV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NumeradorTransporte" EntityType="Self.NumeradorTransporte" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PagoTPV" EntityType="Self.PagoTPV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Paises" EntityType="Self.Paises" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Provincias" EntityType="Self.Provincias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SaldoServiciosCab" EntityType="Self.SaldoServiciosCab" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SaldoServiciosLin" EntityType="Self.SaldoServiciosLin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Tabla_Internacional" EntityType="Self.Tabla_Internacional" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoFacturaServicio" EntityType="Self.TipoFacturaServicio" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TipoIva" EntityType="Self.TipoIva" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TPV" EntityType="Self.TPV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Baleares" EntityType="Self.Transporte_Baleares" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Canarias" EntityType="Self.Transporte_Canarias" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Coeficiente" EntityType="Self.Transporte_Coeficiente" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Coeficiente_CAT" EntityType="Self.Transporte_Coeficiente_CAT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Coeficiente_ReMotos" EntityType="Self.Transporte_Coeficiente_ReMotos" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Estados" EntityType="Self.Transporte_Estados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Ficheros" EntityType="Self.Transporte_Ficheros" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Internacional" EntityType="Self.Transporte_Internacional" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Localidades" EntityType="Self.Transporte_Localidades" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Message" EntityType="Self.Transporte_Message" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Observaciones" EntityType="Self.Transporte_Observaciones" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_PagoTPV" EntityType="Self.Transporte_PagoTPV" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Ponderada" EntityType="Self.Transporte_Ponderada" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Referencia" EntityType="Self.Transporte_Referencia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Referencia2" EntityType="Self.Transporte_Referencia2" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_SeguimientoManual" EntityType="Self.Transporte_SeguimientoManual" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Tipo" EntityType="Self.Transporte_Tipo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Transporte_Transportista" EntityType="Self.Transporte_Transportista" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransporteCab" EntityType="Self.TransporteCab" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransporteLin" EntityType="Self.TransporteLin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransportePedidosCab" EntityType="Self.TransportePedidosCab" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TransportePedidosLin" EntityType="Self.TransportePedidosLin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UserInfo" EntityType="Self.UserInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsuariosServicios" EntityType="Self.UsuariosServicios" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsuariosServiciosFacturados" EntityType="Self.UsuariosServiciosFacturados" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="UsuariosServiciosSeguimiento" EntityType="Self.UsuariosServiciosSeguimiento" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__aspnet_Me__Appli__21B6055D" Association="Self.FK__aspnet_Me__Appli__21B6055D">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Me__UserI__22AA2996" Association="Self.FK__aspnet_Me__UserI__22AA2996">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Membership" EntitySet="aspnet_Membership" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pa__Appli__5AEE82B9" Association="Self.FK__aspnet_Pa__Appli__5AEE82B9">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__628FA481" Association="Self.FK__aspnet_Pe__PathI__628FA481">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationAllUsers" EntitySet="aspnet_PersonalizationAllUsers" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__PathI__68487DD7" Association="Self.FK__aspnet_Pe__PathI__68487DD7">
+      <End Role="aspnet_Paths" EntitySet="aspnet_Paths" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pe__UserI__693CA210" Association="Self.FK__aspnet_Pe__UserI__693CA210">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_PersonalizationPerUser" EntitySet="aspnet_PersonalizationPerUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Pr__UserI__38996AB5" Association="Self.FK__aspnet_Pr__UserI__38996AB5">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Ro__Appli__440B1D61" Association="Self.FK__aspnet_Ro__Appli__440B1D61">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__Appli__0DAF0CB0" Association="Self.FK__aspnet_Us__Appli__0DAF0CB0">
+      <End Role="aspnet_Applications" EntitySet="aspnet_Applications" />
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__RoleI__4AB81AF0" Association="Self.FK__aspnet_Us__RoleI__4AB81AF0">
+      <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK__aspnet_Us__UserI__49C3F6B7" Association="Self.FK__aspnet_Us__UserI__49C3F6B7">
+      <End Role="aspnet_Users" EntitySet="aspnet_Users" />
+      <End Role="aspnet_UsersInRoles" EntitySet="aspnet_UsersInRoles" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturaDetalle_FacturaGlobal" Association="Self.FK_FacturaDetalle_FacturaGlobal">
+      <End Role="FacturaGlobal" EntitySet="FacturaGlobal" />
+      <End Role="FacturaDetalle" EntitySet="FacturaDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturaDetalle_FacturaServicio" Association="Self.FK_FacturaDetalle_FacturaServicio">
+      <End Role="FacturaServicio" EntitySet="FacturaServicio" />
+      <End Role="FacturaDetalle" EntitySet="FacturaDetalle" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturaGlobal_Empresas" Association="Self.FK_FacturaGlobal_Empresas">
+      <End Role="Empresas" EntitySet="Empresas" />
+      <End Role="FacturaGlobal" EntitySet="FacturaGlobal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturaGlobal_TipoIva" Association="Self.FK_FacturaGlobal_TipoIva">
+      <End Role="TipoIva" EntitySet="TipoIva" />
+      <End Role="FacturaGlobal" EntitySet="FacturaGlobal" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FacturaServicio_NumeradoresCab" Association="Self.FK_FacturaServicio_NumeradoresCab">
+      <End Role="NumeradoresCab" EntitySet="NumeradoresCab" />
+      <End Role="FacturaServicio" EntitySet="FacturaServicio" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NumeradoresLin_NumeradoresCab" Association="Self.FK_NumeradoresLin_NumeradoresCab">
+      <End Role="NumeradoresCab" EntitySet="NumeradoresCab" />
+      <End Role="NumeradoresLin" EntitySet="NumeradoresLin" />
+    </AssociationSet>
+    <AssociationSet Name="FK_SaldoServiciosLin_SaldoServiciosCab" Association="Self.FK_SaldoServiciosLin_SaldoServiciosCab">
+      <End Role="SaldoServiciosCab" EntitySet="SaldoServiciosCab" />
+      <End Role="SaldoServiciosLin" EntitySet="SaldoServiciosLin" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosServicios_FacturaServicio" Association="Self.FK_UsuariosServicios_FacturaServicio">
+      <End Role="FacturaServicio" EntitySet="FacturaServicio" />
+      <End Role="UsuariosServicios" EntitySet="UsuariosServicios" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UsuariosServiciosSeguimiento_FacturaServicio" Association="Self.FK_UsuariosServiciosSeguimiento_FacturaServicio">
+      <End Role="FacturaServicio" EntitySet="FacturaServicio" />
+      <End Role="UsuariosServiciosSeguimiento" EntitySet="UsuariosServiciosSeguimiento" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,178 @@
+/*dashboard tranportista*/
+
+.bg-transportes-asignados
+{
+    background-color:#fff;
+    background-image:url("../../img/privada_cliente/dashboard/btn_transportes_asignados.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+
+
+}
+
+.panel-dashboard:hover .bg-transportes-asignados
+{
+    background-color:rgba(59, 97, 170, 1);
+    background-image:url("../../img/privada_cliente/dashboard/btn_transportes_asignados_hover.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+}
+
+.bg-notificaciones
+{
+    background-color:#fff;
+    background-image:url("../../img/privada_cliente/dashboard/btn_notificaciones.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+
+
+}
+
+.panel-dashboard:hover .bg-notificaciones
+{
+    background-color:rgba(59, 97, 170, 1);
+    background-image:url("../../img/privada_cliente/dashboard/btn_notificaciones_hover.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+}
+
+.bg-transportes-finalizados
+{
+    background-color:#fff;
+    background-image:url("../../img/privada_cliente/dashboard/btn_transportes_finalizados.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+
+
+}
+
+.panel-dashboard:hover .bg-transportes-finalizados
+{
+    background-color:rgba(59, 97, 170, 1);
+    background-image:url("../../img/privada_cliente/dashboard/btn_transportes_finalizados_hover.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+}
+
+.bg-autorizaciones
+{
+    background-color:#fff;
+    background-image:url("../../img/privada_cliente/dashboard/btn_autorizaciones.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+
+
+}
+
+.panel-dashboard:hover .bg-autorizaciones
+{
+    background-color:rgba(59, 97, 170, 1);
+    background-image:url("../../img/privada_cliente/dashboard/btn_autorizaciones_hover.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+}
+
+/***********************************************************/
+/**********************MENU EMPLEADOS************************/
+/**************************************************************/
+@media (max-width:767px){
+
+    #sidebar {
+        /* position:relative;
+         top:auto;
+         left:auto;*/
+        position:fixed;
+        top:50px;
+        left:0;
+        z-index:9999;
+        width: 100%;
+        height: 80vh;
+        overflow-y: auto;
+    }
+
+}
+/**********************************************************/
+/***************BOLSA DE TRANSPORTES***************************/
+/****************************************************************/
+
+
+.pedido_a{
+    background-color: rgba(255, 255, 255, 1)!important;
+    color:#333!important;
+}
+
+.pedido_a .sorting_1{
+    background-color: rgba(255, 255, 255, 1)!important;
+    color:#333!important;
+}
+
+.pedido_b{
+    background-color: #eee!important;
+    color:#333!important;
+
+}
+
+.pedido_b .sorting_1{
+    background-color: #eee!important;
+    color:#333!important;
+}
+
+
+/**************************************************/
+/*************TRANSPORTES EN CURSO***************************/
+/*****************************************************/
+
+.acciones_tranp_curso{
+    min-width:120px;
+}
+
+/**************************************************/
+/*************TRANSPORTES FINALIZADOS***************************/
+/*****************************************************/
+
+.acciones_tranp_finalizados{
+    min-width:80px;
+}
+
+
+.mt-content-box-sin-title{
+    margin-top:-20px;
+}
+
+@media(min-width:1201px) and (max-width:1600px){
+    .mt-content-box-sin-title{
+        margin-top:0px;
+    }
+}

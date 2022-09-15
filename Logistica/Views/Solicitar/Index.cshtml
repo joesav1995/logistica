@@ -1,0 +1,1807 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout_mod.cshtml";
+
+    List<SelectListItem> items = (List<SelectListItem>)ViewBag.items;
+    //List<SelectListItem> items2 = (List<SelectListItem>)ViewBag.items2;
+
+}
+
+@section head {
+    <title>GrupoCV | 2019</title>
+    <meta name="description" content="GrupoCV">
+    <meta name="keywords" content="asociación comerciantes vehículos, derechos reales, polizas flotantes, garantías mecánicas, simulador financiero, estadísticas ventas vehículos nuevos,noticias, asociación coches,contratos de compra-venta, hojas de reclamación">
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+<style>
+    /*Estilo del Carrusel*/
+
+    div.caption {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        background-color: #0177c2;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.caption2 {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        background-color: #b42659;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.caption3 {
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        background-color: #b42659;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.destaca {
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: -50px;
+        right: 2px;
+    }
+
+
+    .modal-content {
+        margin-top: 0% !important;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+        width: 100% !important;
+    }
+
+    .modal-dialog {
+        width: 100% !important;
+        height: 100% !important;
+        /*margin: 0 !important;*/
+        padding: 0 !important;
+    }
+
+    .modal-title {
+        color: white;
+    }
+
+    /*}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}*/
+
+
+
+    /*.modal-content {
+        height: auto !important;
+        min-height: 100% !important;
+        border-radius: 0 !important;
+        background-color: #ececec !important
+    }*/
+
+
+    /*.modal-dialog {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width:none !important;
+
+    }
+    .modal-header {
+        border-bottom: 1px solid #9ea2a2 !important;
+    }
+
+    .modal-footer {
+        border-top: 1px solid #9ea2a2 !important;
+    }*/
+
+
+    /*************** Custom Carousel ***************/
+
+    .custom-carousel .item {
+        padding-right: 20px;
+    }
+
+    .custom-carousel.show-one-slide .item {
+        padding-right: 0;
+    }
+
+    .invisible {
+        display: none;
+    }
+    #div_tabla{
+        height:250px;
+        overflow:auto;
+        width:100%;
+    }
+    table tr th {
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    .ordenDefault{
+        background-color: #3b61aa;
+        color: #fff;
+        
+        
+    }
+    table.dataTable thead .orden {
+        background-image: url("http://pruebas.transportauto.es:8083/assets/vendor/DataTables/DataTables-1.10.22/images/sort_both.png");
+    }
+
+    table.dataTable thead .orden_desc {
+        background-image: url("http://pruebas.transportauto.es:8083/assets/vendor/DataTables/DataTables-1.10.22/images/sort_desc.png");
+    }
+    table.dataTable thead .orden_asc {
+        background-image: url("http://pruebas.transportauto.es:8083/assets/vendor/DataTables/DataTables-1.10.22/images/sort_asc.png");
+    }
+    .orden{
+         
+        background-color: #3b61aa;
+        color: #fff;
+      
+    }
+    table.dataTable thead .orden, table.dataTable thead .orden_asc, table.dataTable thead .orden_desc, table.dataTable thead .orden_asc_disabled, 
+        table.dataTable thead .orden_desc_disabled {
+        cursor: pointer;
+        /*cursor: hand;*/
+        background-repeat: no-repeat;
+        background-position: center right;
+    }
+
+    .asc:after {
+        /* content: ' ↑';*/
+        background-image: url("DataTables-1.10.22/images/sort_asc.png");
+    }
+
+    .desc:after {
+      /*content: " ↓";*/
+          background-image: url("DataTables-1.10.22/images/sort_desc.png");
+    }
+</style>
+
+
+
+<div class="container">
+
+    <!--EN MENU FIXED CON CAJA DE CALCULADORA-->
+    <!--*******************************************************************************************************************************************************************-->
+    <!--4. **********************************************3. CONTENIDO  DE CONTRATACIÓN TRANSPORTE *************************************************************************************-->
+    <!--****************************************************************************************************************************************************************-->
+
+    <section id="contrato1" class="content-page mt-first-section-other-page">
+
+        <!-- Horizontal Steppers -->
+        <div class="container-fluid mt20 ">
+            <div class="md-stepper-horizontal orange">
+                <div class="md-step active editable">
+                    <div class="md-step-circle"><span>1</span></div>
+                    <div class="md-step-title">Datos Transporte</div>
+                    <div class="md-step-bar-left"></div>
+                    <div class="md-step-bar-right"></div>
+                </div>
+                <div class="md-step">
+                    <div class="md-step-circle"><span>2</span></div>
+                    <div class="md-step-title">Vehículos</div>
+                    <div class="md-step-bar-left"></div>
+                    <div class="md-step-bar-right"></div>
+                </div>
+
+                <div class="md-step">
+                    <div class="md-step-circle"><span>3</span></div>
+                    <div class="md-step-title">Realizar Pago</div>
+                    <div class="md-step-bar-left"></div>
+                    <div class="md-step-bar-right"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /.Horizontal Steppers -->
+        <form action="Index" method="post">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-12">
+                        <!--datos de origen-->
+                        <div class="box-content-contrato  mt10">
+                            <div class="row anti-row align-items-center">
+                                <div class="col-md-6 plr2">
+                                    <h4 class="blue-color-bold2"><strong>DATOS DE ORIGEN</strong> <a class="btn btn-sm btn-blue-info" data-toggle="modal" data-target="#info_datos_origen"><i class="fas fa-info-circle"></i></a></h4>
+                                    <a class="btn btn-sm btn-menu-modal" data-toggle="modal" data-target="#calculadora">
+                                        <span data-toggle='tooltip' data-placement='top' title='calculadora'>
+                                            <i class="fas fa-calculator"></i> CALCULADORA
+                                        </span>
+                                    </a>
+                                </div>
+                                <div class="col-md-6 white-color  plr2 text-md-right">
+                                    <a id="agenda_origen" class="btn btn-blue btn-sm" data-toggle="collapse" href="#collapse_agenda_origen" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        <span data-toggle='tooltip' data-placement='top' title='seleccionar dirección'>
+                                            <i class="far fa-address-book"></i> Mi agenda <i class="fas fa-chevron-down"></i>
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Modal info datos origen -->
+                            <div class="modal fade" id="info_datos_origen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title">DATOS DE ORIGEN</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="text-justify">
+                                                Texto a definir
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-blue" data-dismiss="modal">Cerrar</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--collapse direcciones de mi agenda para origen-->
+                            <div class="collapse mt10" id="collapse_agenda_origen">
+                                <div class="card card-body car-white-address">
+                                    <!--datatable pc-->
+                                    <!--manzana-->
+                                    <div class="pt-datatables">
+                                        <!--tabla-->
+                                        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
+
+                                            <div id="div_tabla">
+                                                <table class="table display datatable-transportauto dataTable no-footer dtr-inline" style="width: 100%;" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                                                    <thead>
+                                                        <tr role="row">
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Tipo de lugar: activar para ordenar la columna ascendente">Tipo de lugar <span class="ordenDefault"></span> </th>
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Razón social: activar para ordenar la columna ascendente">Razón social <i class="bi bi-caret-up-fill"></i></th>
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Contacto: activar para ordenar la columna ascendente">Contacto <i class="bi bi-caret-up-fill"></i></th>
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Teléfono: activar para ordenar la columna ascendente" aria-sort="descending">Teléfono <i class="bi bi-caret-up-fill"></i></th>
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Dirección: activar para ordenar la columna ascendente">Dirección <i class="bi bi-caret-up-fill"></i></th>
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="CP: activar para ordenar la columna ascendente">CP <i class="bi bi-caret-up-fill"></i></th>
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Localidad: activar para ordenar la columna ascendente">Localidad <i class="bi bi-caret-up-fill"></i></th>
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Provincia: activar para ordenar la columna ascendente">Provincia <i class="bi bi-caret-up-fill"></i></th>
+                                                            <th class="text-center orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Acciones: activar para ordenar la columna ascendente">Acciones <i class="bi bi-caret-up-fill"></i></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="body_origen">
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+
+
+                                        </div>
+
+                                    </div>
+                                    <!--datatable que se muestra en moviles-->
+                                    <div class="pt-datatables datatables-mv">
+                                        <!--tabla-->
+                                        <table class="display datatable-transportauto" style="width:100%">
+                                            <thead>
+                                                <tr>
+
+                                                    <th>Razón social movil</th>
+                                                    <th>Provincia</th>
+                                                    <th>Tipo de lugar</th>
+                                                    <th>Contacto</th>
+                                                    <th>Tlfno</th>
+                                                    <th>Dirección</th>
+                                                    <th>CP</th>
+                                                    <th>Localidad</th>
+                                                    <th class="text-center">Acciones</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+
+                                                    <td>SETI SL	</td>
+                                                    <td>Madrid</td>
+                                                    <td>CAMPA</td>
+                                                    <td>CAMPA</td>
+                                                    <td>999885566</td>
+                                                    <td>ctra. fuencarral 44</td>
+                                                    <td>2108</td>
+                                                    <td>Alcobendas</td>
+                                                    <td align="center">
+                                                        <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>TRANSPORTAUTO SL	</td>
+                                                    <td>Asturias</td>
+                                                    <td>TALLER</td>
+                                                    <td>CAMPA</td>
+                                                    <td>985623484</td>
+                                                    <td>calle prueba 55</td>
+                                                    <td>2199</td>
+                                                    <td>Navia</td>
+                                                    <td align="center">
+                                                        <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>DRAKHAR	</td>
+                                                    <td>Lugo</td>
+                                                    <td>TALLER</td>
+                                                    <td>CAMPA</td>
+                                                    <td>659328412</td>
+                                                    <td>calle Lorem 5</td>
+                                                    <td>28780</td>
+                                                    <td>Viveiro</td>
+                                                    <td align="center">
+                                                        <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                    </td>
+                                                </tr>
+                                        </table>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row anti-row mt20">
+                                <div class="col-md-6 plr2">
+                                    <label>Tipo de lugar de origen</label>
+                                    <select name="tipoLugarRecogida" id="tipoLugarRecogida" class="form-control " data-select2-id="tipoLugarRecogida" tabindex="-1" aria-hidden="true">
+                                        <option value="" data-select2-id="66">SELECCIONA</option>
+                                        <option value="CAMPA" data-select2-id="137">CAMPA</option>
+                                        <option value="CONCESIONARIO" data-select2-id="138">CONCESIONARIO</option>
+                                        <option value="TALLER" data-select2-id="139">TALLER</option>
+                                        <option value="ESTABLECIMIENTO" data-select2-id="140">ESTABLECIMIENTO</option>
+                                        <option value="PARTICULAR" data-select2-id="141">PARTICULAR</option>
+                                        <option value="RENT A CAR" data-select2-id="142">RENT A CAR</option>
+                                        <option value="OTRO" data-select2-id="143">OTRO</option>
+                                        <!---->
+                                    </select>
+                                </div>
+                                <div class="col-md-6 plr2">
+                                    <label>Razón social</label>
+                                    <input id="razonSocial" name="razonSoscialOrigen" class="form-control" type="text" placeholder="Completa..." />
+                                </div>
+                            </div>
+                            <div class="row anti-row">
+                                <div class="col-md-6 plr2">
+                                    <label>Persona de contacto</label>
+                                    <input id="contacto" name="contactoOrigen" class="form-control" type="text" placeholder="Completa..." />
+                                </div>
+                                <div class="col-md-6 plr2">
+                                    <label>Teléfono de contacto</label>
+                                    <input id="telefono" name="telefonoOrigen" class="form-control" type="text" placeholder="Completa..." />
+                                </div>
+                            </div>
+                            <!--   patata-->
+                            <div class="row anti-row">
+                                <div id="blockPais" class="col-md-12 plr2">
+                                    <label>Pais</label>
+                                    <select class="form-control" id="pais" name="paisOrigen">
+                                        <option value="" data-select2-id="66">SELECCIONA</option>
+                                        <option value="ALEMANIA" data-select2-id="66">ALEMANIA</option>
+                                        <option value="AUSTRIA" data-select2-id="67">AUSTRIA</option>
+                                        <option value="BÉLGICA" data-select2-id="68">BÉLGICA</option>
+                                        <option value="BULGARIA" data-select2-id="69">BULGARIA</option>
+                                        <option value="CHIPRE" data-select2-id="70">CHIPRE</option>
+                                        <option value="CROACIA" data-select2-id="71">CROACIA</option>
+                                        <option value="DINAMARCA" data-select2-id="72">DINAMARCA</option>
+                                        <option value="ESLOVAQUIA" data-select2-id="73">ESLOVAQUIA</option>
+                                        <option value="ESLOVENIA" data-select2-id="74">ESLOVENIA</option>
+                                        <option value="ESPAÑA" data-select2-id="75">ESPAÑA</option>
+                                        <option value="ESTONIA" data-select2-id="76">ESTONIA</option>
+                                        <option value="FINLANDIA" data-select2-id="77">FINLANDIA</option>
+                                        <option value="FRANCIA" data-select2-id="78">FRANCIA</option>
+                                        <option value="GRECIA" data-select2-id="79">GRECIA</option>
+                                        <option value="HUNGRÍA" data-select2-id="80">HUNGRÍA</option>
+                                        <option value="IRLANDA" data-select2-id="81">IRLANDA</option>
+                                        <option value="ITALIA" data-select2-id="82">ITALIA</option>
+                                        <option value="LETONIA" data-select2-id="83">LETONIA</option>
+                                        <option value="LITUANIA" data-select2-id="84">LITUANIA</option>
+                                        <option value="LUXEMBURGO" data-select2-id="85">LUXEMBURGO</option>
+                                        <option value="MALTA" data-select2-id="86">MALTA</option>
+                                        <option value="PAÍSES BAJOS" data-select2-id="87">PAÍSES BAJOS</option>
+                                        <option value="POLONIA" data-select2-id="88">POLONIA</option>
+                                        <option value="PORTUGAL" data-select2-id="89">PORTUGAL</option>
+                                        <option value="REINO UNIDO" data-select2-id="90">REINO UNIDO</option>
+                                        <option value="REPÚBLICA CHECA" data-select2-id="91">REPÚBLICA CHECA</option>
+                                        <option value="RUMANÍA" data-select2-id="92">RUMANÍA</option>
+                                        <option value="SUECIA" data-select2-id="93">SUECIA</option>
+                                        <option value="SUIZA" data-select2-id="94">SUIZA</option>
+                                    </select>
+                                </div>
+                                <div id="blockProvincia" class="col-md-4 plr2 invisible">
+                                    <label>Provincia</label>
+                                    <select class="form-control" id="provinciaSelect" name="provinciaSelectOrigen">
+                                        <option value=""  data-select2-id="66">SELECCIONA</option>
+                                    </select>
+
+
+                                </div>
+                                <div id="blockLocalidad" class="col-md-4 plr2 invisible">
+                                    <label>Localidad</label>
+                                    <select class="form-control" id="localidadSelect" name="localidadSelectOrigen">
+                                        <option value="" data-select2-id="66">SELECCIONA</option>
+                                    </select>
+
+                                </div>
+                            </div>
+
+                            <div class="row anti-row">
+                                <div class="col-md-12 plr2" id="direccion">
+                                    <label>Dirección</label>
+                                    <input id="inputDireccion" name="direccionOrigen" class="form-control" type="text" placeholder="" />
+                                </div>
+                                <div class="col-md-12 plr2 invisible" id="codigo_postal">
+                                    <label>Códgo Postal</label>
+                                    <input id="inputCodigo_postal" name="cpOrigen" class="form-control" type="text" placeholder="" />
+                                </div>
+                            </div>
+                            <div class="row anti-row">
+                                <div class="col-md-12 plr2">
+                                    <label>Observaciones</label>
+                                    <textarea id="observaciones" name="observaOrigen" class="form-control" placeholder="Observaciones..."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--   <hr class="doted-hr">-->
+                        <div class="row anti-row mt20">
+                            <div class="col-lg-12 text-center">
+                                <!--  <ul class="list-inline">
+                              <li class="list-inline-item">-->
+                                <p>Por defecto los datos de destino se han autocompletado con tu información de registro</p>
+                                <a id="moverDireccion" class="btn btn-sm btn-info white-color mt10" data-toggle="tooltip" data-placement="top" title="LLevar dirección de destino a origen"><i class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i> Mover dirección</a>
+
+                                <!--    </li>
+                                <li class="list-inline-item">
+                                </li>
+                            </ul>-->
+
+                            </div>
+                        </div>
+                        <!--   <hr class="doted-hr">-->
+                        <!--datos de destino-->
+                        <div class=" mt20">
+                            <div class="row anti-row align-items-center">
+                                <div class="col-md-8 plr2">
+                                    <h4 class="blue-color-bold2"><strong>DATOS DE DESTINO</strong> <a class="btn btn-sm btn-blue-info" data-toggle="modal" data-target="#info_datos_destino"><i class="fas fa-info-circle"></i></a></h4>
+                                </div>
+
+                                <div class="col-md-4 white-color  plr2 text-md-right">
+                                    <a id="agenda_destino" class="btn btn-blue btn-sm" data-toggle="collapse" href="#collapse_agenda_destino" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                        <span data-toggle='tooltip' data-placement='top' title='seleccionar dirección'>
+                                            <i class="far fa-address-book"></i> Mi agenda <i class="fas fa-chevron-down"></i>
+                                        </span>
+
+                                    </a>
+                                </div>
+                            </div>
+
+                            <!-- Modal info datos destiono -->
+                            <div class="modal fade" id="info_datos_destino" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">DATOS DE DESTINO</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <p class="text-justify">
+                                                Por defecto los datos de destino se han autocompletado con su información de registro
+                                            </p>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-blue" data-dismiss="modal">Cerrar</button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--collapse direcciones de mi agenda para destino-->
+                            <div class="collapse mt10" id="collapse_agenda_destino">
+                                <div class="card card-body car-white-address">
+                                    <!--datatable que se muestra en pcs-->
+                                    <div class="pt-datatables">
+                                        <!--tabla-->
+                                        <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper no-footer">
+
+                                            <div id="div_tabla">
+                                                <table class="table display datatable-transportauto dataTable no-footer dtr-inline" style="width: 100%;" id="DataTables_Table_0" role="grid" aria-describedby="DataTables_Table_0_info">
+                                                    <thead>
+                                                        <tr role="row">
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Tipo de lugar: activar para ordenar la columna ascendente">Tipo de lugar <span class="ordenDefault"></span> </th>
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Razón social: activar para ordenar la columna ascendente">Razón social <i class="bi bi-caret-up-fill"></i></th>
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Contacto: activar para ordenar la columna ascendente">Contacto <i class="bi bi-caret-up-fill"></i></th>
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Teléfono: activar para ordenar la columna ascendente" aria-sort="descending">Teléfono <i class="bi bi-caret-up-fill"></i></th>
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Dirección: activar para ordenar la columna ascendente">Dirección <i class="bi bi-caret-up-fill"></i></th>
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="CP: activar para ordenar la columna ascendente">CP <i class="bi bi-caret-up-fill"></i></th>
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Localidad: activar para ordenar la columna ascendente">Localidad <i class="bi bi-caret-up-fill"></i></th>
+                                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Provincia: activar para ordenar la columna ascendente">Provincia <i class="bi bi-caret-up-fill"></i></th>
+                                                            <th class="text-center orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1" aria-label="Acciones: activar para ordenar la columna ascendente">Acciones <i class="bi bi-caret-up-fill"></i></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="body_destino">
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+
+
+                                        </div>
+
+                                    </div>
+
+                                    <!--manzana
+                                <div class="pt-datatables  datatables-pc">
+                                    <!--tabla
+                                    <table class="display datatable-transportauto" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Tipo de lugar PC</th>
+                                                <th>Razón social</th>
+                                                <th>Contacto</th>
+                                                <th>Tlfno</th>
+                                                <th>Dirección</th>
+                                                <th>CP</th>
+                                                <th>Localidad</th>
+                                                <th>Provincia</th>
+                                                <th class="text-center">Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>CAMPA</td>
+                                                <td>SETI SL	</td>
+                                                <td>CAMPA</td>
+                                                <td>999885566</td>
+                                                <td>ctra. fuencarral 44</td>
+                                                <td>2108</td>
+                                                <td>Alcobendas</td>
+                                                <td>Madrid</td>
+                                                <td align="center">
+                                                    <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>CAMPA</td>
+                                                <td>TRANSPORTAUTO SL	</td>
+                                                <td>TALLER</td>
+                                                <td>985623484</td>
+                                                <td>calle prueba 55</td>
+                                                <td>2199</td>
+                                                <td>Navia</td>
+                                                <td>Asturias</td>
+                                                <td align="center">
+                                                    <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>CAMPA</td>
+                                                <td>DRAKHAR	</td>
+                                                <td>TALLER</td>
+                                                <td>659328412</td>
+                                                <td>calle Lorem 5</td>
+                                                <td>28780</td>
+                                                <td>Viveiro</td>
+                                                <td>Lugo</td>
+
+                                                <td align="center">
+                                                    <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                </td>
+                                            </tr>
+                                    </table>
+                                </div>-->
+                                    <!--datatable que se muestra en moviles-->
+                                    <div class="pt-datatables datatables-mv">
+                                        <!--tabla-->
+                                        <table class="display datatable-transportauto" style="width:100%">
+                                            <thead>
+                                                <tr>
+
+                                                    <th>Razón social movil</th>
+                                                    <th>Provincia</th>
+                                                    <th>Tipo de lugar</th>
+                                                    <th>Contacto</th>
+                                                    <th>Tlfno</th>
+                                                    <th>Dirección</th>
+                                                    <th>CP</th>
+                                                    <th>Localidad</th>
+                                                    <th class="text-center">Acciones</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+
+                                                    <td>SETI SL	</td>
+                                                    <td>Madrid</td>
+                                                    <td>CAMPA</td>
+                                                    <td>CAMPA</td>
+                                                    <td>999885566</td>
+                                                    <td>ctra. fuencarral 44</td>
+                                                    <td>2108</td>
+                                                    <td>Alcobendas</td>
+                                                    <td align="center">
+                                                        <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>TRANSPORTAUTO SL	</td>
+                                                    <td>Asturias</td>
+                                                    <td>TALLER</td>
+                                                    <td>CAMPA</td>
+                                                    <td>985623484</td>
+                                                    <td>calle prueba 55</td>
+                                                    <td>2199</td>
+                                                    <td>Navia</td>
+                                                    <td align="center">
+                                                        <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td>DRAKHAR	</td>
+                                                    <td>Lugo</td>
+                                                    <td>TALLER</td>
+                                                    <td>CAMPA</td>
+                                                    <td>659328412</td>
+                                                    <td>calle Lorem 5</td>
+                                                    <td>28780</td>
+                                                    <td>Viveiro</td>
+                                                    <td align="center">
+                                                        <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                    </td>
+                                                </tr>
+                                        </table>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <!-- patata-->
+                            
+                            <div class="row anti-row mt20">
+                                <div class="col-md-6 plr2">
+                                    <label>Tipo de lugar de destino</label>
+                                    <select name="tipoLugarDestino" id="tipoLugarRecogida2" class="form-control " data-select2-id="tipoLugarRecogida" tabindex="-1" aria-hidden="true">
+                                        <option value="" data-select2-id="66">SELECCIONA</option>
+                                        <option value="CAMPA" data-select2-id="137">CAMPA</option>
+                                        <option value="CONCESIONARIO" data-select2-id="138">CONCESIONARIO</option>
+                                        <option value="TALLER" data-select2-id="139">TALLER</option>
+                                        <option value="ESTABLECIMIENTO" data-select2-id="140">ESTABLECIMIENTO</option>
+                                        <option value="PARTICULAR" data-select2-id="141">PARTICULAR</option>
+                                        <option value="RENT A CAR" data-select2-id="142">RENT A CAR</option>
+                                        <option value="OTRO" data-select2-id="143">OTRO</option>
+                                        <!---->
+                                    </select>
+                                </div>
+                                <div class="col-md-6 plr2">
+                                    <label>Razón social</label>
+                                    <input id="razonSocial2" name="razonSocialDestino" class="form-control" type="text" placeholder="Completa..." />
+                                </div>
+                            </div>
+                            <div class="row anti-row">
+                                <div class="col-md-6 plr2">
+                                    <label>Persona de contacto</label>
+                                    <input id="contacto2" name="contactoDestino" class="form-control" type="text" placeholder="Completa..." value="Gema Fernández González" />
+                                </div>
+                                <div class="col-md-6 plr2">
+                                    <label>Teléfono de contacto</label>
+                                    <input id="telefono2" name="telefonoDestino" class="form-control" type="text" placeholder="Completa..." value="918556644" />
+                                </div>
+                            </div>
+                            <div class="row anti-row">
+                                <div id="blockPais2" class="col-md-12 plr2">
+                                    <label>Pais</label>
+                                    <select class="form-control" id="pais2" name="paisDestino">
+                                        <option value="" data-select2-id="66">SELECCIONA</option>
+                                        <option value="ALEMANIA" data-select2-id="66">ALEMANIA</option>
+                                        <option value="AUSTRIA" data-select2-id="67">AUSTRIA</option>
+                                        <option value="BÉLGICA" data-select2-id="68">BÉLGICA</option>
+                                        <option value="BULGARIA" data-select2-id="69">BULGARIA</option>
+                                        <option value="CHIPRE" data-select2-id="70">CHIPRE</option>
+                                        <option value="CROACIA" data-select2-id="71">CROACIA</option>
+                                        <option value="DINAMARCA" data-select2-id="72">DINAMARCA</option>
+                                        <option value="ESLOVAQUIA" data-select2-id="73">ESLOVAQUIA</option>
+                                        <option value="ESLOVENIA" data-select2-id="74">ESLOVENIA</option>
+                                        <option value="ESPAÑA" data-select2-id="75">ESPAÑA</option>
+                                        <option value="ESTONIA" data-select2-id="76">ESTONIA</option>
+                                        <option value="FINLANDIA" data-select2-id="77">FINLANDIA</option>
+                                        <option value="FRANCIA" data-select2-id="78">FRANCIA</option>
+                                        <option value="GRECIA" data-select2-id="79">GRECIA</option>
+                                        <option value="HUNGRÍA" data-select2-id="80">HUNGRÍA</option>
+                                        <option value="IRLANDA" data-select2-id="81">IRLANDA</option>
+                                        <option value="ITALIA" data-select2-id="82">ITALIA</option>
+                                        <option value="LETONIA" data-select2-id="83">LETONIA</option>
+                                        <option value="LITUANIA" data-select2-id="84">LITUANIA</option>
+                                        <option value="LUXEMBURGO" data-select2-id="85">LUXEMBURGO</option>
+                                        <option value="MALTA" data-select2-id="86">MALTA</option>
+                                        <option value="PAÍSES BAJOS" data-select2-id="87">PAÍSES BAJOS</option>
+                                        <option value="POLONIA" data-select2-id="88">POLONIA</option>
+                                        <option value="PORTUGAL" data-select2-id="89">PORTUGAL</option>
+                                        <option value="REINO UNIDO" data-select2-id="90">REINO UNIDO</option>
+                                        <option value="REPÚBLICA CHECA" data-select2-id="91">REPÚBLICA CHECA</option>
+                                        <option value="RUMANÍA" data-select2-id="92">RUMANÍA</option>
+                                        <option value="SUECIA" data-select2-id="93">SUECIA</option>
+                                        <option value="SUIZA" data-select2-id="94">SUIZA</option>
+                                    </select>
+                                </div>
+                                <div id="blockProvincia2" class="col-md-4 plr2 invisible">
+                                    <label>Provincia</label>
+                                    <select class="form-control" id="provinciaSelect2" name="provinciaSelectDestino">
+                                        <option value="" data-select2-id="66">SELECCIONA</option>
+                                    </select>
+
+
+                                </div>
+                                <div id="blockLocalidad2" class="col-md-4 plr2 invisible">
+                                    <label>Localidad</label>
+                                    <select class="form-control" id="localidadSelect2" name="localidadSelectDestino">
+                                        <option value="" data-select2-id="66">SELECCIONA</option>
+                                    </select>
+
+                                </div>
+                            </div>
+                            <div class="row anti-row">
+                                <div class="col-md-12 plr2" id="direccion2">
+                                    <label>Dirección</label>
+                                    <input id="inputDireccion2" name="direccionDestino" class="form-control" type="text" placeholder="Completa..." value="Ctra. Fuencarral 44, Alcobendas, Madrid" />
+                                </div>
+                                <div class="col-md-12 plr2 invisible" id="codigo_postal2">
+                                    <label>Códgo Postal</label>
+                                    <input id="inputCodigo_postal2" name="cpDestino" class="form-control" type="text" placeholder="" />
+                                </div>
+                            </div>
+                            <div class="row anti-row">
+                                <div class="col-md-12 plr2">
+                                    <label>Observaciones</label>
+                                    <textarea id="observaciones2" name="observaDestino" class="form-control" placeholder="Observaciones...">En horario de 8.00 a 17.00 h</textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!--botones de siguiente anterior-->
+                <div class="row  align-items-center mt20">
+                    <div class="col-6"></div>
+                    <div class="col-6 text-right">
+                        @*<a class="btn btn-custom" href="contratacion_step2.html">Siguiente <i class="fas fa-chevron-right"></i> </a>*@
+                        <button type="submit" class="btn btn-custom" >Siguiente <i class="fas fa-chevron-right"></i> </button>
+                    </div>
+                </div>
+            </div>
+        </form>
+
+    </section>
+</div>
+
+<!-- Modal calculadora -->
+<div class="modal fade" id="calculadora" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">CALCULADORA</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-6 col-xl-3">
+                                <label>Tipo vehículo</label>
+                                <select class="select2 form-control mb-3">
+                                    <option value="ab" disabled selected>Selecciona...</option>
+                                    <option value="vehiculos">Turismos</option>
+                                    <option value="vehiculos">Comerciales</option>
+                                    <option value="indust_autocarav_tractor">Industrial</option>
+                                    <option value="indust_autocarav_tractor">Autocaravana</option>
+                                    <option value="indust_autocarav_tractor">Tractor</option>
+                                    <option value="moto">Moto</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6 col-xl-3">
+                                <label>Estado</label>
+                                <select class="select2 form-control mb-3">
+                                    <option value="ab" disabled selected>Selecciona...</option>
+                                    <option value="vehiculos">Arranca</option>
+                                    <option value="vehiculos">No Arranca</option>
+                                    <option value="indust_autocarav_tractor">Siniestro</option>
+
+                                </select>
+                            </div>
+                            <div class="col-lg-6 col-xl-3">
+                                <label>Origen</label>
+                                <select class="select2 form-control mb-3">
+                                    <option value="ab" disabled selected>Selecciona...</option>
+                                    <option value="ab">adsfasdf</option>
+                                    <option value="ab">afdasfasf</option>
+                                    <option value="ab">adfasfasdf</option>
+                                    <option value="ab">adfasdfasdf</option>
+                                    <option value="ab">afasdfasdfasdf</option>
+                                    <option value="ab">afdsfasdf</option>
+                                </select>
+                            </div>
+                            <div class="col-lg-6 col-xl-3">
+                                <label>Destino</label>
+                                <select class="select2 form-control mb-3">
+                                    <option value="ab" disabled selected>Selecciona...</option>
+                                    <option value="ab">adsfasdf</option>
+                                    <option value="ab">afdasfasf</option>
+                                    <option value="ab">adfasfasdf</option>
+                                    <option value="ab">adfasdfasdf</option>
+                                    <option value="ab">afasdfasdfasdf</option>
+                                    <option value="ab">afdsfasdf</option>
+                                </select>
+                            </div>
+                        </div>
+                        <hr class="doted-hr">
+                        <div class="row anti-row">
+                            <div class="col-md-4 plr2">
+                                <label>Marca</label>
+                                <select class="select2 form-control">
+                                    <option value="ab" disabled selected>Selecciona...</option>
+                                    <option value="ab">Marca 1</option>
+                                    <option value="ab">Marca 2</option>
+                                    <option value="ab">Marca 3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 plr2">
+                                <label>Modelo</label>
+                                <select class="select2 form-control">
+                                    <option value="ab" disabled selected>Selecciona...</option>
+                                    <option value="ab">Modelo 1</option>
+                                    <option value="ab">Modelo 2</option>
+                                    <option value="ab">Modelo 3</option>
+                                </select>
+                            </div>
+                            <div class="col-md-4 plr2">
+                                <label>Año</label>
+                                <select class="select2 form-control">
+                                    <option value="ab" disabled selected>Selecciona...</option>
+                                    <option value="ab">2018</option>
+                                    <option value="ab">2017</option>
+                                    <option value="ab">2016</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row anti-row mb-3">
+                            <div class="col-md-12 plr2">
+                                <label>Versión</label>
+                                <select class="select2 form-control">
+                                    <option value="ab" disabled selected>Selecciona...</option>
+                                    <option value="ab">Version asfas asdfas asdf</option>
+                                    <option value="ab">Version asfas asdfas asdf</option>
+                                    <option value="ab">Version asfas asdfas asdf</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="text-right mt10">
+                            <a class="btn btn-xs btn-blue white-color"><i class="fas fa-plus"></i> Añadir vehículos </a>
+                        </div>
+                        <hr class="doted-hr">
+                        <!--un tabla ejemplo lectura-->
+                        <div class="box-simple-line mt10">
+                            <div class="row blue-color-bold2 mt20 title-table-resume">
+                                <div class="col-xl-1 ">
+                                    Nº
+                                </div>
+                                <div class="col-xl-2">
+                                    Marca
+                                </div>
+                                <div class="col-xl-2 ">
+                                    Modelo
+                                </div>
+                                <div class="col-xl-1">
+                                    Año
+                                </div>
+                                <div class="col-xl-3 ">
+                                    Versión
+                                </div>
+
+                                <div class="col-xl-1 ">
+                                    <i class="fas fa-arrows-alt-h"></i> (mm)
+                                </div>
+                                <div class="col-xl-1 ">
+                                    <i class="fas fa-arrows-alt-v"></i> (mm)
+                                </div>
+                                <div class="col-xl-1 ">
+                                    <i class="fas fa-weight-hanging"></i> (kg)
+                                </div>
+                            </div>
+                            <hr class="title-table-resume">
+                            <!--listado de vehículos (3 fixeados)-->
+                            <div class="row">
+                                <div class="col-xl-1 ">
+                                    <button class='btn btn-sm btn-delete-item-orange mt0 fit-content text-right' data-toggle='tooltip' data-placement='top' title='eliminar elemento'> <i class='fas fa-times'></i> </button>
+                                    <br class="salto-mv">
+                                    <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label> 1
+
+                                </div>
+                                <div class="col-xl-2 ">
+                                    <label class="label-hide-mv"><strong>Marca:</strong></label> VOLKSWAGEN
+                                </div>
+                                <div class="col-xl-2 ">
+                                    <label class="label-hide-mv"><strong>Modelo:</strong></label> TIGUAN ALLSPACE
+                                </div>
+                                <div class="col-xl-1 ">
+                                    <label class="label-hide-mv"><strong>Año:</strong></label> 2014
+                                </div>
+                                <div class="col-xl-3 ">
+                                    <label class="label-hide-mv"><strong>Versión:</strong></label> adfasdfasdfasfdasdf
+                                </div>
+
+                                <div class="col-xl-1 ">
+                                    <label class="label-hide-mv"><strong>Long(mm):</strong></label> 3826
+                                </div>
+                                <div class="col-xl-1 ">
+                                    <label class="label-hide-mv"><strong>Alt(mm):</strong></label> 1553
+                                </div>
+                                <div class="col-xl-1 ">
+                                    <label class="label-hide-mv"><strong>Peso (kg):</strong></label> 855
+                                </div>
+                            </div>
+
+                            <hr>
+                            <div class="row">
+                                <div class="col-xl-1 ">
+                                    <button class='btn btn-sm btn-delete-item-orange mt0 fit-content' data-toggle='tooltip' data-placement='top' title='eliminar elemento'> <i class='fas fa-times'></i> </button>
+                                    <br class="salto-mv">
+                                    <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label> 2
+                                </div>
+                                <div class="col-xl-2 ">
+                                    <label class="label-hide-mv"><strong>Marca:</strong></label> AUDI
+                                </div>
+                                <div class="col-xl-2 ">
+                                    <label class="label-hide-mv"><strong>Modelo:</strong></label> AUDI  A2
+                                </div>
+                                <div class="col-xl-1 ">
+                                    <label class="label-hide-mv"><strong>Año:</strong></label> 2000
+                                </div>
+                                <div class="col-xl-3 ">
+                                    <label class="label-hide-mv"><strong>Versión:</strong></label> AF ASDFASDF ASDFASDF
+                                </div>
+
+                                <div class="col-xl-1 ">
+                                    <label class="label-hide-mv"><strong>Long(mm):</strong></label> 3826
+                                </div>
+                                <div class="col-xl-1 ">
+                                    <label class="label-hide-mv"><strong>Alt(mm):</strong></label> 1553
+                                </div>
+                                <div class="col-xl-1 ">
+                                    <label class="label-hide-mv"><strong>Peso (kg):</strong></label> 855
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-10-mv">
+                        <div class="box-simple-line bg-blue-light-trans plr-price-calc">
+                            <div class="row">
+                                <div class="col-9">
+                                    <h5 class="type-price">ANCOVE</h5>
+                                </div>
+                                <div class="col text-right">
+                                    <label class="switch-sm mt2">
+                                        <input class="switch-document" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-4">
+                                    <span class="label-price">BASE:</span> 1000 €
+                                </div>
+                                <div class="col-xl-4">
+                                    <span class="label-price">IVA</span>: 498 €
+                                </div>
+                                <div class="col-xl-4 text-xl-right">
+                                    <strong>1498 €</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-simple-line bg-blue-light-trans mt10 plr-price-calc">
+                            <div class="row">
+                                <div class="col-9">
+                                    <h5 class="type-price">ANCOVE EXPRESS</h5>
+                                </div>
+                                <div class="col text-right">
+                                    <label class="switch-sm mt2">
+                                        <input class="switch-document" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-4">
+                                    <span class="label-price">BASE:</span> 1000 €
+                                </div>
+                                <div class="col-xl-4">
+                                    <span class="label-price">IVA:</span> 498 €
+                                </div>
+                                <div class="col-xl-4 text-xl-right">
+                                    <strong>1498 €</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-simple-line bg-blue-light-trans mt10 plr-price-calc">
+                            <div class="row">
+                                <div class="col-9">
+                                    <h5 class="type-price">TRANSPORTAUTO</h5>
+                                </div>
+                                <div class="col text-right">
+                                    <label class="switch-sm mt2">
+                                        <input class="switch-document" type="checkbox">
+                                        <span class="slider round"></span>
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-4">
+                                    <span class="label-price">BASE:</span> 1000 €
+                                </div>
+                                <div class="col-xl-4">
+                                    <span class="label-price">IVA:</span> 498 €
+                                </div>
+                                <div class="col-xl-4 text-xl-right">
+                                    <strong>1498 €</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-simple-line mt10 plr-price-calc">
+                            <div class="row">
+                                <div class="col-9">
+                                    <h5 class="type-price">TRANSPORTISTA</h5>
+                                </div>
+                                <div class="col text-right">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-4">
+                                    <span class="label-price">BASE:</span> 1000 €
+                                </div>
+                                <div class="col-xl-4">
+                                    <span class="label-price">IVA:</span> 498 €
+                                </div>
+                                <div class="col-xl-4 text-xl-right">
+                                    <strong>1498 €</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="box-simple-line mt10 plr-price-calc">
+                            <div class="row">
+                                <div class="col-9">
+                                    <h5 class="type-price">TRANSPORTISTA EXPRESS</h5>
+                                </div>
+                                <div class="col text-right">
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-4">
+                                    <span class="label-price">BASE:</span> 1000 €
+                                </div>
+                                <div class="col-xl-4">
+                                    <span class="label-price">IVA: </span>498 €
+                                </div>
+                                <div class="col-xl-4 text-xl-right">
+                                    <strong>1498 €</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <a class="btn btn-info white-color" data-toggle="modal" data-target="#calculadora_guardar"><i class="far fa-save"></i> PEDIDO</a>
+                <a class="btn btn-blue white-color" data-toggle="modal" data-target="#calculadora_email"><i class="far fa-envelope"></i> ENVIAR</a>
+                <button type="button" class="btn btn-custom">CALCULAR</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal agenda/CALENDARIO -->
+<div class="modal fade" id="agenda" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">AGENDA</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div id='calendar'></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    var provincias = "";
+    var municipios = "";
+    var miAgenda = "";
+    
+        window.addEventListener('load',
+            function () {
+
+
+                //retorna las provincias
+                var provin = "http://localhost:44359/api/datos";
+                fetch(provin).then(function (result) {
+
+                    if (result.ok) {
+                        return result.json();
+                    }
+
+                }).then(function (data) {
+
+                    provincias = data;
+                })
+                //retorna los municipios
+                var muni = "http://localhost:44359/api/datos2";
+                fetch(muni).then(function (result) {
+
+                    if (result.ok) {
+                        return result.json();
+                    }
+
+                }).then(function (data) {
+
+                    municipios = data;
+                })
+
+                //rellenamos la tabla agenda
+                var myHeaders = new Headers();
+                myHeaders.append("Accept", "application/json, text/plain, /");
+                myHeaders.append("Accept-Language", "es-ES,es;q=0.9,en;q=0.8");
+                myHeaders.append("Access-Control-Allow-Headers", "X-Requested-With,content-type");
+                myHeaders.append("Access-Control-Allow-Methods", "GET");
+                myHeaders.append("Access-Control-Allow-Origin", "*");
+                myHeaders.append("Connection", "keep-alive");
+                myHeaders.append("Content-Type", "application/json");
+                myHeaders.append("Origin", "http://pruebas.transportauto.es:8083");
+                myHeaders.append("Referer", "http://pruebas.transportauto.es:8083/");
+                myHeaders.append("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36");
+
+            
+
+                var raw = '{"username":"atencioncliente_transportauto","password":"123456","applicationName":"TransportAuto"}';
+
+                var requestOptions = {
+                  method: 'POST',
+                  headers: myHeaders,
+                  body: raw,
+                  redirect: 'follow'
+                };
+
+                 fetch("http://apiusers.transportauto.es/api/user/authenticate", requestOptions)
+                    .then(function(serverPromise){ 
+                      serverPromise.json()
+                          .then(function (usuario) { 
+                              //console.log("usuario: "+usuario.token); 
+                                  /*recuperamos datos de la agenda del usuario*/ 
+                                var headers = new Headers();
+                                headers.append("Accept", "application/json, text/plain, /");
+                                headers.append("Accept-Language", "es-ES,es;q=0.9,en;q=0.8");
+                                headers.append("Access-Control-Allow-Headers", "X-Requested-With,content-type");
+                                headers.append("Access-Control-Allow-Methods", "GET");
+                                headers.append("Access-Control-Allow-Origin", "*");
+                                headers.append("Connection", "keep-alive");
+                                headers.append("Content-Type", "application/json");
+                                headers.append("Origin", "http://pruebas.transportauto.es:8083");
+                                headers.append("Referer", "http://pruebas.transportauto.es:8083/");
+                                headers.append("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36");
+                                headers.append("Authorization", "Bearer " + usuario.token);
+                           
+
+                                var requestOptions2 = {
+                                    method: 'GET',
+                                    headers: headers,
+                                    // body: raw,
+                                    redirect: 'follow'
+                                };
+
+                                 fetch("http://apitra.transportauto.es/api/Agenda/user/"+usuario.userId, requestOptions2)
+                                .then(function(serverPromise2){ 
+                                    serverPromise2.json()
+                                    .then(function(agenda) { 
+                                        miAgenda = agenda;
+                                    })
+                                    .catch(function(e2){
+                                        console.log(e2);
+                                    });
+                                })
+                        })
+                        .catch(function(e){
+                          console.log(e);
+                        });
+                    })
+            });
+    //fin load
+        var pais = document.getElementById("pais");
+        pais.addEventListener('change',
+            function () {
+                var selectedOptionPais = this.options[pais.selectedIndex];
+                //console.log(selectedOption.value + ': ' + selectedOptionPais.text);
+
+                 var blockPais = document.getElementById("blockPais");
+                    var html = "";
+                    var html2 = "";
+                    console.log("gooo " + selectedOptionPais.text);
+                    if (selectedOptionPais.text == "ESPAÑA") {
+                    
+                        blockPais.classList.remove("col-md-12");
+                        blockPais.classList.add("col-md-4")
+                  
+
+
+
+                        provincias.forEach(function (element) {
+                            let miSelect = document.getElementById("provinciaSelect");
+                            let opt = document.createElement("option");
+                            opt.appendChild(document.createTextNode(element.Nombre));
+                            opt.value = element.Nombre;
+                            miSelect.appendChild(opt);
+                        })
+
+                        document.getElementById("blockProvincia").classList.remove("invisible");
+                        document.getElementById("blockLocalidad").classList.remove("invisible");
+                        document.getElementById("codigo_postal").classList.remove("invisible");
+                        document.getElementById("codigo_postal").classList.remove("col-md-12");
+                        document.getElementById("codigo_postal").classList.add("col-md-4");
+                        document.getElementById("direccion").classList.remove("col-md-12");
+                        document.getElementById("direccion").classList.add("col-md-8");
+                  
+                    } else {
+                        document.getElementById("blockProvincia").classList.add("invisible");
+                        document.getElementById("blockLocalidad").classList.add("invisible");
+                        document.getElementById("codigo_postal").classList.add("invisible");
+                        document.getElementById("direccion").classList.remove("col-md-8");
+                        document.getElementById("direccion").classList.add("col-md-12")
+                        blockPais.classList.add("col-md-12");
+                        blockPais.classList.remove("col-md-4")
+                    }
+
+               
+            });
+        var provinciaSelect = document.getElementById("provinciaSelect");
+        console.log("provinciaSelect " + provinciaSelect);
+        //if (provinciaSelect) {
+        provinciaSelect.addEventListener('change',
+            function () {
+                var selectedOptionProvincia = this.options[provinciaSelect.selectedIndex];
+                //console.log(selectedOption.value + ': ' + selectedOptionPais.text);
+                //document.getElementById("blockLocalidad").classList.remove("invisble");
+                document.getElementById("localidadSelect").innerHTML = "<option value='' data-select2-id='66'>SELECCIONA</option>";
+
+                 municipios.forEach(function (element) {
+                        let miSelect = document.getElementById("localidadSelect");
+                        //console.log("provincia_id : "+element.Descripcion);
+                        if ( selectedOptionProvincia.value == element.NombreProvincia) {
+                            let opt = document.createElement("option");
+                            opt.appendChild(document.createTextNode(element.Descripcion));
+                            opt.value = element.Descripcion;
+                            miSelect.appendChild(opt);
+                        }
+
+                    })
+               
+            });
+        // datos destino
+        var pais2 = document.getElementById("pais2");
+        pais2.addEventListener('change',
+            function () {
+                var selectedOptionPais2 = this.options[pais2.selectedIndex];
+                //console.log(selectedOption.value + ': ' + selectedOptionPais.text);
+
+                
+                var blockPais = document.getElementById("blockPais2");
+                var html = "";
+                var html2 = "";
+                //console.log("gooo " + selectedOptionPais2.text);
+                if (selectedOptionPais2.text == "ESPAÑA") {
+                    blockPais2.classList.remove("col-md-12");
+                    blockPais2.classList.add("col-md-4")
+                  
+
+
+
+
+                    provincias.forEach(function (element) {
+                        let miSelect = document.getElementById("provinciaSelect2");
+                        let opt = document.createElement("option");
+                        opt.appendChild(document.createTextNode(element.Nombre));
+                        opt.value = element.Nombre;
+                        miSelect.appendChild(opt);
+                    })
+
+                    document.getElementById("blockProvincia2").classList.remove("invisible");
+                    document.getElementById("blockLocalidad2").classList.remove("invisible");
+                    document.getElementById("codigo_postal2").classList.remove("invisible");
+                    document.getElementById("codigo_postal2").classList.remove("col-md-12");
+                    document.getElementById("codigo_postal2").classList.add("col-md-4");
+                    document.getElementById("direccion2").classList.remove("col-md-12");
+                    document.getElementById("direccion2").classList.add("col-md-8");
+                  
+                } else {
+                    document.getElementById("blockProvincia2").classList.add("invisible");
+                    document.getElementById("blockLocalidad2").classList.add("invisible");
+                    document.getElementById("codigo_postal2").classList.add("invisible");
+                    document.getElementById("direccion2").classList.remove("col-md-8");
+                    document.getElementById("direccion2").classList.add("col-md-12")
+                    blockPais.classList.add("col-md-12");
+                    blockPais.classList.remove("col-md-4")
+                }
+                
+            });
+        var provinciaSelect2 = document.getElementById("provinciaSelect2");
+        //console.log("provinciaSelect " + provinciaSelect2);
+        //if (provinciaSelect) {
+        provinciaSelect2.addEventListener('change',
+            function () {
+                var selectedOptionProvincia2 = this.options[provinciaSelect2.selectedIndex];
+                //console.log(selectedOption.value + ': ' + selectedOptionPais.text);
+                //document.getElementById("blockLocalidad").classList.remove("invisble");
+                document.getElementById("localidadSelect2").innerHTML = "<option value='' data-select2-id='66'>SELECCIONA</option>";
+
+                municipios.forEach(function (element) {
+                    let miSelect = document.getElementById("localidadSelect2");
+                    
+                    if (selectedOptionProvincia2.value == element.NombreProvincia) {
+                        //console.log("provincia_id : "+element.Descripcion +" "+element.NombreProvincia);
+                        let opt = document.createElement("option");
+                        opt.appendChild(document.createTextNode(element.Descripcion));
+                        opt.value = element.Descripcion;
+                        miSelect.appendChild(opt);
+                    }
+
+                })
+                
+            });
+
+        //intercambia las direcciones entre origen y destino
+        var moverDireccion = document.getElementById("moverDireccion");
+        moverDireccion.addEventListener('click',
+            function () {
+                var tipoLugarRecogida = document.getElementById("tipoLugarRecogida").value;
+                var razonSocial = document.getElementById("razonSocial").value; 
+                var contacto = document.getElementById("contacto").value;
+                var telefono = document.getElementById("telefono").value;
+                var pais = document.getElementById("pais").value;
+                var provinciaSelect = document.getElementById("provinciaSelect").value;
+                var localidadSelect = document.getElementById("localidadSelect").value;
+                var inputDireccion = document.getElementById("inputDireccion").value;
+                var inputCodigo_postal = document.getElementById("inputCodigo_postal").value;
+                var observaciones = document.getElementById("observaciones").value;
+
+                provincias.forEach(function (element) {
+                    let miSelect = document.getElementById("provinciaSelect");
+                    let opt = document.createElement("option");
+                    opt.appendChild(document.createTextNode(element.Nombre));
+                    opt.value = element.Nombre;
+                    miSelect.appendChild(opt);
+                })
+                //var selectedOptionProvincia2 = this.options[provinciaSelect2.selectedIndex];
+                municipios.forEach(function (element) {
+                    let miSelect = document.getElementById("localidadSelect");
+                    //console.log("provincia_id : "+element.Descripcion);
+                                        
+                                          
+                    let opt = document.createElement("option");
+                    opt.appendChild(document.createTextNode(element.Descripcion));
+                    opt.value = element.Descripcion;
+                    miSelect.appendChild(opt);
+                                           
+
+                })
+
+
+                document.getElementById("tipoLugarRecogida").value = document.getElementById("tipoLugarRecogida2").value;
+                document.getElementById("razonSocial").value = document.getElementById("razonSocial2").value;
+                document.getElementById("contacto").value = document.getElementById("contacto2").value;
+                document.getElementById("telefono").value =  document.getElementById("telefono2").value ;
+                document.getElementById("pais").value =  document.getElementById("pais2").value;
+                document.getElementById("provinciaSelect").value = document.getElementById("provinciaSelect2").value;
+                document.getElementById("localidadSelect").value = document.getElementById("provinciaSelect2").value;
+                document.getElementById("inputDireccion").value =  document.getElementById("inputDireccion2").value;
+                document.getElementById("inputCodigo_postal").value = document.getElementById("inputCodigo_postal2").value;
+                document.getElementById("observaciones").value = document.getElementById("observaciones2").value;
+
+
+                document.getElementById("tipoLugarRecogida2").value = tipoLugarRecogida;
+                document.getElementById("razonSocial2").value = razonSocial;
+                document.getElementById("contacto2").value = contacto;
+                document.getElementById("telefono2").value = telefono;
+                document.getElementById("pais2").value = pais;
+                document.getElementById("provinciaSelect2").value = provinciaSelect;
+                document.getElementById("localidadSelect2").value = localidadSelect;
+                document.getElementById("inputDireccion2").value = inputDireccion;
+                document.getElementById("inputCodigo_postal2").value = inputCodigo_postal;
+                document.getElementById("observaciones2").value = observaciones;
+            });
+
+     
+  
+
+        var agenda_origen = document.getElementById("agenda_origen");
+   
+        agenda_origen.addEventListener('click',
+             function () {
+                //console.log("agenda: " + agenda); 
+                var html = "";
+                miAgenda.forEach(function (element) {
+                    //console.log("Localidad: " + element.localidad); 
+                    html += "<tr role='row' class='odd'>";
+                        html += "<td tabindex='0' class=''>"+element.tipoLugar+"</td>";
+                        html += "<td>"+element.razonSocial+"</td>";
+                        html += "<td>"+element.contacto+"</td>";
+                        html += "<td class='sorting_1'>"+element.telefono+"</td>";
+                        html += "<td>"+element.direccion+"</td>";
+                        html += "<td>"+element.cp+"</td>";
+                        html += "<td>"+element.localidad+"</td>";
+                        html += "<td>"+element.provincia+"</td>";
+                        html += "<td align='center'>";
+                    html += "<a class='btn btn-xs btn-detail' data-toggle='tooltip' data-placement='top' onclick='myFunction_Origen("+element.id+")'>Seleccionar</a>";
+                        html += "</td>";
+                    html += "</tr>";
+
+                    //console.log("html: " + html); 
+                })
+                document.getElementById("body_origen").innerHTML = html;
+              
+           
+            });
+
+        //rellenar agenda destino
+        var agenda_destino = document.getElementById("agenda_destino");
+    
+        agenda_destino.addEventListener('click',
+            function () {
+
+                //console.log("agenda: " + agenda); 
+                var html = "";
+                miAgenda.forEach(function (element) {
+                    // console.log("Localidad: " + element.localidad); 
+                    html += "<tr role='row' class='odd'>";
+                        html += "<td tabindex='0' class=''>"+element.tipoLugar+"</td>";
+                        html += "<td>"+element.razonSocial+"</td>";
+                        html += "<td>"+element.contacto+"</td>";
+                        html += "<td >"+element.telefono+"</td>";
+                        html += "<td>"+element.direccion+"</td>";
+                        html += "<td>"+element.cp+"</td>";
+                        html += "<td>"+element.localidad+"</td>";
+                        html += "<td>"+element.provincia+"</td>";
+                        html += "<td align='center'>";
+                        html += "<a class='btn btn-xs btn-detail' data-toggle='tooltip' data-placement='top' onclick='myFunction_Destino("+element.id+")'>Seleccionar</a>";
+                    
+                        html += "</td>";
+                    html += "</tr>";
+
+                    //console.log("html: " + html); 
+                })
+                document.getElementById("body_destino").innerHTML = html;
+                
+              
+           
+            });
+        //codigo para ordenar de por el alfabeto los datos de la table agenda
+        $('th').click(function() {
+            var table = $(this).parents('table').eq(0)
+            var rows = table.find('tr:gt(0)').toArray().sort(comparer($(this).index()))
+            this.asc = !this.asc
+            if (!this.asc) {
+              rows = rows.reverse()
+            }
+            for (var i = 0; i < rows.length; i++) {
+              table.append(rows[i])
+            }
+            setIcon($(this), this.asc);
+          })
+
+          function comparer(index) {
+            return function(a, b) {
+              var valA = getCellValue(a, index),
+                valB = getCellValue(b, index)
+              return $.isNumeric(valA) && $.isNumeric(valB) ? valA - valB : valA.localeCompare(valB)
+            }
+          }
+
+          function getCellValue(row, index) {
+            return $(row).children('td').eq(index).html()
+          }
+
+          function setIcon(element, asc) {
+            $("th").each(function(index) {
+                $(this).removeClass("orden");
+            
+              $(this).removeClass("orden_asc");
+              $(this).removeClass("orden_desc");
+            });
+           element.addClass("orden");
+            if (asc) element.addClass("orden_asc");
+            else element.addClass("orden_desc");
+    }
+        //agenda origen
+     function myFunction_Origen(id) {
+            //console.log("Hello World");
+            var myHeaders = new Headers();
+            myHeaders.append("Accept", "application/json, text/plain, /");
+            myHeaders.append("Accept-Language", "es-ES,es;q=0.9,en;q=0.8");
+            myHeaders.append("Access-Control-Allow-Headers", "X-Requested-With,content-type");
+            myHeaders.append("Access-Control-Allow-Methods", "GET");
+            myHeaders.append("Access-Control-Allow-Origin", "*");
+            myHeaders.append("Connection", "keep-alive");
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Origin", "http://pruebas.transportauto.es:8083");
+            myHeaders.append("Referer", "http://pruebas.transportauto.es:8083/");
+            myHeaders.append("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36");
+
+            
+
+            var raw = '{"username":"atencioncliente_transportauto","password":"123456","applicationName":"TransportAuto"}';
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+                fetch("http://apiusers.transportauto.es/api/user/authenticate", requestOptions)
+                .then(function(serverPromise){ 
+                    serverPromise.json()
+                        .then(function (usuario) { 
+                            //console.log("usuario: "+usuario.token); 
+                                /*recuperamos datos de la agenda del usuario*/ 
+                            var headers = new Headers();
+                            headers.append("Accept", "application/json, text/plain, /");
+                            headers.append("Accept-Language", "es-ES,es;q=0.9,en;q=0.8");
+                            headers.append("Access-Control-Allow-Headers", "X-Requested-With,content-type");
+                            headers.append("Access-Control-Allow-Methods", "GET");
+                            headers.append("Access-Control-Allow-Origin", "*");
+                            headers.append("Connection", "keep-alive");
+                            headers.append("Content-Type", "application/json");
+                            headers.append("Origin", "http://pruebas.transportauto.es:8083");
+                            headers.append("Referer", "http://pruebas.transportauto.es:8083/");
+                            headers.append("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36");
+                            headers.append("Authorization", "Bearer " + usuario.token);
+                           
+
+                            var requestOptions2 = {
+                                method: 'GET',
+                                headers: headers,
+                                // body: raw,
+                                redirect: 'follow'
+                            };
+
+                                fetch("http://apitra.transportauto.es/api/Agenda/"+id, requestOptions2)
+                            .then(function(serverPromise2){ 
+                                serverPromise2.json()
+                                .then(function(agenda) { 
+                                    //console.log("agenda: " + agenda.contacto); 
+                                    document.getElementById("tipoLugarRecogida").value = agenda.tipoLugar;
+                                    document.getElementById("razonSocial").value = agenda.razonSocial;
+                                    document.getElementById("contacto").value = agenda.contacto;
+                                    document.getElementById("telefono").value = agenda.telefono;
+                                    document.getElementById("inputDireccion").value = agenda.direccion;
+                                    document.getElementById("pais").value = agenda.pais;
+                                    if (agenda.pais == "ESPAÑA") {
+                                        provincias.forEach(function (element) {
+                                            let miSelect = document.getElementById("provinciaSelect");
+                                            let opt = document.createElement("option");
+                                            opt.appendChild(document.createTextNode(element.Nombre));
+                                            opt.value = element.Nombre;
+                                            miSelect.appendChild(opt);
+                                        })
+                                        //var selectedOptionProvincia2 = this.options[provinciaSelect2.selectedIndex];
+                                        municipios.forEach(function (element) {
+                                            let miSelect = document.getElementById("localidadSelect");
+                                            //console.log("provincia_id : "+element.Descripcion);
+                                        
+                                          
+                                            let opt = document.createElement("option");
+                                            opt.appendChild(document.createTextNode(element.Descripcion));
+                                            opt.value = element.Descripcion;
+                                            miSelect.appendChild(opt);
+                                           
+
+                                        })
+                                       
+                                        document.getElementById("provinciaSelect").value = agenda.provincia;
+                                        document.getElementById("localidadSelect").value = agenda.localidad;
+                                        document.getElementById("inputCodigo_postal").value = agenda.cp;
+
+                                        document.getElementById("blockPais").classList.remove("col-md-12");
+                                        document.getElementById("blockPais").classList.add("col-md-4")
+
+                                        document.getElementById("blockProvincia").classList.remove("invisible");
+                                        document.getElementById("blockLocalidad").classList.remove("invisible");
+                                        document.getElementById("codigo_postal").classList.remove("invisible");
+                                        document.getElementById("codigo_postal").classList.remove("col-md-12");
+                                        document.getElementById("codigo_postal").classList.add("col-md-4");
+                                        document.getElementById("direccion").classList.remove("col-md-12");
+                                        document.getElementById("direccion").classList.add("col-md-8");
+                  
+                                    } else {
+                                        document.getElementById("blockProvincia").classList.add("invisible");
+                                        document.getElementById("blockLocalidad").classList.add("invisible");
+                                        document.getElementById("codigo_postal").classList.add("invisible");
+                                        document.getElementById("direccion").classList.remove("col-md-8");
+                                        document.getElementById("direccion").classList.add("col-md-12")
+                                        blockPais.classList.add("col-md-12");
+                                        blockPais.classList.remove("col-md-4")
+                                    }
+                                })
+                                .catch(function(e2){
+                                    console.log(e2);
+                                });
+                            })
+                    })
+                    .catch(function(e){
+                        console.log(e);
+                    });
+                })
+              
+            document.getElementById("collapse_agenda_origen").classList.remove("show");
+        }
+
+        //agenda destino
+        function myFunction_Destino(id) {
+            console.log("Hello World");
+            var myHeaders = new Headers();
+            myHeaders.append("Accept", "application/json, text/plain, /");
+            myHeaders.append("Accept-Language", "es-ES,es;q=0.9,en;q=0.8");
+            myHeaders.append("Access-Control-Allow-Headers", "X-Requested-With,content-type");
+            myHeaders.append("Access-Control-Allow-Methods", "GET");
+            myHeaders.append("Access-Control-Allow-Origin", "*");
+            myHeaders.append("Connection", "keep-alive");
+            myHeaders.append("Content-Type", "application/json");
+            myHeaders.append("Origin", "http://pruebas.transportauto.es:8083");
+            myHeaders.append("Referer", "http://pruebas.transportauto.es:8083/");
+            myHeaders.append("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36");
+
+            
+
+            var raw = '{"username":"atencioncliente_transportauto","password":"123456","applicationName":"TransportAuto"}';
+
+            var requestOptions = {
+                method: 'POST',
+                headers: myHeaders,
+                body: raw,
+                redirect: 'follow'
+            };
+
+                fetch("http://apiusers.transportauto.es/api/user/authenticate", requestOptions)
+                .then(function(serverPromise){ 
+                    serverPromise.json()
+                        .then(function (usuario) { 
+                            //console.log("usuario: "+usuario.token); 
+                                /*recuperamos datos de la agenda del usuario*/ 
+                            var headers = new Headers();
+                            headers.append("Accept", "application/json, text/plain, /");
+                            headers.append("Accept-Language", "es-ES,es;q=0.9,en;q=0.8");
+                            headers.append("Access-Control-Allow-Headers", "X-Requested-With,content-type");
+                            headers.append("Access-Control-Allow-Methods", "GET");
+                            headers.append("Access-Control-Allow-Origin", "*");
+                            headers.append("Connection", "keep-alive");
+                            headers.append("Content-Type", "application/json");
+                            headers.append("Origin", "http://pruebas.transportauto.es:8083");
+                            headers.append("Referer", "http://pruebas.transportauto.es:8083/");
+                            headers.append("User-Agent", "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36");
+                            headers.append("Authorization", "Bearer " + usuario.token);
+                           
+
+                            var requestOptions2 = {
+                                method: 'GET',
+                                headers: headers,
+                                // body: raw,
+                                redirect: 'follow'
+                            };
+
+                                fetch("http://apitra.transportauto.es/api/Agenda/"+id, requestOptions2)
+                            .then(function(serverPromise2){ 
+                                serverPromise2.json()
+                                .then(function(agenda) { 
+                                    console.log("agenda: " + agenda.contacto); 
+                                    document.getElementById("tipoLugarRecogida2").value = agenda.tipoLugar;
+                                    document.getElementById("razonSocial2").value = agenda.razonSocial;
+                                    document.getElementById("contacto2").value = agenda.contacto;
+                                    document.getElementById("telefono2").value = agenda.telefono;
+                                    document.getElementById("inputDireccion2").value = agenda.direccion;
+                                    document.getElementById("pais2").value = agenda.pais;
+                                    if (agenda.pais == "ESPAÑA") {
+                                        provincias.forEach(function (element) {
+                                            let miSelect = document.getElementById("provinciaSelect2");
+                                            let opt = document.createElement("option");
+                                            opt.appendChild(document.createTextNode(element.Nombre));
+                                            opt.value = element.Nombre;
+                                            miSelect.appendChild(opt);
+                                        })
+                                        //var selectedOptionProvincia2 = this.options[provinciaSelect2.selectedIndex];
+                                        municipios.forEach(function (element) {
+                                        let miSelect = document.getElementById("localidadSelect2");
+                                        //console.log("provincia_id : "+element.Descripcion);
+                                        
+                                          
+                                        let opt = document.createElement("option");
+                                        opt.appendChild(document.createTextNode(element.Descripcion));
+                                        opt.value = element.Descripcion;
+                                        miSelect.appendChild(opt);
+                                           
+
+                                        })
+                                       
+                                        document.getElementById("provinciaSelect2").value = agenda.provincia;
+                                        document.getElementById("localidadSelect2").value = agenda.localidad;
+                                        document.getElementById("inputCodigo_postal2").value = agenda.cp;
+
+                                        document.getElementById("blockPais2").classList.remove("col-md-12");
+                                        document.getElementById("blockPais2").classList.add("col-md-4")
+
+                                        document.getElementById("blockProvincia2").classList.remove("invisible");
+                                        document.getElementById("blockLocalidad2").classList.remove("invisible");
+                                        document.getElementById("codigo_postal2").classList.remove("invisible");
+                                        document.getElementById("codigo_postal2").classList.remove("col-md-12");
+                                        document.getElementById("codigo_postal2").classList.add("col-md-4");
+                                        document.getElementById("direccion2").classList.remove("col-md-12");
+                                        document.getElementById("direccion2").classList.add("col-md-8");
+                  
+                                    } else {
+                                        document.getElementById("blockProvincia2").classList.add("invisible");
+                                        document.getElementById("blockLocalidad2").classList.add("invisible");
+                                        document.getElementById("codigo_postal2").classList.add("invisible");
+                                        document.getElementById("direccion2").classList.remove("col-md-8");
+                                        document.getElementById("direccion2").classList.add("col-md-12")
+                                        blockPais.classList.add("col-md-12");
+                                        blockPais.classList.remove("col-md-4")
+                                    }
+                                })
+                                .catch(function(e2){
+                                    console.log(e2);
+                                });
+                            })
+                    })
+                    .catch(function(e){
+                        console.log(e);
+                    });
+                })
+              
+            document.getElementById("collapse_agenda_destino").classList.remove("show");
+        }
+</script>
+

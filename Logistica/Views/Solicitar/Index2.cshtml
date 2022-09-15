@@ -1,0 +1,479 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout_mod.cshtml";
+}
+
+@section head {
+    <title>GrupoCV | 2019</title>
+    <meta name="description" content="GrupoCV">
+    <meta name="keywords" content="asociación comerciantes vehículos, derechos reales, polizas flotantes, garantías mecánicas, simulador financiero, estadísticas ventas vehículos nuevos,noticias, asociación coches,contratos de compra-venta, hojas de reclamación">
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+@model List<Logistica.Models.AutomovilComercial>
+    
+
+<style>
+    /*Estilo del Carrusel*/
+
+    div.caption {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        background-color: #0177c2;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.caption2 {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        background-color: #b42659;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.caption3 {
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        background-color: #b42659;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.destaca {
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: -50px;
+        right: 2px;
+    }
+
+
+    .modal-content {
+        margin-top: 10% !important;
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+        width: 100% !important;
+    }
+
+
+    .modal-dialog {
+        width: 65% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /*}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}*/
+
+
+
+    /*.modal-content {
+        height: auto !important;
+        min-height: 100% !important;
+        border-radius: 0 !important;
+        background-color: #ececec !important
+    }*/
+
+
+    /*.modal-dialog {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width:none !important;
+
+    }
+    .modal-header {
+        border-bottom: 1px solid #9ea2a2 !important;
+    }
+
+    .modal-footer {
+        border-top: 1px solid #9ea2a2 !important;
+    }*/
+
+
+    /*************** Custom Carousel ***************/
+
+    .custom-carousel .item {
+        padding-right: 20px;
+    }
+
+    .custom-carousel.show-one-slide .item {
+        padding-right: 0;
+    }
+
+    .invisible {
+        display: none;
+    }
+
+    .btn-delete-item-orange {
+        border: 1px solid orangered !important;
+        color: orangered !important;
+        background-color: transparent;
+        margin-top: 25px !important;
+    }
+
+    hr {
+        margin-top: 2rem;
+    }
+
+    #vehiculoMoto table thead {
+        padding: 10px;
+        padding-right: 14px;
+        border-bottom: 1px solid #111;
+        background-color: #3b61aa;
+        color: #fff;
+    }
+
+    .btnAgregar{
+        color: #3B61AA!important;
+        font-weight: bold;
+        border-color:#3B61AA!important;
+        background-color: transparent;
+    }
+</style>
+
+
+
+<div class="container">
+
+    <!--*******************************************************************************************************************************************************************-->
+    <!--4. **********************************************3. CONTENIDO  DE CONTRATACIÓN TRANSPORTE *************************************************************************************-->
+    <!--****************************************************************************************************************************************************************-->
+
+    <section id="contrato2" class="content-page mt-first-section-other-page">
+        <!-- Horizontal Steppers -->
+        <div class="container-fluid mt20">
+            <div class="md-stepper-horizontal orange">
+                <div class="md-step active editable">
+                    <div class="md-step-circle"><span>1</span></div>
+                    <div class="md-step-title">Datos Transporte</div>
+                    <div class="md-step-bar-left"></div>
+                    <div class="md-step-bar-right"></div>
+                </div>
+                <div class="md-step active vehicles">
+                    <div class="md-step-circle"><span>2</span></div>
+                    <div class="md-step-title">Vehículos</div>
+                    <div class="md-step-bar-left"></div>
+                    <div class="md-step-bar-right"></div>
+                </div>
+                <div class="md-step">
+                    <div class="md-step-circle"><span>3</span></div>
+                    <div class="md-step-title">Realizar Pago</div>
+                    <div class="md-step-bar-left"></div>
+                    <div class="md-step-bar-right"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /. end Horizontal Steppers -->
+        <!--contenido step 2-->
+
+        <div class="container">
+            <div class="row ">
+                <div class="col-lg-12">
+                    <div class="box-content-contrato">
+                        <div class="row mt20">
+                            <div class="col-md-8">
+                                <h4 class="blue-color-bold2"><strong>VEHÍCULOS</strong></h4>
+                            </div>
+                            <div class="col-md-4">
+                            </div>
+                        </div>
+                        <form id='CreateVehiculo' action='Index2' method='post'>
+
+                            <!--datos comunes autorización-->
+                            <label class="mt20">Tipo de los vehiculos a transportar</label>
+                            <div class="row anti-row ">
+                                <!--  <div class="col-8 col-md-2 plr2">-->
+                                <div class="col-8 col-md-3 plr2">
+                                    <select class="form-control" name="claseVehiculo" id="tipoVehiculo">
+                                        <option value="ab" disabled selected>SELECCIONA</option>
+                                        <option value="Turismo-Comercial" data-select2-id="1804">AUTOMOVIL-COMERCIAL</option>
+                                        <option value="Industrial" data-select2-id="1822">INDUSTRIAL</option>
+                                        <option value="Autocaravana" data-select2-id="1823">AUTOCARAVANA</option>
+                                        <option value="Tractor" data-select2-id="1824">TRACTOR</option>
+                                        <option value="Moto" data-select2-id="1825">MOTO</option>
+                                    </select>
+                                </div>
+                                <div class="col-4 col-md-1 plr2">
+                                    <a class="btn btn-sm btn-blue-info-tall" data-toggle="modal" data-target="#info_tipo_vehiculo"><i class="fas fa-info-circle"></i></a>
+                                </div>
+                                <div class="col-12 col-md-8 plr2"></div>
+                            </div>
+
+                            <!--listado de vehículos (4 items de ejemplo)-->
+                            <hr class="doted-hr">
+                            <div id="vehiculos">
+                            </div>
+                        </form>
+                            <!--1 item de vehículo de ejemplo-->
+
+                            <hr class="doted-hr">
+                            <!--boton añadir vehículos
+        <div id="btnAñadir" class="text-right mt20">
+            <button class="blue-color-link  btn-add-vehiculos" form="CreateForm" type="submit"><i class="fas fa-plus"></i> Añadir vehículos </button>
+        </div>-->
+                            <!--tabla para vehiculos y motos-->
+                            <div id="vehiculoMoto">
+                                <table class="table table-striped display ">
+                                    <thead>
+                                        <tr id="Turismo-Comercial" role="row">
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Tipo<span class="ordenDefault"></span> </th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Marca <i class="bi bi-caret-up-fill"></i></th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Modelo <i class="bi bi-caret-up-fill"></i></th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Año <i class="bi bi-caret-up-fill"></i></th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Version <i class="bi bi-caret-up-fill"></i></th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Matricula<i class="bi bi-caret-up-fill"></i></th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Acciones<i class="bi bi-caret-up-fill"></i></th>
+                                        </tr>
+
+                                        <tr id="otrosVehiculos" class="invisible" role="row">
+
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Marca <i class="bi bi-caret-up-fill"></i></th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Modelo <i class="bi bi-caret-up-fill"></i></th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Alto<span class="ordenDefault"></span> </th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Largo <i class="bi bi-caret-up-fill"></i></th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Peso <i class="bi bi-caret-up-fill"></i></th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Matricula o bastidor<i class="bi bi-caret-up-fill"></i></th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Acciones<i class="bi bi-caret-up-fill"></i></th>
+
+                                        </tr>
+                                        <tr id="Moto" class="invisible" role="row">
+
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Marca <i class="bi bi-caret-up-fill"></i></th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Modelo <i class="bi bi-caret-up-fill"></i></th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Año <i class="bi bi-caret-up-fill"></i></th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Version <i class="bi bi-caret-up-fill"></i></th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Matricula<i class="bi bi-caret-up-fill"></i></th>
+                                            <th class="orden ordenDefault" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1">Acciones<i class="bi bi-caret-up-fill"></i></th>
+                                        </tr>
+                                            
+                                    </thead>
+                                    <tbody id="datoTabla">
+                                        @if (Model != null)
+                                        {
+
+                                            foreach (var item in Model)
+                                            {
+                                                @Html.Hidden("datoClaseVehiculo", item.claseVehiculo)
+                                                
+                                                <tr>
+                                                    <td>
+                                                        @Html.DisplayFor(m => item.tipoVehiculo)
+
+                                                    </td>
+
+                                                    <td>
+                                                        @Html.DisplayFor(m => item.marcaTurismoComercial)
+
+                                                    </td>
+
+                                                    <td>
+                                                        @Html.DisplayFor(m => item.modeloTurismoComercial)
+
+                                                    </td>
+
+                                                    <td>
+                                                        @Html.DisplayFor(m => item.aniosTurismoComercial)
+
+                                                    </td>
+
+                                                    <td>
+                                                        @Html.DisplayFor(m => item.versionTurismosComercial)
+
+                                                    </td>
+
+                                                    <td>
+                                                        @Html.DisplayFor(m => item.matriculaTurismosComercial)
+
+                                                    </td>
+                                                    <td>
+                                                        <form action="Index2" method="post">
+                                                            <!--Html.HiddenFor(m=>item.id,new { Name="id",Value = item.id })-->
+                                                            @Html.Hidden("id", item.id)
+
+                                                            <input type="hidden" name="accion" value="Eliminar" />
+                                                            <button id="btnEliminar" class="btn btn-delete" type="submit"><i class="fas fa-trash-alt" data-toggle="tooltip" data-placement="top" title="Eliminar dirección" onclick="activarCrear()"></i></button>
+                                                        </form>
+
+
+                                                    </td>
+
+                                                </tr>
+                                            }
+
+
+                                        }
+
+                                    </tbody>
+                                </table>
+                            </div>
+                            <!---->
+                            <!--datos comunes autorización-->
+                            <form action="Calcular" method="post">
+                                <label class="mt10 mt-20-mv">Fecha de disponibilidad de los vehículos</label>
+                                <div class="row anti-row align-items-center">
+                                    <div class="col-4 col-lg-3 plr2">
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i class="far fa-calendar-alt"></i>
+                                                </span>
+                                            </div>
+                                            <input type="text" name="fecha" id="fecha" class="form-control datepickers_custom" placeholder="Selecciona...">
+                                        </div>
+                                    </div>
+                                    <div class="col-2 col-lg-1 plr2">
+                                        <a class="btn btn-sm btn-blue-info-tall" data-toggle="modal" data-target="#info_fecha_disponibilidad"><i class="fas fa-info-circle"></i></a>
+                                    </div>
+                                    <div class="col-4 col-lg-2 plr2">
+                                        <select name="estado" class="form-control">
+                                            <option value="" disabled selected>Estado...</option>
+                                            <option value="arranca">Arranca</option>
+                                            <option value="no_arranca">No arranca pero puede rodar</option>
+                                            <option value="internacional">Siniestro/No puede rodar</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-2 col-lg-1 plr2">
+                                        <a class="btn btn-sm btn-blue-info-tall" data-toggle="modal" data-target="#info_estado"><i class="fas fa-info-circle"></i></a>
+                                    </div>
+                                    <div class="col-4 col-lg-2 plr2">
+
+                                        <select name="tipoEnvio" class="form-control">
+                                            <option value="" disabled selected>Tipo de envio</option>
+                                            <option value="Normal">Normal</option>
+                                            <option value="Express">Express</option>
+
+                                        </select>
+                                    </div>
+
+                                    <div class="col-12 col-lg-3 plr2 text-lg-right">
+                                        <ul class="list-inline d-flex text-right justify-content-left align-items-center">
+                                            <li class="list-inline-item">
+                                                ¿Es necesaria autorización?
+                                            </li>
+                                            <li class="list-inline-item text-right">
+                                                <label class="switch">
+                                                    <input name="autorizacion" id="autorizacion" type="checkbox">
+                                                    <span class="slider round"></span>
+                                                </label>
+                                            </li>
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <!--botones anteriro y siguiente-->
+                                <div class="row  align-items-center  mt20">
+                                    <div class="col-6">
+                                        <a class="btn btn-custom" href="@Url.Content("~/Solicitar/Index")">
+                                            <i class="fas fa-chevron-left"></i> Anterior
+                                        </a>
+                                    </div>
+                                    <div class="col-6 text-right">
+                                        <button type="submit" class="btn btn-custom">
+                                            Siguiente <i class="fas fa-chevron-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </form>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+
+
+        <!-- Modal fecha disponibilidad -->
+        <div class="modal fade" id="info_fecha_disponibilidad" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">SELECCIONA FECHA DE DISPONIBILIDAD</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-justify">
+                            Fecha que indica cuando el vehículo estará disponible para recoger.
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-blue" data-dismiss="modal">Cerrar</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal fecha disponibilidad -->
+        <div class="modal fade" id="info_estado" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">ESTADO DEL VEHÍCULO</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-justify">
+                            Lorem ipsum
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-blue" data-dismiss="modal">Cerrar</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Modal tipo de vehiculo -->
+        <div class="modal fade" id="info_tipo_vehiculo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">SELECCIONA TIPO DE VEHÍCULO</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="text-justify">
+                            Puedes añadir:
+                            <ul>
+                                <li>Los turismos que entren en un camión</li>
+                                <li>Las motos que quieras (no hay límite)</li>
+                                <li>El resto de vehículos de manera unitaria</li>
+                            </ul>
+                        </p>
+                        <p class="text-justify mt20">
+                        </p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-blue" data-dismiss="modal">Cerrar</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+<script src="~/js/extraIndex2.js"></script>

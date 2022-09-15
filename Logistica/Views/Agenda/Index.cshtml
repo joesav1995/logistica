@@ -1,0 +1,299 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout_mod.cshtml";
+}
+
+
+@*<script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>*@
+
+@section head {
+    <title>GrupoCV | 2019</title>
+    <meta name="description" content="GrupoCV">
+    <meta name="keywords" content="asociación comerciantes vehículos, derechos reales, polizas flotantes, garantías mecánicas, simulador financiero, estadísticas ventas vehículos nuevos,noticias, asociación coches,contratos de compra-venta, hojas de reclamación">
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+<style>
+    /*Estilo del Carrusel*/
+
+    div.caption {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        background-color: #0177c2;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.caption2 {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        background-color: #b42659;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.caption3 {
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        background-color: #b42659;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.destaca {
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: -50px;
+        right: 2px;
+    }
+
+
+    .modal-content {
+        margin-top: 10% !important;
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+        width: 100% !important;
+    }
+
+
+    .modal-dialog {
+        width: 65% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /*}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}*/
+
+
+
+    /*.modal-content {
+        height: auto !important;
+        min-height: 100% !important;
+        border-radius: 0 !important;
+        background-color: #ececec !important
+    }*/
+
+
+    /*.modal-dialog {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width:none !important;
+
+    }
+    .modal-header {
+        border-bottom: 1px solid #9ea2a2 !important;
+    }
+
+    .modal-footer {
+        border-top: 1px solid #9ea2a2 !important;
+    }*/
+
+
+    /*************** Custom Carousel ***************/
+
+    .custom-carousel .item {
+        padding-right: 20px;
+    }
+
+    .custom-carousel.show-one-slide .item {
+        padding-right: 0;
+    }
+</style>
+
+
+
+    <div class="container">
+        <!--*******************************************************************************************************************************************************************-->
+        <!--**********************************************5 CONTENIDO de AGENDA*************************************************************************************-->
+        <!--****************************************************************************************************************************************************************-->
+
+        <div class="content-page mt-first-section-other-page" id="agenda">
+            <section class="pb-section">
+                <div class="container">
+                    <!--botón abre modal con información -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="blue-color-bold2">AGENDA <a class="btn btn-sm btn-blue-info" data-toggle="modal" data-target="#info_agenda_direcciones"><i class="fas fa-info-circle"></i></a></h3>
+                        </div>
+                        <div class="col-md-6 text-right">
+                        </div>
+                    </div>
+                    <!-- Modal sigue tu envio -->
+                    <div class="modal fade" id="info_agenda_direcciones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">TRANSPORTES GUARDADOS</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-justify">
+                                        Aquí puedes acceder al historial de los destinos y orígenes a los que has realizado transportes.
+                                    </p>
+                                    <p class="text-justify mt20">
+                                        Si necesitas ayuda, no dudes en ponerte en contacto con nuestro personal cualificado que le asesorará en lo que necesite, al teléfono <strong>902 106 925</strong> o por email en el apartado superior de "pregúntanos". Puedes consultar si lo deseas también, las Preguntas Frecuentes
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-blue" data-dismiss="modal">Cerrar</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--botón añadir nueva dirección -->
+                    <div class="row pt-btn-modal">
+                        <div class="col-md-6">
+                        </div>
+                        <div class="col-md-6 text-right">
+                            <a class="btn btn-sm btn-blue-info" href="@Url.Content("~/Agenda/Nueva")"><i class="fas fa-plus"></i> Añadir nueva dirección</a>
+                        </div>
+                    </div>
+                    <!--datatables direcciones-->
+                    <div class="pt-datatables">
+                        <!--tabla-->
+                        <table class="display datatable-transportauto" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Tipo de lugar</th>
+                                    <th>Razón social</th>
+                                    <th>Contacto</th>
+                                    <th>Teléfono</th>
+                                    <th>Dirección</th>
+                                    <th>CP</th>
+                                    <th>Localidad</th>
+                                    <th>Provincia</th>
+                                    <th class="text-center">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>CAMPA</td>
+                                    <td>SETI SL	</td>
+                                    <td>CAMPA</td>
+                                    <td>999885566</td>
+                                    <td>ctra. fuencarral 44</td>
+                                    <td>2108</td>
+                                    <td>Alcobendas</td>
+                                    <td>Madrid</td>
+                                    <td align="center">
+                                        <a class="btn btn-xs btn-detail" data-toggle="modal" data-target="#modal_detalles"><i class="fas fa-search" data-toggle='tooltip' data-placement='top' title='ver detalles'></i></a>
+                                        <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='Editar detalles' href="@Url.Content("~/Agenda/Edit")"><i class="far fa-edit"></i></a>
+                                        <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar dirección'></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>CAMPA</td>
+                                    <td>TRANSPORTAUTO SL	</td>
+                                    <td>TALLER</td>
+                                    <td>985623484</td>
+                                    <td>calle prueba 55</td>
+                                    <td>2199</td>
+                                    <td>Navia</td>
+                                    <td>Asturias</td>
+                                    <td align="center">
+                                        <a class="btn btn-xs btn-detail" data-toggle="modal" data-target="#modal_detalles"><i class="fas fa-search" data-toggle='tooltip' data-placement='top' title='ver detalles'></i></a>
+                                        <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='Editar detalles' href="@Url.Content("~/Agenda/Edit")"><i class="far fa-edit"></i></a>
+                                        <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar dirección'></i></a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>CAMPA</td>
+                                    <td>DRAKHAR	</td>
+                                    <td>TALLER</td>
+                                    <td>659328412</td>
+                                    <td>calle Lorem 5</td>
+                                    <td>28780</td>
+                                    <td>Viveiro</td>
+                                    <td>Lugo</td>
+                                    <td align="center">
+                                        <a class="btn btn-xs btn-detail" data-toggle="modal" data-target="#modal_detalles"><i class="fas fa-search" data-toggle='tooltip' data-placement='top' title='ver detalles'></i></a>
+                                        <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='Editar detalles' href="@Url.Content("~/Agenda/Edit")"><i class="far fa-edit"></i></a>
+                                        <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar dirección'></i></a>
+                                    </td>
+                                </tr>
+                        </table>
+
+                    </div>
+
+                    <!-- Modal borrar elemento -->
+                    <div class="modal fade" id="modal_delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">ELIMIAR DIRECCIÓN</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <h4 class="text-center gray-color mt20">¿Estás seguro de que quieres eliminar esta dirección?</h4>
+
+                                    <div class="row mt20">
+                                        <div class="col-6 text-center">
+                                            <a class="btn btn-danger white-color w-100" data-dismiss="modal"><i class="far fa-window-close"></i> No, cancelar</a>
+                                        </div>
+                                        <div class="col-6 text-center">
+                                            <a class="btn btn-blue white-color w-100"><i class="fas fa-trash-alt"></i> Sí, borrar</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal detalles dirección -->
+                    <div class="modal fade" id="modal_detalles" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">DETALLES DIRECCIÓN</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <div class="box-simple-line">
+                                        <!--direccion origen-->
+                                        <!--   <b class="blue-color-bold">DATOS DE ORIGEN</b>-->
+                                        <p class="mt10"><i class="fas fa-map-marked-alt"></i> Campa</p>
+                                        <p><i class="fas fa-building"></i> Razón social S.L</p>
+                                        <!--datos contacto origen-->
+                                        <p><i class="fas fa-user"></i> Laura Fernández Fernández</p>
+                                        <p><i class="fas fa-phone"></i> 677885599</p>
+                                        <p><i class="fas fa-map-marker-alt"></i>  Calle Origen, 28001 Alcobendas, Madrid</p>
+                                        <p><i class="far fa-comment"></i> Aquí van las observaciones de haberlas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        </div>
+

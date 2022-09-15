@@ -1,0 +1,711 @@
+
+#accordion1 > .nav-link[data-toggle].collapsed:after {
+    content: "▾";
+    color:#3B61AA!important;
+}
+#accordion1 > .nav-link[data-toggle]:not(.collapsed):after {
+    content: "▴";
+    color:#3B61AA!important;
+}
+.link-arrow[data-toggle].collapsed:after{
+    content: "▾";
+    color:#3B61AA!important;
+}
+.link-arrow[data-toggle]:not(.collapsed):after {
+    content: "▴";
+    color:#3B61AA!important;
+}
+
+
+.min-h-content-empleado{
+   /* min-height:calc(100vh - 77px );*/
+}
+
+body{
+    /*background-color:#f8f9fa ;*/
+}
+.menu-horizontal{
+    border-bottom:2px solid #3B61AA;
+}
+.mtb0{
+    margin-top:5px;
+    margin-bottom:0px;
+}
+.mb0{
+    margin-bottom:0px;
+}
+
+
+@media(min-width:1201px){
+
+    .mt20-up1200{
+        margin-top:20px;
+    }
+
+}
+
+@media(min-width:1200px){
+    .mt-10-up1200{
+        margin-top:-10px;
+    }
+}
+.pointer{
+    cursor:pointer;
+}
+
+
+.select2 {
+    width: 100%!important; /* overrides computed width, 100px in your demo */
+}
+.select2-container--default .select2-selection--single {
+    background-color: #fff;
+    border: 1px solid #ced4da;
+    border-radius:  0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    color: #495057;
+    padding: 0.275rem 0.75rem;
+
+
+
+}
+.select2-container .select2-selection--single {
+    box-sizing: border-box;
+    cursor: pointer;
+    display: block;
+    height: 36px;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.select2-container .select2-selection--single .select2-selection__rendered {
+     padding-left: 0px;
+}
+
+
+
+@media (max-width:1025px){
+    .h-100{
+        height:auto!important;
+    }
+}
+@media(max-width:450px){
+    .btn-blue{
+        font-size:14px;
+    }
+}
+
+@media(max-width:320px){
+    .btn-blue{
+        font-size:10px;
+    }
+}
+@media(min-width:800px) and (max-width:1280px){
+    .btn-blue{
+        font-size:14px;
+    }
+}
+
+/**************************MENU HORIZONTAL*******************************/
+
+@media(max-width:767px){
+    .logo-menu {
+        margin-top: 0;
+    }
+}
+.btn-menu-modal{
+    background-color: #3B61AA;
+    color: #fff!important;
+    padding: 15px;
+}
+.btn-menu-modal:hover{
+    background-color: #ccc;
+    color: #333!important;
+    padding: 15px;
+}
+.btn-menu-notif{
+    cursor:pointer;
+    background-color: transparent;
+    color: orangered!important;
+    padding: 5px;
+    font-size:18px;
+}
+.btn-menu-notif:hover{
+    background-color: transparent;
+    color: #333!important;
+    padding: 5px;
+}
+.cero-notif{
+    color:#ccc!important;
+}
+.main-searcher  > .form-control:not(:first-child), .input-group > .custom-select:not(:first-child) {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width:120px;
+
+}
+.main-searcher .input-group-text {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+.menu-horizontal ul{
+    margin-bottom:8px!important;
+}
+
+#calendar {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.fc-content{
+    color:#fff!important;
+}
+.modal-xl{
+    width:80%!important;
+    max-width:80%!important;
+}
+
+
+.doted-hr-low {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    border-top: 2px dotted #3B61AA;
+}
+
+/*calculadora*/
+
+
+@media(max-width:1400px){
+    /*calculadora*/
+    .type-price{
+        font-size:16px;
+    }
+    .label-price{
+        font-size:10px;
+    }
+    .plr-price-calc{
+        padding-left:10px;
+        padding-right:10px;
+    }
+}
+@media(max-width:900px){
+    .btn-menu-modal{
+        background-color: transparent;
+        color: #3B61AA!important;
+        padding: 5px;
+
+    }
+    .btn-menu-modal:hover{
+        background-color: #ccc;
+        color: #333!important;
+        padding: 5px;
+    }
+
+    .modal-xl{
+        width:100%!important;
+        max-width:100%!important;
+    }
+
+}
+@media(max-width:1280px){
+    .modal-xl{
+        width:95%!important;
+        max-width:95%!important;
+    }
+}
+.salto-mv{
+    display:none;
+}
+@media(max-width:1200px){
+    .salto-mv{
+        display:inline
+    }
+}
+/**************************MENU VERTICAL + container********************************/
+.bg-sidebar {
+    background-color: #FFF !important;
+    color:#3B61AA!important;
+}
+
+#sidebar .nav-item {
+    color: #3B61AA;
+    background-color: transparent;
+    /*border-bottom:1px solid rgba(214, 225, 235, 0.2);*/
+}
+
+#sidebar .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    color: #42BFE8!important;
+    border-radius:0;
+    background-color: transparent;
+}
+
+#sidebar{
+    position:fixed;
+    top:70px;
+    left:0px;
+    width: 240px;
+    height: 100vh;
+    overflow-y: auto;
+}
+
+#sidebar::-webkit-scrollbar-track
+{
+    border: 1px solid #3B61AA;
+    background-color: #F5F5F5;
+}
+
+#sidebar::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: #F5F5F5;
+}
+
+#sidebar::-webkit-scrollbar-thumb
+{
+    background-color: #3B61AA;
+}
+
+#content-private {
+    margin-left: 240px;
+    padding:10px;
+     min-height:calc(100vh - 77px );
+}
+
+@media(min-width:1024px)and (max-width: 1366px){
+    #sidebar{
+        height: 80vh;
+        overflow-y: auto;
+    }
+}
+
+@media (max-width:767px){
+
+    #sidebar {
+       /* position:relative;
+        top:auto;
+        left:auto;*/
+        position:fixed;
+        top:100px;
+        left:0;
+        z-index:9999;
+        width: 100%;
+        height: 80vh;
+        overflow-y: auto;
+    }
+    #content-private{
+        margin-left:0px;
+    }
+}
+
+/*dashboard*/
+.panel-dashboard-nohover:hover{
+    background-color:#fff!important;
+}
+
+.panel-small{
+    padding-top:5px;
+    padding-bottom:5px;
+}
+.mt-box-small{
+    margin-top:10px;
+}
+
+.bg-transf-pend{
+    background-color:#fff;
+    background-image:url("../../img/privada_cliente/dashboard/btn_transf_pendiente.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+
+
+}
+
+.panel-dashboard:hover .bg-transf-pend{
+    background-color:rgba(59, 97, 170, 1);
+    background-image:url("../../img/privada_cliente/dashboard/btn_transf_pendiente_hover.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+}
+
+.bg-chat{
+    background-color:#fff;
+    background-image:url("../../img/privada_cliente/dashboard/btn_chat.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+
+
+}
+
+.panel-dashboard:hover .bg-chat{
+    background-color:rgba(59, 97, 170, 1);
+    background-image:url("../../img/privada_cliente/dashboard/btn_chat_hover.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+}
+
+.bg-solicitud-transp
+{
+    background-color:#fff;
+    background-image:url("../../img/privada_cliente/dashboard/btn_solicitud_transportista.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+
+
+}
+
+.panel-dashboard:hover .bg-solicitud-transp
+{
+    background-color:rgba(59, 97, 170, 1);
+    background-image:url("../../img/privada_cliente/dashboard/btn_solicitud_transportista_hover.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+}
+
+.bg-autoasignar-transp
+{
+    background-color:#fff;
+    background-image:url("../../img/privada_cliente/dashboard/btn_autoasignar_transporte.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+
+
+}
+
+.panel-dashboard:hover .bg-autoasignar-transp
+{
+    background-color:rgba(59, 97, 170, 1);
+    background-image:url("../../img/privada_cliente/dashboard/btn_autoasignar_transporte_hover.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+}
+
+.bg-revisar-banco
+{
+    background-color:#fff;
+    background-image:url("../../img/privada_cliente/dashboard/btn_revisar_banco.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+    -moz-transition: all .1s ease-in;
+    -o-transition: all .1s ease-in;
+    -webkit-transition: all .1s ease-in;
+    transition: all .1s ease-in;
+
+
+}
+
+.panel-dashboard:hover .bg-revisar-banco
+{
+    background-color:rgba(59, 97, 170, 1);
+    background-image:url("../../img/privada_cliente/dashboard/btn_revisar_banco_hover.png");
+    background-repeat: no-repeat;
+    background-size:contain;
+    background-position:50% 50%;
+    height:100px;
+}
+
+.panel-small{
+    padding-top:10px;
+}
+
+@media(min-width:1200px) and (max-width:1366px){
+    .panel-dashboard {
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 0;
+        padding-bottom:0;
+    }
+
+    .panel-dashboard h5{
+        font-size:18px;
+    }
+
+    .panel-small{
+        padding-top:11px;
+    }
+}
+
+/**************************2. PEDIDOS**************************************/
+
+
+/***** 2.1 CREAR PEDIDO *********/
+.fixed-box-crear-pedido{
+    position:fixed;
+    top:90px;
+    right:20px;
+    width:calc(100vw/5 );
+}
+
+.price-calc{
+    font-size:18px;
+}
+
+.plr-price-calc-create{
+    padding:5px;
+}
+.mt2{
+    margin-top:2px;
+}
+
+.label-price-create{
+    display: none;
+}
+
+@media(max-width:1025px){
+    .fixed-box-crear-pedido{
+        position:relative;
+        top:initial;
+        right:inherit;
+        width: 100%;
+    }
+}
+@media(min-width:1026px) and (max-width:1366px) {
+    .fixed-box-crear-pedido {
+        right: 10px;
+    }
+}
+@media(min-width:993px) and (max-width:1366px){
+
+    .price-calc{
+        font-size:12px;
+        padding:10px;
+    }
+    .price-manual h3{
+        font-size:14px;
+        margin-bottom:3px;
+    }
+    .price-manual .form-control{
+        height: calc(1.8rem + 2px);
+    }
+
+    .price-manual select.form-control:not([size]):not([multiple]) {
+        height: calc(1.8rem + 2px);
+    }
+
+    .price-manual >.mt10{
+        margin-top:2px;
+    }
+
+    .price-manual > label{
+        margin-bottom:0px;
+    }
+}
+/****2.2  PEDIDO DETALLES******************/
+
+/*pedididos, pedidos detalle*/
+
+.w-timeline{
+    width:50%!important;
+}
+@media(max-width:768px){
+    .w-timeline{
+        width:100%!important;
+    }
+}
+
+@media (min-width:1360px) and (max-width:1444px) {
+    .timeline .event::before {
+        left: 0.5px;
+        top: 20px;
+        min-width: 0;
+        font-size: 13px;
+    }
+    .timeline h3 {
+        font-size: 16px;
+    }
+    .timeline p {
+        padding-top: 20px;
+    }
+    section.lab h3.card-title {
+        padding: 5px;
+        font-size: 16px
+    }
+    .event span{
+        font-size:14px;
+    }
+    .w-timeline{
+        width:100%!important;
+    }
+}
+
+@media (width:1280px) {
+    .timeline .event::before {
+        left: 0.5px;
+        top: 20px;
+        min-width: 0;
+        font-size: 13px;
+    }
+    .timeline h3 {
+        font-size: 16px;
+    }
+    .timeline p {
+        padding-top: 20px;
+    }
+    section.lab h3.card-title {
+        padding: 5px;
+        font-size: 16px
+    }
+    .event span{
+        font-size:14px;
+    }
+    .w-timeline{
+        width:100%!important;
+    }
+}
+/****2.3 LISTADO COCHES PORQUE EL MENU VERTICAL NOS QUITA ANCHO********/
+@media(min-width:989px) and (max-width:1025px){
+    .label-hide-mv{
+        display:inline;
+    }
+
+}
+@media(min-width:989px) and (max-width:1199px){
+/*
+@media(min-width:989px) and (max-width:1025px){
+*/
+    .title-table-resume{
+        display:none!important;
+    }
+}
+
+/************************************************************************/
+/****************************3. ANTESALA***********************************/
+/******************************************************************/
+
+/*tabla columna acciones para pc 1680px y 1600 px y no salten los botones*/
+
+/*@media(min-width:1600px) and (max-width:1680px){*/
+    .antesala-acciones{
+        min-width:90px;
+    }
+/*
+}
+*/
+
+
+/*************************************************************************************************/
+/**********************************************2. FACTURAS*************************************/
+/***************************************************************************************************/
+
+.box-contaplus{
+    border:1px solid red;
+    padding:15px;
+    border-radius:8px;
+}
+
+.color-contaplus{
+    color:#ff0000;
+}
+.btn-contaplus{
+    background-color: #ff0000;
+    color:#fff!important;
+}
+.btn-contaplus:hover{
+    background-color: #ccc;
+    color:#000;
+}
+@media(max-width:1400px){
+    .btn-datatable-xs{
+        padding: 5px;
+        font-size: 0.8rem;
+    }
+}
+
+.btn-datatable-xxs{
+    padding: 5px;
+    font-size: 0.8rem;
+}
+
+.icon-state{
+    font-size:18px;
+}
+@media(min-width:1600px) and (max-width:1680px){
+    .acciones-historico{
+        min-width:160px;
+    }
+}
+
+.acciones-proveedores{
+    min-width:120px;
+}
+
+/************************************************************************/
+/****************************3. ANTESALA***********************************/
+/******************************************************************/
+
+/*tabla columna acciones para pc 1680px y 1600 px y no salten los botones*/
+
+    .acciones-facturacion{
+        min-width:120px;
+    }
+
+
+/****************************TARIFAS TRANSPORTISTAS****************************/
+@media(max-width:392px){
+    .label-shop-mv-big {
+        display:none;
+    }
+}
+
+/******************************USUARIOS TRANSPORTAUTO**************/
+.acciones-usuarios_transp{
+    min-width:100px;
+}
+
+/**********************CAJAS EN GENERAL PARA BOTONES ALINEADOS*********************/
+/**************para que los botones dentro de las cajas blancas de guarar siempre queden en la mismpa posición********************/
+
+
+.box-simple-line.box-btn-save
+{
+    padding-bottom:60px;
+}
+.div-btn-save{
+    position:absolute;
+    right:45px;
+    bottom:20px;
+}
+@media(max-width:1200px){
+    .div-btn-save{
+        margin-top:20px;
+        position:relative;
+        right:auto;
+        bottom:auto;
+    }
+    .box-simple-line.box-btn-save{
+        padding-bottom:auto;
+    }
+}

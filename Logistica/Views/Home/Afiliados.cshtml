@@ -1,0 +1,149 @@
+﻿@{
+    ViewBag.Title = "Empleados";
+    Layout = "~/Views/Shared/_Layout_Afiliados.cshtml";
+}
+
+
+<script src="~/js/afiliados/jquery-2.1.1.js"></script>
+<script src="~/js/afiliados/jquery-2.1.1.min.js"></script>
+
+@*<script src="~/Scripts/jquery.validate.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.js"></script>*@
+
+
+@Scripts.Render("~/bundles/modernizr")
+@Styles.Render("~/css/ancove")
+
+@section head {
+    <title>GrupoCV | 2019</title>
+    <meta name="description" content="GrupoCV">
+    <meta name="keywords" content="asociación comerciantes vehículos, derechos reales, polizas flotantes, garantías mecánicas, simulador financiero, estadísticas ventas vehículos nuevos,noticias, asociación coches,contratos de compra-venta, hojas de reclamación">
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+<style>
+
+
+    /*Estilo del Carrusel*/
+
+    div.caption {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        background-color: #0177c2;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.caption2 {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        background-color: #b42659;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.caption3 {
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        background-color: #b42659;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.destaca {
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: -50px;
+        right: 2px;
+    }
+
+
+    .modal-content {
+        margin-top: 10% !important;
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+        width: 100% !important;
+    }
+
+
+    .modal-dialog {
+        width: 65% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /*}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}*/
+
+
+
+    /*.modal-content {
+        height: auto !important;
+        min-height: 100% !important;
+        border-radius: 0 !important;
+        background-color: #ececec !important 
+    }*/
+
+
+     /*.modal-dialog {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width:none !important;
+
+    }
+    .modal-header {
+        border-bottom: 1px solid #9ea2a2 !important;
+    }
+
+    .modal-footer {
+        border-top: 1px solid #9ea2a2 !important;
+    }*/
+
+
+    /*************** Custom Carousel ***************/
+
+    .custom-carousel .item {
+        padding-right: 20px;
+    }
+
+    .custom-carousel.show-one-slide .item {
+        padding-right: 0;
+    }
+</style>
+
+<section class="ptpb50">
+
+    <div class="container">
+
+
+         
+    </div>
+
+
+
+
+</section>
+
+
+<input type="hidden" id="hiddenId" />
+

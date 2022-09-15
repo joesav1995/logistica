@@ -1,0 +1,418 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout_mod.cshtml";
+}
+
+
+@*<script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>*@
+
+@section head {
+    <title>GrupoCV | 2019</title>
+    <meta name="description" content="GrupoCV">
+    <meta name="keywords" content="asociación comerciantes vehículos, derechos reales, polizas flotantes, garantías mecánicas, simulador financiero, estadísticas ventas vehículos nuevos,noticias, asociación coches,contratos de compra-venta, hojas de reclamación">
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+<style>
+    /*Estilo del Carrusel*/
+
+    div.caption {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        background-color: #0177c2;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.caption2 {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        background-color: #b42659;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.caption3 {
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        background-color: #b42659;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.destaca {
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: -50px;
+        right: 2px;
+    }
+
+
+    .modal-content {
+        margin-top: 10% !important;
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+        width: 100% !important;
+    }
+
+
+    .modal-dialog {
+        width: 65% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /*}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}*/
+
+
+
+    /*.modal-content {
+        height: auto !important;
+        min-height: 100% !important;
+        border-radius: 0 !important;
+        background-color: #ececec !important
+    }*/
+
+
+    /*.modal-dialog {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width:none !important;
+
+    }
+    .modal-header {
+        border-bottom: 1px solid #9ea2a2 !important;
+    }
+
+    .modal-footer {
+        border-top: 1px solid #9ea2a2 !important;
+    }*/
+
+
+    /*************** Custom Carousel ***************/
+
+    .custom-carousel .item {
+        padding-right: 20px;
+    }
+
+    .custom-carousel.show-one-slide .item {
+        padding-right: 0;
+    }
+</style>
+
+
+
+    <div class="container">
+
+        <!--*******************************************************************************************************************************************************************-->
+        <!--**********************************************5 CONTENIDO de MIS FACTURAS*************************************************************************************-->
+        <!--****************************************************************************************************************************************************************-->
+
+        <div class="content-page mt-first-section-other-page" id="facturas">
+            <section class="pb-section">
+                <div class="container">
+                    <!--botón abre modal con información -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="blue-color-bold2">FACTURAS <a class="btn btn-sm btn-blue-info" data-toggle="modal" data-target="#info_facturas"><i class="fas fa-info-circle"></i></a></h3>
+                        </div>
+                        <div class="col-md-6 text-right">
+                        </div>
+                    </div>
+                    <!--contenido de filtros-->
+                    <div id="accordion">
+                        <div class="card card-filter">
+                            <div class="card-header" id="headingOne">
+                                <a class="btn btn-link btn-filter w-100 text-left" data-toggle="collapse" data-target="#filter-box" aria-expanded="true" aria-controls="collapseOne">
+                                    <div class="row">
+                                        <div class="col-11">
+                                            <h5 class="mb-0">
+                                                <i class="fas fa-search"></i> Filtros de búsqueda avanzada
+                                            </h5>
+                                        </div>
+                                        <div class="col-1 text-right">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="filter-box" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body grey-color3">
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="mt10">Nº de factura</label>
+                                            <input type="text" class="form-control " placeholder="Completa...">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="mt10">Fecha inicio</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control datepickers_custom" placeholder="Selecciona...">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="mt10">Fecha Fin</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control datepickers_custom" placeholder="Selecciona...">
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="mt10">Identificador</label>
+                                            <input type="text" class="form-control " placeholder="Completa...">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="mt10">Referencia de pago</label>
+                                            <input type="text" class="form-control " placeholder="Completa...">
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="mt10">Matrícula</label>
+                                            <input type="text" class="form-control " placeholder="Completa...">
+                                        </div>
+                                    </div>
+
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="mt10">Marca</label>
+                                            <select class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4">Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="mt10">Modelo</label>
+                                            <select class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3">Modelo 3</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="mt10">Lugar de origen</label>
+                                            <input type="text" class="form-control " placeholder="Completa...">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="mt10">Lugar de destino</label>
+                                            <input type="text" class="form-control " placeholder="Completa...">
+                                        </div>
+                                    </div>
+
+                                    <div class="text-right">
+                                        <a class="btn btn-blue  mt20 white-color2">Filtrar facturas</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Modal sigue tu envio -->
+                    <div class="modal fade" id="info_facturas" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">FACTURAS</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-justify">
+                                        Visualiza las facturas creadas de los servicios contratados, descarga al momento las facturas generadas en pdf. Puedes ordenar las facturas por fechas, número de factura o por matrícula del vehículo transportado
+                                    <p class="text-justify mt20">
+                                    </p>
+                                    <p class="text-justify">
+                                        Si necesitas ayuda, no dudes en ponerte en contacto con nuestro personal cualificado que le asesorará en lo que necesite, al teléfono <strong>902 106 925</strong> o por email en el apartado superior de "pregúntanos". Puedes consultar si lo deseas también, las Preguntas Frecuentes
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-blue" data-dismiss="modal">Cerrar</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-datatables mt20">
+                        <!--tabla-->
+                        <table class="display datatable-transportauto" style="width:100%">
+                            <thead>
+                                <tr class="th-table-zip">
+
+                                    <th>Nº factura</th>
+                                    <th>Concepto</th>
+                                    <th>Fecha emisión</th>
+                                    <th>Forma pago</th>
+                                    <th>Referencia de pago</th>
+                                    <th>Base</th>
+                                    <th>IVA</th>
+                                    <th class="text-right">TOTAL</th>
+                                    <th class="text-center">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="td-table-zip">
+
+                                    <td>201900003</td>
+                                    <td>FACTURA	</td>
+                                    <td>14/06/19</td>
+                                    <td>Tarjeta</td>
+                                    <td>200619XXXX</td>
+                                    <td>201,60 €</td>
+                                    <td>42,34 €</td>
+                                    <td align="right">243,94 €</td>
+                                    <td align="center">
+                                        <a class="btn btn-xs btn-pdf" data-toggle='tooltip' data-placement='top' title='Descargar pdf'><img src="../../img/privada_cliente/dowload_pdf.png" /> </a>
+                                        <label class="switch-sm ml10">
+                                            <input class="switch-document" type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                                <tr>
+
+                                    <td>201900002</td>
+                                    <td>ABONO</td>
+                                    <td>12/06/19</td>
+                                    <td>Transferencia</td>
+                                    <td>200619AAAA</td>
+                                    <td>100 €</td>
+                                    <td>42,34 €</td>
+                                    <td align="right">143,94 €</td>
+                                    <td align="center">
+                                        <a class="btn btn-xs btn-pdf" data-toggle='tooltip' data-placement='top' title='Descargar pdf'><img src="../../img/privada_cliente/dowload_pdf.png" /> </a>
+                                        <label class="switch-sm ml10">
+                                            <input class="switch-document" type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+
+                                <tr>
+
+                                    <td>201900001</td>
+                                    <td>FACTURA	</td>
+                                    <td>11/06/19</td>
+                                    <td>Tarjeta</td>
+                                    <td>200619CCCC</td>
+                                    <td>300 €</td>
+                                    <td>42,34 €</td>
+                                    <td align="right">343,94 €</td>
+                                    <td align="center">
+                                        <a class="btn btn-xs btn-pdf" data-toggle='tooltip' data-placement='top' title='Descargar pdf'><img src="../../img/privada_cliente/dowload_pdf.png" /> </a>
+                                        <label class="switch-sm ml10">
+                                            <input class="switch-document" type="checkbox">
+                                            <span class="slider round"></span>
+                                        </label>
+                                    </td>
+                                </tr>
+                        </table>
+                    </div>
+                    <!--exportar a excel o generar zip-->
+                    <h4 class="blue-color-bold2 mt40">¿Quieres exportar a Excel o generar un zip con tus facturas?</h4>
+                    <div class="row mt20">
+                        <div class="col-md-6">
+                            <div class="box-excel">
+                                <h4 class="color-excel"><i class="fas fa-file-excel "></i> EXPORTAR A EXCEL</h4>
+                                <p>Selecciona en la columna "acciones" las facturas a exportar</p>
+                                <div class="row anti-row mt20-pc checks-docs">
+                                    <div class="col-md-6">
+                                        <label class="container">
+                                            Seleccionar Todas
+                                            <input type="checkbox" id="check-select-all-excel">
+                                            <span class="checkmark mt10"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div>
+                                            <a class="btn btn-xs btn-excel w-100" id="btn-export-excel"><i class="fas fa-file-excel"></i> Exportar a Excel</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mt-20-mv">
+                            <div class="box-zip">
+                                <h4 class="color-zip"><i class="far fa-folder-open"></i> CREAR UN .ZIP</h4>
+                                <p>Selecciona en la columna "acciones" las facturas a exportar</p>
+                                <div class="row anti-row mt20-pc checks-docs">
+                                    <div class="col-md-6">
+                                        <label class="container">
+                                            Seleccionar Todas
+                                            <input type="checkbox" id="check-select-all-zip">
+                                            <span class="checkmark mt10"></span>
+                                        </label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div>
+                                            <a class="btn btn-xs btn-zip w-100" id="btn-export-zip"><i class="far fa-folder-open"></i> Exportar a .zip</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--modal avisos-->
+                    <div class="modal fade" id="no_facturas_selected" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title">CUIDADO</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body text-center">
+                                    <i class="fas fa-exclamation-triangle gray-color" style="font-size:100px;"></i><br>
+                                    <h4 class="gray-color mt20">No has seleccionado ninguna factura para exportar</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        </div>

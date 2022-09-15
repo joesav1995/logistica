@@ -1,0 +1,506 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--EN MENU FIXED CON CAJA DE CALCULADORA-->
+<!--*******************************************************************************************************************************************************************-->
+<!--4. **********************************************3. CONTENIDO  DE CONTRATACIÓN TRANSPORTE *************************************************************************************-->
+<!--****************************************************************************************************************************************************************-->
+
+    <section id="contrato1" class="pb-section mt-first-section-with-fixed-price content-page">
+        <div class="bg-orangered-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!--caja resumen de presupuesto-->
+                    <div class="col-4 text-md-left col-cart">
+                        <div class="row align-items-center">
+                            <div class="col-3 content-box-resume2 text-left col-cart">
+                                <img class="img-fluid cart-image-orange" src="../../../img/publica/cart.png" />
+                            </div>
+                            <div class="col-9 col-cart">
+                                <h2 class="white-color2 opensans-bold">
+                                    1498 €<br>
+                                    <p class="iva-text-orange">( iva incluído)</p>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 text-center col-adress col-cart">
+                        <strong><p class="font-label-presupuesto"><i class="fas fa-map-marker-alt"></i>  Origen</p></strong>
+                        <p><span class="text-pc">Calle Origen, 28001</span>Alcobendas, Madrid</p>
+
+                    </div>
+                    <div class="col-4 text-center col-adress col-cart">
+                        <strong><p class="font-label-presupuesto"><i class="fas fa-map-marker-alt"></i>  Destino</p></strong>
+                        <p><span class="text-pc">Calle Destino, 28001</span>Alcobendas, Madrid</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Horizontal Steppers -->
+        <div class="container-fluid mt20 ">
+            <div class="md-stepper-horizontal orange">
+                <div class="md-step active editable">
+                    <div class="md-step-circle"><span>1</span></div>
+                    <div class="md-step-title">Datos Transporte</div>
+                    <div class="md-step-bar-left"></div>
+                    <div class="md-step-bar-right"></div>
+                </div>
+                <div class="md-step">
+                    <div class="md-step-circle"><span>2</span></div>
+                    <div class="md-step-title">Vehículos</div>
+                    <div class="md-step-bar-left"></div>
+                    <div class="md-step-bar-right"></div>
+                </div>
+
+                <div class="md-step">
+                    <div class="md-step-circle"><span>3</span></div>
+                    <div class="md-step-title">Realizar Pago</div>
+                    <div class="md-step-bar-left"></div>
+                    <div class="md-step-bar-right"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- /.Horizontal Steppers -->
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-12">
+                    <!--datos de origen-->
+                    <div class="box-content-contrato  mt10">
+                        <div class="row anti-row align-items-center">
+                            <div class="col-md-6 plr2">
+                                <h4 class="blue-color-bold2"><strong>DATOS DE ORIGEN</strong> <a class="btn btn-sm btn-blue-info" data-toggle="modal" data-target="#info_datos_origen"><i class="fas fa-info-circle"></i></a></h4>
+                            </div>
+                            <div class="col-md-6 white-color  plr2 text-md-right">
+                                <a class="btn btn-blue btn-sm" data-toggle="collapse" href="#collapse_agenda_origen" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <span data-toggle='tooltip' data-placement='top' title='seleccionar dirección'>
+                                        <i class="far fa-address-book"></i> Mi agenda <i class="fas fa-chevron-down"></i>
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Modal info datos origen -->
+                        <div class="modal fade" id="info_datos_origen" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">DATOS DE ORIGEN</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="text-justify">
+                                            Texto a definir
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-blue" data-dismiss="modal">Cerrar</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--collapse direcciones de mi agenda para origen-->
+                        <div class="collapse mt10" id="collapse_agenda_origen">
+                            <div class="card card-body car-white-address">
+                                <!--datatable que se muestra en pcs-->
+                                <div class="pt-datatables  datatables-pc">
+                                    <!--tabla-->
+                                    <table class="display datatable-transportauto" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Tipo de lugar</th>
+                                                <th>Razón social</th>
+                                                <th>Contacto</th>
+                                                <th>Tlfno</th>
+                                                <th>Dirección</th>
+                                                <th>CP</th>
+                                                <th>Localidad</th>
+                                                <th>Provincia</th>
+                                                <th class="text-center">Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>CAMPA</td>
+                                                <td>SETI SL	</td>
+                                                <td>CAMPA</td>
+                                                <td>999885566</td>
+                                                <td>ctra. fuencarral 44</td>
+                                                <td>2108</td>
+                                                <td>Alcobendas</td>
+                                                <td>Madrid</td>
+                                                <td align="center">
+                                                    <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>CAMPA</td>
+                                                <td>TRANSPORTAUTO SL	</td>
+                                                <td>TALLER</td>
+                                                <td>985623484</td>
+                                                <td>calle prueba 55</td>
+                                                <td>2199</td>
+                                                <td>Navia</td>
+                                                <td>Asturias</td>
+                                                <td align="center">
+                                                    <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>CAMPA</td>
+                                                <td>DRAKHAR	</td>
+                                                <td>TALLER</td>
+                                                <td>659328412</td>
+                                                <td>calle Lorem 5</td>
+                                                <td>28780</td>
+                                                <td>Viveiro</td>
+                                                <td>Lugo</td>
+
+                                                <td align="center">
+                                                    <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                </td>
+                                            </tr>
+                                    </table>
+                                </div>
+                                <!--datatable que se muestra en moviles-->
+                                <div class="pt-datatables datatables-mv">
+                                    <!--tabla-->
+                                    <table class="display datatable-transportauto" style="width:100%">
+                                        <thead>
+                                            <tr>
+
+                                                <th>Razón social movil</th>
+                                                <th>Provincia</th>
+                                                <th>Tipo de lugar</th>
+                                                <th>Contacto</th>
+                                                <th>Tlfno</th>
+                                                <th>Dirección</th>
+                                                <th>CP</th>
+                                                <th>Localidad</th>
+                                                <th class="text-center">Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+
+                                                <td>SETI SL	</td>
+                                                <td>Madrid</td>
+                                                <td>CAMPA</td>
+                                                <td>CAMPA</td>
+                                                <td>999885566</td>
+                                                <td>ctra. fuencarral 44</td>
+                                                <td>2108</td>
+                                                <td>Alcobendas</td>
+                                                <td align="center">
+                                                    <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>TRANSPORTAUTO SL	</td>
+                                                <td>Asturias</td>
+                                                <td>TALLER</td>
+                                                <td>CAMPA</td>
+                                                <td>985623484</td>
+                                                <td>calle prueba 55</td>
+                                                <td>2199</td>
+                                                <td>Navia</td>
+                                                <td align="center">
+                                                    <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>DRAKHAR	</td>
+                                                <td>Lugo</td>
+                                                <td>TALLER</td>
+                                                <td>CAMPA</td>
+                                                <td>659328412</td>
+                                                <td>calle Lorem 5</td>
+                                                <td>28780</td>
+                                                <td>Viveiro</td>
+                                                <td align="center">
+                                                    <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                </td>
+                                            </tr>
+                                    </table>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="row anti-row mt20">
+                            <div class="col-md-6 plr2">
+                                <label>Tipo de lugar de origen</label>
+                                <input class="form-control" type="text" placeholder="Completa..." />
+                            </div>
+                            <div class="col-md-6 plr2">
+                                <label>Razón social</label>
+                                <input class="form-control" type="text" placeholder="Completa..." />
+                            </div>
+                        </div>
+                        <div class="row anti-row">
+                            <div class="col-md-6 plr2">
+                                <label>Persona de contacto</label>
+                                <input class="form-control" type="text" placeholder="Completa..." />
+                            </div>
+                            <div class="col-md-6 plr2">
+                                <label>Teléfono de contacto</label>
+                                <input class="form-control" type="text" placeholder="Completa..." />
+                            </div>
+                        </div>
+                        <div class="row anti-row">
+                            <div class="col-md-12 plr2">
+                                <label>Dirección</label>
+                                <input class="form-control" type="text" placeholder="Completa..." />
+                            </div>
+                        </div>
+                        <div class="row anti-row">
+                            <div class="col-md-12 plr2">
+                                <label>Observaciones</label>
+                                <textarea class="form-control" placeholder="Observaciones..."></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--   <hr class="doted-hr">-->
+                    <div class="row anti-row mt20">
+                        <div class="col-lg-12 text-center">
+                            <!--  <ul class="list-inline">
+                              <li class="list-inline-item">-->
+                            <p>Por defecto los datos de destino se han autocompletado con tu información de registro</p>
+                            <a class="btn btn-sm btn-info white-color mt10" data-toggle="tooltip" data-placement="top" title="LLevar dirección de destino a origen"><i class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i> Mover dirección</a>
+
+                            <!--    </li>
+                            <li class="list-inline-item">
+                            </li>
+                        </ul>-->
+
+                        </div>
+                    </div>
+                    <!--   <hr class="doted-hr">-->
+                    <!--datos de destino-->
+                    <div class=" mt20">
+                        <div class="row anti-row align-items-center">
+                            <div class="col-md-8 plr2">
+                                <h4 class="blue-color-bold2"><strong>DATOS DE DESTINO</strong> <a class="btn btn-sm btn-blue-info" data-toggle="modal" data-target="#info_datos_destino"><i class="fas fa-info-circle"></i></a></h4>
+                            </div>
+
+                            <div class="col-md-4 white-color  plr2 text-md-right">
+                                <a class="btn btn-blue btn-sm" data-toggle="collapse" href="#collapse_agenda_destino" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                    <span data-toggle='tooltip' data-placement='top' title='seleccionar dirección'>
+                                        <i class="far fa-address-book"></i> Mi agenda <i class="fas fa-chevron-down"></i>
+                                    </span>
+
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Modal info datos destiono -->
+                        <div class="modal fade" id="info_datos_destino" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLabel">DATOS DE DESTINO</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="text-justify">
+                                            Por defecto los datos de destino se han autocompletado con su información de registro
+                                        </p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-blue" data-dismiss="modal">Cerrar</button>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--collapse direcciones de mi agenda para destino-->
+                        <div class="collapse mt10" id="collapse_agenda_destino">
+                            <div class="card card-body car-white-address">
+                                <!--datatable que se muestra en pcs-->
+                                <div class="pt-datatables  datatables-pc">
+                                    <!--tabla-->
+                                    <table class="display datatable-transportauto" style="width:100%">
+                                        <thead>
+                                            <tr>
+                                                <th>Tipo de lugar PC</th>
+                                                <th>Razón social</th>
+                                                <th>Contacto</th>
+                                                <th>Tlfno</th>
+                                                <th>Dirección</th>
+                                                <th>CP</th>
+                                                <th>Localidad</th>
+                                                <th>Provincia</th>
+                                                <th class="text-center">Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>CAMPA</td>
+                                                <td>SETI SL	</td>
+                                                <td>CAMPA</td>
+                                                <td>999885566</td>
+                                                <td>ctra. fuencarral 44</td>
+                                                <td>2108</td>
+                                                <td>Alcobendas</td>
+                                                <td>Madrid</td>
+                                                <td align="center">
+                                                    <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>CAMPA</td>
+                                                <td>TRANSPORTAUTO SL	</td>
+                                                <td>TALLER</td>
+                                                <td>985623484</td>
+                                                <td>calle prueba 55</td>
+                                                <td>2199</td>
+                                                <td>Navia</td>
+                                                <td>Asturias</td>
+                                                <td align="center">
+                                                    <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>CAMPA</td>
+                                                <td>DRAKHAR	</td>
+                                                <td>TALLER</td>
+                                                <td>659328412</td>
+                                                <td>calle Lorem 5</td>
+                                                <td>28780</td>
+                                                <td>Viveiro</td>
+                                                <td>Lugo</td>
+
+                                                <td align="center">
+                                                    <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                </td>
+                                            </tr>
+                                    </table>
+                                </div>
+                                <!--datatable que se muestra en moviles-->
+                                <div class="pt-datatables datatables-mv">
+                                    <!--tabla-->
+                                    <table class="display datatable-transportauto" style="width:100%">
+                                        <thead>
+                                            <tr>
+
+                                                <th>Razón social movil</th>
+                                                <th>Provincia</th>
+                                                <th>Tipo de lugar</th>
+                                                <th>Contacto</th>
+                                                <th>Tlfno</th>
+                                                <th>Dirección</th>
+                                                <th>CP</th>
+                                                <th>Localidad</th>
+                                                <th class="text-center">Acciones</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+
+                                                <td>SETI SL	</td>
+                                                <td>Madrid</td>
+                                                <td>CAMPA</td>
+                                                <td>CAMPA</td>
+                                                <td>999885566</td>
+                                                <td>ctra. fuencarral 44</td>
+                                                <td>2108</td>
+                                                <td>Alcobendas</td>
+                                                <td align="center">
+                                                    <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>TRANSPORTAUTO SL	</td>
+                                                <td>Asturias</td>
+                                                <td>TALLER</td>
+                                                <td>CAMPA</td>
+                                                <td>985623484</td>
+                                                <td>calle prueba 55</td>
+                                                <td>2199</td>
+                                                <td>Navia</td>
+                                                <td align="center">
+                                                    <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+
+                                                <td>DRAKHAR	</td>
+                                                <td>Lugo</td>
+                                                <td>TALLER</td>
+                                                <td>CAMPA</td>
+                                                <td>659328412</td>
+                                                <td>calle Lorem 5</td>
+                                                <td>28780</td>
+                                                <td>Viveiro</td>
+                                                <td align="center">
+                                                    <a class="btn btn-sm btn-detail text-btn-sm" data-toggle='tooltip' data-placement='top' title='seleccionar dirección'><i class="fas fa-mouse-pointer"></i> seleccionar</a>
+                                                </td>
+                                            </tr>
+                                    </table>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="row anti-row mt20">
+                            <div class="col-md-6 plr2">
+                                <label>Tipo de lugar de destino</label>
+                                <input class="form-control" type="text" placeholder="Completa..." value="Taller">
+                            </div>
+                            <div class="col-md-6 plr2">
+                                <label>Razón social</label>
+                                <input class="form-control" type="text" placeholder="Completa..." />
+                            </div>
+                        </div>
+                        <div class="row anti-row">
+                            <div class="col-md-6 plr2">
+                                <label>Persona de contacto</label>
+                                <input class="form-control" type="text" placeholder="Completa..." value="Gema Fernández González" />
+                            </div>
+                            <div class="col-md-6 plr2">
+                                <label>Teléfono de contacto</label>
+                                <input class="form-control" type="text" placeholder="Completa..." value="918556644" />
+                            </div>
+                        </div>
+                        <div class="row anti-row">
+                            <div class="col-md-12 plr2">
+                                <label>Dirección</label>
+                                <input class="form-control" type="text" placeholder="Completa..." value="Ctra. Fuencarral 44, Alcobendas, Madrid" />
+                            </div>
+                        </div>
+                        <div class="row anti-row">
+                            <div class="col-md-12 plr2">
+                                <label>Observaciones</label>
+                                <textarea class="form-control" placeholder="Observaciones...">En horario de 8.00 a 17.00 h</textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--botones de siguiente anterior-->
+            <div class="row  align-items-center mt20">
+                <div class="col-6"></div>
+                <div class="col-6 text-right">
+                    @*<a class="btn btn-custom" href="contratacion_step2.html">Siguiente <i class="fas fa-chevron-right"></i> </a>*@
+                    <a class="btn btn-custom" href="@Url.Content("~/Solicitar/Index2")">Siguiente <i class="fas fa-chevron-right"></i> </a>
+                </div>
+            </div>
+        </div>
+
+    </section>

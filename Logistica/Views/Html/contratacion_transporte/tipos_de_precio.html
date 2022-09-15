@@ -1,0 +1,615 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name='viewport'content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../../../vendor/bootstrap-4.0.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../../css/animate.css">
+
+
+    <link rel="stylesheet" href="../../../css/publica/main.css">
+    <link rel="stylesheet" href="../../../css/privada_cliente/main.css">
+    <!-- END CSS -->
+</head>
+<body>
+<!--*****************************************************-->
+<!--1. AVISO SI SE USA INTERNET EXPLORER 8 O INFERIOR-->
+<!--******************************************************-->
+
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!--***********************************************************************************************************************************************************************-->
+<!--2.********* MENÚ PRINCIPAL*********************************************************************************************************************************************-->
+<!--*********************************************************************************************************************************************************************-->
+<form>
+    <div class="fixed-top menu-scrolling" >
+        <div class="z-index-top">
+            <div class="p-1 border-bottom bg-white">
+                <div class="container">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-4 plr0">
+                                <div class="dropdown show">
+                                    <a class="dropdown-toggle blue-color" href="#" role="button" id="dropdownMenuLinklanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Idioma
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLinklanguage">
+                                        <a class="dropdown-item" href="#">Español</a>
+                                        <a class="dropdown-item" href="#">Francés</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8 plr0 text-right">
+                                <div class="dropdown show">
+                                    <a class="dropdown-toggle btn-register-menu" href="#" role="button" id="dropdownMenuLinkperfil" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-user"></i>  Bienvenida, Gema
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkperfil">
+                                        <a class="dropdown-item" href="#">Cerrar sesión</a>
+                                        <a class="dropdown-item" href="#">Editar Mi perfil</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="img-fluid logo-menu" src="../../../img/publica/logo_transportauto.png" alt="logo transportauto" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon burger-menu-primary"></span>
+                        <i class="fas fa-bars burger-menu-primary"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav ml-auto primary-color">
+                            <li class="nav-item">
+                                <a class="nav-link" href="../index.html">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contratacion_step1.html">SOLICITAR TRANSPORTE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../mis_pedidos.html">MIS PEDIDOS </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../pedidos_pendientes.html">PEDIDOS PENDIENTES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="../facturas.html">FACTURAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="../agenda.html"> AGENDA</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--mini formulario calculadora desplegable-->
+            <div class="show-calculator-menu">
+                <div class="container">
+                    <!--<div class="btn-control-box-calculator">-->
+                    <div class="row">
+                        <div class="col-6 col-md-3 blue-color p-col-calculator">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text" >
+                                             <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Origen">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 blue-color p-col-calculator">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                              <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Destino">
+                            </div>
+
+                        </div>
+                        <div class="col-6 col-md-2 blue-color p-col-calculator">
+                            <select  class="form-control">
+                                <option value="" disabled selected>Estado</option>
+                                <option value="arranca">Arranca</option>
+                                <option value="no_arranca">No arranca pero puede rodar</option>
+                                <option value="internacional" >Siniestro/No puede rodar</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-md-2 blue-color p-col-calculator">
+                            <select  class="form-control mb-3">
+                                <option value="" disabled selected>Tipo</option>
+                                <option value="vehiculos">Turismos</option>
+                                <option value="vehiculos">Comerciales</option>
+                                <option value="indust_autocarav_tractor">Industrial</option>
+                                <option value="indust_autocarav_tractor" >Autocaravana</option>
+                                <option value="indust_autocarav_tractor">Tractor</option>
+                                <option value="moto">Moto</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-2 p-col-calculator">
+                            <a class="btn btn-blue w-100 btn-control-box-calculator">calcular <i class="fas fa-chevron-down"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--CONTENIDO DE LA CALCULADORA OCULTO EN EL MENÚ PPAL-->
+
+        <section id="calculator2" class="ptb-section  calculator-box d-none">
+            <div class="container plr0">
+                <div class="calculator-box">
+                    <div class="box-type-vehicule">
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT AUTOMOVILES *****************************-->
+                        <!--*********************************************************************-->
+                        <!--ocultar o mostrar una u otra box-type-vehicle en función del vehículo seleccionado, no lo tengo simulado, solo muestro el de turismo-->
+
+                        <div class="box-type-vehicle" id="box-turismo" >
+                            <div class="list-vehicules-calculator">
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-vehiculos-collapse"><i class="fas fa-plus"></i> Añadir vehículos </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator ">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Año
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Año</option>
+                                                <option value="Modelo1">2000</option>
+                                                <option value="Modelo2">2001</option>
+                                                <option value="Modelo3">2002</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Versión
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="version1">Versión 1</option>
+                                                <option value="version2">Versión 2</option>
+                                                <option value="version3" >Versión 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i><span class="text-btn-delete-mv"> Eliminar vehículo</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--***********CONTENT comercial *****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-comercial" >
+                            <div class="list-vehicules-calculator">
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-vehiculos-collapse"><i class="fas fa-plus"></i> Añadir vehículos </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator ">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Año
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Año</option>
+                                                <option value="Modelo1">2000</option>
+                                                <option value="Modelo2">2001</option>
+                                                <option value="Modelo3">2002</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Versión
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="version1">Versión 1</option>
+                                                <option value="version2">Versión 2</option>
+                                                <option value="version3" >Versión 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--***********CONTENT INDUSTRIALES *****************************-->
+                        <!--*********************************************************************-->
+                        <div class="box-type-vehicle d-none" id="box-industrial" >
+                            <div class="list-vehicules-calculator">
+                                <!--INDUSTRIALES  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-indust-autocarav-tractor"><i class="fas fa-plus"></i> Añadir vehículos industriales </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Largo (mm)
+                                            <input type="text p-col-calculator" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Alto (mm)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT AUTOCARAVANAS*****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-autocaravana" >
+                            <!--BOX ORIGEN, DESTINO Y ESTADO-->
+
+                            <div class="list-vehicules-calculator">
+                                <!--AUTOCARAVANAS  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-indust-autocarav-tractor"><i class="fas fa-plus"></i> Añadir autocaravanas </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Largo (mm)
+                                            <input type="text p-col-calculator" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Alto (mm)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT TRACTORES*****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-tractor" >
+                            <div class="list-vehicules-calculator">
+                                <!--TRACTORES  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-indust-autocarav-tractor"><i class="fas fa-plus"></i> Añadir tractores </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row ">
+                                        <div class="col-md-3 p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Largo (mm)
+                                            <input type="text p-col-calculator" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Alto (mm)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT MOTOS *****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-moto" >
+                            <div class="list-vehicules-calculator">
+                                <!--MOTOS  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-moto"><i class="fas fa-plus"></i> Añadir motos </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3  p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3  p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-2  p-col-calculator">
+                                            C.C.
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2  p-col-calculator">
+                                            CV
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1  p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end tabs content-->
+                </div><!--end calculator box-->
+
+                <div class="text-right mt-2">
+                    <a id="btn-calculate-price" class="btn btn-md btn-blue  text-center" href="tipos_de_precio.html"><i class="fas fa-search"></i> Calcular el precio del transporte</a>
+                </div>
+            </div>
+            <!--end container-->
+        </section>
+    </div>    <!--EN MENU FIXED CON CAJA DE CALCULADORA-->
+</form>
+
+
+<!--*******************************************************************************************************************************************************************-->
+<!--4. **********************************************3. CONTENIDO TIPOS DE PRECIO, USUARIO NORMAL O USUARIO ANCOVE *************************************************************************************-->
+<!--****************************************************************************************************************************************************************-->
+<section id="contrato" class="ptb-section mt-first-section-prices content-page">
+    <div class="container">
+        <div class="row mt20">
+            <!--tarifa normal-->
+           <div class="col-lg-4">
+               <h3>TARIFA TRANSPORTE</h3>
+               <div class="box-simple-line">
+                   <p class="blue-color-bold2">Tipo de servicio</p>
+                   <p>Transporte camión abierto</p>
+                   <hr>
+                   <p class="blue-color-bold2">Plazo de recogida</p>
+                   <p>Tiempo estimado 7 días laborables</p>
+                   <hr>
+                   <h2 class="opensans-bold">81,14 €
+                       <span style="font-size:12px;">IVA incluido</span><br>
+                   </h2>
+               </div>
+
+               <a class="btn btn-custom w-100 mt20" href="contratacion_step1.html">Contratar  <i class="fas fa-chevron-right"></i></a>
+
+               <p class="mt20">** Los precios indicados en esta página son con IVA incluido.</p>
+           </div>
+            <!--tarifas ancove-->
+            <div class="col-lg-8 mt-20-mv">
+                <h3>TARIFAS SOCIO ANCOVE</h3>
+                <div class="row anti-row box-simple-line">
+                    <div class="col-md-6 col-pr-35">
+                        <p class="blue-color-bold2">Tipo de servicio</p>
+                        <p>Transporte camión abierto</p>
+                        <hr>
+                        <p class="blue-color-bold2">Plazo de recogida</p>
+                        <p>Tiempo estimado 7 días laborables</p>
+                        <hr>
+                        <h2 class="opensans-bold">72 €
+                            <span style="font-size:12px;">IVA incluido</span><br>
+                        </h2>
+                    </div>
+
+                    <div class="col-md-6 line-left-col">
+                        <p class="blue-color-bold2">Tipo de servicio</p>
+                        <p>Transporte camión abierto</p>
+                        <hr>
+                        <p class="blue-color-bold2">Plazo de recogida</p>
+                        <p>Tiempo estimado 5 días laborables</p>
+                        <hr>
+                        <h2 class="opensans-bold">123 €
+                            <span style="font-size:12px;">IVA incluido</span><br>
+                        </h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <a class="btn btn-blue w-100 mt20" href="https://www.ancove.es/afiliacion/solicitud" target="_blank">Darme de alta en ANCOVE</a>
+                    </div>
+                    <div class="col-md-6">
+                        <a class="btn btn-blue w-100 mt20" href="https://www.ancove.es/afiliacion/solicitud" target="_blank">Ya soy socio de ANCOVE</a>
+                    </div>
+                </div>
+
+                <p class="mt20">Si eres comerciante de vehículos y estas afiliado a la Asociación Nacional de Comerciantes de Vehículos, este es el importe y tiempo estimado para realizar el transporte solicitado. Debes de acceder a tu área privada dentro de la web de ANCOVE</p>
+                <p class="mt10">Si eres comerciante y no estas afiliado a <strong>ANCOVE</strong>, puedes darte de alta y disfrutar de este servicio y de 67 servicios más que ofrecen. El importe mensual por estar asociado y disfrutar de los servicios es de <strong>34,86 euros</strong> al mes.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--5. FOOTER-->
+<footer>
+    <div class="background-footer-3">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <p class="white-color text-center">&copy; 2019 Copyright Transportauto S.L </p>
+                </div>
+                <div class="col-md-8 text-center">
+                    <ul class="list-inline mb0">
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="../condiciones_generales.html">
+                                <strong>Condiciones generales</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="../aviso_legal.html">
+                                <strong>Aviso Legal</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="../faq.html">
+                                <strong>FAQ's</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="../politica_cookies.html">
+                                <strong>Política de Cookies</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="../politica_de_privacidad.html">
+                                <strong>Política de Privacidad</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="col-md-2">
+                    <img class="img-fluid" src="../../../img/publica/pago_sm.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--JS-->
+<script src="../../../vendor/jquery-3.2.1.slim.min.js" ></script>
+<script src="../../../vendor/popper.min.js"></script>
+<script src="../../../vendor/bootstrap-4.0.0-dist/js/bootstrap.min.js" ></script>
+
+<script defer src="https://use.fontawesome.com/releases/v5.8.2/js/all.js" integrity="sha384-DJ25uNYET2XCl5ZF++U8eNxPWqcKohUUBUpKGlNLMchM7q4Wjg2CUpjHLaL8yYPH" crossorigin="anonymous"></script>
+
+
+<script src="../../../js/publica/main.js"></script>
+
+<!--chat zoopin de prueba-->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=67a67bcf-2ea9-4168-a124-f502f67d607e"> </script>
+<!-- End of  Zendesk Widget script -->
+
+<!--END JS-->
+</body>
+</html>

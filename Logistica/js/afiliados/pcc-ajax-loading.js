@@ -1,0 +1,1 @@
+function ajaxLoadingParam($section,obj){return $.extend(obj,{beforeSend:function(){var loadingSection=$('#ajax-loadin-container').html();$section.hide().append(loadingSection).fadeIn(600);},complete:function(){$section.children('#ajax-loading').remove();}});}

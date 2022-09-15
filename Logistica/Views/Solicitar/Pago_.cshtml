@@ -1,0 +1,71 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<!--*******************************************************************************************************************************************************************-->
+<!--4. **********************************************3. CONTENIDO DATOS PARA LA TRANSFERENCIA BANCARIA *************************************************************************************-->
+<!--****************************************************************************************************************************************************************-->
+    <section id="contrato" class="ptb-section mt-first-section-prices content-page">
+        <div class="bg-orangered-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!--caja resumen de presupuesto-->
+                    <div class="col-4 text-md-left col-cart">
+                        <div class="row align-items-center">
+                            <div class="col-3 content-box-resume2 text-left col-cart">
+                                <img class="img-fluid cart-image-orange" src="../../../img/publica/cart.png" />
+                            </div>
+                            <div class="col-9 col-cart">
+                                <h2 class="white-color2 opensans-bold">
+                                    1498 €<br>
+                                    <p class="iva-text-orange">( iva incluído)</p>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 text-center col-adress col-cart">
+                        <strong><p class="font-label-presupuesto"><i class="fas fa-map-marker-alt"></i>  Origen</p></strong>
+                        <p><span class="text-pc">Calle Origen, 28001</span>Alcobendas, Madrid</p>
+
+                    </div>
+                    <div class="col-4 text-center col-adress col-cart">
+                        <strong><p class="font-label-presupuesto"><i class="fas fa-map-marker-alt"></i>  Destino</p></strong>
+                        <p><span class="text-pc">Calle Destino, 28001</span>Alcobendas, Madrid</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mt20">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <h4 class="blue-color-bold2"><strong>Apreciado/a</strong></h4>
+                    <p class="text-justify">Hemos recibido una solicitud de transporte con pago por transferencia. Tan pronto realices los siguientes pasos procederemos a insertar el pedido. </p>
+                    <p class="mt20">A continuación te mostramos los datos bancarios para realizar el pago:</p>
+
+                    <div class="box-simple-line mt20">
+                        <p class="mt10"><strong>TITULAR DE LA CUENTA:</strong> Transportauto 2000, S.L.</p>
+                        <p class="mt10"><strong>NÚMERO DE CUENTA:</strong> ES78 0182 1797 3102 0390 6170</p>
+                        <p class="mt10"><strong>CONCEPTO:</strong><span class="blue-color-bold2"> 190214084123</span> </p>
+                        <p class="mt10"><strong>IMPORTE A INGRESAR:</strong><span class="blue-color-bold2"> 214,17€</span></p>
+                    </div>
+
+
+                    <p class="text-justify mt20">Una vez realizada la transferencia envía un email a atencioncliente@transportauto.es adjuntando la copia del comprobante de la transferenca e indicando la referencia del concepto, nuestro Departamento de Administración validará los datos y aceptará la solicitud de transporte enviándote un email. </p>
+                    <p class="text-justify mt10">Desde ese momento entra en tu área privada y podrás descargar la factura y realizar un seguimiento del envío.</p>
+                    <p class="text-justify mt10">Te recordamos que el plazo estimado de recogida es de <strong>7 días</strong> laborables a partir de que comprobemos la transferencia y recibamos la carta de liberación y/o autorización en caso de que sea necesario.</p>
+
+                    <p class="mt40"> Un cordial saludo, </p>
+                    <strong>Dpto. comercial TransportAuto.es</strong>
+                    <p class="mt20"> Tel. 902 106 925   </p>
+
+                    <div class="text-right">
+                        @*<a class="btn btn-sm btn-custom" href="../index.html">Finalizar</a>*@
+                        <a href="@Url.Content("~/Home/Index")" class="btn btn-sm btn-custom">Finalizar</a>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </section>

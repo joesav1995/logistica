@@ -1,0 +1,233 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout_mod.cshtml";
+}
+
+
+@*<script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>*@
+
+@section head {
+    <title>GrupoCV | 2019</title>
+    <meta name="description" content="GrupoCV">
+    <meta name="keywords" content="asociación comerciantes vehículos, derechos reales, polizas flotantes, garantías mecánicas, simulador financiero, estadísticas ventas vehículos nuevos,noticias, asociación coches,contratos de compra-venta, hojas de reclamación">
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+    <div class="container">
+
+
+        <div class="content-page mt-first-section-other-page" id="pedidos">
+            <section class="pb-section">
+                <div class="container">
+                    <!--botón abre modal con información y caja de filtros -->
+                    <div class="row">
+                        <div class="col-md-6">
+                            <h3 class="blue-color-bold2">MIS PEDIDOS  <a class="btn btn-sm btn-blue-info" data-toggle="modal" data-target="#info_sigue_tu_envio"><i class="fas fa-info-circle"></i></a></h3>
+                        </div>
+                        <div class="col-md-6 text-right">
+                        </div>
+                    </div>
+                    <!--contenido de filtros-->
+                    <div id="accordion">
+                        <div class="card card-filter">
+                            <div class="card-header" id="headingOne">
+                                <a class="btn btn-link btn-filter w-100 text-left" data-toggle="collapse" data-target="#filter-box" aria-expanded="true" aria-controls="collapseOne">
+                                    <div class="row">
+                                        <div class="col-11">
+                                            <h5 class="mb-0">
+                                                <i class="fas fa-search"></i> Filtros de búsqueda avanzada
+                                            </h5>
+                                        </div>
+                                        <div class="col-1 text-right">
+                                            <i class="fas fa-chevron-down"></i>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div id="filter-box" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body grey-color3">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="mt10">Identificador</label>
+                                            <input type="text" class="form-control " placeholder="Completa...">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="mt10">Matrícula</label>
+                                            <input type="text" class="form-control " placeholder="Completa...">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <label class="mt10">Lugar de origen</label>
+                                            <input type="text" class="form-control " placeholder="Completa...">
+                                        </div>
+                                        <div class="col-md-6">
+                                            <label class="mt10">Lugar de destino</label>
+                                            <input type="text" class="form-control " placeholder="Completa...">
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <label class="mt10">Fecha inicio</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control datepickers_custom" placeholder="Selecciona...">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="mt10">Fecha fin</label>
+                                            <div class="input-group mb-3">
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text">
+                                                        <i class="far fa-calendar-alt"></i>
+                                                    </span>
+                                                </div>
+                                                <input type="text" class="form-control datepickers_custom" placeholder="Selecciona...">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <label class="mt10">Estado</label>
+                                            <select class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="">Insertado</option>
+                                                <option value="">Pte. autorización</option>
+                                                <option value="">Procesado</option>
+                                                <option value="">Recogiendo</option>
+                                                <option value="">Transportando</option>
+                                                <option value="">Finalizado</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="text-right">
+                                        <a class="btn btn-blue  mt20 white-color2">Buscar pedidos</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal sigue tu envio -->
+                    <div class="modal fade" id="info_sigue_tu_envio" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">MIS PEDIDOS</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <p class="text-justify">
+                                        Realiza seguimientos de tu pedido de una forma ágil y sencilla. Desde aquí puedes ver la ficha del transporte con todos los datos del mismo y realizar un seguimiento en tiempo real para estar informado de todos los estados realizados en tu transporte. El apartado de "Transportes Realizados" son los envíos ya finalizados y también puedes consultar el detalle del servicio contratado.
+                                    </p>
+                                    <p class="text-justify mt20">
+                                        Si necesitas ayuda, no dudes en ponerte en contacto con nuestro personal cualificado que le asesorará en lo que necesite, al teléfono <strong>902 106 925</strong> o por email en el apartado superior de "pregúntanos". Puedes consultar si lo deseas también, las Preguntas Frecuentes
+                                    </p>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-blue" data-dismiss="modal">Cerrar</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="pt-datatables">
+                        <!--tabla-->
+                        <table class="display datatable-transportauto" style="width:100%">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Matrícula</th>
+                                    <th>Origen</th>
+                                    <th>Destino</th>
+                                    <th>Fecha de solicitud</th>
+                                    <th>Estado</th>
+                                    <th>Servicio</th>
+                                    <th class="text-center">Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>12366	</td>
+                                    <td>2345KKK</td>
+                                    <td>BARCELONA</td>
+                                    <td>MADRID</td>
+                                    <td>13/06/2019</td>
+                                    <td><span class="badge badge-warning bg-insertado">Insertado</span></td>
+                                    <td>Basico</td>
+                                    <td align="center"><a class="btn btn-xs btn-detail" data-toggle='tooltip' data-placement='top' title='ver detalles' href="@Url.Content("~/Pedidos/Detalles")"><i class="fas fa-search"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td>4569</td>
+                                    <td>8569AAA</td>
+                                    <td>BARCELONA</td>
+                                    <td>LUGO</td>
+                                    <td>12/06/2019</td>
+                                    <td><span class="badge badge-warning bg-pendiente">Pte.autorización</span></td>
+                                    <td>PLUS</td>
+                                    <td align="center"><a class="btn btn-xs btn-detail" data-toggle='tooltip' data-placement='top' title='ver detalles' href="@Url.Content("~/Pedidos/Detalles")"><i class="fas fa-search"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td>45296</td>
+                                    <td>4589BBB</td>
+                                    <td>BARCELONA</td>
+                                    <td>ASTURIAS</td>
+                                    <td>11/06/2019</td>
+                                    <td><span class="badge badge-warning bg-procesado">Procesado</span></td>
+                                    <td>Basico</td>
+                                    <td align="center"><a class="btn btn-xs btn-detail" data-toggle='tooltip' data-placement='top' title='ver detalles' href="@Url.Content("~/Pedidos/Detalles")"><i class="fas fa-search"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td>8596</td>
+                                    <td>1596CCC</td>
+                                    <td>BARCELONA</td>
+                                    <td>BILBAO</td>
+                                    <td>10/06/2019</td>
+                                    <td><span class="badge badge-warning bg-recogiendo">Recogiendo</span></td>
+                                    <td>PLUS</td>
+                                    <td align="center"><a class="btn btn-xs btn-detail" data-toggle='tooltip' data-placement='top' title='ver detalles' href="@Url.Content("~/Pedidos/Detalles")"><i class="fas fa-search"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td>75695</td>
+                                    <td>3256DDD</td>
+                                    <td>BARCELONA</td>
+                                    <td>MADRID</td>
+                                    <td>09/04/2019</td>
+                                    <td><span class="badge badge-success bg-transportando">Transportando</span></td>
+                                    <td>Basico</td>
+                                    <td align="center"><a class="btn btn-xs btn-detail" data-toggle='tooltip' data-placement='top' title='ver detalles' href="@Url.Content("~/Pedidos/Detalles")"><i class="fas fa-search"></i></a> </td>
+                                </tr>
+                                <tr>
+                                    <td>60000</td>
+                                    <td>1239EEE</td>
+                                    <td>BARCELONA</td>
+                                    <td>MADRID</td>
+                                    <td>08/04/2019</td>
+                                    <td><span class="badge badge-success bg-finalizado">Finalizado</span></td>
+                                    <td>PLUS</td>
+                                    <td align="center"><a class="btn btn-xs btn-detail" data-toggle='tooltip' data-placement='top' title='ver detalles' href="@Url.Content("~/Pedidos/Detalles")"><i class="fas fa-search"></i></a> </td>
+                                </tr>
+
+                        </table>
+
+                    </div>
+
+                </div>
+            </section>
+        </div>
+    </div>
+
+
+<input type="hidden" id="hiddenId" />
+

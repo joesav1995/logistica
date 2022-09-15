@@ -1,0 +1,632 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name='viewport'content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../../vendor/bootstrap-4.0.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!--cookies-->
+    <link rel='stylesheet' href='../../css/publica/cookies_1.css'/>
+
+    <link rel="stylesheet" href="../../css/publica/main.css">
+    <link rel="stylesheet" href="../../css/privada_cliente/main.css">
+
+    <!-- END CSS -->
+</head>
+<body>
+<!--*****************************************************-->
+<!--1. AVISO SI SE USA INTERNET EXPLORER 8 O INFERIOR-->
+<!--******************************************************-->
+
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+
+<!--***********************************************************************************************************************************************************************-->
+<!--2.********* MENÚ PRINCIPAL*********************************************************************************************************************************************-->
+<!--*********************************************************************************************************************************************************************-->
+<form>
+    <div class="fixed-top menu-scrolling" >
+        <div class="z-index-top">
+            <div class="p-1 border-bottom bg-white">
+                <div class="container">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-4 plr0">
+                                <div class="dropdown show">
+                                    <a class="dropdown-toggle blue-color" href="#" role="button" id="dropdownMenuLinklanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Idioma
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLinklanguage">
+                                        <a class="dropdown-item" href="#">Español</a>
+                                        <a class="dropdown-item" href="#">Francés</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8 plr0 text-right">
+
+                                <div class="dropdown show">
+                                    <a class="dropdown-toggle btn-register-menu" href="#" role="button" id="dropdownMenuLinkperfil" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-user"></i>  Bienvenida, Gema
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkperfil">
+                                        <a class="dropdown-item" href="#">Cerrar sesión</a>
+                                        <a class="dropdown-item" href="mi_cuenta.html">Mi Cuenta</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="img-fluid logo-menu" src="../../img/publica/logo_transportauto.png" alt="logo transportauto" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon burger-menu-primary"></span>
+                        <i class="fas fa-bars burger-menu-primary"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav ml-auto primary-color">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contratacion_transporte/contratacion_step1.html">SOLICITAR TRANSPORTE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="mis_pedidos.html">MIS PEDIDOS </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pedidos_pendientes.html">PEDIDOS PENDIENTES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="facturas.html">FACTURAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link "  href="agenda.html"> AGENDA</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--mini formulario calculadora desplegable-->
+            <div class="show-calculator-menu">
+                <div class="container">
+                    <!--<div class="btn-control-box-calculator">-->
+                    <div class="row">
+                        <div class="col-6 col-md-3 blue-color p-col-calculator">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text" >
+                                             <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Origen">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 blue-color p-col-calculator">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                              <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Destino">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-2 blue-color p-col-calculator">
+                            <select  class="form-control">
+                                <option value="" disabled selected>Estado</option>
+                                <option value="arranca">Arranca</option>
+                                <option value="no_arranca">No arranca pero puede rodar</option>
+                                <option value="internacional" >Siniestro/No puede rodar</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-md-2 blue-color p-col-calculator">
+                            <select  class="form-control mb-3">
+                                <option value="" disabled selected>Tipo</option>
+                                <option value="vehiculos">Turismos</option>
+                                <option value="vehiculos">Comerciales</option>
+                                <option value="indust_autocarav_tractor">Industrial</option>
+                                <option value="indust_autocarav_tractor" >Autocaravana</option>
+                                <option value="indust_autocarav_tractor">Tractor</option>
+                                <option value="moto">Moto</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-2 p-col-calculator">
+                            <a class="btn btn-blue w-100 btn-control-box-calculator">calcular <i class="fas fa-chevron-down"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        <!--CONTENIDO DE LA CALCULADORA OCULTO EN EL MENÚ PPAL-->
+        <section id="calculator2" class="ptb-section  calculator-box d-none">
+            <div class="container plr0">
+                <div class="calculator-box">
+                    <div class="box-type-vehicule">
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT AUTOMOVILES *****************************-->
+                        <!--*********************************************************************-->
+                        <!--ocultar o mostrar una u otra box-type-vehicle en función del vehículo seleccionado, no lo tengo simulado, solo muestro el de turismo-->
+
+                        <div class="box-type-vehicle" id="box-turismo" >
+                            <div class="list-vehicules-calculator">
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-vehiculos-collapse"><i class="fas fa-plus"></i> Añadir vehículos </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator ">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Año
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Año</option>
+                                                <option value="Modelo1">2000</option>
+                                                <option value="Modelo2">2001</option>
+                                                <option value="Modelo3">2002</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Versión
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="version1">Versión 1</option>
+                                                <option value="version2">Versión 2</option>
+                                                <option value="version3" >Versión 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i><span class="text-btn-delete-mv"> Eliminar vehículo</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--***********CONTENT comercial *****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-comercial" >
+                            <div class="list-vehicules-calculator">
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-vehiculos-collapse"><i class="fas fa-plus"></i> Añadir vehículos </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator ">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Año
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Año</option>
+                                                <option value="Modelo1">2000</option>
+                                                <option value="Modelo2">2001</option>
+                                                <option value="Modelo3">2002</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Versión
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="version1">Versión 1</option>
+                                                <option value="version2">Versión 2</option>
+                                                <option value="version3" >Versión 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--***********CONTENT INDUSTRIALES *****************************-->
+                        <!--*********************************************************************-->
+                        <div class="box-type-vehicle d-none" id="box-industrial" >
+                            <div class="list-vehicules-calculator">
+                                <!--INDUSTRIALES  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-indust-autocarav-tractor"><i class="fas fa-plus"></i> Añadir vehículos industriales </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Largo (mm)
+                                            <input type="text p-col-calculator" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Alto (mm)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT AUTOCARAVANAS*****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-autocaravana" >
+                            <!--BOX ORIGEN, DESTINO Y ESTADO-->
+
+                            <div class="list-vehicules-calculator">
+                                <!--AUTOCARAVANAS  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-indust-autocarav-tractor"><i class="fas fa-plus"></i> Añadir autocaravanas </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Largo (mm)
+                                            <input type="text p-col-calculator" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Alto (mm)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT TRACTORES*****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-tractor" >
+                            <div class="list-vehicules-calculator">
+                                <!--TRACTORES  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-indust-autocarav-tractor"><i class="fas fa-plus"></i> Añadir tractores </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row ">
+                                        <div class="col-md-3 p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Largo (mm)
+                                            <input type="text p-col-calculator" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Alto (mm)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT MOTOS *****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-moto" >
+                            <div class="list-vehicules-calculator">
+                                <!--MOTOS  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-moto"><i class="fas fa-plus"></i> Añadir motos </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3  p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3  p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-2  p-col-calculator">
+                                            C.C.
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2  p-col-calculator">
+                                            CV
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1  p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end tabs content-->
+                </div><!--end calculator box-->
+
+                <div class="text-right mt-2">
+                    <a id="btn-calculate-price" class="btn btn-md btn-blue  text-center" href="contratacion_transporte/tipos_de_precio.html"><i class="fas fa-search"></i> Calcular el precio del transporte</a>
+                </div>
+            </div>
+            <!--end container-->
+        </section>
+    </div>    <!--EN MENU FIXED CON CAJA DE CALCULADORA-->
+</form>
+
+<!--*******************************************************************************************************************************************************************-->
+<!--**********************************************5 CONTENIDO DE LA PAGINA CONDICIONES GENERALES*************************************************************************************-->
+<!--****************************************************************************************************************************************************************-->
+
+
+<section id="condiciones_generales" class="ptb-section mt-first-section-other-page content-page" >
+
+    <div class="container">
+        <h2 class="blue-color-bold2 title-legales"> CONDICIONES GENERALES DE LA CONTRATACIÓN </h2>
+        <p class="text-justify"> En cumplimiento de la Ley 34/2002 de Servicios de la Sociedad de la Información y del Comercio Electrónico (LSSICE), te informamos que transportauto.es es un dominio de Internet y marca registrada por TRANPORTAUTO 2000, S.L., C.I.F. ESB66221920, inscrita en el Registro Mercantil de Barcelona, Tomo 44160 Folio 55, Sec. Gral., Hoja B 448342, Inscr. 1ª, sita en la calle Diputación, 338, 08009 Barcelona.</p>
+
+        <h4 class="blue-color-bold2 mt20"> Condiciones generales de contratación entre TRANSPORTAUTO 2000, S.L. y el usuario:  </h4>
+
+        <ul class="text-justify">
+            <li>El usuario declara que es mayor de edad (mayor de 18 años) y dispone de capacidad legal necesaria para contratar los servicios ofertados por los proveedores en la Web de www.transportauto.es, de acuerdo con las condiciones más abajo desglosadas, las cuales declara comprender y aceptar.</li>
+
+            <li>El usuario se compromete a utilizar los servicios y contenidos en nuestro sitio Web de conformidad con la Ley y los términos y condiciones generales y particulares de los servicios que ofrece transportauto.es en cada momento, debiendo abstenerse de emplearlos para:
+                <ul>
+                    <li>Transmitir a terceros no autorizados su nombre de usuario y su contraseña, debiendo comunicar inmediatamente a TRANPORTAUTO 2000, S.L. el acceso por parte de un usuario no autorizado a dicha información.</li>
+                    <li>Introducir en la red programas de datos susceptibles de provocar daños en los sistemas informáticos de TRANPORTAUTO 2000, S.L.   </li>
+                    <li>Realizar actividades ilícitas, contrarias a la buena fe, a las costumbres, a la moral o al orden público. </li>
+                    <li>Realizar actividades que constituyan una infracción de la regulación sobre propiedad intelectual e industrial o cualquier otra norma del ordenamiento jurídico aplicable.</li>
+                    <li>Reproducir, duplicar, vender o explotar para fines comerciales cualquier contenido del sitio Web www.transportauto.es  </li>
+                </ul>
+            </li>
+
+            <li>En el caso de indicar al contratar un transporte, que el vehículo arranca, es imprescindible que el vehículo a transportar esté en condiciones de arrancar y de circular, en caso contrario, si el transportista va a cargarlo y no arrancara, el cliente tendrá que abonar los gastos de desplazamiento del mismo.
+
+            </li>
+
+            <li>En el caso de que no se pueda recoger el vehículo en origen por causas externas al transportista, se cobrará el 50% del servicio y el pedido quedará automáticamente anulado. Si el cliente sigue interesado en el transporte se deberá solicitar de nuevo.
+
+            </li>
+
+            <li>Tanto el lugar de carga como el de descarga deben ser accesibles legalmente para la circulación con camión y disponer de zona para poder aparcar el camión y realizar maniobras de carga y descarga. En caso contrario, rogamos lo indiquen en el alta del transporte y de este modo poder acordar un lugar cercano al mismo para realizar el servicio.
+
+            </li>
+
+            <li>Las fechas indicadas en el presupuesto siempre se consideran estimativas, especialmente en tramos marítimos y períodos vacacionales, de ninguna forma serán contractuales, ni definitivas. Por este motivo no cabe ninguna reclamación al respecto.
+
+            </li>
+
+            <li>Nuestro seguro de vehículos nuevos incluido en la contratación es todo riesgo, condiciones CMR, condiciones L.O.T.T ley 15/2009
+
+            </li>
+
+            <li>El seguro y Transportauto respondonden frente al usuario en el transporte de vehículos usados tan solo de los daños que se produzcan según condiciones CMR, condiciones L.O.T.T ley 15/2009 que comprenden, vuelco, incendio o robo del camión con los coches.
+
+            </li>
+
+            <li>El seguro no cubre bienes personales depositados dentro del vehículo. Éstos deben ser retirados y no viajar con la carga (tampoco en cabina del camión). El conductor no podrá ser responsable de su custodia.
+
+            </li>
+
+            <li>Al registrarse en Transportauto.es, el usuario deberá custodiar debidamente las claves y contraseñas facilitadas para su acceso como usuario registrado, dado que son de carácter personal y confidencial, siendo el usuario responsable de su uso por una tercera persona a la que dicho usuario se las haya facilitado.
+
+            </li>
+
+            <li>El usuario es el responsable de facilitar sus datos correctamente en los procesos de contratación establecidos en la página Web de Transportauto.es, debiendo prestar especial atención en cuanto a la introducción de los datos relativos a la dirección de entrega de los pedidos y documentos, así como los nombres de las terceras personas respecto a las cuales introduzca sus datos verificando que éstos coinciden con los que aparecen en su DNI o pasaporte.
+
+            </li>
+
+            <li>TRANSPORTAUTO 2000, S.L. es titular de la base de datos generada con los datos de carácter personal suministrados por los usuarios en el proceso de compra de transportes a través de nuestra página Web. TRANSPORTAUTO 2000, S.L. se compromete al cumplimiento de su obligación de secreto de los datos de carácter personal y de su deber de tratarlos con confidencialidad, y a tal fin TRANSPORTAUTO 2000, S.L. adoptará las medidas necesarias para evitar su alteración, pérdida, tratamiento o acceso no autorizado, habida cuenta en todo momento del estado de la tecnología con arreglo a lo previsto en la legislación vigente en España en materia de protección de datos de carácter personal. Igualmente, para la necesaria prestación del servicio contratado, el usuario acepta que TRANSPORTAUTO 2000, S.L. comunique sus datos de carácter personal al proveedor de los servicios para el transporte solicitado. El usuario responderá, en cualquier caso, de la veracidad de los datos facilitados y se responsabilizará de comunicar a TRANSPORTAUTO 2000, S.L. cualquier modificación en los mismos, reservándose TRANSPORTAUTO 2000, S.L. el derecho a excluir de los servicios registrados a todo usuario que haya facilitado datos falsos, sin perjuicio de las demás acciones que procedan en Derecho.
+
+            </li>
+
+            <li>Todos los contenidos, marcas, logos, dibujos etc. que figuran en la Web de Transportauto.es, se hallan protegidos por los derechos de propiedad intelectual e industrial que son expresamente reservados por TRANSPORTAUTO 2000, S.L. o, en su caso, por las personas o empresas que figuran como autores o titulares de los derechos. La violación de los anteriores derechos será perseguida de conformidad con la legislación vigente. Por lo tanto, queda prohibida la reproducción, explotación, alteración, distribución o comunicación pública por cualquier título o medio de la totalidad de los contenidos de la página Web de Transportauto.es para usos diferentes de la legítima información o contratación por los usuarios de los servicios ofertados. En todo caso será necesario el consentimiento previo por escrito de TRANSPORTAUTO 2000, S.L.
+
+            </li>
+
+            <li>Si cualquier cláusula incluida en estas condiciones generales fuese declarada, total o parcialmente, nula o ineficaz, tal nulidad o ineficacia afectará tan sólo a dicha disposición o a la parte de la misma que resulte nula o ineficaz, subsistiendo las condiciones generales en todo lo demás, teniéndose tal disposición, o la parte de la misma que resultase afectada, por no puesta.
+
+            </li>
+
+            <li>El usuario acepta que la legislación aplicable al funcionamiento de este servicio es la española. Serán competentes para conocer de las divergencias que se deriven de la interpretación o aplicación de este clausulado los Jueces y Tribunales del domicilio del consumidor. Los contenidos, productos y servicios incluidos en el sitio Web son conformes a la legislación española, y no están concebidos ni dirigidos a aquellas personas que residan en jurisdicciones donde sus contenidos no se encuentren debidamente autorizados
+
+            </li>
+
+            <li>Los precios finales indicados en pantalla incluyen el I.V.A. y cualquier otro impuesto que fuera de aplicación al tipo vigente en el momento de la contratación.
+
+            </li>
+
+            <li>Ambas partes de comun acuerdo excluyen expresamente la resolución de los conflictos dimanantes de este contrato de transporte por la Junta Arbitral, aunque su cuantía no exceda de 15.000€.
+
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!--5. FOOTER-->
+<footer>
+    <div class="background-footer-3">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <p class="white-color text-center">&copy; 2019 Copyright Transportauto S.L </p>
+                </div>
+                <div class="col-md-8 text-center">
+                    <ul class="list-inline mb0">
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="condiciones_generales.html">
+                                <strong>Condiciones generales</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="aviso_legal.html">
+                                <strong>Aviso Legal</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="faq.html">
+                                <strong>FAQ's</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="politica_cookies.html">
+                                <strong>Política de Cookies</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="politica_de_privacidad.html">
+                                <strong>Política de Privacidad</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <img class="img-fluid" src="../../img/publica/pago_sm.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+<!--captcha google-->
+
+<script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+<!--JS-->
+<script src="../../vendor/jquery-3.2.1.slim.min.js" ></script>
+<script src="../../vendor/popper.min.js"></script>
+<script src="../../vendor/bootstrap-4.0.0-dist/js/bootstrap.min.js" ></script>
+<script src="../../js/publica/main.js"></script>
+
+<!--chat zoopin de prueba-->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=67a67bcf-2ea9-4168-a124-f502f67d607e"> </script>
+<!-- End of  Zendesk Widget script -->
+
+<!--END JS-->
+</body>
+</html>

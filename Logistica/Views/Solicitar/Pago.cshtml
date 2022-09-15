@@ -1,0 +1,162 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout_mod.cshtml";
+}
+
+@section head {
+    <title>GrupoCV | 2019</title>
+    <meta name="description" content="GrupoCV">
+    <meta name="keywords" content="asociación comerciantes vehículos, derechos reales, polizas flotantes, garantías mecánicas, simulador financiero, estadísticas ventas vehículos nuevos,noticias, asociación coches,contratos de compra-venta, hojas de reclamación">
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+<style>
+    /*Estilo del Carrusel*/
+
+    div.caption {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        background-color: #0177c2;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.caption2 {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        background-color: #b42659;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.caption3 {
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        background-color: #b42659;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.destaca {
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: -50px;
+        right: 2px;
+    }
+
+
+    .modal-content {
+        margin-top: 10% !important;
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+        width: 100% !important;
+    }
+
+
+    .modal-dialog {
+        width: 65% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /*}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}*/
+
+
+
+    /*.modal-content {
+        height: auto !important;
+        min-height: 100% !important;
+        border-radius: 0 !important;
+        background-color: #ececec !important
+    }*/
+
+
+    /*.modal-dialog {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width:none !important;
+
+    }
+    .modal-header {
+        border-bottom: 1px solid #9ea2a2 !important;
+    }
+
+    .modal-footer {
+        border-top: 1px solid #9ea2a2 !important;
+    }*/
+
+
+    /*************** Custom Carousel ***************/
+
+    .custom-carousel .item {
+        padding-right: 20px;
+    }
+
+    .custom-carousel.show-one-slide .item {
+        padding-right: 0;
+    }
+</style>
+
+
+
+<div class="container">
+
+    <!--*******************************************************************************************************************************************************************-->
+    <!--4. **********************************************3. CONTENIDO DATOS PARA LA TRANSFERENCIA BANCARIA *************************************************************************************-->
+    <!--****************************************************************************************************************************************************************-->
+    <section id="contrato" class="content-page mt-first-section-other-page">
+        <div class="container">
+            <div class="row mt20">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <h4 class="blue-color-bold2"><strong>Apreciado/a</strong></h4>
+                    <p class="text-justify">Hemos recibido una solicitud de transporte con pago por transferencia. Tan pronto realices los siguientes pasos procederemos a insertar el pedido. </p>
+                    <p class="mt20">A continuación te mostramos los datos bancarios para realizar el pago:</p>
+
+                    <div class="box-simple-line mt20">
+                        <p class="mt10"><strong>TITULAR DE LA CUENTA:</strong> Transportauto 2000, S.L.</p>
+                        <p class="mt10"><strong>NÚMERO DE CUENTA:</strong> ES78 0182 1797 3102 0390 6170</p>
+                        <p class="mt10"><strong>CONCEPTO:</strong><span class="blue-color-bold2"> 190214084123</span> </p>
+                        <p class="mt10"><strong>IMPORTE A INGRESAR:</strong><span class="blue-color-bold2"> 214,17€</span></p>
+                    </div>
+
+
+                    <p class="text-justify mt20">Una vez realizada la transferencia envía un email a atencioncliente@transportauto.es adjuntando la copia del comprobante de la transferenca e indicando la referencia del concepto, nuestro Departamento de Administración validará los datos y aceptará la solicitud de transporte enviándote un email. </p>
+                    <p class="text-justify mt10">Desde ese momento entra en tu área privada y podrás descargar la factura y realizar un seguimiento del envío.</p>
+                    <p class="text-justify mt10">Te recordamos que el plazo estimado de recogida es de <strong>7 días</strong> laborables a partir de que comprobemos la transferencia y recibamos la carta de liberación y/o autorización en caso de que sea necesario.</p>
+
+                    <p class="mt40"> Un cordial saludo, </p>
+                    <strong>Dpto. comercial TransportAuto.es</strong>
+                    <p class="mt20"> Tel. 902 106 925   </p>
+
+                    <div class="text-right">
+                        @*<a class="btn btn-sm btn-custom" href="../index.html">Finalizar</a>*@
+                        <a href="@Url.Content("~/Home/Index")" class="btn btn-sm btn-custom">Finalizar</a>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </section>
+    </div>

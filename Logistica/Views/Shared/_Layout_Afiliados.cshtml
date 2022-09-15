@@ -1,0 +1,1739 @@
+﻿@using System.Configuration;
+@{
+    Layout = null;
+    if (Session["userID"] == null)
+    {
+        // Response.Redirect("~/Home/Index");
+    }
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GrupoCV - @ViewBag.Title</title>
+
+
+    <script src="~/js/afiliados/jquery-2.1.1.js"></script>
+    <script src="~/js/afiliados/jquery-2.1.1.min.js"></script>
+    @********************************************************************@
+    @Scripts.Render("~/bundles/modernizr")
+    @Styles.Render("~/css/ancove")
+
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../../vendor/bootstrap-4.0.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/animate.css">
+
+    <!--cookies-->
+    <link rel='stylesheet' href='../../css/publica/cookies_1.css' />
+
+    <!--datatables-->
+    <link rel="stylesheet" type="text/css" href="../../css/datatables.min.css" />
+
+    <!--CHARTS-->
+    @*<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.css">*@
+
+    <!--css area publica-->
+    @*<link rel="stylesheet" href="../../css/publica/main.css">*@
+    <!--css area privada cliente-->
+    <link rel="stylesheet" href="../../css/privada_cliente/main.css">
+
+    <!--datetimepickermaster v2-->
+    <link rel="stylesheet" type="text/css" href="../../vendor/datetimepicker-master/jquery.datetimepicker.css" />
+
+    @********************************************************************@
+
+
+    @RenderSection("head")
+
+    <link href="../../css/afiliados/optimized.css?t=1482161395781" rel="stylesheet" />
+    <link href="../../css/afiliados/fontawesome-4.4.0.min.css" rel="stylesheet" />
+
+    @*<link rel="stylesheet" type="text/css" href="../../asset/css/bootstrap.min.css" media="screen">*@
+    <link rel="stylesheet" type="text/css" href="../../css/afiliados/estilos_menu.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="../../css/afiliados/fontello.css" media="screen">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!-- Ancove CSS -->
+    <link rel="stylesheet" href="../../css/afiliados/general.css" />
+    <link rel="stylesheet" href="../../css/afiliados/responsive_2019.css" />
+
+    @*@Styles.Render("~/css/ancove")
+        @RenderSection("styles", required: false)*@
+
+
+    @*<script src="https://kendo.cdn.telerik.com/2018.2.516/js/jquery.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2018.2.516/js/kendo.all.min.js"></script>
+        <script src="https://kendo.cdn.telerik.com/2018.2.516/js/kendo.aspnetmvc.min.js"></script>*@
+
+    @*<script src="../../js/jquery.datetimepicker.full.js"></script>*@
+
+    @*<script src="@Url.Content("~/Scripts/kendo.modernizr.custom.js")"></script>*@
+
+    <script type="text/javascript">
+        //<![CDATA[
+        function WebForm_OnSubmit() {
+            if (typeof (ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+            return true;
+        }
+        //]]>
+    </script>
+
+
+
+    <style>
+        .owl-origin {
+            -webkit-perspective: 1200px;
+            -webkit-perspective-origin-x: 50%;
+            -webkit-perspective-origin-y: 50%;
+            -moz-perspective: 1200px;
+            -moz-perspective-origin-x: 50%;
+            -moz-perspective-origin-y: 50%;
+            perspective: 1200px;
+        }
+
+        .owl-fade-out {
+            z-index: 10;
+            -webkit-animation: fadeOut .7s both ease;
+            -moz-animation: fadeOut .7s both ease;
+            animation: fadeOut .7s both ease;
+        }
+
+        .owl-fade-in {
+            -webkit-animation: fadeIn .7s both ease;
+            -moz-animation: fadeIn .7s both ease;
+            animation: fadeIn .7s both ease;
+        }
+
+        .owl-backSlide-out {
+            -webkit-animation: backSlideOut 1s both ease;
+            -moz-animation: backSlideOut 1s both ease;
+            animation: backSlideOut 1s both ease;
+        }
+
+        .owl-backSlide-in {
+            -webkit-animation: backSlideIn 1s both ease;
+            -moz-animation: backSlideIn 1s both ease;
+            animation: backSlideIn 1s both ease;
+        }
+
+        .owl-goDown-out {
+            -webkit-animation: scaleToFade .7s ease both;
+            -moz-animation: scaleToFade .7s ease both;
+            animation: scaleToFade .7s ease both;
+        }
+
+        .owl-goDown-in {
+            -webkit-animation: goDown .6s ease both;
+            -moz-animation: goDown .6s ease both;
+            animation: goDown .6s ease both;
+        }
+
+        .owl-fadeUp-in {
+            -webkit-animation: scaleUpFrom .5s ease both;
+            -moz-animation: scaleUpFrom .5s ease both;
+            animation: scaleUpFrom .5s ease both;
+        }
+
+        .owl-fadeUp-out {
+            -webkit-animation: scaleUpTo .5s ease both;
+            -moz-animation: scaleUpTo .5s ease both;
+            animation: scaleUpTo .5s ease both;
+        }
+
+        .container1 {
+            width: calc(100% - 50px) !important;
+        }
+
+        .container_footer {
+            width: calc(100% - 4px) !important;
+        }
+
+        .tablaGrid {
+            width: 100% !important;
+            border: 0 !important;
+            padding-bottom: 10px;
+        }
+
+            .tablaGrid td {
+                border-bottom: 1px solid #ccc;
+                padding-top: 15px;
+                padding-bottom: 15px;
+            }
+
+        .pagerGrid {
+            padding-left: 0;
+            margin: 20px 0;
+            text-align: center;
+            list-style: none;
+        }
+
+            .pagerGrid .command, .pagerGrid .current {
+                border: 1px solid #ccc;
+                padding: 8px 16px;
+                color: #2a6496;
+                margin-left: -4px;
+            }
+
+            .pagerGrid .current {
+                color: #fff;
+                cursor: default;
+                background-color: #428bca;
+                border-color: #428bca;
+            }
+
+
+            .pagerGrid .command:first-child {
+                border-top-left-radius: 5px;
+                border-bottom-left-radius: 5px;
+            }
+
+            .pagerGrid .command:last-child {
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+            }
+
+            .pagerGrid .command:hover {
+                color: #2a6496;
+                background-color: #eee;
+                border-color: #ddd;
+            }
+
+            .pagerGrid a:visited {
+                text-decoration: none;
+            }
+
+        .pie-de-pagina #superpie {
+            color: #fff !important;
+            font-size: 0.85rem !important;
+        }
+
+        #triger-menu {
+            left: 17.5rem;
+            top: 12px;
+            width: 46px;
+            height: 44px;
+            border: #ccc 2px solid;
+            border-radius: .45rem;
+            cursor: pointer;
+        }
+
+        #triger-menu {
+            position: absolute !important;
+        }
+
+        .menu-principal .menu-principal__cabecera-seccion h3, .menu-principal .menu-principal__cabecera-seccion h4, .menu-principal .menu-principal__cabecera-seccion h5 {
+            padding-left: 1rem;
+            padding-top: 1rem;
+        }
+
+
+        .close {
+            width: 10px !important;
+        }
+    </style>
+
+    <style type="text/css">
+        .image2 {
+            display: none;
+        }
+
+        .owl-prev, .owl-next {
+            font-size: 16px !important;
+            color: #20134c !important;
+            background-color: white !important;
+        }
+
+            .owl-prev:hover, .owl-next:hover {
+                background-color: #b42659 !important;
+                color: white !important;
+            }
+    </style>
+
+    <!-- ESTILOS NUEVOS -->
+    <style>
+
+        html {
+            /*max-width: 1280px;*/
+            height: auto;
+            font-size: 10pt;
+            line-height: 1.5;
+            font-weight: 400;
+            font-family: 'Lato', sans-serif !important;
+            -webkit-text-size-adjust: 100%;
+            overflow-x: hidden;
+            margin: 0 auto;
+            /* background: #eee; */
+        }
+
+        .container {
+            MARGIN-TOP: 50px !important;
+        }
+
+        .almedio {
+            text-align: center;
+            display: block;
+        }
+
+        .aladerecha {
+            text-align: right;
+            display: block;
+            padding-top: 45px;
+        }
+
+        .alizquierda {
+            text-align: left;
+            display: block;
+            padding-top: 20px;
+        }
+
+        h4 {
+            display: block !important;
+            margin-block-start: 1.33em !important;
+            margin-block-end: 1.33em !important;
+            margin-inline-start: 0px !important;
+            margin-inline-end: 0px !important;
+            /*font-weight: bold !important;*/
+            font-size: 18pt !important;
+        }
+
+        h6 {
+            color: #626262 !important;
+            font-size: 1.7rem !important;
+            font-family: 'Lato', sans-serif !important;
+            display: inline-table !important;
+        }
+
+        .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+            margin-bottom: .5rem !important;
+            font-family: inherit !important;
+            /* font-weight: 500; */
+            line-height: 1.2 !important;
+            /* color: inherit; */
+        }
+
+        /*hr {
+            border-bottom: solid 1px !important;
+            border-image: linear-gradient(to left,rgb(255, 0, 54) 0%,rgb(0, 149, 255) 100%) !important;
+            border-image: -webkit-linear-gradient(to left,rgb(255, 0, 54) 0%,rgb(0, 149, 255) 100%) !important;
+            border-image: -moz-linear-gradient(to left,rgb(255, 0, 54) 0%,rgb(0, 149, 255) 100%) !important;
+            border-image: -o-linear-gradient(to left,rgb(255, 0, 54) 0%,rgb(0, 149, 255) 100%) !important;
+            border-image-slice: 1 !important;
+            margin-top: 1rem !important;
+        }*/
+
+        .mb-4, .my-4 {
+            margin-bottom: 1.5rem !important;
+        }
+
+        .mt-4, .my-4 {
+            margin-top: 1.5rem !important;
+        }
+
+        .btn-blanco {
+            color: #fff !important;
+            background-color: #fff;
+        }
+
+        .square {
+            background-color: #f2f2f2 !important;
+            padding: 5px !important;
+            padding-top: 20px !important;
+            box-sizing: border-box !important;
+            width: 23% !important;
+            display: inline-block !important;
+            vertical-align: top !important;
+            min-height: 204px !important;
+            margin-bottom: 2rem !important;
+            border-top: 1px solid #b2c8dc !important;
+            border-bottom: 1px solid #b2c8dc !important;
+            border-right: 1px solid #b2c8dc !important;
+            border-left: 1px solid #b2c8dc !important;
+        }
+
+        .border-top {
+            border-top: 1px solid #b2c8dc !important;
+        }
+
+        .squareform {
+            /*background-color: #f2f2f2 !important;*/
+            padding: 30px !important;
+        }
+
+        .mr-3, .mx-3 {
+            margin-right: 2rem !important;
+        }
+
+        .lines-effect2 {
+            position: relative;
+        }
+
+            .lines-effect2::before {
+                left: 180px;
+                background-color: #0a558e;
+            }
+
+            .lines-effect2::after {
+                right: 180px;
+                background-color: #b40047;
+            }
+
+            .lines-effect2::after, .lines-effect2::before {
+                content: '';
+                position: absolute;
+                width: 230px;
+                height: 1px;
+                top: 0.6em;
+            }
+
+        *, ::after, ::before {
+            box-sizing: border-box;
+        }
+
+        .active {
+            background-image: linear-gradient(90deg, #21D4FD, #b42559);
+            /*background: -webkit-linear-gradient(#21D4FD,#b42559);*/
+            -webkit-background-clip: text;
+            /* -webkit-text-fill-color: transparent; */
+        }
+
+        .lines-effect-220 {
+            content: '';
+            width: 220px;
+            height: 1px;
+            top: 0.6em;
+            text-align: left;
+            box-sizing: border-box;
+        }
+
+        .lines-effect {
+            content: '';
+            height: 1px;
+            top: 0.6em;
+            box-sizing: border-box;
+        }
+
+
+        .btn {
+            display: inline-block;
+            padding: 4px 12px;
+            margin-bottom: 0;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 1.42857143;
+            text-align: center;
+            white-space: nowrap;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-image: none;
+            /* border: 1px solid transparent; */
+            border-radius: 4px;
+        }
+
+        /*footer*/
+        .ml-auto, .mx-auto {
+            margin-left: auto !important;
+        }
+
+        .mr-auto, .mx-auto {
+            margin-right: auto !important;
+        }
+
+        .d-flex {
+            display: -ms-flexbox !important;
+            display: flex !important;
+        }
+
+        /*footer {
+               background: #0c5991 !important;
+               height: 30px !important;
+               width: 100% !important;
+               min-height: 30px !important;
+               color: #fff !important;
+               font-family: 'Poppins', sans-serif !important;
+           }*/
+
+        .m-0 {
+            /*margin: 0 !important;*/
+            margin-top: 2rem !important;
+            margin-bottom: 6rem !important;
+        }
+
+        .pr-2, .px-2 {
+            padding-right: .5rem !important;
+        }
+
+        .mt-3, .my-3 {
+            margin-top: 4rem !important;
+        }
+
+        .col-auto {
+            -ms-flex: 0 0 auto;
+            flex: 0 0 auto;
+            width: auto;
+            max-width: none;
+        }
+
+        .ml-auto, .mx-auto {
+            margin-left: auto !important;
+        }
+
+        .mr-auto, .mx-auto {
+            margin-right: auto !important;
+        }
+
+        .align-items-center {
+            -ms-flex-align: center !important;
+            align-items: center !important;
+        }
+
+        .justify-content-center {
+            -ms-flex-pack: center !important;
+            justify-content: center !important;
+            border-radius: 10px !important;
+        }
+        /* end footer*/
+
+        .mt-3, .my-3 {
+            margin-top: 3rem !important;
+        }
+
+        .button {
+            margin-top: 10px;
+            border-bottom: 2px solid #b42559;
+            background: #0c5a91;
+            background: -webkit-gradient(linear, left top, left bottom, from(#0070bf), to(#004271));
+            background: -webkit-linear-gradient(top, #0070bf, #004271);
+            background: -moz-linear-gradient(top, #0070bf, #004271);
+            background: -ms-linear-gradient(top, #0070bf, #004271);
+            background: -o-linear-gradient(top, #0070bf, #004271);
+            padding: 6px 16px;
+            -webkit-border-radius: 0px;
+            -moz-border-radius: 0px;
+            border-radius: 0px;
+            text-shadow: rgba(0,0,0,.4) 0 1px 0;
+            color: white;
+            font-size: 15px;
+            font-family: Helvetica, Arial, Sans-Serif;
+            text-decoration: none;
+            vertical-align: middle;
+            transition: all .3s ease;
+            box-sizing: border-box;
+            border-radius: 5px;
+        }
+
+        .button2 {
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            border-bottom: 2px solid #0c5a91;
+            background: -webkit-gradient(linear, left top, left bottom, from(#b42559), to(#6f0029));
+            background: -webkit-linear-gradient(top, #b42559, #6f0029);
+            background: -moz-linear-gradient(top, #b42559, #6f0029);
+            background: -ms-linear-gradient(top, #b42559, #6f0029);
+            background: -o-linear-gradient(top, #b42559, #6f0029);
+            padding: 6px 16px;
+            text-shadow: rgba(0,0,0,.4) 0 1px 0;
+            color: white;
+            font-size: 15px;
+            font-family: Helvetica, Arial, Sans-Serif;
+            text-decoration: none;
+            vertical-align: middle;
+            transition: all .3s ease;
+            border-radius: 5px;
+        }
+
+        #cookie-notice {
+            /*display: none;*/
+            bottom: 0;
+            position: fixed;
+            min-width: 100%;
+            height: auto;
+            z-index: 100000;
+            font-size: 13px;
+            line-height: 20px;
+            left: 0;
+            text-align: center;
+        }
+
+        .cookie-notice-container {
+            padding: 10px;
+            text-align: center;
+        }
+
+        #cookie-notice .button.bootstrap {
+            margin-right: .3em;
+            margin-left: .3em;
+            margin-bottom: 0;
+            line-height: 20px;
+            text-align: center;
+            vertical-align: middle;
+            color: #fff;
+            text-shadow: 0 -1px 0 rgba(0,0,0,.25);
+            background-color: #006dcc;
+            background-image: -moz-linear-gradient(top,#08c,#04c);
+            background-image: -webkit-gradient(linear,0 0,0 100%,from(#08c),to(#04c));
+            background-image: -webkit-linear-gradient(top,#08c,#04c);
+            background-image: -o-linear-gradient(top,#08c,#04c);
+            background-image: linear-gradient(to bottom,#08c,#04c);
+            background-repeat: repeat-x;
+            border-color: #04c #04c #002a80;
+            border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) rgba(0,0,0,.25);
+            box-shadow: 0 1px 0 rgba(255,255,255,.2) inset, 0 1px 2px rgba(0,0,0,.05);
+            filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0088cc', endColorstr='#ff0044cc', GradientType=0);
+            filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+            padding: 2px 10px;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+        }
+
+        #cookie-notice .button.bootstrap, #cookie-notice .button.wp-default {
+            font-family: sans-serif;
+            display: inline-block;
+            font-style: normal;
+            cursor: pointer;
+            border-style: solid;
+            border-width: 1px;
+            font-size: 12px;
+            text-decoration: none;
+            outline: 0;
+        }
+
+        .box-simple-line {
+            background-color: #fff;
+            border-radius: 5px;
+            -webkit-box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.12);
+            box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.12);
+            border: none;
+        }
+
+        .box-simple-line {
+            border: 1px solid #F1F2F6;
+            padding: 20px 30px;
+            background-color: #F1F2F6;
+        }
+
+        .box-icon-dash {
+            position: absolute;
+            left: 20px;
+            top: -20px;
+            padding: 10px 20px;
+            color: #fff;
+            border-radius: 8px;
+            font-size: 20px;
+            transition: all 0.5s ease;
+            background-color: rgba(59, 97, 170, 1);
+        }
+
+        label {
+            display: inline-block !important;
+            margin-bottom: .5rem !important;
+        }
+
+        /*.btn-register-menu {
+               background-color: #0c5991;
+               color: #fff !important;
+               padding: 15px;
+               cursor: pointer;
+           }*/
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 1000;
+            display: none;
+            float: left;
+            min-width: 10rem;
+            padding: 0.5rem 0;
+            margin: 0.125rem 0 0;
+            font-size: 1rem;
+            color: #212529;
+            text-align: left;
+            list-style: none;
+            background-color: #fff;
+            background-clip: padding-box;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            border-radius: 0.25rem;
+        }
+
+        .p-1 {
+            padding: 0.25rem !important;
+        }
+
+        .border-bottom {
+            border-bottom: 1px solid #dee2e6 !important;
+        }
+
+        /*Estilos busqueda avanzadas*/
+
+        .card {
+            position: relative !important;
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
+            -webkit-box-orient: vertical !important;
+            -webkit-box-direction: normal !important;
+            -ms-flex-direction: column !important;
+            flex-direction: column !important;
+            min-width: 0 !important;
+            /* word-wrap: break-word; */
+            background-color: #fff !important;
+            background-clip: border-box !important;
+            border: 1px solid rgba(0, 0, 0, 0.125) !important;
+            border-radius: 0.25rem !important;
+        }
+
+        .card-filtros {
+            position: relative !important;
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
+            -webkit-box-orient: vertical !important;
+            -webkit-box-direction: normal !important;
+            -ms-flex-direction: column !important;
+            flex-direction: column !important;
+            min-width: 0 !important;
+            /* word-wrap: break-word; */
+            background-color: #fff !important;
+            background-clip: border-box !important;
+            border-radius: 0.25rem !important;
+        }
+
+        .card-filter .card-header {
+            background-color: #F1F2F6;
+            border: 1px solid #3B61AA;
+            color: #3B61AA;
+            padding: 5px 10px;
+        }
+
+        .card-header:first-child {
+            border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+        }
+
+        .card-header {
+            padding: 0.75rem 1.25rem;
+            margin-bottom: 0;
+            background-color: rgba(0, 0, 0, 0.03);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        }
+
+        .card-header-filtros {
+            padding: 0.4rem 0rem 0rem 1rem;
+            margin-bottom: 0;
+        }
+
+        .card-body {
+            -webkit-box-flex: 1;
+            -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
+            padding: 0.5rem;
+        }
+
+        .card-filter {
+            background-color: #FFF;
+        }
+
+            .card-filter .card-header {
+                background-color: #F1F2F6;
+                border: 1px solid #3B61AA;
+                color: #3B61AA;
+                padding: 5px 10px;
+            }
+
+
+        .card-filter {
+            background-color: #FFF;
+        }
+
+        .text-right {
+            text-align: right !important;
+        }
+
+        /* BORDES REDONDEADOS */
+
+        #deals {
+            margin: 0 auto;
+            display: flex;
+        }
+
+        #deals2 {
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .sale-item {
+            margin: 3px;
+            border: 1px solid #b2c8dc;
+            border-radius: 10px;
+            padding: 1em;
+            background-color: #F1F2F6;
+            flex: 1 1 50%;
+            display: flex;
+            flex-flow: column nowrap;
+            align-items: start;
+            justify-content: end;
+        }
+
+        .sale-item2 {
+            margin: 3px;
+            border: 1px solid #b2c8dc;
+            border-radius: 40px;
+            /*padding: 1em;*/
+            flex: 1 1 50%;
+            display: flex;
+            flex-flow: column nowrap;
+            width: 400px !important;
+            align-items: start;
+            justify-content: end;
+            -webkit-box-shadow: inset 1px -1px 15px 0px #b2c8dc;
+        }
+
+        .sale-item-filtros {
+            margin: 3px;
+            border: 1px solid #b2c8dc;
+            border-radius: 10px;
+            padding: 0.1em;
+            flex: 1 1 50%;
+            display: flex;
+            flex-flow: column nowrap;
+            width: 400px !important;
+            justify-content: end;
+        }
+
+        .sale-item-form {
+            margin: 3px;
+            border: 1px solid #b2c8dc;
+            border-radius: 10px;
+            /*padding: 0.1em;*/
+            flex: 1 1 50%;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: end;
+        }
+
+        .sale-info {
+            order: 1;
+            /*flex-grow: 1;*/
+            font-size: 0.90em;
+            align-self: center;
+        }
+
+        .input-group-buscador {
+            position: relative;
+            display: table;
+            border-collapse: separate;
+        }
+
+        .boton {
+            order: 1;
+            align-self: center;
+            width: 90%;
+            height: 2em;
+        }
+
+        button {
+            border: 2px inset;
+            border-radius: 5px;
+            width: 100%;
+            height: 100%;
+            color: white;
+            background-color: #0c5991;
+        }
+
+        .sale-image {
+            height: 35%;
+            order: 0;
+            align-self: center;
+            flex-grow: 0;
+        }
+
+        .box-excel {
+            border: 1px solid green;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .box-zip {
+            border: 1px solid #920159;
+            padding: 15px;
+            border-radius: 8px;
+        }
+
+        .btn-excel {
+            background-color: #008000;
+            color: #fff !important;
+        }
+
+        .btn-zip {
+            background-color: #920159;
+            color: #fff !important;
+        }
+
+        .color-excel {
+            color: #008000;
+        }
+
+        .color-zip {
+            color: #920159;
+        }
+
+        .anti-row {
+            margin-right: 0px;
+            margin-left: 0px;
+        }
+
+        .checkmark {
+            /*position: absolute;*/
+            top: 0px;
+            left: 0;
+            height: 20px;
+            width: 20px;
+            background-color: #eee;
+            border-radius: 50%;
+        }
+
+        .blue-color-bold2 {
+            color: #3B61AA;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /*- INICIO UPLOAD */
+
+        .dropZoneElement {
+            position: relative;
+            display: inline-block;
+            background-color: #f8f8f8;
+            border: 1px solid #c7c7c7;
+            width: 230px;
+            height: 110px;
+            text-align: center;
+        }
+
+        .textWrapper {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 100%;
+            font-size: 24px;
+            line-height: 1.2em;
+            font-family: Arial,Helvetica,sans-serif;
+            color: #000;
+        }
+
+        .dropImageHereText {
+            color: #c7c7c7;
+            text-transform: uppercase;
+            font-size: 12px;
+        }
+
+        .product {
+            float: left;
+            position: relative;
+            margin: 0 10px 10px 0;
+            padding: 0;
+        }
+
+            .product img {
+                width: 110px;
+                height: 110px;
+            }
+
+        .wrapper:after {
+            content: ".";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        }
+
+        /*- FIN UPLOAD */
+
+        .box-simple-line {
+            background-color: #fff;
+            border-radius: 5px;
+            -webkit-box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.12);
+            box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.12);
+            border: none;
+            padding: 20px 30px;
+        }
+    </style>
+    <!-- FIN ESTILOS NUEVOS -->
+
+</head>
+<body>
+
+    <!-- HEADER -->
+
+    <header id="cabecera-principal" class="container-fluid cabecera cabecera-principal p-y-1">
+
+        <div class="col-md-6 col-sm-9 col-xs-6 cabecera-elem">
+            <a href="#" class="hidden-xs">
+                <div style="margin-left: 15px" class="img-logo1">
+                    <img id="pccom-logo" src="@Url.Content("/../../img/afiliados/logoCVgrupo.png")" alt="cvgrupo.es" width="175" class="image1" />
+                </div>
+                <div style="margin-left: 45px; margin-top: -5px" class="img-logo2">
+                    <img id="cvgrupo-logog" src="../../img/afiliados/banner_grupo_cv.jpg" width="75" alt="cvgrupo.es" class="image2" />
+                </div>
+            </a>
+            <div id="triger-menu" data-pcc-trigger="toggle-menu-principal" data-pcc-event="click" data-pcc-group="menus-desplegables">
+                <i class="pccom-icon">&#69;</i>
+            </div>
+
+            @*<div id="triger-logo" class="image3">
+                    <a href="#"><img id="cvgrupo-logo-m" src="../../App_Themes/public/images/CV.png" width="30" style="margin-top:5px" alt="Inicio Grupo CV" /></a>
+                </div>*@
+
+            <ul id="usuario" class="pull-xs-right p-r-2 p-l-0 user-floating" data-user-id="c96de3cf3326bbbbdb1bd68aa84ea9c9"></ul>
+        </div>
+
+        <div class="col-md-4 col-sm-2 col-xs-4 cabecera-elem">
+
+
+        </div>
+        <div class="col-md-2 col-sm-1 col-xs-2 cabecera-elem">
+            <div class="media-body dlogout" style="text-align:right">
+                <asp:LinkButton runat="server" ID="LBLO" OnClick="LBLO_Click">
+                    <div><asp:ImageButton OnClick="logOut_Click" runat="server" width="25" style="margin-top:5px" ID="logOut" ImageUrl="../../img/afiliados/shutdown.png" /> </div>
+                    <div class="hidden-sm hidden-xs" style="font-size:small"> Salir</div>
+                </asp:LinkButton>
+            </div>
+
+        </div>
+
+    </header>
+
+    <!-- MENU -->
+
+    <nav id="menu-principal" class="menu-principal v3 sombra-suave" data-pcc-listen="toggle-menu-principal" data-pcc-class="menu-principal--desplegado" data-pcc-group="menus-desplegables" data-pcc-active="0">
+        <div class="menu-principal__fondo-movil" data-pcc-trigger="toggle-menu-principal" data-pcc-event="click" data-pcc-group="menus-desplegables"></div>
+        <div class="menu-principal__seccion menu-principal__seccion-superfamilias">
+
+            <header class="menu-principal__cabecera-seccion cabecera-superfamilia">
+                <h3>TODAS LAS SECCIONES</h3>
+                <div data-pcc-trigger="toggle-menu-principal" data-pcc-event="click" data-pcc-group="menus-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                    <i class="pccom-icon">0</i>
+                </div>
+            </header>
+
+            <div class="menu-principal__seccion__flecha">
+                <img src="../../img/afiliados/menu-arrows-superfamilia.png" class="img-fluid" alt="Familias de artículos de CvGrupo" />
+            </div>
+
+            <ul class="menu-principal__lista-superfamilias">
+                <li class="menu-principal__superfamilia">
+                    <div class="menu-principal__enlace-boton">
+                        <a id="GTM-superfamilia-1" href="#" class="con-icono con-icono-comunicacion hidden-md-down">Comunicación</a>
+                        <div data-pcc-trigger="toggle-superfamilia-1" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="con-icono con-icono-comunicacion menu-principal__pulsador-texto hidden-lg-up">
+                            Comunicación
+                        </div>
+                        <div data-pcc-trigger="toggle-superfamilia-1" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                            <i class="pccom-icon">-</i>
+                        </div>
+                    </div>
+                    <div class="menu-principal__seccion-familias menu-principal__seccion-familia-1" data-pcc-listen="toggle-superfamilia-1" data-pcc-class="superfamilia--desplegada" data-pcc-group="superfamilias-desplegables" data-pcc-active="0">
+                        <div class="menu-principal__cabecera-seccion cabecera-familia">
+                            <h4 class="hidden-md-down">COMUNICACIÓN</h4>
+                            <h4 class="hidden-lg-up"><a href="#">COMUNICACIÓN</a></h4>
+                            <div data-pcc-trigger="toggle-superfamilia-1" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                                <i class="pccom-icon">0</i>
+                            </div>
+                        </div>
+                        <div class="menu-principal__seccion__flecha">
+
+                            <img src="../../img/afiliados/menu-arrows-familia.png" class="img-fluid" alt=">" />
+                        </div>
+                        <div class="row menu-principal__categorias-de-familia">
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista-Componentes">
+                                    <h5 class="h4" style="font-size: 14px">Noticias</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/NoticiasSector.aspx?cat=10000" class="GTM-subfamilia-Mundo-DJ">Noticias del Sector</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/NoticiasOficiales.aspx?cat=10000" class="GTM-subfamilia-Mundo-DJ">Noticias Oficiales</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/Boletin.aspx?cat=10000" class="GTM-subfamilia-Mundo-DJ">Boletín de Noticias</a></li>
+
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista-Pc-a-Medida">
+                                    <h5 class="h4" style="font-size: 14px">Alertas</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/Avisos.aspx" class="GTM-subfamilia-Mundo-DJ">Alertas</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-principal__lista-categoria menu-principal__lista">
+                                    <h5 class="h4" style="font-size: 14px">Agenda</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/Agenda.aspx" class="GTM-subfamilia-Mundo-DJ">Agenda</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-principal__superfamilia">
+                    <div class="menu-principal__enlace-boton">
+                        <a id="GTM-superfamilia-28" href="#" class="con-icono con-icono-financiacion hidden-md-down">Financiación</a>
+                        <div data-pcc-trigger="toggle-superfamilia-28" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="con-icono con-icono-financiacion menu-principal__pulsador-texto hidden-lg-up">
+                            Financiación
+                        </div>
+                        <div data-pcc-trigger="toggle-superfamilia-28" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                            <i class="pccom-icon">-</i>
+                        </div>
+                    </div>
+                    <div class="menu-principal__seccion-familias menu-principal__seccion-familia-28" data-pcc-listen="toggle-superfamilia-28" data-pcc-class="superfamilia--desplegada" data-pcc-group="superfamilias-desplegables" data-pcc-active="0">
+                        <div class="menu-principal__cabecera-seccion cabecera-familia">
+                            <h4 class="hidden-md-down">FINANCIACIÓN</h4>
+                            <h4 class="hidden-lg-up"><a href="#">FINANCIACIÓN</a></h4>
+                            <div data-pcc-trigger="toggle-superfamilia-28" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                                <i class="pccom-icon">0</i>
+                            </div>
+                        </div>
+                        <div class="menu-principal__seccion__flecha">
+
+                            <img src="../../img/afiliados/menu-arrows-familia.png" class="img-fluid" alt=">" />
+                        </div>
+                        <div class="row menu-principal__categorias-de-familia">
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista-Periféricos">
+                                    <h5 class="h4" style="font-size: 14px">Financiación</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/OperacionesFinanciacion.aspx" class="GTM-subfamilia-Mundo-DJ">Operaciones</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/SimuladorFinanciero.aspx?cat=20000" class="GTM-subfamilia-Mundo-DJ">Simulador Financiero</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                </li>
+                <li class="menu-principal__superfamilia">
+                    <div class="menu-principal__enlace-boton">
+                        <a id="GTM-superfamilia-78" href="#" class="con-icono con-icono-tasacion hidden-md-down">Tasación de Vehículos</a>
+                        <div data-pcc-trigger="toggle-superfamilia-78" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="con-icono con-icono-tasacion menu-principal__pulsador-texto hidden-lg-up">
+                            Tasación de Vehículos
+                        </div>
+                        <div data-pcc-trigger="toggle-superfamilia-78" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                            <i class="pccom-icon">-</i>
+                        </div>
+                    </div>
+                    <div class="menu-principal__seccion-familias menu-principal__seccion-familia-78" data-pcc-listen="toggle-superfamilia-78" data-pcc-class="superfamilia--desplegada" data-pcc-group="superfamilias-desplegables" data-pcc-active="0">
+                        <div class="menu-principal__cabecera-seccion cabecera-familia">
+                            <h4 class="hidden-md-down">TASACIÓN DE VEHÍCULOS</h4>
+                            <h4 class="hidden-lg-up"><a href="#">TASACIÓN DE VEHÍCULOS</a></h4>
+                            <div data-pcc-trigger="toggle-superfamilia-78" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                                <i class="pccom-icon">0</i>
+                            </div>
+                        </div>
+                        <div class="menu-principal__seccion__flecha">
+
+                            <img src="../../img/afiliados/menu-arrows-familia.png" class="img-fluid" alt=">" />
+                        </div>
+                        <div class="row menu-principal__categorias-de-familia">
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista-Cables">
+                                    <h5 class="h4" style="font-size: 14px">Tasación Vehículos</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/TasadorCoches.aspx" class="GTM-subfamilia-Mundo-DJ">Tasador de Coches</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/TasadorFurgonetas.aspx" class="GTM-subfamilia-Mundo-DJ">Tasador de Furgonetas</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/TasadorMotos.aspx" class="GTM-subfamilia-Mundo-DJ">Tasador de Motos</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                </li>
+                <li class="menu-principal__superfamilia">
+                    <div class="menu-principal__enlace-boton">
+                        <a id="GTM-superfamilia-100" href="#" class="con-icono con-icono-peritaciones hidden-md-down">Peritaciones</a>
+                        <div data-pcc-trigger="toggle-superfamilia-100" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="con-icono con-icono-peritaciones menu-principal__pulsador-texto hidden-lg-up">
+                            Peritaciones
+                        </div>
+                        <div data-pcc-trigger="toggle-superfamilia-100" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                            <i class="pccom-icon">-</i>
+                        </div>
+                    </div>
+                    <div class="menu-principal__seccion-familias menu-principal__seccion-familia-100" data-pcc-listen="toggle-superfamilia-100" data-pcc-class="superfamilia--desplegada" data-pcc-group="superfamilias-desplegables" data-pcc-active="0">
+                        <div class="menu-principal__cabecera-seccion cabecera-familia">
+                            <h4 class="hidden-md-down">PERITACIONES</h4>
+                            <h4 class="hidden-lg-up"><a href="https://www.cvgrupo.es/Afiliados/Peritaciones.aspx">PERITACIONES</a></h4>
+                            <div data-pcc-trigger="toggle-superfamilia-100" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                                <i class="pccom-icon">0</i>
+                            </div>
+                        </div>
+                        <div class="menu-principal__seccion__flecha">
+
+                            <img src="../../img/afiliados/menu-arrows-familia.png" class="img-fluid" alt=">" />
+                        </div>
+
+
+                        <div class="row menu-principal__categorias-de-familia">
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista-Redes">
+                                    <h5 class="h4" style="font-size: 14px">Peritaciones</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/NuevaPeritacion.aspx" class="GTM-subfamilia-Mundo-DJ">Nueva Peritación</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/Peritaciones.aspx" class="GTM-subfamilia-Mundo-DJ">Listado de solicitudes</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                </li>
+                <li class="menu-principal__superfamilia">
+                    <div class="menu-principal__enlace-boton">
+                        <a id="GTM-superfamilia-119" href="#" class="con-icono con-icono-gestoria hidden-md-down">Gestoría</a>
+                        <div data-pcc-trigger="toggle-superfamilia-119" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="con-icono con-icono-gestoria menu-principal__pulsador-texto hidden-lg-up">
+                            Gestoría
+                        </div>
+                        <div data-pcc-trigger="toggle-superfamilia-119" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                            <i class="pccom-icon">-</i>
+                        </div>
+                    </div>
+                    <div class="menu-principal__seccion-familias menu-principal__seccion-familia-119" data-pcc-listen="toggle-superfamilia-119" data-pcc-class="superfamilia--desplegada" data-pcc-group="superfamilias-desplegables" data-pcc-active="0">
+                        <div class="menu-principal__cabecera-seccion cabecera-familia">
+                            <h4 class="hidden-md-down">GESTORÍA</h4>
+                            <h4 class="hidden-lg-up"><a href="/Documentos.aspx">GESTORÍA</a></h4>
+                            <div data-pcc-trigger="toggle-superfamilia-119" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                                <i class="pccom-icon">0</i>
+                            </div>
+                        </div>
+                        <div class="menu-principal__seccion__flecha">
+
+                            <img src="../../img/afiliados/menu-arrows-familia.png" class="img-fluid" alt=">" />
+                        </div>
+                        <div class="row menu-principal__categorias-de-familia">
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista-Portátiles">
+                                    <h5 class="h4" style="font-size: 14px">Buscador de Matrículas</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/Matriculas.aspx" class="GTM-subfamilia-Mundo-DJ">Buscador de Matrículas</a></li>
+
+                                    </ul>
+                                </div>
+                                <div class="menu-principal__lista-categoria menu-principal__lista-Pcs-Sobremesa">
+                                    <h5 class="h4" style="font-size: 14px">Derechos Reales</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/DerechosReales.aspx" class="GTM-subfamilia-Mundo-DJ">Consulta de Derechos Reales</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista">
+                                    <h5 class="h4" style="font-size: 14px">Documentos</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/Documentos.aspx" class="GTM-subfamilia-Documentos">Documentos</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-principal__lista-categoria menu-principal__lista">
+                                    <h5 class="h4" style="font-size: 14px">Hojas de Reclamación</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/HojasReclamacion.aspx" class="GTM-subfamilia-Hojas-Reclamacion">Hojas de Reclamación</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li class="menu-principal__superfamilia">
+                    <div class="menu-principal__enlace-boton">
+                        <a id="GTM-superfamilia-157" href="#" class="con-icono con-icono-estadisticas hidden-md-down">Estadísticas</a>
+                        <div data-pcc-trigger="toggle-superfamilia-157" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="con-icono con-icono-estadisticas menu-principal__pulsador-texto hidden-lg-up">
+                            Estadísticas
+                        </div>
+                        <div data-pcc-trigger="toggle-superfamilia-157" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                            <i class="pccom-icon">-</i>
+                        </div>
+                    </div>
+                    <div class="menu-principal__seccion-familias menu-principal__seccion-familia-157" data-pcc-listen="toggle-superfamilia-157" data-pcc-class="superfamilia--desplegada" data-pcc-group="superfamilias-desplegables" data-pcc-active="0">
+                        <div class="menu-principal__cabecera-seccion cabecera-familia">
+                            <h4 class="hidden-md-down">ESTADÍSTICAS</h4>
+                            <h4 class="hidden-lg-up"><a href="afiliados/EstadisticasTrimestrales.aspx">ESTADÍSTICAS</a></h4>
+                            <div data-pcc-trigger="toggle-superfamilia-157" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                                <i class="pccom-icon">0</i>
+                            </div>
+                        </div>
+                        <div class="menu-principal__seccion__flecha">
+
+                            <img src="../../img/afiliados/menu-arrows-familia.png" class="img-fluid" alt=">" />
+                        </div>
+                        <div class="row menu-principal__categorias-de-familia">
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista">
+                                    <h5 class="h4" style="font-size: 14px">Estadísticas VN</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasVN.aspx" class="GTM-subfamilia-Mundo-DJ">EstadísticasVN</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasAVN.aspx" class="GTM-subfamilia-Mundo-DJ">Automóviles nuevos</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasMVN.aspx" class="GTM-subfamilia-Mundo-DJ">Motocicletas nuevas</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasTVN.aspx" class="GTM-subfamilia-Mundo-DJ">Tractores nuevos</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-principal__lista-categoria menu-principal__lista">
+                                    <h5 class="h4" style="font-size: 14px">Estadísticas VO</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasVO.aspx" class="GTM-subfamilia-Mundo-DJ">Estadísticas VO</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasVO.aspx?cat=30000&id=1" class="GTM-subfamilia-Mundo-DJ">Automóviles VO Total España</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasVO.aspx?cat=30000&id=2" class="GTM-subfamilia-Mundo-DJ">Automóviles VO</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasMVO.aspx?cat=30000&id=8" class="GTM-subfamilia-Mundo-DJ">Motocicletas VO</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista">
+                                    <h5 class="h4" style="font-size: 14px">Resumen trimestral</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasTrimestrales.aspx" class="GTM-subfamilia-Mundo-DJ">Resumen trimestral</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasTrimestrales.aspx" class="GTM-subfamilia-Mundo-DJ">Turismos</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasTrimestrales.aspx" class="GTM-subfamilia-Mundo-DJ">Todoterrenos</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasTrimestrales.aspx" class="GTM-subfamilia-Mundo-DJ">Pick-ups</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasTrimestrales.aspx" class="GTM-subfamilia-Mundo-DJ">Microcoches</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasTrimestrales.aspx" class="GTM-subfamilia-Mundo-DJ">Comerciales ligeros</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasTrimestrales.aspx" class="GTM-subfamilia-Mundo-DJ">Industriales</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasTrimestrales.aspx" class="GTM-subfamilia-Mundo-DJ">Tractores</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasTrimestrales.aspx" class="GTM-subfamilia-Mundo-DJ">Autocaravanas</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasTrimestrales.aspx" class="GTM-subfamilia-Mundo-DJ">Motocicletas</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadisticasTrimestrales.aspx" class="GTM-subfamilia-Mundo-DJ">Quads</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-4">
+                            </div>
+                        </div>
+                </li>
+                <li class="menu-principal__superfamilia">
+                    <div class="menu-principal__enlace-boton">
+                        <a id="GTM-superfamilia-206" href="#" class="con-icono con-icono-informes hidden-md-down">Informes de Tráfico</a>
+                        <div data-pcc-trigger="toggle-superfamilia-206" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="con-icono con-icono-informes menu-principal__pulsador-texto hidden-lg-up">
+                            Informes de Tráfico
+                        </div>
+                        <div data-pcc-trigger="toggle-superfamilia-206" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                            <i class="pccom-icon">-</i>
+                        </div>
+                    </div>
+                    <div class="menu-principal__seccion-familias menu-principal__seccion-familia-206" data-pcc-listen="toggle-superfamilia-206" data-pcc-class="superfamilia--desplegada" data-pcc-group="superfamilias-desplegables" data-pcc-active="0">
+                        <div class="menu-principal__cabecera-seccion cabecera-familia">
+                            <h4 class="hidden-md-down">INFORMES DE TRÁFICO</h4>
+                            <h4 class="hidden-lg-up"><a href="SolicitarInformesTrafico.aspx">INFORMES DE TRÁFICO</a></h4>
+                            <div data-pcc-trigger="toggle-superfamilia-206" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                                <i class="pccom-icon">0</i>
+                            </div>
+                        </div>
+                        <div class="menu-principal__seccion__flecha">
+
+                            <img src="../../img/afiliados/menu-arrows-familia.png" class="img-fluid" alt=">" />
+                        </div>
+                        <div class="row menu-principal__categorias-de-familia">
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista-Tablets">
+                                    <h5 class="h4" style="font-size: 14px">Informes de tráfico</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/SolicitarInformesTrafico.aspx" class="GTM-subfamilia-Mundo-DJ">Solicitar Informes</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/SolicitudesInformes.aspx" class="GTM-subfamilia-Mundo-DJ">Histórico de informes</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                            </div>
+                        </div>
+                </li>
+                <li class="menu-principal__superfamilia">
+                    <div class="menu-principal__enlace-boton">
+                        <a id="GTM-superfamilia-237" href="#" class="con-icono con-icono-publicidad hidden-md-down">Publicidad</a>
+                        <div data-pcc-trigger="toggle-superfamilia-237" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="con-icono con-icono-publicidad menu-principal__pulsador-texto hidden-lg-up">
+                            Publicidad
+                        </div>
+                        <div data-pcc-trigger="toggle-superfamilia-237" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                            <i class="pccom-icon">-</i>
+                        </div>
+                    </div>
+                    <div class="menu-principal__seccion-familias menu-principal__seccion-familia-237" data-pcc-listen="toggle-superfamilia-237" data-pcc-class="superfamilia--desplegada" data-pcc-group="superfamilias-desplegables" data-pcc-active="0">
+                        <div class="menu-principal__cabecera-seccion cabecera-familia">
+                            <h4 class="hidden-md-down">PUBLICIDAD</h4>
+                            <h4 class="hidden-lg-up"><a href="/MiStock.aspx">PUBLICIDAD</a></h4>
+                            <div data-pcc-trigger="toggle-superfamilia-237" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                                <i class="pccom-icon">0</i>
+                            </div>
+                        </div>
+                        <div class="menu-principal__seccion__flecha">
+
+                            <img src="../../img/afiliados/menu-arrows-familia.png" class="img-fluid" alt=">" />
+                        </div>
+                        <div class="row menu-principal__categorias-de-familia">
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista-Smartphones">
+                                    <h5 class="h4" style="font-size: 14px">Stock de vehículos</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/MiStock.aspx" class="GTM-subfamilia-Mundo-DJ">Gestionar Stock</a></li>
+
+                                    </ul>
+                                </div>
+
+                                <div class="menu-principal__lista-categoria menu-principal__lista-Mundo-iPhone">
+                                    <h5 class="h4" style="font-size: 14px">Pasarelas</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/PublicarIntermedio.aspx" class="GTM-subfamilia-Mundo-DJ">Anunciar Vehículos</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/Pasarelas.aspx" class="GTM-subfamilia-Mundo-DJ">Configurar Pasarela</a></li>
+
+
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                </li>
+                <li class="menu-principal__superfamilia">
+                    <div class="menu-principal__enlace-boton">
+                        <a id="GTM-superfamilia-271" href="#" class="con-icono con-icono-logistica hidden-md-down">Logística</a>
+                        <div data-pcc-trigger="toggle-superfamilia-271" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="con-icono con-icono-logistica menu-principal__pulsador-texto hidden-lg-up">
+                            Logística
+                        </div>
+                        <div data-pcc-trigger="toggle-superfamilia-271" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                            <i class="pccom-icon">-</i>
+                        </div>
+                    </div>
+                    <div class="menu-principal__seccion-familias menu-principal__seccion-familia-271" data-pcc-listen="toggle-superfamilia-271" data-pcc-class="superfamilia--desplegada" data-pcc-group="superfamilias-desplegables" data-pcc-active="0">
+                        <div class="menu-principal__cabecera-seccion cabecera-familia">
+                            <h4 class="hidden-md-down">LOGÍSTICA</h4>
+                            <h4 class="hidden-lg-up"><a href="/CalculadoraTransporte.aspx">LOGÍSTICA</a></h4>
+                            <div data-pcc-trigger="toggle-superfamilia-271" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                                <i class="pccom-icon">0</i>
+                            </div>
+                        </div>
+                        <div class="menu-principal__seccion__flecha">
+
+                            <img src="../../img/afiliados/menu-arrows-familia.png" class="img-fluid" alt=">" />
+                        </div>
+                        <div class="row menu-principal__categorias-de-familia">
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista-Sony-PS4">
+                                    <h5 class="h4" style="font-size: 14px">Logística</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/Transporte.aspx" class="GTM-subfamilia-Mundo-DJ">Solicitar Transporte</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadoTransporte.aspx" class="GTM-subfamilia-Mundo-DJ">Sigue tu envio</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/PedidosTransporte.aspx" class="GTM-subfamilia-Mundo-DJ">Pedidos guardados</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/CalculadoraTransporte.aspx" class="GTM-subfamilia-Mundo-DJ">Calcular transporte</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/TransporteInternacional.aspx" class="GTM-subfamilia-Mundo-DJ">Internacional</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadoCuenta.aspx" class="GTM-subfamilia-Mundo-DJ">Facturas de transporte</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-4">
+                            </div>
+                            <div class="col-lg-4">
+                            </div>
+                        </div>
+                </li>
+                <li class="menu-principal__superfamilia">
+                    <div class="menu-principal__enlace-boton">
+                        <a id="GTM-superfamilia-320" href="#" class="con-icono con-icono-seguros hidden-md-down">Seguros</a>
+                        <div data-pcc-trigger="toggle-superfamilia-320" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="con-icono con-icono-seguros menu-principal__pulsador-texto hidden-lg-up">
+                            Seguros
+                        </div>
+                        <div data-pcc-trigger="toggle-superfamilia-320" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                            <i class="pccom-icon">-</i>
+                        </div>
+                    </div>
+                    <div class="menu-principal__seccion-familias menu-principal__seccion-familia-320" data-pcc-listen="toggle-superfamilia-320" data-pcc-class="superfamilia--desplegada" data-pcc-group="superfamilias-desplegables" data-pcc-active="0">
+                        <div class="menu-principal__cabecera-seccion cabecera-familia">
+                            <h4 class="hidden-md-down">SEGUROS</h4>
+                            <h4 class="hidden-lg-up"><a href="/PolizasFlotantes.aspx">SEGUROS</a></h4>
+                            <div data-pcc-trigger="toggle-superfamilia-320" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                                <i class="pccom-icon">0</i>
+                            </div>
+                        </div>
+                        <div class="menu-principal__seccion__flecha">
+
+                            <img src="../../img/afiliados/menu-arrows-familia.png" class="img-fluid" alt=">" />
+                        </div>
+                        <div class="row menu-principal__categorias-de-familia">
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista-Discos-CD/DVD">
+                                    <h5 class="h4" style="font-size: 14px">SEGUROS</h5>
+                                    <ul>
+                                        <li><a href="@Url.Content("/Seguros/Index")">Seguros</a></li>
+                                        <li><a href="@Url.Content("/Seguros/Solicitudes")">Productos</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-4">
+                            </div>
+                            <div class="col-lg-4">
+                            </div>
+                        </div>
+                </li>
+                <li class="menu-principal__superfamilia">
+                    <div class="menu-principal__enlace-boton">
+                        <a id="GTM-superfamilia-359" href="#" class="con-icono con-icono-movil hidden-md-down">Aplicación Móvil</a>
+                        <div data-pcc-trigger="toggle-superfamilia-359" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="con-icono con-icono-movil menu-principal__pulsador-texto hidden-lg-up">
+                            Aplicación Móvil
+                        </div>
+                        <div data-pcc-trigger="toggle-superfamilia-359" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                            <i class="pccom-icon">-</i>
+                        </div>
+                    </div>
+                    <div class="menu-principal__seccion-familias menu-principal__seccion-familia-359" data-pcc-listen="toggle-superfamilia-359" data-pcc-class="superfamilia--desplegada" data-pcc-group="superfamilias-desplegables" data-pcc-active="0">
+                        <div class="menu-principal__cabecera-seccion cabecera-familia">
+                            <h4 class="hidden-md-down">APLICACIÓN MÓVIL</h4>
+                            <h4 class="hidden-lg-up"><a href="afiliados/Movil.aspx">APLICACIÓN MÓVIL</a></h4>
+                            <div data-pcc-trigger="toggle-superfamilia-359" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                                <i class="pccom-icon">0</i>
+                            </div>
+                        </div>
+                        <div class="menu-principal__seccion__flecha">
+
+                            <img src="../../img/afiliados/menu-arrows-familia.png" class="img-fluid" alt=">" />
+                        </div>
+                        <div class="row menu-principal__categorias-de-familia">
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista">
+                                    <h5 class="h4" style="font-size: 14px">ANDROID</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/Movil.aspx" class="GTM-subfamilia-Android">Plataforma Android</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista">
+                                    <h5 class="h4" style="font-size: 14px">IOS</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/Movil.aspx" class="GTM-subfamilia-iPad-iPhone">iPad - iPhone</a></li>
+                                    </ul>
+                                </div>
+
+                            </div>
+                            <div class="col-lg-4">
+                            </div>
+                            <div class="col-lg-4">
+                            </div>
+                        </div>
+                </li>
+                <li class="menu-principal__superfamilia">
+                    <div class="menu-principal__enlace-boton">
+                        <a id="GTM-superfamilia-415" href="#" class="con-icono con-icono-cuentas hidden-md-down">Estado de la Cuenta</a>
+                        <div data-pcc-trigger="toggle-superfamilia-415" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="con-icono con-icono-cuentas menu-principal__pulsador-texto hidden-lg-up">
+                            Estado de la Cuenta
+                        </div>
+                        <div data-pcc-trigger="toggle-superfamilia-415" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                            <i class="pccom-icon">-</i>
+                        </div>
+                    </div>
+                    <div class="menu-principal__seccion-familias menu-principal__seccion-familia-415" data-pcc-listen="toggle-superfamilia-415" data-pcc-class="superfamilia--desplegada" data-pcc-group="superfamilias-desplegables" data-pcc-active="0">
+                        <div class="menu-principal__cabecera-seccion cabecera-familia">
+                            <h4 class="hidden-md-down">FACTURAS</h4>
+                            <h4 class="hidden-lg-up"><a href="/RecargaSaldo.aspx">ESTADO DE LA CUENTA</a></h4>
+                            <div data-pcc-trigger="toggle-superfamilia-415" data-pcc-event="click" data-pcc-group="superfamilias-desplegables" class="menu-principal__interruptor hidden-lg-up">
+                                <i class="pccom-icon">0</i>
+                            </div>
+                        </div>
+                        <div class="menu-principal__seccion__flecha">
+
+                            <img src="../../img/afiliados/menu-arrows-familia.png" class="img-fluid" alt=">" />
+                        </div>
+                        <div class="row menu-principal__categorias-de-familia">
+                            <div class="col-lg-4">
+                                <div class="menu-principal__lista-categoria menu-principal__lista-Gadgets-y-Smart-Technology">
+                                    <h5 class="h4" style="font-size: 14px">Saldo</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/RecargaSaldo.aspx" class="GTM-subfamilia-Mundo-DJ">Saldo</a></li>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/RecargaSaldo.aspx" class="GTM-subfamilia-Mundo-DJ">Recargas</a></li>
+                                    </ul>
+                                </div>
+                                <div class="menu-principal__lista-categoria menu-principal__lista-Deporte">
+                                    <h5 class="h4" style="font-size: 14px">Facturas</h5>
+                                    <ul>
+                                        <li><a href="https://www.cvgrupo.es/Afiliados/EstadoCuenta.aspx?cat=70000" class="GTM-subfamilia-Mundo-DJ">Facturas</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                            </div>
+                        </div>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!-- FIN MENU -->
+    <!-- CONTENIDO -->
+    <div class="container body-content">
+
+        <!-- Start Header Section -->
+        @RenderBody()
+
+    </div>
+
+    <!-- MENU -->
+    <script src="../../js/afiliados/router.js"></script>
+    <script src="../../js/afiliados/routing.js"></script>
+    <script src="../../js/afiliados/pcc.core.js"></script>
+    <script src="../../js/afiliados/pcc-ajax-loading.js"></script>
+
+    <!-- SECCION NUEVA --- COMENTADO -->
+    @*@Scripts.Render("~/js/script.js")
+        @Scripts.Render("~/js/jquery_designer")
+        @Scripts.Render("~/js/modernizrr")
+        @Scripts.Render("~/js/bootstrapmin")
+        @Scripts.Render("~/js/extras")
+        @RenderSection("scripts", required: false)*@
+
+
+    <!-- FIN SECCION NUEVA -->
+
+    <script>
+        $(document).ready(function () {
+
+            if ($(window).width() > 1000) {
+                $("#triger-menu").click(); //abrir menu
+                window.dispatchEvent(new Event('resize'));
+            }
+            $("#triger-menu").on("click", function () {
+                window.dispatchEvent(new Event('resize'));
+            })
+
+        })
+
+    </script>
+
+
+
+</body>
+</html>
+
+
+<!-- FOOTER -->
+
+<br />
+<br />
+<footer id="fTr" class="fluid-container">
+    <div class="container d-flex flex-row">
+
+        <!-- HERE :: Column 1 -->
+        <div class="col-md-3">
+            <ul>
+                <img src="../../img/afiliados/GrupoCV-logoInitial.png" width="137" height="37" alt="Logo Grupo CV" />
+
+                <li><a href="tel:0034902323636">34+ 902 323 636</a></li>
+                <li>C/ Diputación 235</li>
+                <li>08007 BARCELONA</li>
+            </ul>
+        </div>
+        <!-- END :: Column 1 -->
+        <!-- HERE :: Column 2 -->
+        <div class="col-md-3">
+            <ul>
+                <li><a href="comunicacion.html">Comunicación</a></li>
+                <li><a href="gestoria.html">Gestoria</a></li>
+                <li><a href="publicidad.html">Publicidad</a></li>
+                <li><a href="seguros.html">Seguros</a></li>
+                <li><a href="logistica.html">Logística</a></li>
+                <li><a href="juridico.html">Juridica</a></li>
+                <li><a href="tecnicoPericial.html">Técnico pericial</a></li>
+            </ul>
+        </div>
+        <!-- END :: Column 2 -->
+        <!-- HERE :: Column 3 -->
+        <div class="col-md-3">
+            <ul>
+                <li><a data-toggle="modal" data-target="#logIn">Acceso Afiliados</a></li>
+                <li><a href="https://www.ancove.es/afiliacion/solicitud">Regístrate</a></li>
+            </ul>
+            <ul id="social">
+                <span>Síguenos en:</span>
+                <li class="iblk itemScl in"><a href="https://www.linkedin.com/company/ancove">Linkedin</a></li>
+                <li class="iblk itemScl tw"><a href="https://twitter.com/ancove_es">Twitter</a></li>
+            </ul>
+        </div>
+        <!-- END :: Column 3 -->
+        <!-- HERE :: Column 4 -->
+        <div class="col-md-3 d-flex flex-column justify-content-between">
+            <ul>
+                <li><a href="https://www.ancove.es/mapa_web/mapa_web">Mapa Web</a></li>
+                <li><a href="https://www.ancove.es/nota_legal/cookies">Política de Cookies</a></li>
+                <li><a href="https://www.ancove.es/nota_legal/privacidad">Política de Privacidad</a></li>
+                <li><a href="https://www.ancove.es/nota_legal/aviso">Aviso legal</a></li>
+            </ul>
+
+        </div>
+        <!-- END :: Column 4 -->
+    </div>
+</footer>
+<!-- FOOTER -->
+
+<div id="popUpsLaterales"></div>
+
+@*<div id="volver-arriba" style="display: block;"><i class="pccom-icon">,</i></div>*@
+
+<div class="modal fade in" id="modalpcc" role="dialog">
+    <div class="modal-dialog modal-md">
+        <div class="modal-content">
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade in" id="modalpcc-small" role="dialog">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <div class="modal-body">
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<div id="ajax-loadin-container" class="hidden-xs-up">
+    <div id="ajax-loading" class="row">
+        <div class="overlay-spin">
+            <div class="spinner">
+                <div class="rect1"></div>
+                <div class="rect2"></div>
+                <div class="rect3"></div>
+                <div class="rect4"></div>
+                <div class="rect5"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--captcha google-->
+<script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+
+<!--JS-->
+@*<script src="../../vendor/jquery-3.2.1.slim.min.js"></script>*@
+<script src="../../vendor/popper.min.js"></script>
+<script src="../../vendor/bootstrap-4.0.0-dist/js/bootstrap.min.js"></script>
+<script src="../../js/publica/main.js"></script>
+<script src="../../js/privada_cliente/main.js"></script>
+
+<!--CHART JS-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+
+<!--datatables-->
+
+<script type="text/javascript" src="../../js/datatables/pdfmake.min.js"></script>
+<script type="text/javascript" src="../../js/datatables/vfs_fonts.js"></script>
+<script type="text/javascript" src="../../js/datatables/datatables.min.js"></script>
+
+
+<!--datetimepickermaster v2-->
+<script src="../../vendor/datetimepicker-master/build/jquery.datetimepicker.full.js"></script>

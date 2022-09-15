@@ -1,0 +1,1243 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.9.10\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props" Condition="Exists('packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.9.10\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props')" />
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1D4004DB-4E12-4144-80CA-404DB6003414}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Logistica</RootNamespace>
+    <AssemblyName>Logistica</AssemblyName>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44359</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
+    <DockerLaunchUrl>http://{ServiceIPAddress}</DockerLaunchUrl>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Areas\HelpPage\ApiDescriptionExtensions.cs" />
+    <Compile Include="Areas\HelpPage\App_Start\HelpPageConfig.cs" />
+    <Compile Include="Areas\HelpPage\Controllers\HelpController.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageAreaRegistration.cs" />
+    <Compile Include="Areas\HelpPage\HelpPageConfigurationExtensions.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\CollectionModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ComplexTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\DictionaryModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\EnumValueDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\IModelDocumentationProvider.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\KeyValuePairModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelDescriptionGenerator.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameAttribute.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ModelNameHelper.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterAnnotation.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\ParameterDescription.cs" />
+    <Compile Include="Areas\HelpPage\ModelDescriptions\SimpleTypeModelDescription.cs" />
+    <Compile Include="Areas\HelpPage\Models\HelpPageApiModel.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\HelpPageSampleKey.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ImageSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\InvalidSample.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\ObjectGenerator.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
+    <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
+    <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\AgendaController.cs" />
+    <Compile Include="Controllers\AgendaDatosController.cs" />
+    <Compile Include="Controllers\Datos2Controller.cs" />
+    <Compile Include="Controllers\DatosController.cs" />
+    <Compile Include="Controllers\DatosEnvioController.cs" />
+    <Compile Include="Controllers\FacturasController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PedidosController.cs" />
+    <Compile Include="Controllers\PendientesController.cs" />
+    <Compile Include="Controllers\ListaVehiculosController.cs" />
+    <Compile Include="Controllers\ServicioController.cs" />
+    <Compile Include="Controllers\SolicitarController.cs" />
+    <Compile Include="Controllers\ValuesController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Agenda.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AH_Terrassa_schedule.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Alertas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AlertasAfiliados.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AnarBy_TerresaRealTime.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AnuncioCoches.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AnuncioCochesExtra.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Anuncios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AnuncioTipo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Apoyos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\aspnet_Applications.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\aspnet_Paths.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AspNet_SqlCacheTablesForChangeNotification.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AutomovilComercial.cs" />
+    <Compile Include="Models\A_AAnarByStatus.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\A_AnarByRoute.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\A_DT.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\A_Hours.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\A_Lines.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\A_Routes.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\A_Stopper.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\A_Temp.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\A_Traces.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BancoMaster.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Boletines.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BoletinesNoticias.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\botigues.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Canasta.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CategoriaImagenes.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Categorias.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CategoriasDocumentos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CategoriasEnlaces.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CategoriasRoles.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CategoriaTienda.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClientesFinanciacion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ClientesFinanciacion_bak.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\clients.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CochesRobados.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Comunidad.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConductoresPoliza.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ConductorSeguroFlotante.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Consulta_etiquetes_A.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Consulta_etiquetes_B.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Consulta_fitxa_associats.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\consulta_sobres_botigues.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C_botigues.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\C_Fantasmas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DatosEnvio.cs" />
+    <Compile Include="Models\Departamentos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DepartamentosServicios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DerechoRealPorcientos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DerechosReales.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DerechosReales2016.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DerechosReales2017.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DerechosReales2018.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DerechosReales2019.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DerechosReales2020.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Diarios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Documentos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DocumentosReclamacion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmailsEnvioBoletin.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Empresas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EmpresasColaboradoras.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Enlaces.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Errors.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EstadisticasVNMensualesTemp.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EstadisticasVNSemanalesTemp.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EstadisticasVNTotalesTemp.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Est_Log.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\EtiquetasDGT.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Facturacion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FacturacionEstadoFichDevuelto.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FacturacionFichRecDevueltos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FacturacionRemesaEstado.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FacturaDetalle.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FacturaGlobal.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FacturaServicio.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FinanciacionBanco.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FinanciacionComprador.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FinanciacionEntidad_DELETE.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\FinanciacionEstado.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_Banco.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_Cargo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_CondicionVehiculo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_Configuracion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_Consultas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_Estado.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_EstadoCivil.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_FormaPago.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_OLD.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_PlazoMeses.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_PlazoMesesCompleto.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_Simulador.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_SituacionProfesional.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_Solicitud.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_Solicitud_Fichero.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_TipoDocumento.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_TipoEmpleo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_TipoIngreso.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_TipoSexo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_TipoTarjeta.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_TipoVia.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_TipoVivienda.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_Usuario_Banco.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Financiacion_Usuario_Datos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\HomeEnlaces.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Idiomas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Imagenes.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ImagenesNoticias.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InformesTraficoCab.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\InformesTraficoLin.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Juridico_Consultas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Juridico_Contenido.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Juridico_Estados.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Juridico_Niveles.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Juridico_Temas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Juridico_Titulos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Juridico_TopTen.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\listados.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarcasCoche.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MatriculaPoliza.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Matriculas_Actuales.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Matriculas_Antiguas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Matriculas_Ciclomotores.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Matriculas_Clasicas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Menu.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MessageRecipients.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Messages.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModelosCoches.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Municipios_Mapa.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Munincipios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Noticias.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NoticiasAncove.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NoticiasOficiales.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Numeradores.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NumeradoresCab.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NumeradoresLin.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\NumeradorTemporalFacturas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PagoTPV.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pais.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Pedidos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PedidosDetalle.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Peritaciones.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Peritaciones_Estados.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Peritaciones_Ficheros.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Peritaciones_Guardadas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Peritaciones_Informes.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Peritaciones_Km.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Peritaciones_PagoTPV.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Peritaciones_Talleres.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Peritaciones_Tarifas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Peritos_Poblacion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Portal.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Provincias.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Prueba.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Publicaciones.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Publicador.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Roles.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\RolesTipo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SaldoServiciosCab.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SaldoServiciosLin.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SchedelulesTrain.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SeguroFlotante.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Servicio.cs" />
+    <Compile Include="Models\SiteConfig.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\SiteTranslation.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\sysdiagrams.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TablaProvinciasModel\TablaMunicipiosModel.cs" />
+    <Compile Include="Models\TablaProvinciasModel\TablaProvinciasModel.cs" />
+    <Compile Include="Models\Tienda.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoCombustible.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoConductorSeguroFlotante.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoEstablecimiento.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoFacturaServicio.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoIva.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TipoUsuario.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TPV.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TransporteCab.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TransporteLin.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TransportePedidosCab.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\TransportePedidosLin.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transporte_Agenda.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transporte_Baleares.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transporte_Canarias.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transporte_Coeficiente.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transporte_Estados.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transporte_Localidades.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transporte_Message.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transporte_Observaciones.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transporte_PagoTPV.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transporte_Ponderada.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transporte_Referencia.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transporte_SeguimientoManual.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transporte_Tipo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Transporte_Transportista.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\t_clients.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\t_clients1.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Users.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsersInRoles.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Usuarios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuariosAvisos.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuariosBoletines.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuariosDatosBancarios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuariosEstado.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuariosServicios.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuariosServiciosFacturados.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UsuariosServiciosSeguimiento.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\VehiculoSeguroFlotante.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\afiliados\ancove.css" />
+    <Content Include="css\afiliados\estilos_menu.css" />
+    <Content Include="css\afiliados\font-awesome.css" />
+    <Content Include="css\afiliados\font-awesome.min.css" />
+    <Content Include="css\afiliados\fontawesome-4.4.0.min.css" />
+    <Content Include="css\afiliados\fontello.css" />
+    <Content Include="css\afiliados\general.css" />
+    <Content Include="css\afiliados\optimized.css" />
+    <Content Include="css\afiliados\optimized_mod.css" />
+    <Content Include="css\afiliados\ResponsiveCSS.css" />
+    <Content Include="css\afiliados\responsive_2019.css" />
+    <Content Include="css\animate.css" />
+    <Content Include="css\datatables.min.css" />
+    <Content Include="css\main.css" />
+    <Content Include="css\privada_cliente\main.css" />
+    <Content Include="css\privada_empleado\main.css" />
+    <Content Include="css\privada_empleado\main_backup_menuold.css" />
+    <Content Include="css\privada_transportista\main.css" />
+    <Content Include="css\publica\cookies_1.css" />
+    <Content Include="css\publica\main.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\open-sans-300italic.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="img\afiliados\banner_grupo_cv.jpg" />
+    <Content Include="img\afiliados\dptos\APLICACION_MOVIL.png" />
+    <Content Include="img\afiliados\dptos\APLICACION_MOVIL2.png" />
+    <Content Include="img\afiliados\dptos\COMUNICACION.png" />
+    <Content Include="img\afiliados\dptos\COMUNICACION2.png" />
+    <Content Include="img\afiliados\dptos\DEPARTAMENTO LOGISTICA.png" />
+    <Content Include="img\afiliados\dptos\ESTADISTICAS.png" />
+    <Content Include="img\afiliados\dptos\ESTADISTICAS2.png" />
+    <Content Include="img\afiliados\dptos\FACTURAS.png" />
+    <Content Include="img\afiliados\dptos\FACTURAS2.png" />
+    <Content Include="img\afiliados\dptos\FINANCIACION.png" />
+    <Content Include="img\afiliados\dptos\FINANCIACION2.png" />
+    <Content Include="img\afiliados\dptos\GESTORIA.png" />
+    <Content Include="img\afiliados\dptos\GESTORIA2.png" />
+    <Content Include="img\afiliados\dptos\INFORMES_TRAFICO.png" />
+    <Content Include="img\afiliados\dptos\INFORMES_TRAFICO2.png" />
+    <Content Include="img\afiliados\dptos\INFORMES_TRAFICO3.png" />
+    <Content Include="img\afiliados\dptos\LOGISTICA.png" />
+    <Content Include="img\afiliados\dptos\LOGISTICA2.png" />
+    <Content Include="img\afiliados\dptos\PERICIAL.png" />
+    <Content Include="img\afiliados\dptos\PERICIAL2.png" />
+    <Content Include="img\afiliados\dptos\PERICIAL3.png" />
+    <Content Include="img\afiliados\dptos\PUBLICIDAD.png" />
+    <Content Include="img\afiliados\dptos\PUBLICIDAD2.png" />
+    <Content Include="img\afiliados\dptos\RECAMBIOS.png" />
+    <Content Include="img\afiliados\dptos\SEGUROS.png" />
+    <Content Include="img\afiliados\dptos\SEGUROS2.png" />
+    <Content Include="img\afiliados\dptos\TASACION.png" />
+    <Content Include="img\afiliados\dptos\TASACION2.png" />
+    <Content Include="img\afiliados\dptos\TASACION3.png" />
+    <Content Include="img\afiliados\GrupoCV-logoFixed.png" />
+    <Content Include="img\afiliados\GrupoCV-logoInitial.png" />
+    <Content Include="img\afiliados\lnkdn.png" />
+    <Content Include="img\afiliados\logoCVgrupo.png" />
+    <Content Include="img\afiliados\menu-arrows-familia.png" />
+    <Content Include="img\afiliados\menu-arrows-superfamilia.png" />
+    <Content Include="img\afiliados\select-bg.png" />
+    <Content Include="img\afiliados\shutdown.png" />
+    <Content Include="img\afiliados\twttr.png" />
+    <Content Include="img\privada_cliente\bg-calculator2.jpg" />
+    <Content Include="img\privada_cliente\dashboard\btn_autoasignar_transporte.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_autoasignar_transporte_delete.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_autoasignar_transporte_hover.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_autoasignar_transporte_hover_delete.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_autorizaciones.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_autorizaciones_hover.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_chat.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_chat_hover.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_encurso.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_encurso2.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_encurso3.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_encurso4.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_encurso5.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_encurso_hover.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_encurso_hover3.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_encurso_hover4.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_encurso_hover5.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_notificaciones.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_notificaciones_hover.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_pago_pendiente.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_pago_pendiente2.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_pago_pendiente_hover.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_pago_pendiente_hover2.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_presup_pendiente.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_presup_pendiente2.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_presup_pendiente_hover.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_presup_pendiente_hover2.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_revisar_banco.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_revisar_banco_hover.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_solicitud_transportista.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_solicitud_transportista_hover.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_transf_pendiente.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_transf_pendiente_hover.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_transportes_asignados.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_transportes_asignados_hover.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_transportes_finalizados.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_transportes_finalizados_hover.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_transp_pendiente.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_transp_pendiente2.png" />
+    <Content Include="img\privada_cliente\dashboard\btn_transp_pendiente_hover.png" />
+    <Content Include="img\privada_cliente\dashboard\world_map.png" />
+    <Content Include="img\privada_cliente\dowload_pdf.png" />
+    <Content Include="img\privada_cliente\pattern.jpg" />
+    <Content Include="img\privada_cliente\transferencia_gris.png" />
+    <Content Include="img\privada_empleado\Contaplus.jpg" />
+    <Content Include="img\privada_empleado\logo_transportauto.png" />
+    <Content Include="img\publica\cart.png" />
+    <Content Include="img\publica\como-funciona-transportauto-mv.png" />
+    <Content Include="img\publica\como-funciona-transportauto.png" />
+    <Content Include="img\publica\faq\faq2.jpg" />
+    <Content Include="img\publica\faq\faq2_mv.jpg" />
+    <Content Include="img\publica\faq\faq2_mv_sm.jpg" />
+    <Content Include="img\publica\faq\faq2_old.jpg" />
+    <Content Include="img\publica\important.png" />
+    <Content Include="img\publica\info.jpg" />
+    <Content Include="img\publica\info2.jpg" />
+    <Content Include="img\publica\logo_cuadrado_transportauto.jpg" />
+    <Content Include="img\publica\logo_cuadrado_transportauto.png" />
+    <Content Include="img\publica\logo_redondo_transportauto.png" />
+    <Content Include="img\publica\logo_transportauto.png" />
+    <Content Include="img\publica\new-footer.jpg" />
+    <Content Include="img\publica\pago por tarjeta.svg" />
+    <Content Include="img\publica\pago.png" />
+    <Content Include="img\publica\pago2.png" />
+    <Content Include="img\publica\pago_seguro_resume.png" />
+    <Content Include="img\publica\pago_sm.png" />
+    <Content Include="img\publica\pago_sm_delete.png" />
+    <Content Include="img\publica\pago_tarjeta.png" />
+    <Content Include="img\publica\preguntanos\preguntanos_trasnsportauto.png" />
+    <Content Include="img\publica\register.png" />
+    <Content Include="img\publica\registro\pago_seguro.png" />
+    <Content Include="img\publica\registro\seguro_coche.png" />
+    <Content Include="img\publica\sequimiento_envio\area_privada.png" />
+    <Content Include="img\publica\sequimiento_envio\seguimiento_24horas.png" />
+    <Content Include="img\publica\sequimiento_envio\seguimiento_envio_trasnsportauto.png" />
+    <Content Include="img\publica\sequimiento_envio\siguetuenvio2.jpg" />
+    <Content Include="img\publica\sequimiento_envio\siguetuenvio2_cropped.jpg" />
+    <Content Include="img\publica\sequimiento_envio\siguetuenvio2_cropped_ret.jpg" />
+    <Content Include="img\publica\sequimiento_envio\transporte.jpg" />
+    <Content Include="img\publica\sequimiento_envio\user_transportauto.png" />
+    <Content Include="img\publica\servicios\transporte_camion_abierto_transportauto.png" />
+    <Content Include="img\publica\servicios\transporte_camion_cerrado_transportauto.png" />
+    <Content Include="img\publica\servicios\transporte_carga_completa_transportauto.png" />
+    <Content Include="img\publica\servicios\transporte_industriales_transportauto.png" />
+    <Content Include="img\publica\servicios\transporte_internacional_transportauto.png" />
+    <Content Include="img\publica\servicios\transporte_nacional_transportauto.png" />
+    <Content Include="img\publica\servicios\transporte_no_arranca_transportauto.png" />
+    <Content Include="img\publica\somos\herramienta_informatica.png" />
+    <Content Include="img\publica\somos\somos.jpg" />
+    <Content Include="img\publica\somos\somos.png" />
+    <Content Include="img\publica\somos\somosrender.png" />
+    <Content Include="img\publica\tarjeta_credito_debito.png" />
+    <Content Include="img\publica\tarjeta_credito_debito_sm.png" />
+    <Content Include="img\publica\tarjeta_credito_debito_sm_3.png" />
+    <Content Include="img\publica\trans.png" />
+    <Content Include="img\publica\transferencia_bancaria.png" />
+    <Content Include="img\publica\transferencia_bancaria_2.png" />
+    <Content Include="img\publica\transferencia_bancaria_3.png" />
+    <Content Include="img\publica\transferencia_bancaria_4.png" />
+    <Content Include="img\publica\transferencia_bancaria_5.png" />
+    <Content Include="img\publica\transferencia_bancaria_6.png" />
+    <Content Include="img\publica\transportauto.jpg" />
+    <Content Include="img\publica\transportauto_ipad_vertical.jpg" />
+    <Content Include="img\publica\transportauto_mv2_delete.jpg" />
+    <Content Include="img\publica\transportauto_mv4.jpg" />
+    <Content Include="img\publica\transportauto_mv_delete.jpg" />
+    <Content Include="img\publica\transportauto_xl.jpg" />
+    <Content Include="img\publica\trans_mod.png" />
+    <Content Include="js\afiliados\jquery-2.1.1.js" />
+    <Content Include="js\afiliados\jquery-2.1.1.min.js" />
+    <Content Include="js\afiliados\pcc-ajax-loading.js" />
+    <Content Include="js\afiliados\pcc.core.js" />
+    <Content Include="js\afiliados\router.js" />
+    <Content Include="js\afiliados\routing.js" />
+    <Content Include="js\datatables\datatables.min.js" />
+    <Content Include="js\datatables\pdfmake.min.js" />
+    <Content Include="js\datatables\vfs_fonts.js" />
+    <Content Include="js\extraIndex2.js" />
+    <Content Include="js\extraIndex3.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\privada_cliente\main.js" />
+    <Content Include="js\privada_empleado\charts.js" />
+    <Content Include="js\privada_empleado\main.js" />
+    <Content Include="js\publica\main.js" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Areas\HelpPage\Views\Web.config" />
+    <Content Include="Areas\HelpPage\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\ResourceModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Index.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\TextSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\SimpleTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Samples.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\Parameters.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ModelDescriptionLink.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\KeyValuePairModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\InvalidSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ImageSample.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\HelpPageApiModel.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\EnumTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\DictionaryModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ComplexTypeModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\CollectionModelDescription.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\DisplayTemplates\ApiGroup.cshtml" />
+    <Content Include="Areas\HelpPage\Views\Help\Api.cshtml" />
+    <None Include="Dockerfile" />
+    <None Include=".dockerignore">
+      <DependentUpon>Dockerfile</DependentUpon>
+    </None>
+    <Content Include="Scripts\Edit.cshtml" />
+    <Content Include="Scripts\Index.cshtml" />
+    <Content Include="Scripts\Index_.cshtml" />
+    <Content Include="docs\CALCULADORA_CAT.xlsx" />
+    <Content Include="docs\prueba.pdf" />
+    <Content Include="fonts\Montserrat-Bold.eot" />
+    <Content Include="fonts\Montserrat-Bold.woff2" />
+    <Content Include="fonts\Montserrat-Regular.eot" />
+    <Content Include="fonts\Montserrat-Regular.woff2" />
+    <Content Include="fonts\open-sans-300.eot" />
+    <Content Include="fonts\open-sans-300.woff2" />
+    <Content Include="fonts\open-sans-300italic.eot" />
+    <Content Include="fonts\open-sans-300italic.ttf" />
+    <Content Include="fonts\open-sans-300italic.woff" />
+    <Content Include="fonts\open-sans-300italic.woff2" />
+    <Content Include="fonts\open-sans-700.eot" />
+    <Content Include="fonts\open-sans-700.ttf" />
+    <Content Include="fonts\open-sans-700.woff" />
+    <Content Include="fonts\open-sans-700.woff2" />
+    <Content Include="fonts\open-sans-700italic.eot" />
+    <Content Include="fonts\open-sans-700italic.woff" />
+    <Content Include="fonts\open-sans-700italic.woff2" />
+    <Content Include="fonts\open-sans-italic.eot" />
+    <Content Include="fonts\open-sans-italic.woff" />
+    <Content Include="fonts\open-sans-italic.woff2" />
+    <Content Include="fonts\open-sans-regular.eot" />
+    <Content Include="fonts\open-sans-regular.ttf" />
+    <Content Include="fonts\open-sans-regular.woff" />
+    <Content Include="fonts\open-sans-regular.woff2" />
+    <Content Include="fonts\pccom.eot" />
+    <Content Include="fonts\pccom.ttf" />
+    <Content Include="fonts\pccom.woff" />
+    <Content Include="fonts\pccom.woff2" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Views\Html\agenda.html" />
+    <Content Include="Views\Html\agenda_direccion_nueva.html" />
+    <Content Include="Views\Html\agenda_edit.html" />
+    <Content Include="Views\Html\aviso_legal.html" />
+    <Content Include="Views\Html\condiciones_generales.html" />
+    <Content Include="Views\Html\contratacion_transporte\contratacion_step1.html" />
+    <Content Include="Views\Html\contratacion_transporte\contratacion_step2.html" />
+    <Content Include="Views\Html\contratacion_transporte\contratacion_step3.html" />
+    <Content Include="Views\Html\contratacion_transporte\contratacion_step3_delete.html" />
+    <Content Include="Views\Html\contratacion_transporte\pago_tarjeta_fail.html" />
+    <Content Include="Views\Html\contratacion_transporte\pago_tarjeta_ok.html" />
+    <Content Include="Views\Html\contratacion_transporte\pago_transferencia.html" />
+    <Content Include="Views\Html\contratacion_transporte\tipos_de_precio.html" />
+    <Content Include="Views\Html\facturas.html" />
+    <Content Include="Views\Html\faq.html" />
+    <Content Include="Views\Html\index.html" />
+    <Content Include="Views\Html\mis_pedidos.html" />
+    <Content Include="Views\Html\mis_pedidos_detalles.html" />
+    <Content Include="Views\Html\mi_cuenta.html" />
+    <Content Include="Views\Html\pedidos_pendientes.html" />
+    <Content Include="Views\Html\pedidos_pendientes_detalles.html" />
+    <Content Include="Views\Html\politica_cookies.html" />
+    <Content Include="Views\Html\politica_de_privacidad.html" />
+    <Content Include="Views\Html\solicitar_transporte_delete.html" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Areas\HelpPage\Views\_ViewStart.cshtml" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\IndexH.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Scripts\Nueva.cshtml" />
+    <Content Include="Views\Agenda\Edit.cshtml" />
+    <Content Include="Views\Agenda\Index.cshtml" />
+    <Content Include="Views\Agenda\Index_.cshtml" />
+    <Content Include="Views\Agenda\Nueva.cshtml" />
+    <Content Include="Views\Facturas\Index.cshtml" />
+    <Content Include="Views\Facturas\Index_.cshtml" />
+    <Content Include="Views\Pedidos\Detalles.cshtml" />
+    <Content Include="Views\Pedidos\Detalles_.cshtml" />
+    <Content Include="Views\Pedidos\Index.cshtml" />
+    <Content Include="Views\Pedidos\Index_.cshtml" />
+    <Content Include="Views\Pendientes\Edit.cshtml" />
+    <Content Include="Views\Pendientes\Edit_.cshtml" />
+    <Content Include="Views\Pendientes\Index.cshtml" />
+    <Content Include="Views\Pendientes\Index_.cshtml" />
+    <Content Include="Views\Solicitar\Index.cshtml" />
+    <Content Include="Views\Solicitar\Index2.cshtml" />
+    <Content Include="Views\Solicitar\Index3.cshtml" />
+    <Content Include="Views\Solicitar\Index_.cshtml" />
+    <Content Include="Views\Solicitar\Index_2.cshtml" />
+    <Content Include="Views\Solicitar\Index_3.cshtml" />
+    <Content Include="Views\Solicitar\Pago.cshtml" />
+    <Content Include="Views\Solicitar\Pago_.cshtml" />
+    <Content Include="Views\View.cshtml" />
+    <Content Include="Views\Solicitar\prueba.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="img\privada_transportista\" />
+    <Folder Include="js\privada_transportista\" />
+    <Folder Include="Views\Default\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>13687</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:44359/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.9.10\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.9.10\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.props'))" />
+    <Error Condition="!Exists('packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.9.10\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.9.10\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets'))" />
+  </Target>
+  <Import Project="packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.9.10\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets" Condition="Exists('packages\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.1.9.10\build\Microsoft.VisualStudio.Azure.Containers.Tools.Targets.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

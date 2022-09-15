@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="c554c0859c364465afe07fea250f0459" Name="Diagram1">
+        <EntityTypeShape EntityType="qcu947Model.A_AAnarByStatus" Width="1.5" PointX="11.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.A_AnarByRoute" Width="1.5" PointX="5.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.A_DT" Width="1.5" PointX="11.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.A_Hours" Width="1.5" PointX="17" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.A_Lines" Width="1.5" PointX="14.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.A_Routes" Width="1.5" PointX="17" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.A_Stopper" Width="1.5" PointX="19.75" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.A_Temp" Width="1.5" PointX="13.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.A_Traces" Width="1.5" PointX="17" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Agenda" Width="1.5" PointX="12" PointY="133.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.AH_Terrassa_schedule" Width="1.5" PointX="21.75" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Alertas" Width="1.5" PointX="3" PointY="34.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.AnarBy_TerresaRealTime" Width="1.5" PointX="4.75" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.AnuncioCoches" Width="1.5" PointX="23.75" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.AnuncioCochesExtra" Width="1.5" PointX="24.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Anuncios" Width="1.5" PointX="22" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.AnuncioTipo" Width="1.5" PointX="14.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Apoyos" Width="1.5" PointX="24.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.aspnet_Applications" Width="1.5" PointX="14.75" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.aspnet_Paths" Width="1.5" PointX="17" PointY="23.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.AspNet_SqlCacheTablesForChangeNotification" Width="1.5" PointX="6.75" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.BancoMaster" Width="1.5" PointX="24.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Boletines" Width="1.5" PointX="24.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.BoletinesNoticias" Width="1.5" PointX="16.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Canasta" Width="1.5" PointX="9.75" PointY="89.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.CategoriaImagenes" Width="1.5" PointX="19.75" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Categorias" Width="1.5" PointX="19.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.CategoriasDocumentos" Width="1.5" PointX="9.75" PointY="79.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.CategoriasEnlaces" Width="1.5" PointX="3.75" PointY="31.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.CategoriasRoles" Width="1.5" PointX="22" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.CategoriaTienda" Width="1.5" PointX="0.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.ClientesFinanciacion" Width="1.5" PointX="25.75" PointY="23.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.CochesRobados" Width="1.5" PointX="22" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Comunidad" Width="1.5" PointX="0.75" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.ConductoresPoliza" Width="1.5" PointX="2.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.ConductorSeguroFlotante" Width="1.5" PointX="14.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Departamentos" Width="1.5" PointX="9.75" PointY="82.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.DepartamentosServicios" Width="1.5" PointX="12" PointY="76.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.DerechoRealPorcientos" Width="1.5" PointX="26.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.DerechosReales2016" Width="1.5" PointX="26.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.DerechosReales2017" Width="1.5" PointX="26.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.DerechosReales2018" Width="1.5" PointX="26.75" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Diarios" Width="1.5" PointX="19.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Documentos" Width="1.5" PointX="12" PointY="59.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.DocumentosReclamacion" Width="1.5" PointX="3" PointY="6" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.EmailsEnvioBoletin" Width="1.5" PointX="16.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Empresas" Width="1.5" PointX="0.75" PointY="39.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.EmpresasColaboradoras" Width="1.5" PointX="18.75" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Enlaces" Width="1.5" PointX="6" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Errors" Width="1.5" PointX="27.75" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Est_Log" Width="1.5" PointX="27.75" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.EstadisticasVNMensualesTemp" Width="1.5" PointX="28.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.EstadisticasVNSemanalesTemp" Width="1.5" PointX="28.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.EstadisticasVNTotalesTemp" Width="1.5" PointX="28.75" PointY="12.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.EtiquetasDGT" Width="1.5" PointX="28.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Facturacion" Width="1.5" PointX="0.75" PointY="45" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.FacturacionEstadoFichDevuelto" Width="1.5" PointX="19.75" PointY="10" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.FacturacionFichRecDevueltos" Width="1.5" PointX="22" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.FacturacionRemesaEstado" Width="1.5" PointX="1.5" PointY="50.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.FacturaDetalle" Width="1.5" PointX="5.25" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.FacturaGlobal" Width="1.5" PointX="3" PointY="42.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.FacturaServicio" Width="1.5" PointX="3" PointY="10.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion" Width="1.5" PointX="6.75" PointY="26.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_Banco" Width="1.5" PointX="9.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_Cargo" Width="1.5" PointX="9.75" PointY="8.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_CondicionVehiculo" Width="1.5" PointX="20.75" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_Configuracion" Width="1.5" PointX="29.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_Consultas" Width="1.5" PointX="0.75" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_Estado" Width="1.5" PointX="9.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_EstadoCivil" Width="1.5" PointX="9.75" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_FormaPago" Width="1.5" PointX="9.75" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_OLD" Width="1.5" PointX="29.75" PointY="26.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_PlazoMeses" Width="1.5" PointX="9.75" PointY="19" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_Simulador" Width="1.5" PointX="12" PointY="92.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_SituacionProfesional" Width="1.5" PointX="9.75" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_Solicitud" Width="1.5" PointX="12" PointY="13.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_Solicitud_Fichero" Width="1.5" PointX="14.25" PointY="35.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_TipoDocumento" Width="1.5" PointX="9.75" PointY="24.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_TipoEmpleo" Width="1.5" PointX="9.75" PointY="26.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_TipoIngreso" Width="1.5" PointX="9.75" PointY="40.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_TipoSexo" Width="1.5" PointX="9.75" PointY="43.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_TipoTarjeta" Width="1.5" PointX="9.75" PointY="46" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_TipoVia" Width="1.5" PointX="9.75" PointY="48.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_TipoVivienda" Width="1.5" PointX="9.75" PointY="51.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_Usuario_Banco" Width="1.5" PointX="12" PointY="66.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_Usuario_Datos" Width="1.5" PointX="12" PointY="69.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.FinanciacionBanco" Width="1.5" PointX="9" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.FinanciacionComprador" Width="1.5" PointX="9" PointY="32.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.FinanciacionEntidad_DELETE" Width="1.5" PointX="30.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.FinanciacionEstado" Width="1.5" PointX="30.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.HomeEnlaces" Width="1.5" PointX="30.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Idiomas" Width="1.5" PointX="30.75" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Imagenes" Width="1.5" PointX="22" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.ImagenesNoticias" Width="1.5" PointX="8.75" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.InformesTraficoCab" Width="1.5" PointX="30.75" PointY="14.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.InformesTraficoLin" Width="1.5" PointX="30.75" PointY="17.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Juridico_Consultas" Width="1.5" PointX="17.75" PointY="32.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Juridico_Estados" Width="1.5" PointX="19.75" PointY="32.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Juridico_Niveles" Width="1.5" PointX="31.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Juridico_TopTen" Width="1.5" PointX="31.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.listados" Width="1.5" PointX="31.75" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.MarcasCoche" Width="1.5" PointX="31.75" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.MatriculaPoliza" Width="1.5" PointX="32.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Matriculas_Actuales" Width="1.5" PointX="32.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Matriculas_Antiguas" Width="1.5" PointX="32.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Matriculas_Ciclomotores" Width="1.5" PointX="32.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Matriculas_Clasicas" Width="1.5" PointX="32.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Menu" Width="1.5" PointX="33.75" PointY="20.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Messages" Width="1.5" PointX="33.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.ModelosCoches" Width="1.5" PointX="19.75" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Munincipios" Width="1.5" PointX="0.75" PointY="34.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Noticias" Width="1.5" PointX="12" PointY="79.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.NoticiasAncove" Width="1.5" PointX="12" PointY="85.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.NoticiasOficiales" Width="1.5" PointX="15" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Numeradores" Width="1.5" PointX="27.75" PointY="34.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.NumeradoresCab" Width="1.5" PointX="0.75" PointY="13.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.NumeradoresLin" Width="1.5" PointX="3" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.PagoTPV" Width="1.5" PointX="33.75" PointY="29.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Pais" Width="1.5" PointX="9.75" PointY="54.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Pedidos" Width="1.5" PointX="2.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.PedidosDetalle" Width="1.5" PointX="5" PointY="1.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Peritaciones" Width="1.5" PointX="33.75" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Peritaciones_Estados" Width="1.5" PointX="34.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Peritaciones_Ficheros" Width="1.5" PointX="34.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Peritaciones_Guardadas" Width="1.5" PointX="34.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Peritaciones_Informes" Width="1.5" PointX="34.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Peritaciones_PagoTPV" Width="1.5" PointX="19.75" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Portal" Width="1.5" PointX="9.75" PointY="86.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Provincias" Width="1.5" PointX="9.75" PointY="57.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Prueba" Width="1.5" PointX="29.75" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Publicaciones" Width="1.5" PointX="35.75" PointY="19.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Publicador" Width="1.5" PointX="12.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Roles" Width="1.5" PointX="35.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.RolesTipo" Width="1.5" PointX="35.75" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.SaldoServiciosCab" Width="1.5" PointX="14.75" PointY="16.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.SaldoServiciosLin" Width="1.5" PointX="17" PointY="16.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.SchedelulesTrain" Width="1.5" PointX="35.75" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.SeguroFlotante" Width="1.5" PointX="14.75" PointY="11.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.SiteConfig" Width="1.5" PointX="35.75" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.SiteTranslation" Width="1.5" PointX="35.75" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.sysdiagrams" Width="1.5" PointX="36.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Tienda" Width="1.5" PointX="2.75" PointY="21.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.TipoCombustible" Width="1.5" PointX="36.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.TipoConductorSeguroFlotante" Width="1.5" PointX="36.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.TipoEstablecimiento" Width="1.5" PointX="36.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.TipoFacturaServicio" Width="1.5" PointX="36.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.TipoIva" Width="1.5" PointX="0.75" PointY="52.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.TipoUsuario" Width="1.5" PointX="7.5" PointY="66" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.TPV" Width="1.5" PointX="16.75" PointY="37.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Transporte_Agenda" Width="1.5" PointX="37.75" PointY="16.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Transporte_Baleares" Width="1.5" PointX="37.75" PointY="22.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Transporte_Canarias" Width="1.5" PointX="21.75" PointY="38.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Transporte_Coeficiente" Width="1.5" PointX="37.75" PointY="25.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Transporte_Estados" Width="1.5" PointX="37.75" PointY="28.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Transporte_Localidades" Width="1.5" PointX="27.75" PointY="38.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Transporte_Message" Width="1.5" PointX="29.75" PointY="38.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Transporte_Observaciones" Width="1.5" PointX="37.75" PointY="31.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Transporte_PagoTPV" Width="1.5" PointX="37.75" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Transporte_Ponderada" Width="1.5" PointX="38.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Transporte_Referencia" Width="1.5" PointX="38.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Transporte_SeguimientoManual" Width="1.5" PointX="38.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Transporte_Tipo" Width="1.5" PointX="38.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Transporte_Transportista" Width="1.5" PointX="39.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.TransporteCab" Width="1.5" PointX="39.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.TransporteLin" Width="1.5" PointX="39.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.TransportePedidosCab" Width="1.5" PointX="39.75" PointY="37.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.TransportePedidosLin" Width="1.5" PointX="39.75" PointY="40.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Users" Width="1.5" PointX="7.5" PointY="68.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.UsersInRoles" Width="1.5" PointX="40.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Usuarios" Width="1.5" PointX="9.75" PointY="61.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.UsuariosAvisos" Width="1.5" PointX="40.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.UsuariosBoletines" Width="1.5" PointX="40.75" PointY="7.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.UsuariosDatosBancarios" Width="1.5" PointX="21.75" PointY="41.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.UsuariosEstado" Width="1.5" PointX="40.75" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.UsuariosServicios" Width="1.5" PointX="5.25" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.UsuariosServiciosFacturados" Width="1.5" PointX="5.75" PointY="42.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.UsuariosServiciosSeguimiento" Width="1.5" PointX="5.25" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.VehiculoSeguroFlotante" Width="1.5" PointX="17" PointY="12.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.C_botigues" Width="1.5" PointX="41.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.C_Fantasmas" Width="1.5" PointX="41.75" PointY="35.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.AlertasAfiliados" Width="1.5" PointX="5.25" PointY="39.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.botigues" Width="1.5" PointX="41.75" PointY="38.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.ClientesFinanciacion_bak" Width="1.5" PointX="14.75" PointY="43.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.clients" Width="1.5" PointX="16.75" PointY="43.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Consulta_etiquetes_A" Width="1.5" PointX="42.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Consulta_etiquetes_B" Width="1.5" PointX="42.75" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Consulta_fitxa_associats" Width="1.5" PointX="18.75" PointY="43.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.consulta_sobres_botigues" Width="1.5" PointX="42.75" PointY="9.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.DerechosReales" Width="1.5" PointX="31.75" PointY="43.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.DerechosReales2019" Width="1.5" PointX="33.75" PointY="43.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.DerechosReales2020" Width="1.5" PointX="43.75" PointY="13.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Financiacion_PlazoMesesCompleto" Width="1.5" PointX="43.75" PointY="18.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Juridico_Contenido" Width="1.5" PointX="43.75" PointY="21.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Juridico_Temas" Width="1.5" PointX="43.75" PointY="24.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Juridico_Titulos" Width="1.5" PointX="43.75" PointY="27.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.MessageRecipients" Width="1.5" PointX="43.75" PointY="30.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Municipios_Mapa" Width="1.5" PointX="43.75" PointY="33.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.NumeradorTemporalFacturas" Width="1.5" PointX="43.75" PointY="36.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Peritaciones_Km" Width="1.5" PointX="43.75" PointY="39.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Peritaciones_Talleres" Width="1.5" PointX="43.75" PointY="42.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Peritaciones_Tarifas" Width="1.5" PointX="44.75" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.Peritos_Poblacion" Width="1.5" PointX="5.75" PointY="45.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.t_clients" Width="1.5" PointX="20.75" PointY="45.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="qcu947Model.t_clients1" Width="1.5" PointX="22.75" PointY="45.25" IsExpanded="true" />
+        <AssociationConnector Association="qcu947Model.FK_A_Hours_A_Lines" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_A_Routes_A_Lines" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_A_Traces_A_Lines" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Agenda_Portal" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_AlertasAfiliados_Alertas" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Alerta_Comunidad" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Alerta_Financiacion_Solicitud" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Alerta_Munincipios" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Alerta_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Anuncios_Diarios" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK__aspnet_Pa__Appli__2C538F61" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Canasta_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Imagenes_CategoriaImagenes" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_CategoriasRoles_Categorias" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Documentos_CategoriasDocumentos" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Enlaces_CategoriasEnlaces" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_CochesRobados_ModelosCoches" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_DocumentosReclamacion_Comunidad" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_NoticiasOficiales_Comunidad" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_DepartamentosServicios_Departamentos" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Documentos_Departamentos" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Noticias_Departamentos" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_NoticiasAncove_Departamentos" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Documentos_Portal" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Documentos_Provincias" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Facturacion_Empresas" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_FacturaGlobal_Empresas" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Enlaces_Munincipios" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Facturacion_FacturacionRemesaEstado" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_FacturaGlobal_Facturacion" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_FacturacionFichRecDevueltos_FacturacionEstadoFichDevuelto" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_FacturaDetalle_FacturaGlobal" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_FacturaDetalle_FacturaServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_FacturaGlobal_TipoIva" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_FacturaServicio_NumeradoresCab" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_UsuariosServicios_FacturaServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_UsuariosServiciosSeguimiento_FacturaServicio" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_FinanciacionBanco_Financiacion" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_FinanciacionComprador_Financiacion" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Simulador_Financiacion_Banco" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_Banco" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_Cargo" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_Cargo1" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_Cargo2" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_Estado" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_EstadoCivil" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_EstadoCivil1" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_EstadoCivil2" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_FormaPago" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_FormaPago1" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_PlazoMeses" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_SituacionProfesional" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_SituacionProfesional1" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_SituacionProfesional2" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Fichero_Financiacion_Solicitud" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoDocumento" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoDocumento1" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoDocumento2" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoEmpleo" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoEmpleo1" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoEmpleo2" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoIngreso" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoIngreso1" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoIngreso2" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoSexo" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoSexo1" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoSexo2" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoTarjeta" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoTarjeta1" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoTarjeta2" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoVia" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoVia1" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoVia2" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoVivienda" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoVivienda1" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Financiacion_TipoVivienda2" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Munincipios" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Munincipios1" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Munincipios2" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Pais" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Pais1" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Pais2" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Pais3" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Pais4" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Pais5" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Provincias" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Provincias1" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Provincias2" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Solicitud_Usuarios1" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Usuario_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Financiacion_Usuario_Datos_Usuarios" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_FinanciacionComprador_Munincipios" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_FinanciacionComprador_Provincias" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_NoticiasOficiales_Provincias" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_NoticiasOficiales_Publicador" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_NumeradoresLin_NumeradoresCab" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_PedidosDetalle_Pedidos" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_PedidosDetalle_Tienda" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_SaldoServiciosLin_SaldoServiciosCab" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_VehiculoSeguroFlotante_SeguroFlotante" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Usuarios_TipoUsuario" ManuallyRouted="false" />
+        <AssociationConnector Association="qcu947Model.FK_Usuarios_Users" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

@@ -1,0 +1,1085 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name='viewport'content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../../vendor/bootstrap-4.0.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!--cookies-->
+    <link rel='stylesheet' href='../../css/publica/cookies_1.css'/>
+    <!--datatables-->
+<!--
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/af-2.3.3/b-1.5.6/b-colvis-1.5.6/b-flash-1.5.6/b-html5-1.5.6/b-print-1.5.6/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.5.0/r-2.2.2/rg-1.1.0/rr-1.2.4/sc-2.0.0/sl-1.3.0/datatables.min.css"/>
+-->
+    <!--datetimepickermaster v2-->
+    <link rel="stylesheet" type="text/css" href="../../vendor/datetimepicker-master/jquery.datetimepicker.css"/>
+
+    <!--css area publica-->
+    <link rel="stylesheet" href="../../css/publica/main.css">
+    <!--css area privada cliente-->
+    <link rel="stylesheet" href="../../css/privada_cliente/main.css">
+
+
+    <!-- END CSS -->
+</head>
+<body>
+<!--*****************************************************-->
+<!--1. AVISO SI SE USA INTERNET EXPLORER 8 O INFERIOR-->
+<!--******************************************************-->
+
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!--//BLOQUE COOKIES-->
+<!--<div id="barraaceptacion">
+    <div class="inner">
+        Usamos cookies para asegurarnos de darte la mejor experiencia en nuestra web. Si aceptas estas condiciones, consideramos que aceptas su uso.
+        <br><br><a href="javascript:void(0);" class="ok cursor_pointer" onclick="PonerCookie();"><b>OK</b></a>
+        <a  class="info cursor_pointer" href="politica_cookies.html" target="_blank"> M&aacute;s informaci&oacute;n</a>
+    </div>
+</div>-->
+
+<!--***********************************************************************************************************************************************************************-->
+<!--2.********* MENÚ PRINCIPAL*********************************************************************************************************************************************-->
+<!--*********************************************************************************************************************************************************************-->
+<form>
+    <div class="fixed-top menu-scrolling" >
+        <div class="z-index-top">
+            <div class="p-1 border-bottom bg-white">
+                <div class="container">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-4 plr0">
+                                <div class="dropdown show">
+                                    <a class="dropdown-toggle blue-color" href="#" role="button" id="dropdownMenuLinklanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Idioma
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLinklanguage">
+                                        <a class="dropdown-item" href="#">Español</a>
+                                        <a class="dropdown-item" href="#">Francés</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8 plr0 text-right">
+
+                                <div class="dropdown show">
+                                    <a class="dropdown-toggle btn-register-menu" href="#" role="button" id="dropdownMenuLinkperfil" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-user"></i>  Bienvenida, Gema
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkperfil">
+                                        <a class="dropdown-item" href="#">Cerrar sesión</a>
+                                        <a class="dropdown-item" href="mi_cuenta.html">Mi Cuenta</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="img-fluid logo-menu" src="../../img/publica/logo_transportauto.png" alt="logo transportauto" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon burger-menu-primary"></span>
+                        <i class="fas fa-bars burger-menu-primary"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav ml-auto primary-color">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contratacion_transporte/contratacion_step1.html">SOLICITAR TRANSPORTE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="mis_pedidos.html">MIS PEDIDOS </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pedidos_pendientes.html">PEDIDOS PENDIENTES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link " href="facturas.html">FACTURAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"  href="agenda.html"> AGENDA</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--mini formulario calculadora desplegable-->
+            <div class="show-calculator-menu">
+                <div class="container">
+                    <!--<div class="btn-control-box-calculator">-->
+                    <div class="row">
+                        <div class="col-6 col-md-3 blue-color p-col-calculator">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text" >
+                                             <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Origen">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 blue-color p-col-calculator">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                              <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Destino">
+                            </div>
+
+                        </div>
+                        <div class="col-6 col-md-2 blue-color p-col-calculator">
+                            <select  class="form-control">
+                                <option value="" disabled selected>Estado</option>
+                                <option value="arranca">Arranca</option>
+                                <option value="no_arranca">No arranca pero puede rodar</option>
+                                <option value="internacional" >Siniestro/No puede rodar</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-md-2 blue-color p-col-calculator">
+                            <select  class="form-control mb-3">
+                                <option value="" disabled selected>Tipo</option>
+                                <option value="vehiculos">Turismos</option>
+                                <option value="vehiculos">Comerciales</option>
+                                <option value="indust_autocarav_tractor">Industrial</option>
+                                <option value="indust_autocarav_tractor" >Autocaravana</option>
+                                <option value="indust_autocarav_tractor">Tractor</option>
+                                <option value="moto">Moto</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-2 p-col-calculator">
+                            <a class="btn btn-blue w-100 btn-control-box-calculator" >calcular <i class="fas fa-chevron-down"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <section id="calculator2" class="ptb-section  calculator-box d-none">
+            <div class="container plr0">
+                <div class="calculator-box">
+                    <div class="box-type-vehicule">
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT AUTOMOVILES *****************************-->
+                        <!--*********************************************************************-->
+                        <!--ocultar o mostrar una u otra box-type-vehicle en función del vehículo seleccionado, no lo tengo simulado, solo muestro el de turismo-->
+
+                        <div class="box-type-vehicle" id="box-turismo" >
+                            <div class="list-vehicules-calculator">
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-vehiculos-collapse"><i class="fas fa-plus"></i> Añadir vehículos </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator ">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Año
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Año</option>
+                                                <option value="Modelo1">2000</option>
+                                                <option value="Modelo2">2001</option>
+                                                <option value="Modelo3">2002</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Versión
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="version1">Versión 1</option>
+                                                <option value="version2">Versión 2</option>
+                                                <option value="version3" >Versión 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i><span class="text-btn-delete-mv"> Eliminar vehículo</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--***********CONTENT comercial *****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-comercial" >
+                            <div class="list-vehicules-calculator">
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-vehiculos-collapse"><i class="fas fa-plus"></i> Añadir vehículos </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator ">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Año
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Año</option>
+                                                <option value="Modelo1">2000</option>
+                                                <option value="Modelo2">2001</option>
+                                                <option value="Modelo3">2002</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Versión
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="version1">Versión 1</option>
+                                                <option value="version2">Versión 2</option>
+                                                <option value="version3" >Versión 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--***********CONTENT INDUSTRIALES *****************************-->
+                        <!--*********************************************************************-->
+                        <div class="box-type-vehicle d-none" id="box-industrial" >
+                            <div class="list-vehicules-calculator">
+                                <!--INDUSTRIALES  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-indust-autocarav-tractor"><i class="fas fa-plus"></i> Añadir vehículos industriales </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Largo (mm)
+                                            <input type="text p-col-calculator" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Alto (mm)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT AUTOCARAVANAS*****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-autocaravana" >
+                            <!--BOX ORIGEN, DESTINO Y ESTADO-->
+
+                            <div class="list-vehicules-calculator">
+                                <!--AUTOCARAVANAS  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-indust-autocarav-tractor"><i class="fas fa-plus"></i> Añadir autocaravanas </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Largo (mm)
+                                            <input type="text p-col-calculator" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Alto (mm)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT TRACTORES*****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-tractor" >
+                            <div class="list-vehicules-calculator">
+                                <!--TRACTORES  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-indust-autocarav-tractor"><i class="fas fa-plus"></i> Añadir tractores </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row ">
+                                        <div class="col-md-3 p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Largo (mm)
+                                            <input type="text p-col-calculator" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Alto (mm)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT MOTOS *****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-moto" >
+                            <div class="list-vehicules-calculator">
+                                <!--MOTOS  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-moto"><i class="fas fa-plus"></i> Añadir motos </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3  p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3  p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-2  p-col-calculator">
+                                            C.C.
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2  p-col-calculator">
+                                            CV
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1  p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end tabs content-->
+                </div><!--end calculator box-->
+
+                <div class="text-right mt-2">
+                    <a id="btn-calculate-price" class="btn btn-md btn-blue  text-center" href="contratacion_transporte/tipos_de_precio.html"><i class="fas fa-search"></i> Calcular el precio del transporte</a>
+                </div>
+            </div>
+            <!--end container-->
+        </section>
+    </div>
+    <!--EN MENU FIXED CON CAJA DE CALCULADORA-->
+</form>
+
+<!--*******************************************************************************************************************************************************************-->
+<!--**********************************************5 CONTENIDO de DETALLES MIS PEDIDOS*************************************************************************************-->
+<!--****************************************************************************************************************************************************************-->
+
+<div class="content-page mt-first-section-other-page" id="sigue_tu_envio">
+    <section class="pb-section">
+        <div class="container">
+
+            <div class="row pt-btn-modal">
+                <div class="col-lg-6">
+                    <h3 class="blue-color-bold2">DETALLES DEL PEDIDO</h3>
+                </div>
+                <div class="col-lg-6 text-right">
+                </div>
+            </div>
+
+            <div class="row ">
+                <div class="col-md-12">
+                    <div class="box-content-contrato">
+                        <h4 class="blue-color-bold2 mt20"><strong>RESUMEN DEL TRANSPORTE</strong></h4>
+                        <div class="row  mt10">
+                            <div class="col-lg-4 mt-20-mv">
+                                <div class="box-simple-line h-100">
+                                    <!--direccion origen-->
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+                                            <b class="blue-color-bold">DATOS DE ORIGEN</b>
+                                        </li>
+                                       <!-- <li class="list-inline-item">
+                                            <a class="btn btn-xs"  data-toggle='tooltip' data-placement='top' title='Editar' href=""><i class="fas fa-edit"></i> </a>
+                                        </li>-->
+                                    </ul>
+
+                                    <p><i class="fas fa-map-marked-alt"></i> Campa</p>
+                                    <p><i class="fas fa-building"></i> Razón social S.L</p>
+                                    <!--datos contacto origen-->
+                                    <p><i class="fas fa-user"></i> Laura Fernández Fernández</p>
+                                    <p><i class="fas fa-phone"></i> 677885599</p>
+                                    <p ><i class="fas fa-map-marker-alt"></i>  Calle Origen, 28001 Alcobendas, Madrid</p>
+                                    <p><i class="far fa-comment"></i>Aquí van las observaciones con tamaños maximo 50</p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 mt-20-mv">
+                                <div class="box-simple-line h-100">
+                                    <!--direccion destino-->
+                                    <!--direccion origen-->
+                                    <ul class="list-inline mb-0">
+                                        <li class="list-inline-item">
+                                            <b class="blue-color-bold ">DATOS DE DESTINO</b>
+                                        </li>
+                                       <!-- <li class="list-inline-item">
+                                            <a class="btn btn-xs"  data-toggle='tooltip' data-placement='top' title='Editar' href=""><i class="fas fa-edit"></i> </a>
+                                        </li>-->
+                                    </ul>
+                                    <p><i class="fas fa-map-marked-alt"></i> Campa</p>
+                                    <p><i class="fas fa-building"></i> Razón social S.L</p>
+
+                                    <!--datos contacto origen-->
+                                    <p><i class="fas fa-user"></i> Laura Fernández Fernández</p>
+                                    <p><i class="fas fa-phone"></i> 677885599</p>
+                                    <p ><i class="fas fa-map-marker-alt"></i>  Calle destino, 28001 Alcobendas, Madrid</p>
+                                    <p><i class="far fa-comment"></i>Aquí obsrvaciones mas peques</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mt-20-mv">
+                                <div class="box-simple-line h-100">
+                                    <div class="">
+                                        <b class="blue-color-bold">IDENTIFICADOR DEL PEDIDO</b>
+                                        <p> <i class="far fa-file-alt"></i> 4569</p>
+                                    </div>
+                                    <div class="">
+                                        <b class="blue-color-bold">FECHA SOLICITUD</b>
+                                        <p> <i class="fas fa-calendar-check"></i> 29/04/2019</p>
+                                    </div>
+                                    <div class="">
+                                        <b class="blue-color-bold">FECHA DISPONIBILIDAD</b>
+                                        <p> <i class="fas fa-calendar-check"></i> 29/05/2019</p>
+                                    </div>
+                                    <div class="">
+                                        <b class="blue-color-bold ">TIPO DE ENVÍO</b>
+                                        <p><i class="fas fa-shipping-fast"></i> 7 días de recogida</p>
+                                    </div>
+                                    <div class="">
+                                        <b class="blue-color-bold ">ESTADO DEL VEHÍCULO</b>
+                                        <p><i class="fas fa-car-alt"></i> El vehículo si arranca</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--listado de vehíuclos-->
+
+                        <ul class="list-inline mt10">
+                            <li class="list-inline-item">
+                                <div class="title-step4-mv mt20">
+                                    <p class="blue-color-bold2"> LISTADO DE VEHÍCULOS</p>
+                                </div>
+                            </li>
+                         <!--   <li class="list-inline-item">
+                                <a class="btn btn-xs"  data-toggle='tooltip' data-placement='top' title='Editar' href="contratacion_transporte/contratacion_step2.html"><i class="fas fa-edit"></i> </a>
+                            </li>-->
+                        </ul>
+                        <!-- titulo de columnas-->
+                        <div class="box-simple-line mt10">
+                            <div class="row blue-color-bold2 mt20 title-table-resume">
+                                <div class="col-1 plr2">
+                                    Nº
+                                </div>
+                                <div class="col-2 plr2">
+                                    Matrícula/ Bastidor
+                                </div>
+                                <div class="col-2 plr2">
+                                    Marca
+                                </div>
+                                <div class="col-2 plr2">
+                                    Modelo
+                                </div>
+                                <div class="col-2 plr2">
+                                    Longitud(mm)
+                                </div>
+                                <div class="col-1 plr2">
+                                    Altura(mm)
+                                </div>
+                                <div class="col-2 plr2">
+                                    Peso(kg)
+                                </div>
+                            </div>
+                            <hr class="title-table-resume">
+
+                            <!--listado de vehículos (3 fixeados)-->
+                            <div class="row">
+                                <div class="col-lg-1 plr2">
+                                    <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label> 1
+                                </div>
+                                <div class="col-lg-2 plr2">
+                                    <label class="label-hide-mv"><strong>Matrícula:</strong></label> LU 789654
+                                </div>
+                                <div class="col-lg-2 plr2">
+                                    <label class="label-hide-mv"><strong>Marca:</strong></label> AUDI
+                                </div>
+                                <div class="col-lg-2 plr2">
+                                    <label class="label-hide-mv"><strong>Modelo:</strong></label> AUDI  A2
+                                </div>
+                                <div class="col-lg-2 plr2">
+                                    <label class="label-hide-mv"><strong>Longitud (mm):</strong></label> 3826
+                                </div>
+                                <div class="col-lg-1 plr2">
+                                    <label class="label-hide-mv"><strong>Altura (mm):</strong></label> 1553
+                                </div>
+                                <div class="col-lg-2 plr2">
+                                    <label class="label-hide-mv"><strong>Peso (kg):</strong></label> 855
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg-1 plr2">
+                                    <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label> 2
+                                </div>
+                                <div class="col-lg-2 plr2">
+                                    <label class="label-hide-mv"><strong>Matrícula:</strong></label> LU 789654
+                                </div>
+                                <div class="col-lg-2 plr2">
+                                    <label class="label-hide-mv"><strong>Marca:</strong></label> AUDI
+                                </div>
+                                <div class="col-lg-2 plr2">
+                                    <label class="label-hide-mv"><strong>Modelo:</strong></label> AUDI  A2
+                                </div>
+                                <div class="col-lg-2 plr2">
+                                    <label class="label-hide-mv"><strong>Longitud (mm):</strong></label> 3826
+                                </div>
+                                <div class="col-lg-1 plr2">
+                                    <label class="label-hide-mv"><strong>Altura (mm):</strong></label> 1553
+                                </div>
+                                <div class="col-lg-2 plr2">
+                                    <label class="label-hide-mv"><strong>Peso (kg):</strong></label> 855
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg-1 plr2">
+                                    <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label> 3
+                                </div>
+                                <div class="col-lg-2 plr2">
+                                    <label class="label-hide-mv"><strong>Matrícula:</strong></label> LU 789654
+                                </div>
+                                <div class="col-lg-2 plr2">
+                                    <label class="label-hide-mv"><strong>Marca</strong></label> AUDI
+                                </div>
+                                <div class="col-lg-2 plr2">
+                                    <label class="label-hide-mv"><strong>Modelo</strong></label> AUDI  A2
+                                </div>
+                                <div class="col-lg-2 plr2">
+                                    <label class="label-hide-mv"><strong>Longitud (mm)</strong></label> 3826
+                                </div>
+                                <div class="col-lg-1 plr2">
+                                    <label class="label-hide-mv"><strong>Altura (mm)</strong></label> 1553
+                                </div>
+                                <div class="col-lg-2 plr2">
+                                    <label class="label-hide-mv"><strong>Peso (kg)</strong></label> 855
+                                </div>
+                            </div>
+                        </div>
+                        <!--1. ***********************RESUMEN TRANSPORTE*****************-->
+
+
+
+                        <hr class="mt20 doted-hr">
+
+                        <!--2. ***********************CARTA LIBERACIÓN*****************-->
+                        <h4 class="blue-color-bold2 mt20"><strong>CARTA DE LIBERACIÓN</strong></h4>
+                        <div class="row align-items-center mt20">
+                            <div class="col-lg-6">
+                                <p class="blue-color-bold2">DESCARGAR CARTA</p>
+                                <p>Si en Origen solicitan una autorización para la recogida del vehículo/s, puedes descargar la autorización ya rellena en este apartado, donde solo tendrás que firmar y sellar si es el caso.</p>
+
+                            </div>
+                            <div class="col-lg-6 text-md-right white-color mt-20-mv">
+                                <a class="btn btn-blue">  <i class="fas fa-file-download"></i> Descargar</a>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row align-items-center mt20">
+                            <div class="col-lg-6 mt-20-mv">
+                                <p class="blue-color-bold2">SUBIR CARTA</p>
+                                <p>Una vez firmada y sellada la autorización puedes subirla adjuntando el documento.</p>
+
+                            </div>
+                            <div class="col-lg-4 text-lg-right">
+                                <!--custom input file-->
+                                <input type="file" name="file" class="inputfile inputfile-1"  />
+                            </div>
+                            <div class="col-lg-2 white-color text-md-right mt-20-mv text-md-right">
+                                <a class="btn btn-blue">  <i class="fas fa-upload"></i> Enviar</a>
+                            </div>
+                        </div>
+                      <!--  <hr class="mt20 doted-hr">-->
+
+                        <!--3. ***********************AUTORIZACIÓN*****************-->
+                        <h4 class="blue-color-bold2 mt20"><strong>AUTORIZACIÓN</strong></h4>
+                        <div class="row align-items-center mt20">
+                            <div class="col-lg-6">
+                                <p class="blue-color-bold2">SUBIR AUTORIZACIÓN</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nunc libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+                            </div>
+                            <div class="col-lg-4 text-lg-right">
+                                <!--custom input file-->
+                                <input type="file" name="file" class="inputfile inputfile-1"  />
+                            </div>
+                            <div class="col-lg-2 white-color text-md-right mt-20-mv">
+                                <a class="btn btn-blue">  <i class="fas fa-upload"></i> Enviar</a>
+
+                            </div>
+
+                        </div>
+                        <hr class="mt20 doted-hr">
+
+
+                        <!--4. ***********************SEGUIMIENTO*****************-->
+
+                        <h4 class="blue-color-bold2 mt20"><strong>SEGUIMIENTO DEL ENVÍO</strong></h4>
+
+                        <section id="timeline" class="timeline-outer">
+                            <div class="container" id="content">
+                                <div class="row">
+                                    <div class="col s12 m12 l12">
+                                        <ul class="timeline">
+                                            <li class="event" data-date="14/06/2019" >
+                                                <span class="badge badge-warning bg-insertado">Insertado</span>
+                                                <p class="gray-color mt10"><i class="far fa-clock"></i> 9:27:13</p>
+                                                <p class="mt10">
+                                                    Transporte insertado en el sistema
+                                                </p>
+                                            </li>
+                                            <li class="event" data-date="14/06/2019">
+                                                <span class="badge badge-warning bg-pendiente">Pendiente de autorización</span>
+                                                <p class="gray-color mt10"><i class="far fa-clock"></i> 10:27:13</p>
+                                                <p class="mt10">
+                                                    A la espera de recibir la autorización
+                                                </p>
+
+                                            </li>
+                                            <li class="event" data-date="15/06/2019">
+                                                <span class="badge badge-warning bg-procesado">Procesado</span>
+
+                                                <p class="gray-color mt10"><i class="far fa-clock"></i> 15:00:00</p>
+                                                <p class="mt10">Pedido asignado a transportista
+                                                </p>
+                                            </li>
+                                            <li class="event" data-date="16/06/2019">
+                                                <span class="badge badge-warning bg-recogiendo">Recogiendo</span>
+                                                <p class="gray-color mt10"><i class="far fa-clock"></i> 18:30:55</p>
+                                                <p class="mt10">Recogiendo vehículo/s en origen  </p>
+                                            </li>
+                                            <li class="event" data-date="17/06/2019">
+                                                <span class="badge badge-warning bg-transportando">Transportando</span>
+                                                <p class="gray-color mt10"><i class="far fa-clock"></i> 8:15:13</p>
+                                                <p class="mt10">Transporte en ruta  </p>
+                                            </li>
+                                            <li class="event" data-date="24/06/2019">
+                                                <span class="badge badge-warning bg-fallido">Incidencia</span>
+                                                <p class="gray-color mt10"><i class="far fa-clock"></i> 17:27:13</p>
+                                                <p class="mt10">No se ha podido realizar la entrega. </p>
+
+                                            </li>
+                                            <li class="event" data-date="24/06/2019">
+                                                <span class="badge badge-warning bg-finalizado">Finalizado</span>
+                                                <p class="gray-color mt10"><i class="far fa-clock"></i> 20:27:13</p>
+                                                <p class="mt10"> Transporte entregado en destino. </p>
+
+                                            </li>
+
+                                            <!--esto es para pintar la bandera fin de linea-->
+                                            <li class="event flag">
+                                                <p style="color:transparent;">fin</p>
+                                            </li>
+
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <div class="text-right white-color mt-20-mv">
+                            <a class="btn btn-blue">  <i class="fas fa-sync-alt"></i> Actualizar</a>
+                        </div>
+
+                        <hr class="mt20 doted-hr">
+
+
+                        <!--5. ***********************RESUMEN DE PAGO*****************-->
+                        <h4 class="blue-color-bold2 mt20"><strong>RESUMEN DE PAGO</strong></h4>
+                      <!--  <div class="row anti-row mt20">
+                            <div class="col-md-4">
+                               <p class="blue-color-bold2"> MÉTODO DE PAGO</p>
+                                <div class="box-simple-line mt20 ">
+                                    <div class="mt10 text-center">
+                                        <p class="gray-color ">TARJETA DE CRÉDITO O DÉBITO</p>
+                                    </div>
+                                </div>
+
+                                &lt;!&ndash;<img src="../../img/publica/tarjeta_credito_debito_sm_3.png" class="img-fluid mt20"/>&ndash;&gt;
+                            </div>
+                            <div class="col-md-4 border-left ">
+                                <p class="blue-color-bold2">REFERENCIA DE PAGO</p>
+                                <div class="box-simple-line mt20">
+                                    <div class="mt10 text-center">
+                                        <p class="gray-color">190617074408</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4 border-left">
+                                <p class="blue-color-bold2">PAGO</p>
+                                <div class="box-simple-line bg-blue-light-trans mt20" style="font-size:18px;">
+
+                                    <div class="row">
+                                        <div class="col-4">BASE:</div>
+                                        <div class="col-8 text-right"> 1000 €</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">IVA:</div>
+                                        <div class="col-8 text-right"> 498 €</div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-4"><strong>TOTAL:</strong></div>
+                                        <div class="col-8 text-right"><strong>1498 €</strong></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>-->
+                        <div class="row anti-row mt20">
+                            <div class="col-md-4 text-center">
+                                <p class="blue-color-bold2"> MÉTODO DE PAGO</p>
+                                    <div class="mt10">
+                                        <p class="gray-color ">TARJETA DE CRÉDITO O DÉBITO</p>
+                                    </div>
+                            </div>
+                            <div class="col-md-4 border-left text-center">
+                                <p class="blue-color-bold2">REFERENCIA DE PAGO</p>
+                                    <div class="mt10">
+                                        <p class="gray-color">190617074408</p>
+                                    </div>
+                            </div>
+                            <div class="col-md-4 border-left text-center">
+                                <p class="blue-color-bold2">FECHA DE PAGO</p>
+                                    <div class="mt10">
+                                        <p class="gray-color">12/06/2019</p>
+                                    </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="row anti-row mt20 align-items-center">
+                            <div class="col-md-4 text-center">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <p class="blue-color-bold2"> BASE</p>
+                                    </li>
+                                    <li class="list-inline-item">
+                                        <!--<p class="gray-color">1000 €</p>-->
+                                        <p class="blue-color-bold2">1000 €</p>
+                                    </li>
+                                </ul>
+
+                            </div>
+                            <div class="col-md-4 border-left text-center">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <p class="blue-color-bold2"> IVA</p>
+                                    </li>
+                                    <li class="list-inline-item">
+                                       <!-- <p class="gray-color ">498 €</p>-->
+                                        <p class="blue-color-bold2 ">498 €</p>
+
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4 border-left text-center">
+                                <ul class="list-inline">
+                                    <li class="list-inline-item">
+                                        <p class="blue-color-bold2"> TOTAL</p>
+                                    </li>
+                                    <li class="list-inline-item">
+<!--
+                                        <p class="gray-color">1498 €</p>
+-->
+                                        <p class="blue-color-bold2">1498 €</p>
+
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr class="mt20 doted-hr">
+
+
+                        <!--6. ***********************FACTURA*****************-->
+                        <h4 class="blue-color-bold2 mt20"><strong>FACTURA</strong></h4>
+
+                        <p>La factura no estará disponible hasta que tu pedido se haya finalizado</p>
+
+
+                        <p>Incialmente se mostrará solo la frase de arriba, y cuando pedido finalizado se mostrará lo que sigue </p>
+                        <div class="row align-items-center mt20">
+                            <div class="col-md-6">
+                                <p class="blue-color-bold2">DESCARGAR FACTURA</p>
+                                <p>Tu pedido ya ha sido finalizado, por lo tanto ya tienes disponible tu factura para descargar</p>
+
+                            </div>
+                            <div class="col-md-6 text-md-right white-color mt-20-mv">
+                                <a class="btn btn-blue">  <i class="fas fa-file-download"></i> Descargar</a>
+                            </div>
+                        </div>
+
+                        <hr class="mt20 doted-hr">
+
+
+
+                        <!--7. ***********************CONSULTAS ACERCA DEL PEDIDO*****************-->
+
+                        <h4 id="consultas_pedido" class="blue-color-bold2 mt20"><strong>CONSULTAS ACERCA DEL PEDIDO</strong></h4>
+                        <!--listado de consultas anteriores-->
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-1 blue-color-bold2">
+                                1 <i class="far fa-comment fa-2x"></i>
+                            </div>
+                            <div class="col-sm-11 ">
+                                <p class="blue-color-bold2">¿Lorem ipsum dolor sit amet, consectetur adipiscing elit.?</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nunc libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lobortis laoreet nibh et iaculis.
+                                </p>
+                            </div>
+
+                        </div>
+                        <hr>
+                        <div class="row">
+                            <div class="col-sm-1 blue-color-bold2">
+                                2 <i class="far fa-comment fa-2x"></i>
+                            </div>
+                            <div class="col-sm-11 ">
+                                <p class="blue-color-bold2">¿Lorem ipsum dolor sit amet, consectetur adipiscing elit.?</p>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nunc libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lobortis laoreet nibh et iaculis.
+                                </p>
+                            </div>
+
+                        </div>
+                        <hr>
+
+                        <textarea class="form-control w-100" rows="3" cols="5" placeholder="Consulta..."></textarea>
+                        <div class="text-right white-color mt10">
+                            <a class="btn btn-blue"> Enviar consulta nueva  <i class="far fa-paper-plane"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+</div>
+
+<!--5. FOOTER-->
+<footer>
+
+    <div class="background-footer-3">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <p class="white-color text-center">&copy; 2019 Copyright Transportauto S.L </p>
+                </div>
+                <div class="col-md-8 text-center">
+                    <ul class="list-inline mb0">
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="condiciones_generales.html">
+                                <strong>Condiciones generales</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="aviso_legal.html">
+                                <strong>Aviso Legal</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="faq.html">
+                                <strong>FAQ's</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="politica_cookies.html">
+                                <strong>Política de Cookies</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="politica_de_privacidad.html">
+                                <strong>Política de Privacidad</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <img class="img-fluid" src="../../img/publica/pago_sm.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!--captcha google-->
+
+<script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+<!--JS-->
+<script src="../../vendor/jquery-3.2.1.slim.min.js" ></script>
+<script src="../../vendor/popper.min.js"></script>
+<script src="../../vendor/bootstrap-4.0.0-dist/js/bootstrap.min.js" ></script>
+
+
+
+
+<!--datatables-->
+
+<!--
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+-->
+<!--
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+-->
+<!--
+<script type="text/javascript" src="https://cdn.datatables.net/v/dt/jszip-2.5.0/dt-1.10.18/af-2.3.3/b-1.5.6/b-colvis-1.5.6/b-flash-1.5.6/b-html5-1.5.6/b-print-1.5.6/cr-1.5.0/fc-3.2.5/fh-3.1.4/kt-2.5.0/r-2.2.2/rg-1.1.0/rr-1.2.4/sc-2.0.0/sl-1.3.0/datatables.min.js"></script>
+-->
+
+<!--<script type="text/javascript" src=../../vendor/DataTables/datatables.js></script>-->
+
+<!--datetimepickermaster v2-->
+<script src="../../vendor/datetimepicker-master/build/jquery.datetimepicker.full.js"></script>
+
+
+<script src="../../js/publica/main.js"></script>
+<script src="../../js/privada_cliente/main.js"></script>
+
+
+
+<!--chat zoopin de prueba-->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=67a67bcf-2ea9-4168-a124-f502f67d607e"> </script>
+<!-- End of  Zendesk Widget script -->
+
+<!--END JS-->
+</body>
+</html>

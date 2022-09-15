@@ -1,0 +1,854 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name='viewport'content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../../vendor/bootstrap-4.0.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!--cookies-->
+    <link rel='stylesheet' href='../../css/publica/cookies_1.css'/>
+
+    <link rel="stylesheet" href="../../css/publica/main.css">
+    <link rel="stylesheet" href="../../css/privada_cliente/main.css">
+
+    <!-- END CSS -->
+</head>
+<body>
+<!--*****************************************************-->
+<!--1. AVISO SI SE USA INTERNET EXPLORER 8 O INFERIOR-->
+<!--******************************************************-->
+
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!--//BLOQUE COOKIES-->
+<!--<div id="barraaceptacion">
+    <div class="inner">
+        Usamos cookies para asegurarnos de darte la mejor experiencia en nuestra web. Si aceptas estas condiciones, consideramos que aceptas su uso.
+        <br><br><a href="javascript:void(0);" class="ok cursor_pointer" onclick="PonerCookie();"><b>OK</b></a>
+        <a  class="info cursor_pointer" href="politica_cookies.html" target="_blank"> M&aacute;s informaci&oacute;n</a>
+    </div>
+</div>-->
+
+<!--***********************************************************************************************************************************************************************-->
+<!--2.********* MENÚ PRINCIPAL*********************************************************************************************************************************************-->
+<!--*********************************************************************************************************************************************************************-->
+<form>
+    <div class="fixed-top menu-scrolling" >
+        <div class="z-index-top">
+            <div class="p-1 border-bottom bg-white">
+                <div class="container">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-4 plr0">
+                                <div class="dropdown show">
+                                    <a class="dropdown-toggle blue-color" href="#" role="button" id="dropdownMenuLinklanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Idioma
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLinklanguage">
+                                        <a class="dropdown-item" href="#">Español</a>
+                                        <a class="dropdown-item" href="#">Francés</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8 plr0 text-right">
+
+                                <div class="dropdown show">
+                                    <a class="dropdown-toggle btn-register-menu" href="#" role="button" id="dropdownMenuLinkperfil" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-user"></i>  Bienvenida, Gema
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkperfil">
+                                        <a class="dropdown-item" href="#">Cerrar sesión</a>
+                                        <a class="dropdown-item" href="mi_cuenta.html">Mi Cuenta</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="img-fluid logo-menu" src="../../img/publica/logo_transportauto.png" alt="logo transportauto" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon burger-menu-primary"></span>
+                        <i class="fas fa-bars burger-menu-primary"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav ml-auto primary-color">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contratacion_transporte/contratacion_step1.html">SOLICITAR TRANSPORTE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="mis_pedidos.html">MIS PEDIDOS </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pedidos_pendientes.html">PEDIDOS PENDIENTES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="facturas.html">FACTURAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link "  href="agenda.html"> AGENDA</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--mini formulario calculadora desplegable-->
+            <div class="show-calculator-menu">
+                <div class="container">
+                    <!--<div class="btn-control-box-calculator">-->
+                    <div class="row">
+                        <div class="col-6 col-md-3 blue-color p-col-calculator">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text" >
+                                             <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Origen">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 blue-color p-col-calculator">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                              <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Destino">
+                            </div>
+
+                        </div>
+                        <div class="col-6 col-md-2 blue-color p-col-calculator">
+                            <select  class="form-control">
+                                <option value="" disabled selected>Estado</option>
+                                <option value="arranca">Arranca</option>
+                                <option value="no_arranca">No arranca pero puede rodar</option>
+                                <option value="internacional" >Siniestro/No puede rodar</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-md-2 blue-color p-col-calculator">
+                            <select  class="form-control mb-3">
+                                <option value="" disabled selected>Tipo</option>
+                                <option value="vehiculos">Turismos</option>
+                                <option value="vehiculos">Comerciales</option>
+                                <option value="indust_autocarav_tractor">Industrial</option>
+                                <option value="indust_autocarav_tractor" >Autocaravana</option>
+                                <option value="indust_autocarav_tractor">Tractor</option>
+                                <option value="moto">Moto</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-2 p-col-calculator">
+                            <a class="btn btn-blue w-100 btn-control-box-calculator">calcular <i class="fas fa-chevron-down"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>        <!--CONTENIDO DE LA CALCULADORA OCULTO EN EL MENÚ PPAL-->
+        <!--CONTENIDO DE LA CALCULADORA OCULTO EN EL MENÚ PPAL-->
+        <section id="calculator2" class="ptb-section  calculator-box d-none">
+            <div class="container plr0">
+                <div class="calculator-box">
+                    <div class="box-type-vehicule">
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT AUTOMOVILES *****************************-->
+                        <!--*********************************************************************-->
+                        <!--ocultar o mostrar una u otra box-type-vehicle en función del vehículo seleccionado, no lo tengo simulado, solo muestro el de turismo-->
+
+                        <div class="box-type-vehicle" id="box-turismo" >
+                            <div class="list-vehicules-calculator">
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-vehiculos-collapse"><i class="fas fa-plus"></i> Añadir vehículos </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator ">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Año
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Año</option>
+                                                <option value="Modelo1">2000</option>
+                                                <option value="Modelo2">2001</option>
+                                                <option value="Modelo3">2002</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Versión
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="version1">Versión 1</option>
+                                                <option value="version2">Versión 2</option>
+                                                <option value="version3" >Versión 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i><span class="text-btn-delete-mv"> Eliminar vehículo</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--***********CONTENT comercial *****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-comercial" >
+                            <div class="list-vehicules-calculator">
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-vehiculos-collapse"><i class="fas fa-plus"></i> Añadir vehículos </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator ">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Año
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Año</option>
+                                                <option value="Modelo1">2000</option>
+                                                <option value="Modelo2">2001</option>
+                                                <option value="Modelo3">2002</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Versión
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="version1">Versión 1</option>
+                                                <option value="version2">Versión 2</option>
+                                                <option value="version3" >Versión 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--***********CONTENT INDUSTRIALES *****************************-->
+                        <!--*********************************************************************-->
+                        <div class="box-type-vehicle d-none" id="box-industrial" >
+                            <div class="list-vehicules-calculator">
+                                <!--INDUSTRIALES  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-indust-autocarav-tractor"><i class="fas fa-plus"></i> Añadir vehículos industriales </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Largo (mm)
+                                            <input type="text p-col-calculator" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Alto (mm)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT AUTOCARAVANAS*****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-autocaravana" >
+                            <!--BOX ORIGEN, DESTINO Y ESTADO-->
+
+                            <div class="list-vehicules-calculator">
+                                <!--AUTOCARAVANAS  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-indust-autocarav-tractor"><i class="fas fa-plus"></i> Añadir autocaravanas </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Largo (mm)
+                                            <input type="text p-col-calculator" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Alto (mm)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT TRACTORES*****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-tractor" >
+                            <div class="list-vehicules-calculator">
+                                <!--TRACTORES  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-indust-autocarav-tractor"><i class="fas fa-plus"></i> Añadir tractores </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row ">
+                                        <div class="col-md-3 p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Largo (mm)
+                                            <input type="text p-col-calculator" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Alto (mm)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT MOTOS *****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-moto" >
+                            <div class="list-vehicules-calculator">
+                                <!--MOTOS  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-moto"><i class="fas fa-plus"></i> Añadir motos </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3  p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3  p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-2  p-col-calculator">
+                                            C.C.
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2  p-col-calculator">
+                                            CV
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1  p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end tabs content-->
+                </div><!--end calculator box-->
+
+                <div class="text-right mt-2">
+                    <a id="btn-calculate-price" class="btn btn-md btn-blue  text-center" href="contratacion_transporte/tipos_de_precio.html"><i class="fas fa-search"></i> Calcular el precio del transporte</a>
+                </div>
+            </div>
+            <!--end container-->
+        </section>
+    </div>
+    <!--EN MENU FIXED CON CAJA DE CALCULADORA-->
+</form>
+
+<!--*******************************************************************************************************************************************************************-->
+<!--**********************************************5 CONTENIDO DE LA PAGINA POLÍTICA DE COOKIES*************************************************************************************-->
+<!--****************************************************************************************************************************************************************-->
+
+
+<section id="cookies" class="ptb-section mt-first-section-other-page content-page" >
+
+    <div class="container">
+        <h2 class="blue-color-bold2 title-legales"> POLÍTICA DE COOKIES </h2>
+        <p class="text-justify">Transportauto 2000, S.L. informa acerca del uso de las cookies en su página web: www.transportauto.es    </p>
+
+        <h4 class="blue-color-bold2 mt20">¿Qué son las cookies?  </h4>
+        <p class="text-justify">Las cookies son archivos que se pueden descargar en su equipo a través de las páginas web. Son herramientas que
+            tienen un papel esencial para la prestación de numerosos servicios de la sociedad de la información. Entre otros,
+            permiten a una página web almacenar y recuperar información sobre los hábitos de navegación de un usuario o de su
+            equipo y, dependiendo de la información obtenida, se pueden utilizar para reconocer al usuario y mejorar el servicio
+            ofrecido.
+        </p>
+
+
+        <h4 class="blue-color-bold2 mt20">Tipos de cookies</h4>
+        <p class="text-justify">Según quien sea la entidad que gestione el dominio desde donde se envían las cookies y trate los datos que se
+            obtengan se pueden distinguir dos tipos:
+        </p>
+
+        <ul class="text-justify">
+            <li>Cookies propias:<br>Aquéllas que se envían al equipo terminal del usuario desde un equipo o dominio gestionado por el
+                propio editor y desde el que se presta el servicio solicitado por el usuario.  </li>
+            <li>Cookies de terceros:<br> Aquéllas que se envían al equipo terminal del usuario desde un equipo o dominio que no es gestionado
+                por el editor, sino por otra entidad que trata los datos obtenidos través de las cookies.
+            </li>
+        </ul>
+
+        <p class="text-justify">En el caso de que las cookies sean instaladas desde un equipo o dominio gestionado por el propio editor pero la
+            información que se recoja mediante éstas sea gestionada por un tercero, no pueden ser consideradas como cookies
+            propias.</p>
+
+        <p class="text-justify">Existe también una segunda clasificación según el plazo de tiempo que permanecen almacenadas en el navegador del
+            cliente, pudiendo tratarse de:
+        </p>
+
+        <ul class="text-justify">
+            <li>
+                <strong>Cookies de sesión:</strong><br>
+                Diseñadas para recabar y almacenar datos mientras el usuario accede a una página web. Se suelen
+                emplear para almacenar información que solo interesa conservar para la prestación del servicio
+                solicitado por el usuario en una sola ocasión (p.e. una lista de productos adquiridos).
+            </li>
+            <li>
+                <strong>Cookies persistentes:
+                </strong><br>
+                Los datos siguen almacenados en el terminal y pueden ser accedidos y tratados durante un periodo
+                definido por el responsable de la cookie, y que puede ir de unos minutos a varios años.
+            </li>
+        </ul>
+
+
+        <p class="text-justify">Por último, existe otra clasificación con seis tipos de cookies según la finalidad para la que se traten los datos
+            obtenidos:
+        </p>
+        <ul class="text-justify">
+            <li>
+                <strong>Cookies técnicas:</strong><br>
+                <p class="text-justify">Aquellas que permiten al usuario la navegación a través de una página web, plataforma o aplicación y
+                    la utilización de las diferentes opciones o servicios que en ella existan como, por ejemplo, controlar el
+                    tráfico y la comunicación de datos, identificar la sesión, acceder a partes de acceso restringido,
+                    recordar los elementos que integran un pedido, realizar el proceso de compra de un pedido, realizar la
+                    solicitud de inscripción o participación en un evento, utilizar elementos de seguridad durante la
+                    navegación, almacenar contenidos para la difusión de vídeos o sonido o compartir contenidos a través
+                    de redes sociales.</p>
+            </li>
+            <li>
+                <strong>Cookies de personalización:</strong><br>
+                <p class="text-justify">
+                    Permiten al usuario acceder al servicio con algunas características de carácter general predefinidas en
+                    función de una serie de criterios en el terminal del usuario como por ejemplo serian el idioma, el tipo de
+                    navegador a través del cual accede al servicio, la configuración regional desde donde accede al
+                    servicio, etc.
+
+                </p>
+            </li>
+            <li>
+                <strong>Cookies de análisis:   </strong><br>
+                <p class="text-justify">
+                    Permiten al responsable de las mismas, el seguimiento y análisis del comportamiento de los usuarios
+                    de los sitios web a los que están vinculadas. La información recogida mediante este tipo de cookies se
+                    utiliza en la medición de la actividad de los sitios web, aplicación o plataforma y para la elaboración de
+                    perfiles de navegación de los usuarios de dichos sitios, aplicaciones y plataformas, con el fin de
+                    introducir mejoras en función del análisis de los datos de uso que hacen los usuarios del servicio.
+                </p>
+            </li>
+            <li>
+                <strong>Cookies publicitarias: </strong><br>
+                <p class="text-justify">
+                    Permiten la gestión, de la forma más eficaz posible, de los espacios publicitarios.
+                </p>
+            </li>
+            <li>
+                <strong>Cookies de publicidad comportamental:</strong><br>
+                <p class="text-justify">Almacenan información del comportamiento de los usuarios obtenida a través de la observación
+                    continuada de sus hábitos de navegación, lo que permite desarrollar un perfil específico para mostrar
+                    publicidad en función del mismo.</p>
+            </li>
+            <li>
+                <strong>Cookies de redes sociales externas:</strong><br>
+                <p class="text-justify">Se utilizan para que los visitantes puedan interactuar con el contenido de diferentes plataformas
+                    sociales (facebook, youtube, twitter, linkedIn, etc..) y que se generen únicamente para los usuarios de
+                    dichas redes sociales. Las condiciones de utilización de estas cookies y la información recopilada se
+                    regula por la política de privacidad de la plataforma social correspondiente</p>
+            </li>
+        </ul>
+
+        <h4 class="blue-color-bold2 mt20">Desactivación y eliminación de cookies </h4>
+
+        <p class="text-justify">Tienes la opción de permitir, bloquear o eliminar las cookies instaladas en tu equipo mediante la configuración de las
+            opciones del navegador instalado en su equipo. Al desactivar cookies, algunos de los servicios disponibles podrían
+            dejar de estar operativos. La forma de deshabilitar las cookies es diferente para cada navegador, pero normalmente
+            puede hacerse desde el menú Herramientas u Opciones. También puede consultarse el menú de Ayuda del navegador
+            dónde puedes encontrar instrucciones. El usuario podrá en cualquier momento elegir qué cookies quiere que funcionen
+            en este sitio web.
+        </p>
+
+        <p class="text-justify">Puede usted permitir, bloquear o eliminar las cookies instaladas en su equipo mediante la configuración de las opciones
+            del navegador instalado en su ordenador:
+        </p>
+
+        <ul class="text-justify">
+            <li>
+                <strong>Microsoft Internet Explorer o Microsoft Edge: </strong>
+
+                <a href="https://support.microsoft.com/en-us/help/17442/windows-internet-explorer-delete-manage-cookies" target="_blank">abrir enlace</a>
+            </li>
+            <li>
+                <strong>Mozilla Firefox:</strong>
+
+                <a href="https://support.mozilla.org/es/kb/impedir-que-los-sitios-web-guarden-sus-preferencia" target="_blank">abrir enlace</a>
+            </li>
+            <li>
+                <strong>Chrome: </strong>
+
+                <a href="https://support.google.com/accounts/answer/61416?hl=es" target="_blank">abrir enlace</a>
+            </li>
+            <li>
+                <strong>Safari: </strong>
+
+                <a href="http://safari.helpmax.net/es/privacidad-y-seguridad/como-gestionar-las-cookies/" target="_blank">abrir enlace</a>
+            </li>
+            <li>
+                <strong>Opera: </strong>
+
+                <a href="https://help.opera.com/en/Linux/10.60/es-ES/cookies.html" target="_blank">abrir enlace</a>
+            </li>
+        </ul>
+
+        <p class="text-justify">Además, también puede gestionar el almacén de cookies en su navegador a través de herramientas como las
+            siguientes
+        </p>
+
+        <ul class="text-justify">
+            <li>
+                 Ghostery: <a href="https://www.ghostery.com/" target="_blank">abrir enlace</a>
+            </li>
+            <li>
+                 Your Online Choices:<a href="http://www.youronlinechoices.com/es/" target="_blank">abrir enlace</a>
+            </li>
+        </ul>
+
+
+        <h4 class="blue-color-bold2 mt20">Cookies utilizadas en www.transportauto.es </h4>
+        <p class="text-justify">
+            A continuación se identifican las cookies que están siendo utilizadas en este portal así como su tipología y función:
+        </p>
+
+        <p class="text-justify">
+            Cookies propias y de terceros: Se utilizan para medir la audiencia y parámetros del tráfico, controlar el progreso y número
+            de entradas.
+        </p>
+
+        <h4 class="blue-color-bold2 mt20">Aceptación de la Política de cookies</h4>
+        <p class="text-justify">
+            www.transportauto.es, asume que usted acepta el uso de cookies. No obstante, muestra información sobre su Política
+            de cookies en la parte inferior o superior de cualquier página del portal con cada inicio de sesión con el objeto de que
+            usted sea consciente.
+
+        </p>
+        <p>Ante esta información es posible llevar a cabo las siguientes acciones:</p>
+        <ul class="">
+            <li>Aceptar cookies: <br>No se volverá a visualizar este aviso al acceder a cualquier página del portal durante la presente
+                sesión.
+            </li>
+            <li>
+                Cerrar:<br>Se oculta el aviso en la presente página.
+            </li>
+            <li>
+                Modificar su configuración:<br>
+                Podrá obtener más información sobre qué son las cookies, conocer la Política de cookies de:
+                www.transportauto.es y modificar la configuración de su navegador.
+            </li>
+        </ul>
+    </div>
+</section>
+
+<!--5. FOOTER-->
+<footer>
+ <!--   <div class="background-footer">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="offset-lg-5 col-lg-7 white-color text-center">
+                    <div class="align-middle">
+                        <h2 class="white-color">¿NECESITAS MÁS INFORMACIÓN?</h2>
+                        <h3 class="white-color" >¡Llámanos o escríbenos! </h3>
+                        <h3 class="white-color">Responderemos a todas tus preguntas.</h3>
+
+                        <ul class="list-inline mt20">
+                            <li class="list-inline-item btn-banner">
+                                <a  href="tel:+34000000000">
+                                    <h2 class="phone white-color" >
+                                        <i class="fas fa-phone-volume"></i> Llamar 902106925
+                                    </h2>
+                                </a>
+                            </li>
+                            <li class="list-inline-item btn-banner mt-20-mv">
+                                <a href="preguntanos.html">
+                                    <h2 class="phone white-color">
+                                        <i class="fas fa-envelope-open-text"></i> Enviar email
+                                    </h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="background-footer-2">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-4">
+                    <img class="img-fluid" src="../../img/publica/logo_transportauto.png" alt="logo transportauto" />
+                    <p class="text-justify mt20">
+                        Empresa dedicada al sector del transporte de todo tipo de vehículos (automóviles, furgonetas, camiones, autobuses, tractores y autocaravanas) que ofrece un servicio de recogida y entrega puerta a puerta en cualquier punto de la península, Baleares y Canarias, pero también en otros países europeos.
+                    </p>
+                </div>
+
+                <div class="col-md-8">
+
+                    <h3>ÚLTIMAS NOTICIAS</h3>
+                    &lt;!&ndash;mostrar las 4 últimas noticias&ndash;&gt;
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="item-new-footer row align-items-center ">
+                                <div class="col-sm-4">
+                                    <img class="img-fluid" src="../../img/publica/new-footer.jpg" alt="" />
+                                </div>
+                                <div class="col-sm-8">
+                                    <p>Jueves, 16 de mayo de 2019</p>
+                                    <a class="blue-color-link" href="">Seat prevé mejorar hasta un 50% sus indicadores medioambientales para 2025</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="item-new-footer row align-items-center ">
+                                <div class="col-sm-4">
+                                    <img class="img-fluid" src="../../img/publica/new-footer.jpg" alt="" />
+                                </div>
+                                <div class="col-sm-8">
+                                    <p>Jueves, 16 de mayo de 2019</p>
+                                    <a class="blue-color-link" href="">Seat prevé mejorar hasta un 50% sus indicadores medioambientales para 2025</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="item-new-footer row align-items-center ">
+                                <div class="col-sm-4">
+                                    <img class="img-fluid" src="../../img/publica/new-footer.jpg" alt="" />
+                                </div>
+                                <div class="col-sm-8">
+                                    <p>Jueves, 16 de mayo de 2019</p>
+                                    <a class="blue-color-link" href="">Seat prevé mejorar hasta un 50% sus indicadores medioambientales para 2025</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="item-new-footer row align-items-center ">
+                                <div class="col-sm-4">
+                                    <img class="img-fluid" src="../../img/publica/new-footer.jpg" alt="" />
+                                </div>
+                                <div class="col-sm-8">
+                                    <p>Jueves, 16 de mayo de 2019</p>
+                                    <a class="blue-color-link" href="">Seat prevé mejorar hasta un 50% sus indicadores medioambientales para 2025</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <div class="background-footer-3">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <p class="white-color text-center">&copy; 2019 Copyright Transportauto S.L </p>
+                </div>
+                <div class="col-md-8 text-center">
+                    <ul class="list-inline mb0">
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="condiciones_generales.html">
+                                <strong>Condiciones generales</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="aviso_legal.html">
+                                <strong>Aviso Legal</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="faq.html">
+                                <strong>FAQ's</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="politica_cookies.html">
+                                <strong>Política de Cookies</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="politica_de_privacidad.html">
+                                <strong>Política de Privacidad</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <img class="img-fluid" src="../../img/publica/pago_sm.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</footer><!--captcha google-->
+
+<script src='https://www.google.com/recaptcha/api.js?hl=es'></script>
+<!--JS-->
+<script src="../../vendor/jquery-3.2.1.slim.min.js" ></script>
+<script src="../../vendor/popper.min.js"></script>
+<script src="../../vendor/bootstrap-4.0.0-dist/js/bootstrap.min.js" ></script>
+
+
+<script src="../../js/publica/main.js"></script>
+
+<!--chat zoopin de prueba-->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=67a67bcf-2ea9-4168-a124-f502f67d607e"> </script>
+<!-- End of  Zendesk Widget script -->
+
+<!--END JS-->
+</body>
+</html>

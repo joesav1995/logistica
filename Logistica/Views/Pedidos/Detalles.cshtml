@@ -1,0 +1,519 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout_mod.cshtml";
+}
+
+@section head {
+    <title>GrupoCV | 2019</title>
+    <meta name="description" content="GrupoCV">
+    <meta name="keywords" content="asociación comerciantes vehículos, derechos reales, polizas flotantes, garantías mecánicas, simulador financiero, estadísticas ventas vehículos nuevos,noticias, asociación coches,contratos de compra-venta, hojas de reclamación">
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+<div class="container">
+
+    <!--*******************************************************************************************************************************************************************-->
+    <!--**********************************************5 CONTENIDO de DETALLES MIS PEDIDOS*************************************************************************************-->
+    <!--****************************************************************************************************************************************************************-->
+
+    <div class="content-page mt-first-section-other-page" id="sigue_tu_envio">
+        <section class="pb-section">
+            <div class="container">
+
+                <div class="row pt-btn-modal">
+                    <div class="col-lg-6">
+                        <h3 class="blue-color-bold2">DETALLES DEL PEDIDO</h3>
+                    </div>
+                    <div class="col-lg-6 text-right">
+                    </div>
+                </div>
+
+                <div class="row ">
+                    <div class="col-md-12">
+                        <div class="box-content-contrato">
+                            <h4 class="blue-color-bold2 mt20"><strong>RESUMEN DEL TRANSPORTE</strong></h4>
+                            <div class="row  mt10">
+                                <div class="col-lg-4 mt-20-mv">
+                                    <div class="box-simple-line h-100">
+                                        <!--direccion origen-->
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item">
+                                                <b class="blue-color-bold">DATOS DE ORIGEN</b>
+                                            </li>
+                                            <!-- <li class="list-inline-item">
+                                                 <a class="btn btn-xs"  data-toggle='tooltip' data-placement='top' title='Editar' href=""><i class="fas fa-edit"></i> </a>
+                                             </li>-->
+                                        </ul>
+
+                                        <p><i class="fas fa-map-marked-alt"></i> Campa</p>
+                                        <p><i class="fas fa-building"></i> Razón social S.L</p>
+                                        <!--datos contacto origen-->
+                                        <p><i class="fas fa-user"></i> Laura Fernández Fernández</p>
+                                        <p><i class="fas fa-phone"></i> 677885599</p>
+                                        <p><i class="fas fa-map-marker-alt"></i>  Calle Origen, 28001 Alcobendas, Madrid</p>
+                                        <p><i class="far fa-comment"></i>Aquí van las observaciones con tamaños maximo 50</p>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-4 mt-20-mv">
+                                    <div class="box-simple-line h-100">
+                                        <!--direccion destino-->
+                                        <!--direccion origen-->
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item">
+                                                <b class="blue-color-bold ">DATOS DE DESTINO</b>
+                                            </li>
+                                            <!-- <li class="list-inline-item">
+                                                 <a class="btn btn-xs"  data-toggle='tooltip' data-placement='top' title='Editar' href=""><i class="fas fa-edit"></i> </a>
+                                             </li>-->
+                                        </ul>
+                                        <p><i class="fas fa-map-marked-alt"></i> Campa</p>
+                                        <p><i class="fas fa-building"></i> Razón social S.L</p>
+
+                                        <!--datos contacto origen-->
+                                        <p><i class="fas fa-user"></i> Laura Fernández Fernández</p>
+                                        <p><i class="fas fa-phone"></i> 677885599</p>
+                                        <p><i class="fas fa-map-marker-alt"></i>  Calle destino, 28001 Alcobendas, Madrid</p>
+                                        <p><i class="far fa-comment"></i>Aquí obsrvaciones mas peques</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-20-mv">
+                                    <div class="box-simple-line h-100">
+                                        <div class="">
+                                            <b class="blue-color-bold">IDENTIFICADOR DEL PEDIDO</b>
+                                            <p> <i class="far fa-file-alt"></i> 4569</p>
+                                        </div>
+                                        <div class="">
+                                            <b class="blue-color-bold">FECHA SOLICITUD</b>
+                                            <p> <i class="fas fa-calendar-check"></i> 29/04/2019</p>
+                                        </div>
+                                        <div class="">
+                                            <b class="blue-color-bold">FECHA DISPONIBILIDAD</b>
+                                            <p> <i class="fas fa-calendar-check"></i> 29/05/2019</p>
+                                        </div>
+                                        <div class="">
+                                            <b class="blue-color-bold ">TIPO DE ENVÍO</b>
+                                            <p><i class="fas fa-shipping-fast"></i> 7 días de recogida</p>
+                                        </div>
+                                        <div class="">
+                                            <b class="blue-color-bold ">ESTADO DEL VEHÍCULO</b>
+                                            <p><i class="fas fa-car-alt"></i> El vehículo si arranca</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--listado de vehíuclos-->
+
+                            <ul class="list-inline mt10">
+                                <li class="list-inline-item">
+                                    <div class="title-step4-mv mt20">
+                                        <p class="blue-color-bold2"> LISTADO DE VEHÍCULOS</p>
+                                    </div>
+                                </li>
+                                <!--   <li class="list-inline-item">
+                                       <a class="btn btn-xs"  data-toggle='tooltip' data-placement='top' title='Editar' href="contratacion_transporte/contratacion_step2.html"><i class="fas fa-edit"></i> </a>
+                                   </li>-->
+                            </ul>
+                            <!-- titulo de columnas-->
+                            <div class="box-simple-line mt10">
+                                <div class="row blue-color-bold2 mt20 title-table-resume">
+                                    <div class="col-1 plr2">
+                                        Nº
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Matrícula/ Bastidor
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Marca
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Modelo
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Longitud(mm)
+                                    </div>
+                                    <div class="col-1 plr2">
+                                        Altura(mm)
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Peso(kg)
+                                    </div>
+                                </div>
+                                <hr class="title-table-resume">
+
+                                <!--listado de vehículos (3 fixeados)-->
+                                <div class="row">
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label> 1
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Matrícula:</strong></label> LU 789654
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Marca:</strong></label> AUDI
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Modelo:</strong></label> AUDI  A2
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Longitud (mm):</strong></label> 3826
+                                    </div>
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Altura (mm):</strong></label> 1553
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Peso (kg):</strong></label> 855
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label> 2
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Matrícula:</strong></label> LU 789654
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Marca:</strong></label> AUDI
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Modelo:</strong></label> AUDI  A2
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Longitud (mm):</strong></label> 3826
+                                    </div>
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Altura (mm):</strong></label> 1553
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Peso (kg):</strong></label> 855
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label> 3
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Matrícula:</strong></label> LU 789654
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Marca</strong></label> AUDI
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Modelo</strong></label> AUDI  A2
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Longitud (mm)</strong></label> 3826
+                                    </div>
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Altura (mm)</strong></label> 1553
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Peso (kg)</strong></label> 855
+                                    </div>
+                                </div>
+                            </div>
+                            <!--1. ***********************RESUMEN TRANSPORTE*****************-->
+
+
+
+                            <hr class="mt20 doted-hr">
+
+                            <!--2. ***********************CARTA LIBERACIÓN*****************-->
+                            <h4 class="blue-color-bold2 mt20"><strong>CARTA DE LIBERACIÓN</strong></h4>
+                            <div class="row align-items-center mt20">
+                                <div class="col-lg-6">
+                                    <p class="blue-color-bold2">DESCARGAR CARTA</p>
+                                    <p>Si en Origen solicitan una autorización para la recogida del vehículo/s, puedes descargar la autorización ya rellena en este apartado, donde solo tendrás que firmar y sellar si es el caso.</p>
+
+                                </div>
+                                <div class="col-lg-6 text-md-right white-color mt-20-mv">
+                                    <a class="btn btn-blue">  <i class="fas fa-file-download"></i> Descargar</a>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row align-items-center mt20">
+                                <div class="col-lg-6 mt-20-mv">
+                                    <p class="blue-color-bold2">SUBIR CARTA</p>
+                                    <p>Una vez firmada y sellada la autorización puedes subirla adjuntando el documento.</p>
+
+                                </div>
+                                <div class="col-lg-4 text-lg-right">
+                                    <!--custom input file-->
+                                    <input type="file" name="file" class="inputfile inputfile-1" />
+                                </div>
+                                <div class="col-lg-2 white-color text-md-right mt-20-mv text-md-right">
+                                    <a class="btn btn-blue">  <i class="fas fa-upload"></i> Enviar</a>
+                                </div>
+                            </div>
+                            <!--  <hr class="mt20 doted-hr">-->
+                            <!--3. ***********************AUTORIZACIÓN*****************-->
+                            <h4 class="blue-color-bold2 mt20"><strong>AUTORIZACIÓN</strong></h4>
+                            <div class="row align-items-center mt20">
+                                <div class="col-lg-6">
+                                    <p class="blue-color-bold2">SUBIR AUTORIZACIÓN</p>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nunc libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;</p>
+
+                                </div>
+                                <div class="col-lg-4 text-lg-right">
+                                    <!--custom input file-->
+                                    <input type="file" name="file" class="inputfile inputfile-1" />
+                                </div>
+                                <div class="col-lg-2 white-color text-md-right mt-20-mv">
+                                    <a class="btn btn-blue">  <i class="fas fa-upload"></i> Enviar</a>
+
+                                </div>
+
+                            </div>
+                            <hr class="mt20 doted-hr">
+
+
+                            <!--4. ***********************SEGUIMIENTO*****************-->
+
+                            <h4 class="blue-color-bold2 mt20"><strong>SEGUIMIENTO DEL ENVÍO</strong></h4>
+
+                            <section id="timeline" class="timeline-outer">
+                                <div class="container" id="content">
+                                    <div class="row">
+                                        <div class="col s12 m12 l12">
+                                            <ul class="timeline">
+                                                <li class="event" data-date="14/06/2019">
+                                                    <span class="badge badge-warning bg-insertado">Insertado</span>
+                                                    <p class="gray-color mt10"><i class="far fa-clock"></i> 9:27:13</p>
+                                                    <p class="mt10">
+                                                        Transporte insertado en el sistema
+                                                    </p>
+                                                </li>
+                                                <li class="event" data-date="14/06/2019">
+                                                    <span class="badge badge-warning bg-pendiente">Pendiente de autorización</span>
+                                                    <p class="gray-color mt10"><i class="far fa-clock"></i> 10:27:13</p>
+                                                    <p class="mt10">
+                                                        A la espera de recibir la autorización
+                                                    </p>
+
+                                                </li>
+                                                <li class="event" data-date="15/06/2019">
+                                                    <span class="badge badge-warning bg-procesado">Procesado</span>
+
+                                                    <p class="gray-color mt10"><i class="far fa-clock"></i> 15:00:00</p>
+                                                    <p class="mt10">
+                                                        Pedido asignado a transportista
+                                                    </p>
+                                                </li>
+                                                <li class="event" data-date="16/06/2019">
+                                                    <span class="badge badge-warning bg-recogiendo">Recogiendo</span>
+                                                    <p class="gray-color mt10"><i class="far fa-clock"></i> 18:30:55</p>
+                                                    <p class="mt10">Recogiendo vehículo/s en origen  </p>
+                                                </li>
+                                                <li class="event" data-date="17/06/2019">
+                                                    <span class="badge badge-warning bg-transportando">Transportando</span>
+                                                    <p class="gray-color mt10"><i class="far fa-clock"></i> 8:15:13</p>
+                                                    <p class="mt10">Transporte en ruta  </p>
+                                                </li>
+                                                <li class="event" data-date="24/06/2019">
+                                                    <span class="badge badge-warning bg-fallido">Incidencia</span>
+                                                    <p class="gray-color mt10"><i class="far fa-clock"></i> 17:27:13</p>
+                                                    <p class="mt10">No se ha podido realizar la entrega. </p>
+
+                                                </li>
+                                                <li class="event" data-date="24/06/2019">
+                                                    <span class="badge badge-warning bg-finalizado">Finalizado</span>
+                                                    <p class="gray-color mt10"><i class="far fa-clock"></i> 20:27:13</p>
+                                                    <p class="mt10"> Transporte entregado en destino. </p>
+
+                                                </li>
+
+                                                <!--esto es para pintar la bandera fin de linea-->
+                                                <li class="event flag">
+                                                    <p style="color:transparent;">fin</p>
+                                                </li>
+
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <div class="text-right white-color mt-20-mv">
+                                <a class="btn btn-blue">  <i class="fas fa-sync-alt"></i> Actualizar</a>
+                            </div>
+
+                            <hr class="mt20 doted-hr">
+
+
+                            <!--5. ***********************RESUMEN DE PAGO*****************-->
+                            <h4 class="blue-color-bold2 mt20"><strong>RESUMEN DE PAGO</strong></h4>
+                            <!--  <div class="row anti-row mt20">
+                                  <div class="col-md-4">
+                                     <p class="blue-color-bold2"> MÉTODO DE PAGO</p>
+                                      <div class="box-simple-line mt20 ">
+                                          <div class="mt10 text-center">
+                                              <p class="gray-color ">TARJETA DE CRÉDITO O DÉBITO</p>
+                                          </div>
+                                      </div>
+
+                                      &lt;!&ndash;<img src="../../img/publica/tarjeta_credito_debito_sm_3.png" class="img-fluid mt20"/>&ndash;&gt;
+                                  </div>
+                                  <div class="col-md-4 border-left ">
+                                      <p class="blue-color-bold2">REFERENCIA DE PAGO</p>
+                                      <div class="box-simple-line mt20">
+                                          <div class="mt10 text-center">
+                                              <p class="gray-color">190617074408</p>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="col-md-4 border-left">
+                                      <p class="blue-color-bold2">PAGO</p>
+                                      <div class="box-simple-line bg-blue-light-trans mt20" style="font-size:18px;">
+
+                                          <div class="row">
+                                              <div class="col-4">BASE:</div>
+                                              <div class="col-8 text-right"> 1000 €</div>
+                                          </div>
+                                          <div class="row">
+                                              <div class="col-4">IVA:</div>
+                                              <div class="col-8 text-right"> 498 €</div>
+                                          </div>
+                                          <hr>
+                                          <div class="row">
+                                              <div class="col-4"><strong>TOTAL:</strong></div>
+                                              <div class="col-8 text-right"><strong>1498 €</strong></div>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>-->
+                            <div class="row anti-row mt20">
+                                <div class="col-md-4 text-center">
+                                    <p class="blue-color-bold2"> MÉTODO DE PAGO</p>
+                                    <div class="mt10">
+                                        <p class="gray-color ">TARJETA DE CRÉDITO O DÉBITO</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 border-left text-center">
+                                    <p class="blue-color-bold2">REFERENCIA DE PAGO</p>
+                                    <div class="mt10">
+                                        <p class="gray-color">190617074408</p>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 border-left text-center">
+                                    <p class="blue-color-bold2">FECHA DE PAGO</p>
+                                    <div class="mt10">
+                                        <p class="gray-color">12/06/2019</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row anti-row mt20 align-items-center">
+                                <div class="col-md-4 text-center">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <p class="blue-color-bold2"> BASE</p>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <!--<p class="gray-color">1000 €</p>-->
+                                            <p class="blue-color-bold2">1000 €</p>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                                <div class="col-md-4 border-left text-center">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <p class="blue-color-bold2"> IVA</p>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <!-- <p class="gray-color ">498 €</p>-->
+                                            <p class="blue-color-bold2 ">498 €</p>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-md-4 border-left text-center">
+                                    <ul class="list-inline">
+                                        <li class="list-inline-item">
+                                            <p class="blue-color-bold2"> TOTAL</p>
+                                        </li>
+                                        <li class="list-inline-item">
+                                            <!--
+                                                                                    <p class="gray-color">1498 €</p>
+                                            -->
+                                            <p class="blue-color-bold2">1498 €</p>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr class="mt20 doted-hr">
+
+
+                            <!--6. ***********************FACTURA*****************-->
+                            <h4 class="blue-color-bold2 mt20"><strong>FACTURA</strong></h4>
+
+                            <p>La factura no estará disponible hasta que tu pedido se haya finalizado</p>
+
+
+                            <p>Incialmente se mostrará solo la frase de arriba, y cuando pedido finalizado se mostrará lo que sigue </p>
+                            <div class="row align-items-center mt20">
+                                <div class="col-md-6">
+                                    <p class="blue-color-bold2">DESCARGAR FACTURA</p>
+                                    <p>Tu pedido ya ha sido finalizado, por lo tanto ya tienes disponible tu factura para descargar</p>
+
+                                </div>
+                                <div class="col-md-6 text-md-right white-color mt-20-mv">
+                                    <a class="btn btn-blue">  <i class="fas fa-file-download"></i> Descargar</a>
+                                </div>
+                            </div>
+
+                            <hr class="mt20 doted-hr">
+
+
+
+                            <!--7. ***********************CONSULTAS ACERCA DEL PEDIDO*****************-->
+
+                            <h4 id="consultas_pedido" class="blue-color-bold2 mt20"><strong>CONSULTAS ACERCA DEL PEDIDO</strong></h4>
+                            <!--listado de consultas anteriores-->
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-1 blue-color-bold2">
+                                    1 <i class="far fa-comment fa-2x"></i>
+                                </div>
+                                <div class="col-sm-11 ">
+                                    <p class="blue-color-bold2">¿Lorem ipsum dolor sit amet, consectetur adipiscing elit.?</p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nunc libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lobortis laoreet nibh et iaculis.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-1 blue-color-bold2">
+                                    2 <i class="far fa-comment fa-2x"></i>
+                                </div>
+                                <div class="col-sm-11 ">
+                                    <p class="blue-color-bold2">¿Lorem ipsum dolor sit amet, consectetur adipiscing elit.?</p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nunc libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lobortis laoreet nibh et iaculis.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <hr>
+
+                            <textarea class="form-control w-100" rows="3" cols="5" placeholder="Consulta..."></textarea>
+                            <div class="text-right white-color mt10">
+                                <a class="btn btn-blue"> Enviar consulta nueva  <i class="far fa-paper-plane"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    </div>

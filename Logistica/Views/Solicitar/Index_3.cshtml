@@ -1,0 +1,372 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <section id="contrato" class="pb-section mt-first-section-with-fixed-price content-page">
+        <div class="bg-orangered-light">
+            <div class="container">
+                <div class="row align-items-center">
+                    <!--caja resumen de presupuesto-->
+                    <div class="col-4 text-md-left col-cart">
+                        <div class="row align-items-center">
+                            <div class="col-3 content-box-resume2 text-left col-cart">
+                                <img class="img-fluid cart-image-orange" src="../../../img/publica/cart.png" />
+                            </div>
+                            <div class="col-9 col-cart">
+                                <h2 class="white-color2 opensans-bold">
+                                    1498 €<br>
+                                    <p class="iva-text-orange">( iva incluído)</p>
+                                </h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-4 text-center col-adress col-cart">
+                        <strong><p class="font-label-presupuesto"><i class="fas fa-map-marker-alt"></i>  Origen</p></strong>
+                        <p><span class="text-pc">Calle Origen, 28001</span>Alcobendas, Madrid</p>
+
+                    </div>
+                    <div class="col-4 text-center col-adress col-cart">
+                        <strong><p class="font-label-presupuesto"><i class="fas fa-map-marker-alt"></i>  Destino</p></strong>
+                        <p><span class="text-pc">Calle Destino, 28001</span>Alcobendas, Madrid</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Horizontal Steppers -->
+        <div class="container-fluid mt20">
+
+            <div class="md-stepper-horizontal orange">
+                <div class="md-step active editable">
+                    <div class="md-step-circle"><span>1</span></div>
+                    <div class="md-step-title">Datos Transporte</div>
+                    <div class="md-step-bar-left"></div>
+                    <div class="md-step-bar-right"></div>
+                </div>
+                <div class="md-step active vehicles">
+                    <div class="md-step-circle"><span>2</span></div>
+                    <div class="md-step-title">Vehículos</div>
+                    <div class="md-step-bar-left"></div>
+                    <div class="md-step-bar-right"></div>
+                </div>
+
+                <div class="md-step active pago">
+                    <div class="md-step-circle"><span>3</span></div>
+                    <div class="md-step-title">Realizar Pago</div>
+                    <div class="md-step-bar-left"></div>
+                    <div class="md-step-bar-right"></div>
+                </div>
+            </div>
+        </div>
+        <!-- /. end Horizontal Steppers -->
+
+        <div class="container">
+            <!--contenido -->
+            <div class="row mt20">
+                <div class="col-md-12">
+                    <div class="box-content-contrato ">
+                        <h4 class="blue-color-bold2 mt20"><strong>RESUMEN DEL TRANSPORTE</strong></h4>
+                        <div class="row  mt10">
+                            <div class="col-lg-4 mt-20-mv">
+                                <div class="box-simple-line h-100">
+                                    <!--direccion origen-->
+                                    <b class="blue-color-bold">DATOS DE ORIGEN</b>
+                                    <p class="mt10"><i class="fas fa-map-marked-alt"></i> Campa</p>
+                                    <p><i class="fas fa-building"></i> Razón social S.L</p>
+                                    <!--datos contacto origen-->
+                                    <p><i class="fas fa-user"></i> Laura Fernández Fernández</p>
+                                    <p><i class="fas fa-phone"></i> 677885599</p>
+                                    <p><i class="fas fa-map-marker-alt"></i>  Calle Origen, 28001 Alcobendas, Madrid</p>
+                                    <p><i class="far fa-comment"></i> Aquí van las observaciones de haberlas</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mt-20-mv">
+                                <div class="box-simple-line h-100">
+                                    <!--direccion destino-->
+                                    <b class="blue-color-bold ">DATOS DE DESTINO</b>
+                                    <p class="mt10"><i class="fas fa-map-marked-alt"></i> Campa</p>
+                                    <p><i class="fas fa-building"></i> Razón social S.L</p>
+
+                                    <!--datos contacto origen-->
+                                    <p><i class="fas fa-user"></i> Laura Fernández Fernández</p>
+                                    <p><i class="fas fa-phone"></i> 677885599</p>
+                                    <p><i class="fas fa-map-marker-alt"></i>  Calle destino, 28001 Alcobendas, Madrid</p>
+                                    <p><i class="far fa-comment"></i> Aquí van las observaciones de haberlas</p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 mt-20-mv">
+                                <div class="box-simple-line h-100">
+                                    <div class="title-step4-mv">
+                                        <b class="blue-color-bold">FECHA DISPONIBILIDAD</b>
+                                        <p> <i class="fas fa-calendar-check"></i> 29/05/2019</p>
+                                    </div>
+                                    <div class="title-step4-mv mt20">
+                                        <b class="blue-color-bold ">TIPO DE ENVÍO</b>
+                                        <p><i class="fas fa-shipping-fast"></i> 7 días de recogida</p>
+                                    </div>
+                                    <div class="title-step4-mv mt20">
+                                        <b class="blue-color-bold ">ESTADO DEL VEHÍCULO</b>
+                                        <p><i class="fas fa-car-alt"></i> El vehículo si arranca</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--listado de vehíuclos-->
+                        <div class="title-step4-mv mt20">
+                            <p class="blue-color-bold2"> LISTADO DE VEHÍCULOS</p>
+                        </div>
+                        <!-- titulo de columnas-->
+                        <div class="box-simple-line mt20">
+                            <div class="row blue-color-bold2 mt20 title-table-resume">
+                                <div class="col-1">
+                                    Nº
+                                </div>
+                                <div class="col-2">
+                                    Matrícula/ Bastidor
+                                </div>
+                                <div class="col-2">
+                                    Marca
+                                </div>
+                                <div class="col-2">
+                                    Modelo
+                                </div>
+                                <div class="col-2">
+                                    Longitud
+                                </div>
+                                <div class="col-1">
+                                    Altura
+                                </div>
+                                <div class="col-2">
+                                    Peso
+                                </div>
+                            </div>
+                            <hr class="title-table-resume">
+
+                            <!--listado de vehículos (3 fixeados)-->
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label> 1
+                                </div>
+                                <div class="col-lg-2">
+                                    <label class="label-hide-mv"><strong>Matrícula:</strong></label> LU 789654
+                                </div>
+                                <div class="col-lg-2">
+                                    <label class="label-hide-mv"><strong>Marca:</strong></label> AUDI
+                                </div>
+                                <div class="col-lg-2">
+                                    <label class="label-hide-mv"><strong>Modelo:</strong></label> AUDI  A2
+                                </div>
+                                <div class="col-lg-2">
+                                    <label class="label-hide-mv"><strong>Longitud (mm):</strong></label> 3826
+                                </div>
+                                <div class="col-lg-1">
+                                    <label class="label-hide-mv"><strong>Altura (mm):</strong></label> 1553
+                                </div>
+                                <div class="col-lg-2">
+                                    <label class="label-hide-mv"><strong>Peso (kg):</strong></label> 855
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label> 2
+                                </div>
+                                <div class="col-lg-2">
+                                    <label class="label-hide-mv"><strong>Matrícula:</strong></label> LU 789654
+                                </div>
+                                <div class="col-lg-2">
+                                    <label class="label-hide-mv"><strong>Marca:</strong></label> AUDI
+                                </div>
+                                <div class="col-lg-2">
+                                    <label class="label-hide-mv"><strong>Modelo:</strong></label> AUDI  A2
+                                </div>
+                                <div class="col-lg-2">
+                                    <label class="label-hide-mv"><strong>Longitud (mm):</strong></label> 3826
+                                </div>
+                                <div class="col-lg-1">
+                                    <label class="label-hide-mv"><strong>Altura (mm):</strong></label> 1553
+                                </div>
+                                <div class="col-lg-2">
+                                    <label class="label-hide-mv"><strong>Peso (kg):</strong></label> 855
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-lg-1">
+                                    <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label> 3
+                                </div>
+                                <div class="col-lg-2">
+                                    <label class="label-hide-mv"><strong>Matrícula:</strong></label> LU 789654
+                                </div>
+                                <div class="col-lg-2">
+                                    <label class="label-hide-mv"><strong>Marca</strong></label> AUDI
+                                </div>
+                                <div class="col-lg-2">
+                                    <label class="label-hide-mv"><strong>Modelo</strong></label> AUDI  A2
+                                </div>
+                                <div class="col-lg-2">
+                                    <label class="label-hide-mv"><strong>Longitud (mm)</strong></label> 3826
+                                </div>
+                                <div class="col-lg-1">
+                                    <label class="label-hide-mv"><strong>Altura (mm)</strong></label> 1553
+                                </div>
+                                <div class="col-lg-2">
+                                    <label class="label-hide-mv"><strong>Peso (kg)</strong></label> 855
+                                </div>
+                            </div>
+                        </div>
+                        <!--botón guardar pedido-->
+                        <div class="text-right mt40">
+                            <p>¿Quieres guardar el pedido para finalizarlo más tarde?</p>
+                            <a class="btn btn-sm btn-blue mt10" href=""><i class="far fa-save"></i> Guardar pedido </a>
+                        </div>
+                        <hr class="mt20 doted-hr">
+
+                        <!--terminos particulares-->
+                        <h4 class="blue-color-bold2 mt20"><strong>TÉRMINOS PARTICULARES</strong></h4>
+                        <div class="box-list-terms">
+                            <ul class="list-terminos list-unstyled">
+
+                                <li class="mt10">
+                                    En el caso de indicar que el vehículo arranca, es imprescindible que los vehículos a transportar estén en condiciones de arrancar y en condiciones de circular, ya que el camión asignado no estará equipado con grúa y de lo contrario no podrá cargar el vehículo con los gastos que esto conlleva.
+                                </li>
+
+                                <li class="mt10">
+                                    Tanto el lugar de carga como lugar de descarga deben ser accesibles legalmente para la circulación con camión y disponer de una zona para poder aparcar el camión y realizar las maniobras de carga y descarga.
+                                </li>
+
+                                <li class="mt10">
+                                    Las fechas indicadas en el presupuesto siempre se consideran estimativas, especialmente en tramos marítimos y períodos vacacionales.
+                                </li>
+
+                                <li class="mt10">
+                                    Seguro vehículos nuevos incluido: todo riesgo, Condiciones CMR, condiciones L.O.T.T. ley 15/2009.
+                                </li>
+                                <li class="mt10">
+                                    Seguro vehículos usados incluido: Condiciones CMR, condiciones L.O.T.T. ley 15/2009 que comprenden; vuelco, incendio o robo del camión con los coches.
+                                </li>
+                                <li class="mt10">
+                                    El seguro no cubre vehículos por importe superior a 80.000€. En este caso hay que contratar un seguro adicional.
+                                </li>
+                                <li class="mt10">
+                                    El seguro no cubre bienes personales depositados dentro del vehículo. Éstos deben ser retirados y no viajar con la carga (tampoco en la cabina del camión). El conductor no podrá ser responsable de su custodia.
+                                <li class="mt10">
+                                    En caso de incidencia, ha de quedar reflejado en el Albarán de entrega.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="row anti-row align-items-center position-switches-autorizacion">
+                            <div class="col-md-11 text-md-right">
+                                ¿Estás de acuerdo con los términos particulares?
+                            </div>
+                            <div class="col-md-1 text-right">
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                        <hr class="doted-hr">
+
+                        <!--PRECIO-->
+                        <h4 class="blue-color-bold2 mt20"><strong>A PAGAR</strong></h4>
+
+                        <div class="row anti-row align-items-center pb25">
+                            <div class="col-md-5 ">
+                                <p class="text-justify">
+                                    TransportAuto trabaja para asegurar la seguridad de las transacciones con nuestros clientes y por ello solamente trabajamos con los medios de pago más seguros. Todas las comunicaciones con datos sensibles son aseguradas mediante certificado SSL.
+                                </p>
+                            </div>
+
+                            <div class="col-md-3 text-center text-md-right ">
+                                <img class="img-fluid" src="../../../img/publica/pago_seguro_resume.png" />
+                            </div>
+                            <div class="col-md-4 text-right">
+                                <div class="box-simple-line bg-blue-light-trans" style="font-size:18px;">
+                                    <div class="row">
+                                        <div class="col-4">BASE:</div>
+                                        <div class="col-8 text-right"> 1000 €</div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-4">IVA:</div>
+                                        <div class="col-8 text-right"> 498 €</div>
+                                    </div>
+                                    <hr>
+                                    <div class="row">
+                                        <div class="col-4"><strong>TOTAL:</strong></div>
+                                        <div class="col-8 text-right"><strong>1498 €</strong></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="doted-hr">
+
+                        <!--Métodos de pago-->
+                        <h4 class="blue-color-bold2 mt20"><strong>MÉTODO DE PAGO</strong></h4>
+                        <div class="row mt20">
+                            <div class="col-md-6  padding-pago">
+                                <div class="box-simple-line">
+                                    <div class="text-center">
+                                        <p>TARJETA DE CRÉDITO O DÉBITO</p>
+                                    </div>
+                                    <div style="padding-left:10px;padding-right:10px;">
+                                        <div class="row mt20 align-content-center">
+                                            <div class="col-4 text-right">
+                                                <label class="container-radios">
+                                                    <input type="radio" name="radio">
+                                                    <span class="checkmark" style="left:90%"></span>
+                                                </label>
+                                            </div>
+                                            <div class="col-8">
+                                                <img src="../../../img/publica/tarjeta_credito_debito_sm_3.png" class="img-fluid" style="height:35px;width:auto;" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 mt-20-mv  padding-pago">
+                                <div class="box-simple-line">
+                                    <div class="text-center">
+                                        <p>TRANSFERENCIA BANCARIA</p>
+
+                                    </div>
+                                    <div style="padding-left:10px;padding-right:10px;">
+                                        <div class="row mt20 align-content-center">
+                                            <div class="col-5 text-right">
+                                                <label class="container-radios">
+                                                    <input type="radio" checked="checked" name="radio">
+                                                    <span class="checkmark" style="left:90%"></span>
+                                                </label>
+                                            </div>
+                                            <div class="col-7">
+                                                <img src="../../../img/publica/transferencia_bancaria_6.png" class="img-fluid" style="height:35px;width:auto;" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <hr class="doted-hr">
+                    </div>
+                </div>
+            </div>
+
+            <!--botón anterior y realizar pago -->
+            <div class="row  align-items-center mt20">
+                <div class="col-5">
+                    <a class="btn btn-custom" href="@Url.Content("~/Solicitar/Index_2")">
+                        <i class="fas fa-chevron-left"></i> Anterior
+                    </a>
+                </div>
+                <div class="col-7 text-right">
+                    <a class="btn btn-custom" href="@Url.Content("~/Solicitar/Pago")">
+                        Pagar transporte <i class="fas fa-chevron-right"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>

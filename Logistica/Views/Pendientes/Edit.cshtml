@@ -1,0 +1,849 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout_mod.cshtml";
+}
+
+
+@*<script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.validate.unobtrusive.js"></script>*@
+
+@section head {
+    <title>GrupoCV | 2019</title>
+    <meta name="description" content="GrupoCV">
+    <meta name="keywords" content="asociación comerciantes vehículos, derechos reales, polizas flotantes, garantías mecánicas, simulador financiero, estadísticas ventas vehículos nuevos,noticias, asociación coches,contratos de compra-venta, hojas de reclamación">
+
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+}
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+
+
+<style>
+    /*Estilo del Carrusel*/
+
+    div.caption {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        background-color: #0177c2;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.caption2 {
+        position: absolute;
+        top: 15px;
+        left: 0;
+        width: 100%;
+        background-color: #b42659;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.caption3 {
+        position: absolute;
+        top: 10px;
+        width: 100%;
+        background-color: #b42659;
+        color: #fff;
+        padding: 5px;
+        text-align: center;
+    }
+
+    div.destaca {
+        position: relative;
+        padding-bottom: 10px;
+    }
+
+    .owl-nav {
+        position: absolute;
+        top: -50px;
+        right: 2px;
+    }
+
+
+    .modal-content {
+        margin-top: 10% !important;
+        margin-left: 10% !important;
+        margin-right: 10% !important;
+        width: 100% !important;
+    }
+
+
+    .modal-dialog {
+        width: 65% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+
+    /*}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}*/
+
+
+
+    /*.modal-content {
+        height: auto !important;
+        min-height: 100% !important;
+        border-radius: 0 !important;
+        background-color: #ececec !important
+    }*/
+
+
+    /*.modal-dialog {
+        width: 100% !important;
+        height: 100% !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        max-width:none !important;
+
+    }
+    .modal-header {
+        border-bottom: 1px solid #9ea2a2 !important;
+    }
+
+    .modal-footer {
+        border-top: 1px solid #9ea2a2 !important;
+    }*/
+
+
+    /*************** Custom Carousel ***************/
+
+    .custom-carousel .item {
+        padding-right: 20px;
+    }
+
+    .custom-carousel.show-one-slide .item {
+        padding-right: 0;
+    }
+</style>
+
+
+
+<div class="container">
+    <!--*******************************************************************************************************************************************************************-->
+    <!--**********************************************5 CONTENIDO de DETALLES TRANSPORTES GUARDADOS*************************************************************************************-->
+    <!--****************************************************************************************************************************************************************-->
+
+    <div class="content-page mt-first-section-other-page" id="sigue_tu_envio">
+        <section class="pb-section">
+            <div class="container">
+
+                <div class="row pt-btn-modal">
+                    <div class="col-md-6">
+                        <h3 class="blue-color-bold2">DETALLES DEL PEDIDO PENDIENTE </h3>
+                    </div>
+                    <div class="col-md-6 text-right">
+                    </div>
+                </div>
+
+                <div class="row mt20">
+                    <div class="col-md-12">
+                        <div class="box-content-contrato">
+                            <!--********************************************ESTAS SON LAS CJAS EN MODO LECTURA Y CUANDO LE DAS AL BOTÓN EDITAR SE CAMBIAN LOS TEXTOS POR INUTS, LO PONGO DE EJEMPLO DEBAJO***********************************************-->
+
+                            <h4 class="blue-color-bold2"><strong>RESUMEN DEL TRANSPORTE</strong></h4>
+                            <div class="row  mt10">
+                                <div class="col-lg-4 mt-20-mv">
+                                    <div class="box-simple-line h-100">
+                                        <!--direccion origen-->
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item">
+                                                <b class="blue-color-bold">DATOS DE ORIGEN</b>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="btn btn-xs" data-toggle='tooltip' data-placement='top' title='Editar' href=""><i class="fas fa-edit"></i> </a>
+                                            </li>
+                                        </ul>
+
+                                        <p><i class="fas fa-map-marked-alt"></i> Campa</p>
+                                        <p><i class="fas fa-building"></i> Razón social S.L</p>
+                                        <!--datos contacto origen-->
+                                        <p><i class="fas fa-user"></i> Laura Fernández Fernández</p>
+                                        <p><i class="fas fa-phone"></i> 677885599</p>
+                                        <p><i class="fas fa-map-marker-alt"></i>  Calle Origen, 28001 Alcobendas, Madrid</p>
+                                        <p><i class="far fa-comment"></i>Aquí van las observaciones con tamaños maximo 50</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-20-mv">
+                                    <div class="box-simple-line h-100">
+                                        <!--direccion destino-->
+                                        <!--direccion origen-->
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item">
+                                                <b class="blue-color-bold ">DATOS DE DESTINO</b>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <a class="btn btn-xs" data-toggle='tooltip' data-placement='top' title='Editar' href=""><i class="fas fa-edit"></i> </a>
+                                            </li>
+                                        </ul>
+                                        <p><i class="fas fa-map-marked-alt"></i> Campa</p>
+                                        <p><i class="fas fa-building"></i> Razón social S.L</p>
+
+                                        <!--datos contacto origen-->
+                                        <p><i class="fas fa-user"></i> Laura Fernández Fernández</p>
+                                        <p><i class="fas fa-phone"></i> 677885599</p>
+                                        <p><i class="fas fa-map-marker-alt"></i>  Calle destino, 28001 Alcobendas, Madrid</p>
+                                        <p><i class="far fa-comment"></i>Aquí obsrvaciones mas peques</p>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-20-mv">
+                                    <div class="box-simple-line h-100">
+                                        <ul class="list-inline text-right mb-0">
+                                            <li class="list-inline-item">
+                                                <a class="btn btn-xs" data-toggle='tooltip' data-placement='top' title='Editar' href=""><i class="fas fa-edit"></i> </a>
+                                            </li>
+                                        </ul>
+                                        <div class="mt-fecha-solicitud">
+                                            <b class="blue-color-bold">FECHA SOLICITUD</b>
+                                            <p> <i class="fas fa-calendar-check"></i> 29/04/2019</p>
+                                        </div>
+                                        <div class="">
+                                            <b class="blue-color-bold">FECHA DISPONIBILIDAD</b>
+                                            <p> <i class="fas fa-calendar-check"></i> 29/05/2019</p>
+                                        </div>
+                                        <div class="">
+                                            <b class="blue-color-bold ">TIPO DE ENVÍO</b>
+                                            <p><i class="fas fa-shipping-fast"></i> 7 días de recogida</p>
+                                        </div>
+                                        <div class="">
+                                            <b class="blue-color-bold ">ESTADO DEL VEHÍCULO</b>
+                                            <p><i class="fas fa-car-alt"></i> El vehículo si arranca</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--listado de vehíuclos-->
+
+                            <ul class="list-inline mt10">
+                                <li class="list-inline-item">
+                                    <div class="title-step4-mv mt20">
+                                        <p class="blue-color-bold2"> LISTADO DE VEHÍCULOS</p>
+                                    </div>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a class="btn btn-xs" data-toggle='tooltip' data-placement='top' title='Editar' href="contratacion_transporte/contratacion_step2.html"><i class="fas fa-edit"></i> </a>
+                                </li>
+                            </ul>
+                            <!-- titulo de columnas + items de vehiculos fixeados-->
+                            <div class="box-simple-line mt10">
+                                <div class="row blue-color-bold2 mt20 title-table-resume">
+                                    <div class="col-1 plr2">
+                                        Nº
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Matrícula/ Bastidor
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Marca
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Modelo
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Longitud(mm)
+                                    </div>
+                                    <div class="col-1 plr2">
+                                        Altura(mm)
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Peso(kg)
+                                    </div>
+                                </div>
+                                <hr class="title-table-resume">
+
+                                <!--listado de vehículos (3 fixeados)-->
+                                <div class="row">
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label> 1
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Matrícula:</strong></label> LU 789654
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Marca:</strong></label> AUDI
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Modelo:</strong></label> AUDI  A2
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Longitud (mm):</strong></label> 3826
+                                    </div>
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Altura (mm):</strong></label> 1553
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Peso (kg):</strong></label> 855
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label> 2
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Matrícula:</strong></label> LU 789654
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Marca:</strong></label> AUDI
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Modelo:</strong></label> AUDI  A2
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Longitud (mm):</strong></label> 3826
+                                    </div>
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Altura (mm):</strong></label> 1553
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Peso (kg):</strong></label> 855
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label> 3
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Matrícula:</strong></label> LU 789654
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Marca</strong></label> AUDI
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Modelo</strong></label> AUDI  A2
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Longitud (mm)</strong></label> 3826
+                                    </div>
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Altura (mm)</strong></label> 1553
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Peso (kg)</strong></label> 855
+                                    </div>
+                                </div>
+                            </div>
+                            <!--botón guardar pedido-->
+                            <div class="text-right mt40">
+                                <p>¿Quieres guardar el pedido para finalizarlo más tarde?</p>
+                                <a class="btn btn-sm btn-blue mt10" href=""><i class="far fa-save"></i> Guardar pedido </a>
+                            </div>
+
+
+
+
+                            <!--********************************************ESTO ES PARA QUE SE VEA COMO QUEDARÁ CUANDO SE EDITABLE CUALQUIER COSA***********************************************-->
+
+                            <h4 class="blue-color-bold2"><strong>RESUMEN DEL TRANSPORTE</strong></h4>
+                            <div class="row  mt10">
+                                <div class="col-lg-4 mt-20-mv">
+                                    <div class="box-simple-line h-100">
+                                        <!--direccion origen-->
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item">
+                                                <b class="blue-color-bold">DATOS DE ORIGEN</b>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <!-- <a class="btn btn-xs"  data-toggle='tooltip' data-placement='top' title='Editar' href=""><i class="fas fa-edit"></i> </a>-->
+                                            </li>
+                                        </ul>
+
+                                        <input type="text" class="form-control" value="campa" />
+                                        <input type="text" class="form-control mt10" value="Razon social S.l" />
+
+                                        <!--datos contacto origen-->
+                                        <input type="text" class="form-control mt10" value=" Laura Fernández Fernández" />
+                                        <input type="text" class="form-control mt10" value="677885599" />
+                                        <input type="text" class="form-control mt10" value=" Calle Origen, 28001 Alcobendas, Madrid" />
+                                        <input type="text" class="form-control mt10" value="Aquí van las observaciones con tamaños maximo 50" />
+                                        <div class="text-right white-color mt10">
+                                            <a class="btn btn-sm btn-blue">Guardar cambios</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-20-mv">
+                                    <div class="box-simple-line h-100">
+                                        <!--direccion destino-->
+                                        <!--direccion origen-->
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item">
+                                                <b class="blue-color-bold ">DATOS DE DESTINO</b>
+                                            </li>
+                                            <li class="list-inline-item">
+                                                <!--   <a class="btn btn-xs"  data-toggle='tooltip' data-placement='top' title='Editar' href=""><i class="fas fa-edit"></i> </a>-->
+                                            </li>
+                                        </ul>
+                                        <!--datos contacto origen-->
+                                        <input type="text" class="form-control" value="campa" />
+                                        <input type="text" class="form-control mt10" value="Razon social S.l" />
+                                        <!--datos contacto origen-->
+                                        <input type="text" class="form-control mt10" value=" Laura Fernández Fernández" />
+                                        <input type="text" class="form-control mt10" value="677885599" />
+                                        <input type="text" class="form-control mt10" value=" Calle Destino, 28001 Alcobendas, Madrid" />
+                                        <input type="text" class="form-control mt10" value="Aquí obsrvaciones mas peques" />
+                                        <div class="text-right white-color mt10">
+                                            <a class="btn btn-sm btn-blue">Guardar cambios</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-4 mt-20-mv">
+                                    <div class="box-simple-line h-100">
+                                        <ul class="list-inline text-right mb-0">
+                                            <li class="list-inline-item">
+                                                <!-- <a class="btn btn-xs"  data-toggle='tooltip' data-placement='top' title='Editar' href=""><i class="fas fa-edit"></i> </a>-->
+                                            </li>
+                                        </ul>
+                                        <div class="mt-fecha-solicitud">
+                                            <b class="blue-color-bold">FECHA SOLICITUD</b>
+                                            <input type="text" class="form-control datepickers_custom" placeholder="Selecciona..." value="25/04/2019">
+                                        </div>
+                                        <div class="">
+                                            <b class="blue-color-bold">FECHA DISPONIBILIDAD</b>
+                                            <input type="text" class="form-control datepickers_custom" placeholder="Selecciona..." value="25/04/2019">
+
+                                        </div>
+                                        <div class="">
+                                            <b class="blue-color-bold ">TIPO DE ENVÍO</b>
+                                            <input type="text" class="form-control" value="7 días de recogida" />
+                                        </div>
+                                        <div class="">
+                                            <b class="blue-color-bold ">ESTADO DEL VEHÍCULO</b>
+                                            <input type="text" class="form-control" value="El vehículo si arranca" />
+                                        </div>
+                                        <div class="text-right white-color mt10">
+                                            <a class="btn btn-sm btn-blue">Guardar cambios</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!--listado de vehíuclos editable ejemplo para tipo industrial-->
+
+                            <ul class="list-inline mt10">
+                                <li class="list-inline-item">
+                                    <div class="title-step4-mv mt20">
+                                        <p class="blue-color-bold2"> LISTADO DE VEHÍCULOS</p>
+                                    </div>
+                                </li>
+                                <li class="list-inline-item">
+                                </li>
+                            </ul>
+                            <!-- titulo de columnas + items de vehiculos industrial-->
+                            <div class="box-simple-line mt10">
+
+                                <div class="text-right mt20">
+                                    <a class="blue-color-link  btn-add-vehiculos"><i class="fas fa-plus"></i> Añadir vehículos </a>
+                                </div>
+                                <div class="row blue-color-bold2 mt20 title-table-resume">
+                                    <div class="col-1 plr2">
+                                        Nº
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Matrícula/ Bastidor
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Marca
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Modelo
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Longitud(mm)
+                                    </div>
+                                    <div class="col-1 plr2">
+                                        Altura(mm)
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Peso(kg)
+                                    </div>
+                                </div>
+                                <hr class="title-table-resume">
+
+                                <!--listado de vehículos (3 fixeados)-->
+                                <div class="row">
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label>
+                                        <input type="text" class="form-control" value="1" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Matrícula:</strong></label>
+                                        <input type="text" class="form-control" value="LU 789654" />
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Marca:</strong></label>
+                                        <input type="text" class="form-control" value="AUDI" />
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Modelo:</strong></label>
+                                        <input type="text" class="form-control" value="A2" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Longitud (mm):</strong></label>
+                                        <input type="text" class="form-control" value=" 3826" />
+
+                                    </div>
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Altura (mm):</strong></label>
+                                        <input type="text" class="form-control" value=" 1553" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Peso (kg):</strong></label>
+                                        <input type="text" class="form-control" value=" 855" />
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label>
+                                        <input type="text" class="form-control" value="2" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Matrícula:</strong></label>
+                                        <input type="text" class="form-control" value="LU 789654" />
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Marca:</strong></label>
+                                        <input type="text" class="form-control" value="AUDI" />
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Modelo:</strong></label>
+                                        <input type="text" class="form-control" value="A2" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Longitud (mm):</strong></label>
+                                        <input type="text" class="form-control" value=" 3826" />
+
+                                    </div>
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Altura (mm):</strong></label>
+                                        <input type="text" class="form-control" value=" 1553" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Peso (kg):</strong></label>
+                                        <input type="text" class="form-control" value=" 855" />
+                                    </div>
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label>
+                                        <input type="text" class="form-control" value="3" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Matrícula:</strong></label>
+                                        <input type="text" class="form-control" value="LU 789654" />
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Marca:</strong></label>
+                                        <input type="text" class="form-control" value="AUDI" />
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Modelo:</strong></label>
+                                        <input type="text" class="form-control" value="A2" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Longitud (mm):</strong></label>
+                                        <input type="text" class="form-control" value=" 3826" />
+
+                                    </div>
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Altura (mm):</strong></label>
+                                        <input type="text" class="form-control" value=" 1553" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Peso (kg):</strong></label>
+                                        <input type="text" class="form-control" value=" 855" />
+                                    </div>
+                                </div>
+                                <div class="text-right white-color mt10">
+                                    <a class="btn btn-sm btn-blue">Guardar cambios</a>
+                                </div>
+                            </div>
+
+
+                            <!--listado de vehíuclos editable ejemplo para tipo turismo-->
+
+                            <ul class="list-inline mt10">
+                                <li class="list-inline-item">
+                                    <div class="title-step4-mv mt20">
+                                        <p class="blue-color-bold2"> LISTADO DE VEHÍCULOS</p>
+                                    </div>
+                                </li>
+                                <li class="list-inline-item">
+                                    <!--  <a class="btn btn-xs"  data-toggle='tooltip' data-placement='top' title='Editar' href="contratacion_transporte/contratacion_step2.html"><i class="fas fa-edit"></i> </a>-->
+                                </li>
+                            </ul>
+                            <!-- titulo de columnas + items -->
+                            <div class="box-simple-line mt10">
+
+                                <div class="text-right mt20">
+                                    <a class="blue-color-link  btn-add-vehiculos"><i class="fas fa-plus"></i> Añadir vehículos </a>
+                                </div>
+                                <div class="row blue-color-bold2 mt20 title-table-resume">
+                                    <div class="col-1 plr2">
+                                        Nº
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Matrícula/ Bastidor
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Marca
+                                    </div>
+                                    <div class="col-3 plr2">
+                                        Modelo
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Versión
+                                    </div>
+                                    <div class="col-2 plr2">
+                                        Año
+                                    </div>
+
+                                </div>
+                                <hr class="title-table-resume">
+
+                                <!--listado de vehículos (3 fixeados)-->
+                                <div class="row">
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label>
+                                        <input type="text" class="form-control" value="1" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Matrícula:</strong></label>
+                                        <input type="text" class="form-control" value="LU 789654" />
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Marca:</strong></label>
+                                        <input type="text" class="form-control" value="AUDI" />
+                                    </div>
+                                    <div class="col-lg-3 plr2">
+                                        <label class="label-hide-mv"><strong>Modelo:</strong></label>
+                                        <input type="text" class="form-control" value="A2" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Versión:</strong></label>
+                                        <input type="text" class="form-control" value=" version" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Año:</strong></label>
+                                        <input type="text" class="form-control" value=" 1995" />
+
+                                    </div>
+
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label>
+                                        <input type="text" class="form-control" value="2" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Matrícula:</strong></label>
+                                        <input type="text" class="form-control" value="LU 789654" />
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Marca:</strong></label>
+                                        <input type="text" class="form-control" value="AUDI" />
+                                    </div>
+                                    <div class="col-lg-3 plr2">
+                                        <label class="label-hide-mv"><strong>Modelo:</strong></label>
+                                        <input type="text" class="form-control" value="A2" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Versión:</strong></label>
+                                        <input type="text" class="form-control" value=" version" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Año:</strong></label>
+                                        <input type="text" class="form-control" value=" 1995" />
+
+                                    </div>
+
+                                </div>
+                                <hr>
+                                <div class="row">
+                                    <div class="col-lg-1 plr2">
+                                        <label class="label-hide-mv"><strong>Vehículo Nº:</strong></label>
+                                        <input type="text" class="form-control" value="3" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Matrícula:</strong></label>
+                                        <input type="text" class="form-control" value="LU 789654" />
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Marca:</strong></label>
+                                        <input type="text" class="form-control" value="AUDI" />
+                                    </div>
+                                    <div class="col-lg-3 plr2">
+                                        <label class="label-hide-mv"><strong>Modelo:</strong></label>
+                                        <input type="text" class="form-control" value="A2" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Versión:</strong></label>
+                                        <input type="text" class="form-control" value=" version" />
+
+                                    </div>
+                                    <div class="col-lg-2 plr2">
+                                        <label class="label-hide-mv"><strong>Año:</strong></label>
+                                        <input type="text" class="form-control" value=" 1995" />
+                                    </div>
+
+                                </div>                            <div class="text-right white-color mt10">
+                                    <a class="btn btn-sm btn-blue">Guardar cambios</a>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <!--botón guardar pedido-->
+                            <div class="text-right mt40">
+                                <p>¿Quieres guardar el pedido para finalizarlo más tarde?</p>
+                                <a class="btn btn-sm btn-blue mt10" href=""><i class="far fa-save"></i> Guardar pedido </a>
+                            </div>
+
+
+
+
+
+                            <hr class="mt20 doted-hr">
+
+                            <!--RESUMEN DE PAGO-->
+                            <h4 class="blue-color-bold2"><strong>RESUMEN DE PAGO</strong></h4>
+                            <div class="row align-items-center">
+                                <div class="col-md-8 ">
+                                    <p class="blue-color-bold2"> DATOS PARA LA TRANSFERENCIA</p>
+                                    <div class="box-simple-line mt20 h-100">
+                                        <div class="row align-items-center">
+                                            <div class="col-md-10">
+                                                <p class="mt10"><strong>TITULAR DE LA CUENTA:</strong> Transportauto 2000, S.L.</p>
+                                                <p class="mt10"><strong>NÚMERO DE CUENTA:</strong> ES78 0182 1797 3102 0390 6170</p>
+                                                <p class="mt10"><strong>CONCEPTO:</strong>190214084123 </p>
+                                            </div>
+                                            <div class="col-md-2 text-center mt-20-mv">
+                                                <img src="../../img/privada_cliente/transferencia_gris.png" class="img-fluid" />
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- <div class="col-md-2 text-center text-md-right h-100">
+                                                               &lt;!&ndash; <p class="blue-color-bold2"> PAGO SEGURO</p>
+
+                                                                <img class="img-fluid" src="../../img/publica/pago_seguro_resume.png"/>
+                                                                <p>Le garantizamos que cada una de las transpacciones realizadas en Transportauto.es es 100% segura</p>
+                                &ndash;&gt;
+                                                            </div>-->
+                                <div class="col-md-4 mt10">
+                                    <p class="blue-color-bold2"> A PAGAR</p>
+                                    <div class="box-simple-line bg-blue-light-trans h-100 mt20" style="font-size:18px;">
+                                        <div class="row">
+                                            <div class="col-4">BASE:</div>
+                                            <div class="col-8 text-right"> 1000 €</div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-4">IVA:</div>
+                                            <div class="col-8 text-right"> 498 €</div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-4"><strong>TOTAL:</strong></div>
+                                            <div class="col-8 text-right"><strong>1498 €</strong></div>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+
+
+
+                            <hr class="mt20 doted-hr">
+
+
+                            <!--AÑADIR CONSULTAS ACERCA DEL PEDIDO-->
+                            <h4 class="blue-color-bold2 mt20"><strong>CONSULTAS ACERCA DEL PEDIDO</strong></h4>
+                            <!--listado de consultas anteriores-->
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-1 blue-color-bold2">
+                                    1 <i class="far fa-comment fa-2x"></i>
+                                </div>
+                                <div class="col-sm-11 ">
+                                    <p class="blue-color-bold2">¿Lorem ipsum dolor sit amet, consectetur adipiscing elit.?</p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nunc libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lobortis laoreet nibh et iaculis.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <hr>
+                            <div class="row">
+                                <div class="col-sm-1 blue-color-bold2">
+                                    2 <i class="far fa-comment fa-2x"></i>
+                                </div>
+                                <div class="col-sm-11 ">
+                                    <p class="blue-color-bold2">¿Lorem ipsum dolor sit amet, consectetur adipiscing elit.?</p>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent et nunc libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Morbi lobortis laoreet nibh et iaculis.
+                                    </p>
+                                </div>
+
+                            </div>
+                            <hr>
+
+                            <textarea class="form-control w-100" rows="3" cols="5" placeholder="Consulta..."></textarea>
+                            <div class="text-right white-color mt10">
+                                <a class="btn btn-blue"> Enviar consulta nueva  <i class="far fa-paper-plane"></i></a>
+                            </div>
+
+                            <hr class="mt20 doted-hr">
+
+                            <div class="text-right">
+                                <a class="btn btn-custom" href="contratacion_transporte/contratacion_step3.html">
+                                    Pagar transporte <i class="fas fa-chevron-right"></i>
+                                </a>
+                            </div>
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+        </section>
+    </div>
+    </div>

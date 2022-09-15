@@ -1,0 +1,624 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--*******************************************************************************************************************************************************************-->
+<!--**********************************************5 CONTENIDO de pedidos pendientes*************************************************************************************-->
+<!--****************************************************************************************************************************************************************-->
+
+<div class="content-page mt-first-section-other-page" id="pedidos_pendientes">
+    <section class="pb-section">
+        <div class="container">
+            <!--botón abre modal con información -->
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="blue-color-bold2">PEDIDOS PENDIENTES <a class="btn btn-sm btn-blue-info" data-toggle="modal" data-target="#info_transportes"><i class="fas fa-info-circle"></i></a></h3>
+                </div>
+                <div class="col-md-6 text-right">
+
+                </div>
+            </div>
+            <!-- Modal sigue tu envio -->
+            <div class="modal fade" id="info_transportes" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">PEDIDOS PENDIENTES</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <p class="text-justify">
+                                Aquí puedes recuperar los transportes que aún no están contratados y que previamente hayas guardado, puedes visualizarlos, modificar los datos que necesites (datos de origen, destino, añadir mas vehículos, etc…) y contratarlo en cualquier momento.
+                            </p>
+                            <p class="text-justify mt20">
+                                Si necesitas ayuda, no dudes en ponerte en contacto con nuestro personal cualificado que le asesorará en lo que necesite, al teléfono <strong>902 106 925</strong> o por email en el apartado superior de "pregúntanos". Puedes consultar si lo deseas también, las Preguntas Frecuentes
+                            </p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-blue" data-dismiss="modal">Cerrar</button>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--contenido de filtros-->
+            <div id="accordion">
+                <div class="card card-filter">
+                    <div class="card-header" id="headingOne">
+                        <a class="btn btn-link btn-filter w-100 text-left" data-toggle="collapse" data-target="#filter-box" aria-expanded="true" aria-controls="collapseOne">
+                            <div class="row">
+                                <div class="col-11">
+                                    <h5 class="mb-0">
+                                        <i class="fas fa-search"></i> Filtros de búsqueda avanzada
+                                    </h5>
+                                </div>
+                                <div class="col-1 text-right">
+                                    <i class="fas fa-chevron-down"></i>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div id="filter-box" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body grey-color3">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="mt10">Tipo</label>
+                                    <select class="form-control">
+                                        <option value="" disabled selected>Selecciona...</option>
+                                        <option value="">Nacional</option>
+                                        <option value="">Internacional</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="mt10">Servicio</label>
+                                    <select class="form-control">
+                                        <option value="" disabled selected>Selecciona...</option>
+                                        <option value="">Basico</option>
+                                        <option value="">Express</option>
+                                        <option value="">No arranca</option>
+                                        <option value="">Siniestro</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="mt10">Matrícula</label>
+                                    <input type="text" class="form-control " placeholder="Completa...">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <label class="mt10">Lugar de origen</label>
+                                    <input type="text" class="form-control " placeholder="Completa...">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="mt10">Lugar de destino</label>
+                                    <input type="text" class="form-control " placeholder="Completa...">
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <label class="mt10">Fecha inicio</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="far fa-calendar-alt"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control datepickers_custom" placeholder="Selecciona...">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="mt10">Fecha fin</label>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="far fa-calendar-alt"></i>
+                                            </span>
+                                        </div>
+                                        <input type="text" class="form-control datepickers_custom" placeholder="Selecciona...">
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <label class="mt10">Estado</label>
+                                    <select class="form-control">
+                                        <option value="" disabled selected>Selecciona...</option>
+                                        <option value="">Pedido guardado</option>
+                                        <option value="">Pte. de pago</option>
+                                        <option value="">Presupuesto solicitado</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="text-right">
+                                <a class="btn btn-blue  mt20 white-color2">Buscar pedidos</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pt-datatables">
+                <!--tabla-->
+                <table class="display datatable-transportauto" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>Estado</th>
+                            <th>Tipo</th>
+                            <th>Servicio</th>
+                            <th>Origen</th>
+                            <th>Destino</th>
+                            <th>Marca</th>
+                            <th>Modelo</th>
+                            <th class="text-right">Precio</th>
+                            <th class="text-center">Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="badge badge-success bg-guardado">Pedido guardado</span></td>
+                            <td>Nacional</td>
+                            <td>BÁSICO</td>
+                            <td>MADRID</td>
+                            <td>BARCELONA</td>
+                            <td>AUDI</td>
+                            <td>A3</td>
+                            <td align="right">200 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-warning bg-pendiente-pago">Pendiente de pago</span></td>
+                            <td>Internacional</td>
+                            <td>EXPRESS</td>
+                            <td>MADRID</td>
+                            <td>BÉLGICA</td>
+                            <td>CITRON</td>
+                            <td>ZX</td>
+                            <td align="right">150,20 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-warning bg-solicitado">Presupuesto solicitado</span></td>
+                            <td>Nacional</td>
+                            <td>NO ARRANCA</td>
+                            <td>BILBAO</td>
+                            <td>SANTANDER</td>
+                            <td>TOYOTA </td>
+                            <td>COROLLA</td>
+                            <td align="right">Pendiente</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td><span class="badge badge-warning bg-pendiente-pago">Pendiente de pago</span></td>
+                            <td>Internacional</td>
+                            <td>EXPRESS</td>
+                            <td>ASTURIAS</td>
+                            <td>PARIS</td>
+                            <td>RENAULT</td>
+                            <td>AA</td>
+                            <td align="right">250,90 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-warning bg-solicitado">Presupuesto solicitado</span></td>
+                            <td>Nacional</td>
+                            <td>NO ARRANCA</td>
+                            <td>SEVILLA</td>
+                            <td>NAVARRA</td>
+                            <td>BMW</td>
+                            <td>ZX</td>
+                            <td align="right">Pendiente</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-success bg-guardado">Pedido guardado</span></td>
+                            <td>Nacional</td>
+                            <td>BÁSICO</td>
+                            <td>SANTANDER</td>
+                            <td>BARCELONA</td>
+                            <td>PORCHE</td>
+                            <td>CAYANE</td>
+                            <td align="right">350,58 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+
+
+                        <tr>
+                            <td><span class="badge badge-warning bg-pendiente-pago">Pendiente de pago</span></td>
+                            <td>Internacional</td>
+                            <td>EXPRESS</td>
+                            <td>MADRID</td>
+                            <td>LUGO</td>
+                            <td>CITRON</td>
+                            <td>ZX</td>
+                            <td align="right">120 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-success bg-guardado">Pedido guardado</span></td>
+                            <td>Nacional</td>
+                            <td>BÁSICO</td>
+                            <td>CÁCERES</td>
+                            <td>BARCELONA</td>
+                            <td>CITROEN</td>
+                            <td>ZAFIRA</td>
+                            <td align="right">200 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-warning bg-solicitado">Presupuesto solicitado</span></td>
+                            <td>Nacional</td>
+                            <td>NO ARRANCA</td>
+                            <td>MADRID</td>
+                            <td>BILBAO</td>
+                            <td>CITRON</td>
+                            <td>ZX</td>
+                            <td align="right">Pendiente</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+
+                        <!--para sacar 3 paginas-->
+                        <tr>
+                            <td><span class="badge badge-warning bg-solicitado">Presupuesto solicitado</span></td>
+                            <td>Nacional</td>
+                            <td>NO ARRANCA</td>
+                            <td>MADRID</td>
+                            <td>BILBAO</td>
+                            <td>CITRON</td>
+                            <td>ZX</td>
+                            <td align="right">Pendiente</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="badge badge-warning bg-solicitado">Presupuesto solicitado</span></td>
+                            <td>Nacional</td>
+                            <td>NO ARRANCA</td>
+                            <td>MADRID</td>
+                            <td>BILBAO</td>
+                            <td>CITRON</td>
+                            <td>ZX</td>
+                            <td align="right">Pendiente</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="badge badge-warning bg-pendiente-pago">Pendiente de pago</span></td>
+                            <td>Internacional</td>
+                            <td>EXPRESS</td>
+                            <td>ASTURIAS</td>
+                            <td>PARIS</td>
+                            <td>RENAULT</td>
+                            <td>AA</td>
+                            <td align="right">250,90 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-warning bg-solicitado">Presupuesto solicitado</span></td>
+                            <td>Nacional</td>
+                            <td>NO ARRANCA</td>
+                            <td>SEVILLA</td>
+                            <td>NAVARRA</td>
+                            <td>BMW</td>
+                            <td>ZX</td>
+                            <td align="right">Pendiente</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-success bg-guardado">Pedido guardado</span></td>
+                            <td>Nacional</td>
+                            <td>BÁSICO</td>
+                            <td>SANTANDER</td>
+                            <td>BARCELONA</td>
+                            <td>PORCHE</td>
+                            <td>CAYANE</td>
+                            <td align="right">350,58 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="badge badge-warning bg-pendiente-pago">Pendiente de pago</span></td>
+                            <td>Internacional</td>
+                            <td>EXPRESS</td>
+                            <td>ASTURIAS</td>
+                            <td>PARIS</td>
+                            <td>RENAULT</td>
+                            <td>AA</td>
+                            <td align="right">250,90 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-warning bg-solicitado">Presupuesto solicitado</span></td>
+                            <td>Nacional</td>
+                            <td>NO ARRANCA</td>
+                            <td>SEVILLA</td>
+                            <td>NAVARRA</td>
+                            <td>BMW</td>
+                            <td>ZX</td>
+                            <td align="right">Pendiente</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-success bg-guardado">Pedido guardado</span></td>
+                            <td>Nacional</td>
+                            <td>BÁSICO</td>
+                            <td>SANTANDER</td>
+                            <td>BARCELONA</td>
+                            <td>PORCHE</td>
+                            <td>CAYANE</td>
+                            <td align="right">350,58 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="badge badge-warning bg-pendiente-pago">Pendiente de pago</span></td>
+                            <td>Internacional</td>
+                            <td>EXPRESS</td>
+                            <td>ASTURIAS</td>
+                            <td>PARIS</td>
+                            <td>RENAULT</td>
+                            <td>AA</td>
+                            <td align="right">250,90 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-warning bg-solicitado">Presupuesto solicitado</span></td>
+                            <td>Nacional</td>
+                            <td>NO ARRANCA</td>
+                            <td>SEVILLA</td>
+                            <td>NAVARRA</td>
+                            <td>BMW</td>
+                            <td>ZX</td>
+                            <td align="right">Pendiente</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-success bg-guardado">Pedido guardado</span></td>
+                            <td>Nacional</td>
+                            <td>BÁSICO</td>
+                            <td>SANTANDER</td>
+                            <td>BARCELONA</td>
+                            <td>PORCHE</td>
+                            <td>CAYANE</td>
+                            <td align="right">350,58 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="badge badge-warning bg-pendiente-pago">Pendiente de pago</span></td>
+                            <td>Internacional</td>
+                            <td>EXPRESS</td>
+                            <td>ASTURIAS</td>
+                            <td>PARIS</td>
+                            <td>RENAULT</td>
+                            <td>AA</td>
+                            <td align="right">250,90 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-warning bg-solicitado">Presupuesto solicitado</span></td>
+                            <td>Nacional</td>
+                            <td>NO ARRANCA</td>
+                            <td>SEVILLA</td>
+                            <td>NAVARRA</td>
+                            <td>BMW</td>
+                            <td>ZX</td>
+                            <td align="right">Pendiente</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-success bg-guardado">Pedido guardado</span></td>
+                            <td>Nacional</td>
+                            <td>BÁSICO</td>
+                            <td>SANTANDER</td>
+                            <td>BARCELONA</td>
+                            <td>PORCHE</td>
+                            <td>CAYANE</td>
+                            <td align="right">350,58 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td><span class="badge badge-warning bg-pendiente-pago">Pendiente de pago</span></td>
+                            <td>Internacional</td>
+                            <td>EXPRESS</td>
+                            <td>ASTURIAS</td>
+                            <td>PARIS</td>
+                            <td>RENAULT</td>
+                            <td>AA</td>
+                            <td align="right">250,90 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-warning bg-solicitado">Presupuesto solicitado</span></td>
+                            <td>Nacional</td>
+                            <td>NO ARRANCA</td>
+                            <td>SEVILLA</td>
+                            <td>NAVARRA</td>
+                            <td>BMW</td>
+                            <td>ZX</td>
+                            <td align="right">Pendiente</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="badge badge-success bg-guardado">Pedido guardado</span></td>
+                            <td>Nacional</td>
+                            <td>BÁSICO</td>
+                            <td>SANTANDER</td>
+                            <td>BARCELONA</td>
+                            <td>PORCHE</td>
+                            <td>CAYANE</td>
+                            <td align="right">350,58 €</td>
+                            <td align="center">
+                                <a class="btn btn-xs btn-edit" data-toggle='tooltip' data-placement='top' title='editar' href="@Url.Content("~/Pendientes/Edit")"><i class="fas fa-edit"></i></a>
+                                <a class="btn btn-xs btn-pay" data-toggle="modal" data-target="#modal_pay"><i class="fas fa-euro-sign" data-toggle='tooltip' data-placement='top' title='Pagar'></i></a>
+                                <a class="btn btn-xs btn-delete" data-toggle="modal" data-target="#modal_delete"><i class="fas fa-trash-alt" data-toggle='tooltip' data-placement='top' title='Eliminar pedido guardado'></i></a>
+
+                            </td>
+                        </tr>
+                        <!--fin para sacar 3 paginas-->
+                </table>
+
+                <!--modal botón pagar-->
+                <div class="modal fade" id="modal_pay" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title">A PAGAR</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="box-simple-line">
+                                    <p class="mt10"><strong>TITULAR DE LA CUENTA:</strong> Transportauto 2000, S.L.</p>
+                                    <p class="mt10"><strong>NÚMERO DE CUENTA:</strong> ES78 0182 1797 3102 0390 6170</p>
+                                    <p class="mt10"><strong>CONCEPTO:</strong> 190214084123 </p>
+                                    <p class="mt10"><strong>IMPORTE A INGRESAR:</strong> 300 €</p>
+                                </div>
+                                <div class="mt20 text-center">
+                                    <h5>¿Quieres cambiar el método de pago?</h5>
+                                    <a class="btn btn-sm btn-blue" href="contratacion_transporte/contratacion_step3.html">Quiero cambiar el método de pago</a>
+                                </div>
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal borrar elemento -->
+            <div class="modal fade" id="modal_delete" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title">ELIMIAR PEDIDO</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <h4 class="text-center gray-color mt20">¿Estás seguro de que quieres borrar este pedido?</h4>
+
+                            <div class="row mt20">
+                                <div class="col-6 text-center">
+                                    <a class="btn btn-danger white-color w-100" data-dismiss="modal"><i class="far fa-window-close"></i> No, cancelar</a>
+                                </div>
+                                <div class="col-6 text-center">
+                                    <a class="btn btn-blue white-color w-100"><i class="fas fa-trash-alt"></i> Sí, borrar</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+</div>

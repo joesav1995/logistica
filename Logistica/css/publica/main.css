@@ -1,0 +1,2246 @@
+
+
+/* ==========================================================================
+   SETI SL custom styles
+   ========================================================================== */
+
+/*********************************************TEXTOS*******************************/
+
+
+.content-page-big-footer{
+    min-height: calc(100vh - 1000px);
+}
+h1,h2{
+    color: #555;
+    font-family: 'Raleway', sans-serif;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 1.3;
+}
+
+h3{
+    font-family: 'Raleway', sans-serif;
+    color: #3b3b3b;
+    font-weight: bold;
+    line-height: 1.4;
+    font-size:24px;
+}
+h4{
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+
+}
+p {
+    margin-bottom: 0.1rem;
+}
+a{
+    color:#3B61AA;
+}
+a:hover{
+    color:orangered;
+    text-decoration: none;
+}
+label{margin-top:10px;}
+body{
+    color: #999 !important;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 14px !important;
+    font-weight: 400;
+    line-height: 1.7;
+}
+.opensans-bold{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+.subtitle-page{
+    font-size: 30px;
+}
+.fontAwesome {
+    font-family: Helvetica, 'FontAwesome', sans-serif;
+}
+
+@media(max-width:385px){
+    h1,h2{
+        font-size: 30px;
+    }
+}
+/******************************** COLORES de fuentes, backgrounds colors...**************************************/
+
+/*********font colors*************/
+
+.blue-color{
+    color:#3B61AA!important;
+    text-decoration:none;
+}
+
+.blue-color-bold{
+    color:#3B61AA;
+    text-decoration:none;
+    font-weight: 600;
+}
+
+.blue-color-bold2{
+    color:#3B61AA;
+    text-decoration:none;
+    font-weight: 600;
+}
+.blue-light-color{
+    color:#42BFE8;
+}
+
+.white-color{
+    color:#ececec!important;
+}
+
+.black-color{
+    color:#333!important;
+}
+.white-color-bold{
+    color:#ececec!important;
+    text-decoration:none;
+    font-weight: 500;
+}
+
+.white-color2{
+    color:#fff!important;
+}
+.gray-color{
+    color:#999;
+}
+.green-color{
+    color:#93BE52;
+}
+.orange-color{
+    color:#FFB64D
+
+}
+.red-color{
+    color:#FC6180;
+}
+/******backgrounds ************/
+
+.bg-blue{
+    background-color:#3B61AA;
+}
+
+.bg-blue-light{
+    background-color:#42BFE8;
+}
+
+.bg-white{
+    background-color:#ececec;
+}
+.bg-gray{
+    background-color:#F1F2F6;
+}
+
+.bg-orangered-light{
+    background-color:rgba(255, 69, 0, 0.9);
+    color:#fff!important;
+}
+/******************PADDINGS, MARGINS, elementos generales**************************/
+.img-responsive{
+    width:100%;
+    height:auto;
+}
+.mt0{
+    margin-top:0px!important;
+}
+.mt10{
+    margin-top:10px;
+}
+.mb0{
+    margin-bottom:0px!important;
+}
+.mt20{
+    margin-top:20px;
+}
+.mt25{
+    margin-top:25px;
+}
+.mt40{
+    margin-top:40px;
+}
+.mt60{
+    margin-top:60px;
+}
+.ml10{
+    margin-left:10px;
+}
+.mt-20{
+    margin-top:-20px;
+}
+.anti-row{
+    margin-right: 0px;
+    margin-left: 0px;
+}
+.border-radius{
+    border-radius:8px;
+}
+.p15{
+    padding:15px;
+}
+.pr0{
+    padding-right:0px;
+}
+.plr0{
+    padding-left:0px;
+    padding-right:0px;
+}
+.pr0{
+
+    padding-right:0px;
+}
+.plr2{
+    padding-left:2px;
+    padding-right:2px;
+}
+.ptb-section{
+    padding-top:60px;
+    padding-bottom:60px;
+}
+.pb-section{
+    padding-bottom:60px;
+}
+.mt-first-section-simple-page{
+    margin-top:30px;
+}
+.mt-first-section-other-page{
+    margin-top:180px;
+}
+
+@media(max-width:1380px){
+    .mt-first-section-other-page{
+        margin-top:160px;
+    }
+}
+
+@media(max-width:767px){
+    .mt-first-section-other-page{
+        margin-top:210px;
+    }
+}
+
+.mt-first-section-prices{
+    margin-top:190px;
+}
+
+@media(max-width:1380px){
+    .mt-first-section-prices{
+        margin-top:120px;
+    }
+}
+
+@media(max-width:767px){
+    .mt-first-section-prices{
+        margin-top:120px;
+    }
+}
+
+.mt-first-section-with-fixed-price{
+    margin-top:280px;
+}
+
+.mt-first-section-other-page-without-calculator{
+    margin-top:120px;
+}
+/*hr.white-hr {
+    border-top: 1px solid rgba(255,255, 255, 0.5);
+}
+hr.doted-hr {
+    border-top: 2px dotted #3B61AA;
+}
+hr.white-doted-hr {
+    border-top: 2px dotted #fff;
+}*/
+.form-control{
+    font-size:14px;
+}
+
+@media(max-width:768px){
+    .mt-20-mv{
+        margin-top:20px;
+    }
+    .mt-40-mv{
+        margin-top:40px;
+    }
+    .mt-60-mv{
+        margin-top:60px;
+    }
+    .plr0-mv{
+        padding-left:0px;
+        padding-right:0px;
+    }
+}
+@media(min-width:769px){
+    .mt20-pc{
+        margin-top:20px;
+    }
+}
+/*esto es para las 3 cajas de resumen de precio */
+@media(min-width:769px) and (max-width:990px){
+    .col-lg-4.mt-20-mv{
+        margin-top:20px;
+    }
+}
+/************BUTTONS/ links********************/
+.btn-custom{
+    background-color: orangered;
+    color:#fff!important;
+}
+
+.btn-custom:hover, .btn-custom:active{
+    background-color: #3B61AA;
+    color:#fff;
+    text-decoration: none;
+}
+.btn-blue{
+    background-color: #3B61AA;
+    color:#fff;
+    border:1px solid #fff;
+}
+
+.btn-blue:hover, .btn-blue:active{
+    background-color: #ccc;
+    color:#fff;
+    text-decoration: none;
+}
+
+.btn-link-orange{
+    color:orangered;
+    font-weight:400;
+    cursor:pointer!important;
+}
+
+.btn-link-orange-2{
+    color:orangered;
+    font-weight:400;
+    cursor:pointer!important;
+}
+.btn-link-orange-2:hover{
+    color:#fff;
+
+}
+.btn-link-orange:hover, .btn-link-orange:active{
+    color:#3B61AA;
+    text-decoration: none;
+}
+
+a:not([href]):not([tabindex]) {
+    color: inherit;
+    text-decoration: none;
+}
+.btn-link-white{
+    color:white!important;
+    font-size:1rem;
+    font-weight:400;
+    cursor:pointer!important;
+}
+.btn-link-white:hover{
+    color:#42BFE8!important;
+
+}
+.blue-color-link{
+    color:#3B61AA!important;
+    text-decoration:none;
+    cursor:pointer;
+    font-weight: bold;
+}
+
+.blue-color-link:hover{
+    color:#42BFE8!important;
+    text-decoration:none;
+}
+.white-color-link{
+    color:#fff!important;
+    text-decoration:none;
+    cursor:pointer;
+    font-weight: 300;
+}
+
+.white-color-link:hover{
+    color:#42BFE8!important;
+    text-decoration:none;
+}
+
+.btn-blue-info{
+    background-color:rgba(59, 97, 170, 1);
+    color:#fff!important;
+}
+.btn-blue-info:hover{
+    background-color:#ccc;
+    color:#111!important;
+}
+.btn-blue-info-tall{
+    background-color:rgba(59, 97, 170, 1);
+    padding: 0.4rem 0.5rem;
+    color:#fff!important;
+
+}
+.btn-blue-info-tall:hover{
+    background-color:#ccc;
+    color:#111!important;
+}
+/*MODAL*/
+.modal-header{
+    background-color:rgba(59, 97, 170, 1);
+    color:#fff;
+    border-bottom: 0px solid #e9ecef;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.btn-secondary{
+    background-color: #FC6180;
+}
+
+.modal-dialog button{
+    color:#fff;
+}
+
+
+
+
+/*******************CHECKBOXES********************************/
+
+.regular-checkbox {
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: 1px solid #ccc;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+    padding: 9px!important;
+    border-radius: 3px;
+    display: inline-block;
+    position: relative;
+    cursor:pointer;
+}
+.regular-checkbox:active, .regular-checkbox:checked:active {
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+.regular-checkbox:checked {
+    background-color: #e9ecee;
+    border: 1px solid #e13a3a;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+    color: #e13a3a;
+}
+
+.regular-checkbox:checked:after {
+    content: '\2714';
+    font-size: 14px;
+    position: absolute;
+    top: 0px;
+    left: 3px;
+    color: #e13a3a;
+}
+
+/*************************RADIO BUTTONS**********************************/
+/* Customize the label (the container) */
+.container-radios {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    /*margin-bottom: 12px;*/
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* Hide the browser's default radio button */
+.container-radios input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container-radios:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the radio button is checked, add a blue background */
+.container-radios input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container-radios input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container-radios .checkmark:after {
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: white;
+}
+/*checkboxes*/
+/* Hide the browser's default checkbox */
+.checks-docs input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+}
+
+/* On mouse-over, add a grey background color */
+.checks-docs:hover input ~ .checkmark {
+    background-color: #ccc;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checks-docs input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checks-docs input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the checkmark/indicator */
+.checks-docs .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+/*************************SWITCHES**********************************/
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+/*********************CAJAS***************************/
+.box-simple-line{
+    border:1px solid #F1F2F6;
+    padding:20px 30px;
+    background-color: #F1F2F6;
+}
+
+/**********************************BREADCRUMGS********************************************/
+
+.breadcrumb {
+    background-color: #F1F2F6;
+    margin-bottom:0px;
+}
+/******************************** MENÚ PRINCIPAL**************************************/
+.z-index-top{
+    z-index:9999!important;
+
+}
+.menu-scrolling{
+    max-height:100vh;
+    overflow-y:auto;
+}
+.logo-menu{
+    max-height:70px;
+    width:auto;
+    margin-top:-10px;
+}
+
+.list-user-cart{
+    margin-bottom:0px;
+}
+.list-user-cart a{
+    color:#fff;
+}
+
+.burger-menu-primary{
+    color: #3B61AA;
+}
+
+.primary-color a{
+    color:#3B61AA;
+}
+.primary-color a:hover{
+    color:#42BFE8;
+}
+.navbar {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: #fff;
+}
+.nav-menu .nav-link{
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    /* padding: 15px 17px 47px; */
+    padding: 0 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+@media(min-width:990px) and (max-width:1199px){
+    .navbar-expand-lg .navbar-nav .nav-link {
+        padding-right: 0.2rem;
+        padding-left: 0.2rem;
+        font-size:13px;
+    }
+}
+.nav-link.active{
+    font-weight:600;
+    color:#42BFE8!important;
+}
+
+.btn-register-menu{
+    background-color:orangered;
+    color:#fff!important;
+    padding:15px;
+    cursor:pointer;
+}
+.btn-register-menu a{
+    text-decoration: none;
+}
+.btn-register-menu:hover{
+    background-color:#3B61AA;
+    color:#fff!important;
+    padding:15px;
+}
+
+/*MENÚ COLLAPSE en todas las páginas menos en la home*/
+
+.show-calculator-menu{
+    background-color:rgba(59, 97, 170, 0.9);
+    color:#fff!important;
+    padding-top:10px;
+    cursor:pointer;
+    /*padding-bottom:0px;*/
+}
+
+.show-calculator-menu a{
+    color:#fff!important;
+}
+
+/*RESPONSIVE MENÚ */
+
+@media(max-width:479px){
+    .navbar-brand {
+        width:65%;
+    }
+}
+.mt-first-section-home {
+    margin-top: 110px;
+}
+/*******************************************FOOTER**********************************************************/
+.background-footer{
+    background: -moz-linear-gradient(to right, rgba(59,97,170,0.1) 0%,rgba(59,97,170,0.3 )16%,rgba(59,97,170,0.3 )20%, rgba(59,97,170,0.4)30%, rgba(48,75,130,1)50%, rgba(48,75,130,1) 65%,rgba(48,75,130,1) 100%),url("../../img/publica/info2.jpg");
+    background: -webkit-linear-gradient(to right, rgba(59,97,170,0.1) 0%,rgba(59,97,170,0.3 )16%,rgba(59,97,170,0.3 )20%, rgba(59,97,170,0.4)30%, rgba(48,75,130,1)50%, rgba(48,75,130,1) 65%,rgba(48,75,130,1) 100%),url("../../img/publica/info2.jpg");
+    background:linear-gradient(to right, rgba(59,97,170,0.1) 0%,rgba(59,97,170,0.3 )16%,rgba(59,97,170,0.3 )20%, rgba(59,97,170,0.4)30%, rgba(48,75,130,1)50%, rgba(48,75,130,1) 65%,rgba(48,75,130,1) 100%),url("../../img/publica/info2.jpg");
+    /*background:url("../../img/publica/info2.jpg");*/
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height:400px;
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:100px;
+    padding-bottom:100px;
+}
+
+.background-footer-2{
+    background-color: #fff;
+    min-height:200px;
+    padding:50px;
+
+}
+.background-footer-3{
+    background-color: #3B61AA;
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:20px;
+    padding-bottom:20px;
+
+}
+.btn-banner{
+   border:1px solid white;
+    padding:5px;
+    padding-left:20px;
+    padding-right:20px;
+    cursor:pointer;
+}
+.btn-banner:hover, .btn-banner:active{
+    border:1px solid orangered;
+
+}
+.btn-banner h2{
+    font-size:24px;margin-bottom:0px;
+}
+@media(max-width:768px){
+    .background-footer{
+        background:url("../../img/publica/info2.jpg");
+        background-repeat: no-repeat;
+        background-color: rgba(48,75,130,1);
+        background-size: 100% auto;
+        min-height:400px;
+        padding-left:50px;
+        padding-right:50px;
+        padding-top:100px;
+        padding-bottom:100px;
+    }
+}
+@media(max-width:500px){
+    .background-footer .email, .background-footer .phone{
+        font-size:20px;
+    }
+    .background-footer h2{
+        font-size:25px;
+    }
+    .background-footer {
+        padding-top:200px;
+    }
+}
+@media(min-width:501px) and (max-width:768px){
+    .background-footer .email, .background-footer .phone{
+        font-size:30px;
+    }
+}
+
+@media(min-width:769px) and (max-width:1024px){
+    .number-stadistic h2{
+        font-size:25px;
+    }
+    .background-footer{
+        background-size: cover;
+        background-position:50% 50%;
+    }
+}
+
+@media(width:768px){
+    .background-footer{
+        padding-top:300px;
+        padding-bottom:50px;
+    }
+}
+@media(min-width:2500px){
+    .background-footer{
+     background-color: rgba(48,75,130,1);
+    }
+}
+
+
+
+/****************************************************************************************************************************************************************/
+/********************************************** 1. HOME ********************************************************************************************/
+/**************************************************************************************************************************************************/
+
+.ptb-section-home{
+    padding-top:60px;
+    padding-bottom:60px;
+}
+
+.mt-first-section-home{
+    margin-top:130px;
+}
+
+/********************************1.2  CALCULATOR **************************************/
+.title-calculator {
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#calculator{
+    background:url("../../img/publica/transportauto.jpg");
+    background-attachment: fixed;
+    background-size:100% auto;
+    background-repeat: no-repeat;
+    background-position: 20% 40%;
+    min-height:300px;
+}
+
+@media(min-width:2301px){
+    #calculator{
+        background:url("../../img/publica/transportauto_xl.jpg");
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: 55% 40%;
+        min-height:500px;
+    }
+
+}
+/*background image fixed no funciona en ios. así que para ipad cambio propiedad*/
+
+/*retinas*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (-webkit-min-device-pixel-ratio: 2) {
+    #calculator{
+        background-attachment: initial;
+
+    }
+}
+/*ipad normal*/
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)  {
+    #calculator{
+        background-attachment: initial;
+
+    }
+}
+
+
+.calculator-box .tab-pane{
+    background-color:rgba(59, 97, 170, 0.8);
+    font-family: 'Raleway', sans-serif;
+    -webkit-border-radius: 8px;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius: 8px;
+    -moz-border-radius-topleft: 0;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+}
+
+.tab-title-blue{
+    background-color:rgba(59, 97, 170, 0.8);
+    padding: 0.5rem 1rem;
+    line-height: 2.5em!important;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-topright: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.calculator-box .nav-item{
+    background-color:rgba(255, 255, 255, 0.9);
+    /*border:1px solid #3B61AA;*/
+    margin-right:10px;
+    border-radius:0;
+    color:#3B61AA;
+    font-weight:500;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-topright: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.calculator-box .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    /*background-color:rgba(59, 97, 170, 0.9);*/
+    background-color:rgba(255, 69, 0, 0.9);
+
+}
+.calculator-box .nav-link{
+    color:#3B61AA!important;
+    font-weight: 600;
+}
+
+
+.calculator-box .nav-link.active {
+    color:#fff!important;
+    /*background-color:rgba(59, 97, 170, 0.8);*/
+    border-radius:0;
+    font-family: 'Raleway', sans-serif;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-topright: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+}
+
+.calculator-box h5{
+    color:#3B61AA;
+    font-family: 'Raleway', sans-serif;
+}
+
+#calculator-tabs {
+    float: right;
+}
+
+#calculator-tabs li {
+    float: left;
+}
+
+.box-blue-calculator{
+    /*background-color:rgba(66, 191, 232, 0.1);*/
+    padding-top:10px;
+    padding-bottom:15px;
+    padding-left:15px;
+    padding-right:15px;
+}
+
+.list-vehicules-calculator{
+    padding:15px;
+    padding-top:0px;
+}
+/*quitar padding izquierdo a las columnas de calculadora para ganar espacio*/
+.p-col-calculator{
+    padding-right:5px;
+}
+
+.btn-delete-item{
+    border:1px solid white;
+    color:#fff;
+    width: 100%;
+    background-color:transparent;
+    margin-top:25px;
+}
+.btn-delete-item:hover, .btn-delete-item:active{
+    border:1px solid orangered;
+    color:orangered;
+    width: 100%;
+
+
+}
+.btn-delete-item-orange{
+    border:1px solid orangered;
+    color:orangered!important;
+    width: 100%;
+    background-color:transparent;
+    margin-top:25px;
+}
+.btn-delete-item-orange:hover, .btn-delete-item-orange:active{
+    border:1px solid #3B61AA;
+    color:#3B61AA;
+    width: 100%;
+
+
+}
+/*******************************************************CALCULADORA HOME DISEÑO PARA MOVILES**********************************************************************************/
+
+#calculator-mv .calculator-box {
+    background-color:rgba(59, 97, 170, 0.8);
+    font-family: 'Raleway', sans-serif;
+    /*-webkit-border-radius: 8px;*/
+    /*-moz-border-radius: 8px;*/
+    /*border-radius: 8px;*/
+    padding:20px;
+}
+
+.img-truck-mv{
+    background:url("../../img/publica/transportauto_mv2_delete.jpg");
+    background-repeat: no-repeat;
+    background-position: 20% 0%;
+    background-size:cover;
+    height:calc(100vh - 500px);
+    width:auto;
+}
+
+
+@media(max-width:320px){
+    .img-truck-mv{
+        display:none;
+        height:0px;
+    }
+    .calculator-box{
+        height:calc(100vh - 180px);
+    }
+}
+
+
+@media(max-width:768px){
+    .img-truck-mv{
+        height:calc(100vh - 510px);
+    }
+}
+/*************************** CALCULADORA RESTO DE PAGINAS: DETALLES DISTINTOS RESPECTO A CALCULADORA NORMAL PARA CALCULADORA DESPLEGABLE QUE IRÁ EN TODAS LAS PAGINAS RESTANTES   **********************************************/
+#calculator2{
+    background-color:rgba(59, 97, 170, 0.9);
+    background-repeat: no-repeat;
+    background-position: 55% 40%;
+    /*min-height:300px;*/
+    padding-top:20px;
+    padding-bottom:40px;
+}
+.input-group-text {
+    color: #3B61AA;
+    text-align: center;
+    white-space: nowrap;
+    background-color: #fff;
+    /*
+    border: 0px solid #fff;
+    */
+}
+.input-group > .form-control, .input-group > .custom-select, .input-group > .custom-file {
+    width: 0px;
+    border-left: 0px;
+}
+
+@media (max-width:1439px){
+    .btn-control-box-calculator{
+        padding:0px;
+    }
+}
+
+#calculator2 #btn-calculate-price { margin-right:15px;}
+/*********************************1.3 compartir en redes debajo de calculadora home***********************************************************************************************/
+
+.banner-social{
+    background-color:#3B61AA;
+    padding-top:15px;
+    padding-bottom:8px;
+}
+.banner-social ul{
+  margin-bottom:0px;
+    margin-top:10px;
+}
+
+.banner-social h3{
+  color:#fff!important;
+    font-weight: 400;
+    font-size:18px;
+}
+/*variacion para compartir noticias*/
+
+.banner-social-news{
+    background-color:transparent;
+    padding-top:15px;
+    padding-bottom:8px;
+}
+.banner-social-news ul{
+    margin-bottom:0px;
+    margin-top:10px;
+}
+
+.banner-social-news h3{
+    color:#3B61AA!important;
+    font-weight: 400;
+    font-size:18px;
+}
+/*end variacion*/
+
+.link-social{
+    font-size:35px;
+    color:white;
+}
+
+.link-social:hover{
+    color:#42BFE8;
+}
+
+.link-social-news{
+    font-size:35px;
+    color:#3B61AA;
+}
+
+.link-social-news:hover{
+    color:#42BFE8;
+}
+
+.link-social-sm{
+    font-size:20px;
+    color:white;
+}
+.link-social-sm:hover{
+    color:#42BFE8;
+
+}
+
+/*titulo con lineas de puntos before and after*/
+.lines-text {
+    line-height: 0.5;
+    text-align: center;
+}
+.lines-text span {
+    /*
+    display: inline-block;
+    */
+    position: relative;
+}
+.lines-text span:before,
+.lines-text span:after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-top: 2px solid white;
+    top: 25px;
+    width: 600px;
+}
+.lines-text span:before {
+    right: 100%;
+    margin-right: 15px;
+}
+.lines-text span:after {
+    left: 100%;
+    margin-left: 15px;
+}
+
+.line-height-0{
+    line-height:0px;
+}
+
+/********************************1.3  NUESTROS SERVICIOS HOME **************************************/
+
+.ptb-section-transportauto-home{
+    padding-top:60px;
+    padding-bottom:120px;
+}
+.box-type-vehicle{
+    background-color:transparent;
+    font-family: 'Raleway', sans-serif;
+}
+
+.truck-bg-home {
+    background: url("../../img/publica/trans_mod.png");
+    background-repeat: no-repeat;
+    background-size: 65% auto;
+}
+
+.box-services-home{
+    background-color:rgba(255, 255, 255, 0.9);
+    border:3px solid #3B61AA;
+    padding:30px;
+    margin-top:-120px;
+}
+
+.box-doted{
+    padding:50px;
+
+}
+
+
+.border-left-dotted{
+    border-left:2px dotted #3B61AA;
+}
+
+@media(max-width:768px){
+    .border-left-dotted{
+        border-left:0px dotted #3B61AA;
+    }
+
+}
+
+.border-top-dotted{
+    border-top:2px dotted #3B61AA;
+}
+
+
+
+/*----------------------------------------------------------*/
+/*--------------------RESPONSIVE HOME ---------------------*/
+/*----------------------------------------------------------*/
+
+@media(max-width:640px) {
+    .mt-first-section-home
+    {
+        margin-top: 90px;
+    }
+
+    .text-tab{
+        display:none;
+    }
+    #calculator .nav-link{
+        padding-left:11px;
+        padding-right:11px;
+        font-size:18px;
+    }
+    .ptb-section-home {
+        padding-top: 20px;
+        padding-bottom: 60px;
+    }
+    .ptb-section-home{
+        /*
+        padding-bottom:10px!important;
+        */
+        padding-bottom:0px;
+    }
+    .calculator-box .tab-pane{
+        background-color:rgba(59, 97, 170, 0.8);
+        font-family: 'Raleway', sans-serif;
+        -webkit-border-radius: 8px;
+        -webkit-border-top-left-radius: 8px;
+        -moz-border-radius: 8px;
+        -moz-border-radius-topleft: 8px;
+        border-radius: 8px;
+        border-top-left-radius: 8px;
+    }
+    #calculator-tabs{
+        margin-top:10px;
+    }
+    .banner-social h3{
+        font-size:14px;
+    }
+
+}
+
+
+@media(max-width:767px){
+    .p-col-calculator{
+        padding-right:15px;
+    }
+
+    .truck-bg-home {
+        background-size: 100% auto;
+    }
+
+}
+/*//hasta ipad vertical (768 px ) muestro calculadora home movil*/
+@media(max-width:768px){
+    #calculator{
+        display:none;
+    }
+    .mt-first-section-home
+    {
+        margin-top: 90px;
+    }
+
+    #calculator-mv .ptb-section-home{
+        margin-top:10px!important;
+        padding-bottom:0!important;
+    }
+
+    #calculator-mv{
+        /*min-height:calc(100vh - 200px);*/
+    }
+
+}
+/*de768 px (ipad vertical) hacia adelante, pcs... se muestra este formulario*/
+
+@media(min-width:768px){
+    .text-btn-delete-mv{
+        display:none;
+    }
+}
+@media(min-width:769px){
+    #calculator-mv{
+        display:none;
+    }
+
+}
+@media(min-width:768px)and (max-width:800px){
+    .p-col-calculator{
+        padding-right:0px;
+    }
+    .text-tab{
+        display:none;
+    }
+    #calculator .nav-link{
+        padding-left:15px;
+        padding-right:15px;
+        font-size:20px;
+    }
+    .btn-delete-item {
+        margin-top: 18px;
+    }
+    truck-bg-home {
+
+        background-size: 90% auto;
+    }
+}
+@media(min-width:801px)and (max-width:1280px){
+    .box-services-home{
+        margin-top:280px;
+    }
+    .truck-bg-home {
+        background-size: 90% auto;
+    }
+}
+
+
+/*//hasta ipad vertical (768 px ) muestro calculadora home movil*/
+
+
+@media(min-width:1351px)and (max-width:1440px ){
+    .col-especial-1{
+        -webkit-box-flex: 0!important;
+        -ms-flex: 0 0 50%!important;
+        flex: 0 0 50%!important;
+        max-width: 50%!important;
+    }
+    .col-especial-2{
+        -webkit-box-flex: 0!important;
+        -ms-flex: 0 0 50%!important;
+        flex: 0 0 50%!important;
+        max-width: 50%!important;
+    }
+    .col-especial-3{
+        -webkit-box-flex: 0!important;
+        -ms-flex: 0 0 0%!important;
+        flex: 0 0 0%!important;
+        max-width: 0%!important;
+    }
+
+}
+
+@media(min-width:801px)and (max-width:1024px){
+    .calculator-box .nav-item {
+         margin-right: 5px;
+    }
+}
+@media(min-width:1280px) and (max-width:1380px){
+    .icon-search{
+        width:100px;
+    }
+
+}
+@media(min-width:1280px) and (max-width:1380px){
+    .btn-delete-item {
+        margin-top: 18px;
+    }
+}
+
+@media( max-width:1380px){
+
+    .calculator-box .form-control
+    {
+        height:25px!important;
+        padding-left:5px;
+        padding-right:2px;
+        padding-bottom:0px;
+        padding-top:0px;
+
+    }
+    .show-calculator-menu .form-control
+    {
+        height:25px!important;
+        padding-left:5px;
+        padding-right:2px;
+        padding-bottom:0px;
+        padding-top:0px;
+
+    }
+
+    .show-calculator-menu .p-col-calculator{
+        padding-left:5px;
+        padding-right:5px;
+    }
+    #calculator2 .p-col-calculator{
+        padding-left:5px;
+        padding-right:5px;
+    }
+    #calculator2 .btn-control-box-calculator{
+        padding:0px;
+    }
+    .show-calculator-menu .mb-3{
+        margin-bottom: 5px !important;
+    }
+    .show-calculator-menu{
+        padding-bottom: 5px !important;
+    }
+    .input-group-text {
+        font-size: 10px;
+    }
+}
+@media( max-width:1350px){
+    .col-especial-1, .col-especial-2{
+        -webkit-box-flex: 0!important;
+        -ms-flex: 0 0 100%!important;
+        flex: 0 0 100%!important;
+        max-width: 100%!important;
+    }
+
+    .box-services-home{
+        margin-top:360px;
+    }
+}
+@media(max-width:767px){
+
+    .box-services-home{
+        margin-top:120px;
+    }
+
+    .truck-bg-home {
+
+        background-size: 100% auto;
+    }
+
+}
+@media(min-width:600px)and (max-width:700px){
+
+    .box-services-home{
+        margin-top:150px;
+    }
+
+
+
+}
+@media(min-width:768px) and (max-width:900px){
+
+    .box-services-home{
+        margin-top:250px;
+    }
+
+    .truck-bg-home {
+
+        background-size: 100% auto;
+    }
+
+}
+@media(max-width:384px) {
+    .lines-text {
+        line-height: 1.2;
+        text-align: center;
+    }
+}
+
+
+/****************************************************************************************************************************************************************/
+/********************************************** 3. CONTRATACIÓN (VEHÍCULOS ARRANCAN, STEPS) ********************************************************************************************/
+/**************************************************************************************************************************************************/
+
+.box-resume {
+    background-color: #fff;
+    border:2px solid orangered;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+}
+
+.content-box-resume{
+    padding:20px;
+}
+.content-box-resume2{
+    padding:5px 20px;
+}
+.border-box-resume2{
+    border:2px solid orangered;
+}
+
+.box-titles-contrato{
+    /*background-color: #939dac;*/
+    color:#3B61AA;
+    padding:0px 10px;
+    padding-top:3px;
+}
+.box-content-contrato{
+    padding:10px;
+    border-radius:8px;
+}
+
+.list-terminos > li:before {
+    content: '\2013';
+    margin-left: -20px;
+    margin-right: 10px;
+}
+
+ .box-list-terms{
+     margin-left:25px;
+     margin-top:20px;
+ }
+
+ .mt-arrow{
+     margin-top:60px;
+ }
+
+
+.font-label-presupuesto{
+    font-size:20px;
+}
+
+.iva-text-orange{
+    font-size:12px;
+}
+ @media (max-width:1024px){
+     .bg-orangered-light h2{
+         font-size:30px;
+     }
+     .font-label-presupuesto{
+         font-size:14px;
+     }
+     .content-box-resume2{
+         padding:5px;
+     }
+     .text-pc{
+         display:none;
+     }
+ }
+@media (max-width:1000px){
+    .bg-orangered-light h2{
+        font-size:20px;
+    }
+    .font-label-presupuesto{
+        font-size:12px;
+    }
+    .content-box-resume2{
+        padding:5px;
+    }
+    .bg-orangered-light p{
+        font-size:12px;
+    }
+    .iva-text-orange{
+        font-size:10px!important;
+    }
+}
+@media(max-width:680px){
+    .md-step-title{
+        display:none;
+    }
+    .col-cart{
+        padding-left:2px;
+        padding-right:2px;
+    }
+    .cart-image-orange{
+        display:none;
+    }
+
+    .mt-arrow{
+        display:none;
+    }
+
+    .title-table-resume{
+        display:none;
+    }
+    .title-step4-mv{
+        margin-top:30px;
+    }
+
+}
+/*@media(min-width:680px){
+    .label-hide-mv{
+        display:none;
+    }
+
+}*/
+@media(min-width:990px){
+    .label-hide-mv{
+        display:none;
+    }
+
+}
+
+@media(max-width:990px){
+     .title-table-resume{
+        display:none;
+    }
+}
+
+/******************* linea de pasos horizontal******************************/
+.md-stepper-horizontal {
+    display:table;
+    width:100%;
+    margin:0 auto;
+    background-color:#FFFFFF;
+    box-shadow: 0 3px 8px -6px rgba(0,0,0,.50);
+}
+.md-stepper-horizontal .md-step {
+    display:table-cell;
+    position:relative;
+    padding:0px 24px 10px 24px;
+}
+
+.md-stepper-horizontal .md-step:active {
+    border-radius: 15% / 75%;
+}
+.md-stepper-horizontal .md-step:first-child:active {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.md-stepper-horizontal .md-step:last-child:active {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.md-stepper-horizontal .md-step:hover .md-step-circle {
+    background-color:#757575;
+}
+.md-stepper-horizontal .md-step:first-child .md-step-bar-left,
+.md-stepper-horizontal .md-step:last-child .md-step-bar-right {
+    display:none;
+}
+.md-stepper-horizontal .md-step .md-step-circle {
+    width:30px;
+    height:30px;
+    margin:0 auto;
+    background-color:#999999;
+    border-radius: 50%;
+    text-align: center;
+    line-height:30px;
+    font-size: 16px;
+    font-weight: 600;
+    color:#FFFFFF;
+}
+.md-stepper-horizontal.green .md-step.active .md-step-circle {
+    background-color:#00AE4D;
+}
+.md-stepper-horizontal.orange .md-step.active .md-step-circle {
+    background-color:#F96302;
+}
+.md-stepper-horizontal .md-step.active .md-step-circle {
+    background-color: rgb(33,150,243);
+}
+.md-stepper-horizontal .md-step.done .md-step-circle:before {
+    font-family: "Font Awesome 5 Free"; /* This is the correct font-family*/
+    font-weight:600;
+    content: "\f00c";
+}
+.md-stepper-horizontal .md-step.done .md-step-circle *,
+.md-stepper-horizontal .md-step.editable .md-step-circle *,
+.md-stepper-horizontal .md-step.vehicles .md-step-circle *,
+.md-stepper-horizontal .md-step.pago .md-step-circle *,
+.md-stepper-horizontal .md-step.login .md-step-circle *
+
+{
+    display:none;
+}
+.md-stepper-horizontal .md-step.pago .md-step-circle {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.md-stepper-horizontal .md-step.editable .md-step-circle {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.md-stepper-horizontal .md-step.vehicles .md-step-circle {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.md-stepper-horizontal .md-step.login .md-step-circle {
+    -moz-transform: scaleX(-1);
+    -o-transform: scaleX(-1);
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
+.md-stepper-horizontal .md-step.editable .md-step-circle:before {
+     font-family: "Font Awesome 5 Free";
+     font-weight:600;
+     content: "\f3c5";
+ }
+.md-stepper-horizontal .md-step.pago .md-step-circle:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight:600;
+    content: "\f53a";
+}
+
+.md-stepper-horizontal .md-step.vehicles .md-step-circle:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight:600;
+    content: "\f1b9";
+}
+
+.md-stepper-horizontal .md-step.login .md-step-circle:before {
+    font-family: "Font Awesome 5 Free";
+    font-weight:600;
+    content: "\f007";
+}
+.md-stepper-horizontal .md-step .md-step-title {
+    margin-top:16px;
+    font-size:16px;
+    font-weight:600;
+}
+.md-stepper-horizontal .md-step .md-step-title,
+.md-stepper-horizontal .md-step .md-step-optional {
+    text-align: center;
+    color:rgba(0,0,0,.26);
+}
+.md-stepper-horizontal .md-step.active .md-step-title {
+    font-weight: 600;
+    color:rgba(0,0,0,.87);
+}
+.md-stepper-horizontal .md-step.active.done .md-step-title,
+.md-stepper-horizontal .md-step.active.editable .md-step-title {
+    font-weight:600;
+}
+.md-stepper-horizontal .md-step .md-step-optional {
+    font-size:12px;
+}
+.md-stepper-horizontal .md-step.active .md-step-optional {
+    color:rgba(0,0,0,.54);
+}
+.md-stepper-horizontal .md-step .md-step-bar-left,
+.md-stepper-horizontal .md-step .md-step-bar-right {
+    position:absolute;
+    top:20px;
+    height:1px;
+    border-top:1px solid #DDDDDD;
+}
+.md-stepper-horizontal .md-step .md-step-bar-right {
+    right:0;
+    left:50%;
+    margin-left:20px;
+}
+.md-stepper-horizontal .md-step .md-step-bar-left {
+    left:0;
+    right:50%;
+    margin-right:20px;
+}
+
+.box-resume-cart{
+    /*
+    border:1px solid #F1F2F6;
+    */
+    padding:15px;
+    height:100%;
+}
+
+.item-list-cart{
+    border-bottom:1px solid #F1F2F6;
+    padding-top:10px;
+}
+
+.border-left-line{
+    border-left:1px solid #999;
+}
+
+.padding-pago{
+    padding-left:40px;
+    padding-right:40px;
+}
+
+
+
+
+@media(max-width:768px){
+    .mt-box-right-mv{
+        margin-top:60px;
+    }
+    .border-left-line{
+        border-left:0px solid #999;
+    }
+    .padding-pago{
+        padding-left:0px;
+        padding-right:0px;
+    }
+
+
+}
+
+@media(min-width:480px) and (max-width:600px){
+    #contrato1, #contrato2, #contrato3{
+        margin-top:290px;
+    }
+}
+
+@media(max-width:321px){
+  /*  .col-adress{
+        display:none;
+    }*/
+    .col-cart{
+        width:100%;
+    }
+}
+
+/*******************************************celda necesitas autorizacion con switch***********************/
+.position-switches-autorizacion{
+    margin-top:25px;
+    margin-left:0px;
+}
+@media(max-width:680px){
+    .position-switches-autorizacion {
+        margin-left: 0px;
+    }
+}
+
+
+/*****************************************cajas resumen precios*************************************/
+
+.line-left-col{
+    border-left:2px solid #fff;
+    padding-left:40px;
+}
+
+.bg-blue-light-trans{
+    background-color:#fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.12);
+    border: none;
+    background-color:rgba(214, 225, 235, 0.6);
+    color:rgba(59, 97, 170, 1)!important;
+}
+.box-shadow{
+    background-color:#fff;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 1px 11px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 11px 0 rgba(0, 0, 0, 0.12);
+    border: none;
+}
+
+
+@media(max-width:767px){
+    .line-left-col{
+        border-left:0px solid #fff;
+        padding-left:15px;
+        border-top:2px solid #fff;
+        padding-top:20px;
+    }
+}
+
+.col-pr-35{
+    padding-right:35px;
+}
+
+/****************************************************************************************************************************/
+/*****************************************4. LOGIN / REGISTER***************************************************************/
+/****************************************************************************************************************************/
+
+.login-register-box .tab-pane{
+    background-color:rgba(59, 97, 170, 0.8);
+    font-family: 'Raleway', sans-serif;
+    -webkit-border-radius: 8px;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-radius: 8px;
+    -moz-border-radius-topleft: 0;
+    border-radius: 8px;
+    border-top-left-radius: 0;
+}
+
+
+
+.login-register-box .nav-item{
+    background-color:rgba(255, 255, 255, 0.9);
+    /*border:1px solid #3B61AA;*/
+    margin-right:10px;
+    border-radius:0;
+    color:#3B61AA;
+    font-weight:500;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-topright: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.login-register-box .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+    /*background-color:rgba(59, 97, 170, 0.9);*/
+    background-color:rgba(255, 69, 0, 0.9);
+
+}
+.login-register-box .nav-link{
+    color:#3B61AA!important;
+    font-weight: 600;
+}
+
+
+.login-register-box .nav-link.active {
+    color:#fff!important;
+    /*background-color:rgba(59, 97, 170, 0.8);*/
+    border-radius:0;
+    font-family: 'Raleway', sans-serif;
+    -webkit-border-top-left-radius: 8px;
+    -webkit-border-top-right-radius: 8px;
+    -moz-border-radius-topleft: 8px;
+    -moz-border-radius-topright: 8px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+}
+
+.login-register-box h5{
+    color:#3B61AA;
+    font-family: 'Raleway', sans-serif;
+}
+
+#login-register-box {
+    float: right;
+}
+
+#login-register-box li {
+    float: left;
+}
+
+.content-tab-login{
+    /*background-color:rgba(66, 191, 232, 0.1);*/
+   padding:50px;
+
+}
+
+
+.p-box-register{
+    padding-left:20px;
+}
+
+.box-doted-2{
+    padding:10px 50px;
+
+}
+@media(max-width:768px){
+    .box-doted-2 {
+        padding: 10px 10px;
+    }
+}
+/***************************************************************************************************************/
+/****************************************************5. SIGUE TU ENVIO********************************************/
+/****************************************************************************************************************/
+
+.bg-image-sigue-envio{
+
+    background:url("../../img/publica/sequimiento_envio/siguetuenvio2_cropped_ret.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:50% 0%;
+    min-height:400px;
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:100px;
+    padding-bottom:100px;
+}
+
+
+
+@media(min-width:1100px) and (max-width:1280px) {
+    .bg-image-sigue-envio {
+        background-size: 100% auto;
+
+    }
+
+    #sigue_tu_envio .box-doted {
+        padding-top: 0px;
+    }
+
+    #sigue_tu_envio .box-doted p:first-child {
+        margin-top:0px;
+    }
+    #sigue_tu_envio .row{
+        margin-top:10px;
+    }
+
+}
+@media(max-width: 767px){
+    .bg-image-sigue-envio{
+        background-size:100% auto;
+        padding-bottom:10px;
+        min-height:220px;
+    }
+
+}
+
+@media(min-width: 2400px){
+    .bg-image-sigue-envio{
+        /*background-size:100% auto;
+        padding-bottom:10px;*/
+        min-height:600px;
+    }
+
+}
+/**********************************************************************************************************/
+/**************************************************6. FAQ**************************************************/
+/***********************************************************************************************************/
+
+/*propuesta 2*/
+#faq{
+    background:url("../../img/publica/faq/faq2.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:50% 60%;
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:60px;
+    padding-bottom:100px;
+}
+
+.btn-faq{
+    padding:40px;
+    background-color:rgba(241, 242, 246, 0.8);
+    width:100%;
+    color:rgba(59, 97, 170, 1);
+    font-weight: bold;
+    white-space: inherit;
+    border:0px;
+}
+
+.btn-faq:hover{
+    background-color:rgba(59, 97, 170, 0.9);
+}
+
+.btn-faq[aria-expanded="true"]{
+    background-color:rgba(59, 97, 170, 0.9);
+    color:rgba(255, 255, 255, 1);
+    font-weight: bold;
+}
+
+/*inicial*/
+/*
+.btn-faq .fa:before {
+    content: "\f0c0";
+}
+*/
+
+.btn-faq[aria-expanded="false"] .fa:before {
+    content: "\f13a";
+    font-size:20px;
+}
+/*panel abierto*/
+.btn-faq[data-toggle="collapse"] .fa:before {
+    content: "\f139";
+    font-size:20px;
+}
+/*panel cerrado de nuevo*/
+.btn-faq[data-toggle="collapse"].collapsed .fa:before {
+    content: "\f13a";
+}
+
+.card{
+    background-color:rgba(59, 97, 170, 0.9);
+    color:#fff;
+}
+@media(max-width:768px){
+    #preguntas-pc{
+        display:none;
+    }
+    .btn-faq{
+        padding:10px;
+        margin-top:15px;
+    }
+    #faq{
+        background:url("../../img/publica/faq/faq2_mv_sm.jpg");
+        background-position:20% 20%;
+        background-size:100% 100%;
+
+        /*quitar imagen en movil??*/
+        padding-top:20px;
+        padding-left:0px;
+        padding-right:0px;
+    }
+}
+@media(min-width:769px){
+    #preguntas-mv{
+        display:none;
+    }
+
+}
+
+
+
+
+/*****************************************************************************/
+/*********************************7. somos***********************************/
+/*********************************************************************************/
+.bg-image-somos1{
+
+    background:url("../../img/publica/somos/somosrender.png");
+    background-repeat: no-repeat;
+    background-size:85% auto;
+    background-attachment: fixed;
+    background-position:50% 80%;
+    min-height:500px;
+    padding-left:50px;
+    padding-right:50px;
+    padding-bottom:100px;
+}
+
+.bg-image-somos{
+
+    background:url("../../img/publica/somos/somos.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:50% 50%;
+    min-height:500px;
+    padding-left:50px;
+    padding-right:50px;
+    padding-top:100px;
+    padding-bottom:100px;
+}
+
+
+/*background image fixed no funciona en ios. así que para ipad cambio propiedad*/
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+and (orientation : landscape)
+and (-webkit-min-device-pixel-ratio: 2) {
+    .bg-image-somos1{
+        background-attachment: scroll;
+        min-height:600px;
+        background-position:50% 50%;
+    }
+}
+
+@media (max-width:1024px){
+    .bg-image-somos1{
+        background-attachment: scroll;
+    }
+}
+@media(width:1024px){
+    .bg-image-somos1{
+        min-height:400px;
+    }
+}
+@media (max-width:767px) {
+    .bg-image-somos1 {
+        min-height: 200px;
+    }
+
+    #quienes_somos {
+        padding-top: 0px;
+    }
+}
+@media(max-width:1024px){
+    .bg-image-somos{
+        background:linear-gradient( rgba(255, 255, 255, 0.2) 100%, rgba(255, 255, 255, 0.1)100%),url("../../img/publica/somos/somos.jpg");
+        font-size:16px;
+        color:#000;
+    }
+}
+@media(min-width:1600px){
+    .bg-image-somos1 {
+        min-height: 700px;
+    }
+    .bg-image-somos1 .row {
+        padding-bottom:80px;
+    }
+}
+
+@media(width:1280px){
+    .bg-image-somos1 {
+        background-position:50% 50%;
+    }
+}
+
+@media(width:1400px){
+    .bg-image-somos1 {
+        background-position:50% 60%;
+    }
+}
+@media(min-width:1360px) and (max-width:1367px){
+    .bg-image-somos1 {
+        background-position:50% 100%;
+        min-height:750px;
+    }
+}
+
+@media(min-width:2560px){
+    .bg-image-somos1 {
+        background-position:50% 40%;
+        min-height:850px;
+    }
+}
+
+
+
+
+
+/*****************************************************************************/
+/*********************************8. noticias***********************************/
+/*********************************************************************************/
+.title-articles{
+    font-size:30px;
+    font-family: "Open Sans";
+}
+
+@media(max-width:800px){
+    .title-articles{
+        font-size:20px;
+
+    }
+}
+
+/*****************************************************************************/
+/*********************************9. pregúntanos ***********************************/
+/*********************************************************************************/
+.recaptcha-position{
+    margin-top:20px;
+}
+@media( max-width: 768px){
+  /*  .recaptcha-position{
+        margin-left:-20px;
+    }*/
+}
+/*********************************************/
+/********************COOKIES, AVISO LEGAL, CONDICIONES...**************/
+/********************************************************************/
+@media (max-width:1280px){
+    .title-legales{
+        font-size:25px;
+    }
+}
+

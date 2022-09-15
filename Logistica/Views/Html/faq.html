@@ -1,0 +1,960 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang=""> <!--<![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name='viewport'content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+
+    <!--FONTS-->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800|Raleway:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+
+    <!--CSS-->
+    <link rel="stylesheet" href="../../vendor/bootstrap-4.0.0-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/animate.css">
+    <!--cookies-->
+    <link rel='stylesheet' href='../../css/publica/cookies_1.css'/>
+
+    <link rel="stylesheet" href="../../css/publica/main.css">
+    <link rel="stylesheet" href="../../css/privada_cliente/main.css">
+
+    <!-- END CSS -->
+</head>
+<body>
+<!--*****************************************************-->
+<!--1. AVISO SI SE USA INTERNET EXPLORER 8 O INFERIOR-->
+<!--******************************************************-->
+
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<!--***********************************************************************************************************************************************************************-->
+<!--2.********* MENÚ PRINCIPAL*********************************************************************************************************************************************-->
+<!--*********************************************************************************************************************************************************************-->
+<form>
+    <div class="fixed-top menu-scrolling" >
+        <div class="z-index-top">
+            <div class="p-1 border-bottom bg-white">
+                <div class="container">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-4 plr0">
+                                <div class="dropdown show">
+                                    <a class="dropdown-toggle blue-color" href="#" role="button" id="dropdownMenuLinklanguage" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Idioma
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLinklanguage">
+                                        <a class="dropdown-item" href="#">Español</a>
+                                        <a class="dropdown-item" href="#">Francés</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-8 plr0 text-right">
+
+                                <div class="dropdown show">
+                                    <a class="dropdown-toggle btn-register-menu" href="#" role="button" id="dropdownMenuLinkperfil" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <i class="fas fa-user"></i>  Bienvenida, Gema
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuLinkperfil">
+                                        <a class="dropdown-item" href="#">Cerrar sesión</a>
+                                        <a class="dropdown-item" href="mi_cuenta.html">Mi Cuenta</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <nav class="navbar navbar-expand-lg">
+                <div class="container">
+                    <a class="navbar-brand" href="index.html">
+                        <img class="img-fluid logo-menu" src="../../img/publica/logo_transportauto.png" alt="logo transportauto" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon burger-menu-primary"></span>
+                        <i class="fas fa-bars burger-menu-primary"></i>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarCollapse">
+                        <ul class="navbar-nav ml-auto primary-color">
+                            <li class="nav-item">
+                                <a class="nav-link" href="index.html">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contratacion_transporte/contratacion_step1.html">SOLICITAR TRANSPORTE</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="mis_pedidos.html">MIS PEDIDOS </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="pedidos_pendientes.html">PEDIDOS PENDIENTES</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="facturas.html">FACTURAS</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link "  href="agenda.html"> AGENDA</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!--mini formulario calculadora desplegable-->
+            <div class="show-calculator-menu">
+                <div class="container">
+                    <!--<div class="btn-control-box-calculator">-->
+                    <div class="row">
+                        <div class="col-6 col-md-3 blue-color p-col-calculator">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text" >
+                                             <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Origen">
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3 blue-color p-col-calculator">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                        <span class="input-group-text">
+                                              <i class="fas fa-map-marker-alt"></i>
+                                        </span>
+                                </div>
+                                <input type="text" class="form-control" placeholder="Destino">
+                            </div>
+
+                        </div>
+                        <div class="col-6 col-md-2 blue-color p-col-calculator">
+                            <select  class="form-control">
+                                <option value="" disabled selected>Estado</option>
+                                <option value="arranca">Arranca</option>
+                                <option value="no_arranca">No arranca pero puede rodar</option>
+                                <option value="internacional" >Siniestro/No puede rodar</option>
+                            </select>
+                        </div>
+                        <div class="col-6 col-md-2 blue-color p-col-calculator">
+                            <select  class="form-control mb-3">
+                                <option value="" disabled selected>Tipo</option>
+                                <option value="vehiculos">Turismos</option>
+                                <option value="vehiculos">Comerciales</option>
+                                <option value="indust_autocarav_tractor">Industrial</option>
+                                <option value="indust_autocarav_tractor" >Autocaravana</option>
+                                <option value="indust_autocarav_tractor">Tractor</option>
+                                <option value="moto">Moto</option>
+                            </select>
+                        </div>
+                        <div class="col-12 col-md-2 p-col-calculator">
+                            <a class="btn btn-blue w-100 btn-control-box-calculator">calcular <i class="fas fa-chevron-down"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--CONTENIDO DE LA CALCULADORA OCULTO EN EL MENÚ PPAL-->
+        <section id="calculator2" class="ptb-section  calculator-box d-none">
+            <div class="container plr0">
+                <div class="calculator-box">
+                    <div class="box-type-vehicule">
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT AUTOMOVILES *****************************-->
+                        <!--*********************************************************************-->
+                        <!--ocultar o mostrar una u otra box-type-vehicle en función del vehículo seleccionado, no lo tengo simulado, solo muestro el de turismo-->
+                        <div class="box-type-vehicle" id="box-turismo" >
+                            <div class="list-vehicules-calculator">
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-vehiculos-collapse"><i class="fas fa-plus"></i> Añadir vehículos </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator ">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Año
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Año</option>
+                                                <option value="Modelo1">2000</option>
+                                                <option value="Modelo2">2001</option>
+                                                <option value="Modelo3">2002</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Versión
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="version1">Versión 1</option>
+                                                <option value="version2">Versión 2</option>
+                                                <option value="version3" >Versión 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i><span class="text-btn-delete-mv"> Eliminar vehículo</span></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--***********CONTENT comercial *****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-comercial" >
+                            <div class="list-vehicules-calculator">
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-vehiculos-collapse"><i class="fas fa-plus"></i> Añadir vehículos </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator ">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-4 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Año
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Año</option>
+                                                <option value="Modelo1">2000</option>
+                                                <option value="Modelo2">2001</option>
+                                                <option value="Modelo3">2002</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Versión
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="version1">Versión 1</option>
+                                                <option value="version2">Versión 2</option>
+                                                <option value="version3" >Versión 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--***********CONTENT INDUSTRIALES *****************************-->
+                        <!--*********************************************************************-->
+                        <div class="box-type-vehicle d-none" id="box-industrial" >
+                            <div class="list-vehicules-calculator">
+                                <!--INDUSTRIALES  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-indust-autocarav-tractor"><i class="fas fa-plus"></i> Añadir vehículos industriales </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Largo (mm)
+                                            <input type="text p-col-calculator" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Alto (mm)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT AUTOCARAVANAS*****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-autocaravana" >
+                            <!--BOX ORIGEN, DESTINO Y ESTADO-->
+
+                            <div class="list-vehicules-calculator">
+                                <!--AUTOCARAVANAS  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-indust-autocarav-tractor"><i class="fas fa-plus"></i> Añadir autocaravanas </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3 p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Largo (mm)
+                                            <input type="text p-col-calculator" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Alto (mm)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT TRACTORES*****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-tractor" >
+                            <div class="list-vehicules-calculator">
+                                <!--TRACTORES  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-indust-autocarav-tractor"><i class="fas fa-plus"></i> Añadir tractores </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row ">
+                                        <div class="col-md-3 p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3 p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Largo (mm)
+                                            <input type="text p-col-calculator" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2 p-col-calculator">
+                                            Alto (mm)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--***************************************************************-->
+                        <!--*********** CONTENT MOTOS *****************************-->
+                        <!--*********************************************************************-->
+
+                        <div class="box-type-vehicle d-none" id="box-moto" >
+                            <div class="list-vehicules-calculator">
+                                <!--MOTOS  -->
+                                <div class="text-right">
+                                    <a class="btn-link-orange-calc btn-add-moto"><i class="fas fa-plus"></i> Añadir motos </a>
+                                </div>
+                                <div class='item-vehicule'>
+                                    <div class="row">
+                                        <div class="col-md-3  p-col-calculator">
+                                            Marca
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="marca1">Marca 1</option>
+                                                <option value="marca2">Marca 2</option>
+                                                <option value="marca4" >Marca 3</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-3  p-col-calculator">
+                                            Modelo
+                                            <select  class="form-control">
+                                                <option value="" disabled selected>Selecciona...</option>
+                                                <option value="Modelo1">Modelo 1</option>
+                                                <option value="Modelo2">Modelo 2</option>
+                                                <option value="Modelo3" >Modelo 3</option>
+                                            </select>                                            </div>
+                                        <div class="col-md-2  p-col-calculator">
+                                            C.C.
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-2  p-col-calculator">
+                                            CV
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1  p-col-calculator">
+                                            Peso (kg)
+                                            <input type="text" class="form-control"/>
+                                        </div>
+                                        <div class="col-md-1 ">
+                                            <button class='btn btn-sm btn-delete-item' data-toggle='tooltip' data-placement='top' title='eliminar elemento'><i class='fas fa-times'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div><!--end tabs content-->
+                </div><!--end calculator box-->
+
+                <div class="text-right mt-2">
+                    <a id="btn-calculate-price" class="btn btn-md btn-blue  text-center" href="contratacion_transporte/tipos_de_precio.html"><i class="fas fa-search"></i> Calcular el precio del transporte</a>
+                </div>
+            </div>
+            <!--end container-->
+        </section>
+    </div>    <!--EN MENU FIXED CON CAJA DE CALCULADORA-->
+</form>
+
+<!--*******************************************************************************************************************************************************************-->
+<!--4. **********************************************5.  CONTENIDO DE FAQ *************************************************************************************-->
+<!--****************************************************************************************************************************************************************-->
+
+<section id="faq" class="pb-section mt-first-section-other-page content-page ">
+    <div class="container mt20" >
+        <!--6. **********************************************FAQ PC ************************************************************************************-->
+        <div id="preguntas-pc">
+            <!--row 1-->
+            <div class="row">
+                <div class="col-md-6 text-center">
+
+                    <a class="btn btn-primary btn-faq collapsed" data-toggle="collapse" href="#faq1" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        ¿Cómo calculo la tarifa para mi localidad?
+                        <div class="mt20">
+                            <i class="fa" aria-hidden="true"></i>
+                        </div>
+
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-primary btn-faq collapsed" data-toggle="collapse" href="#faq2" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        ¿Cómo contrato un transporte?
+                        <div class="mt20">
+                            <i class="fa" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="collapse" id="faq1">
+                <div class="card card-body mt10">
+                    <p class="text-justify">
+                        Nuestro servicio de transporte es puerta a puerta. La tarificación es provincial, es decir, los precios se calculan dependiendo de la provincia donde se encuentre la localidad de origen y la de destino. Para calcular el precio del transporte en el área pública no es necesario por lo tanto indicar las localidades. Las localidades sólo se solicitarán cuando se quiera formalizar el pedido de transporte en su área privada.
+                    </p>
+                </div>
+            </div>
+            <div class="collapse" id="faq2">
+                <div class="card card-body mt10">
+                    <p class="text-justify">Para la contratación de un transporte, es necesario darse de alta en la página. Una vez que estés dado de alta y hayas introducido el usuario y la contraseña en el "Área cliente" accederás a tu administración. Sólo tienes que rellenar los datos del transporte en el apartado "Solicitar Transporte", añadir el/los vehículo/s y verás el resumen del transporte. Podrás pagarlo por Paypal/tarjeta o guardarlo si lo deseas para finalizarlo posteriormente.</p>
+                </div>
+            </div>
+
+            <!--row 2-->
+            <div class="row mt20">
+                <div class="col-md-6">
+                    <a class="btn btn-primary btn-faq collapsed" data-toggle="collapse" href="#faq3" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        ¿Qué hago si mi modelo de vehículo no aparece?
+                        <div class="mt20">
+                            <i class="fa" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-primary btn-faq collapsed" data-toggle="collapse" href="#faq4" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        ¿Puedo solicitar un transporte con varios vehículos?
+                        <div class="mt20">
+                            <i class="fa" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="collapse" id="faq3">
+                <div class="card card-body mt10">
+                    <p class="text-justify">Si es un vehículo comercial, tendrá que seleccionar primero el icono de la furgoneta en la página principal, así mismo, si fuese un camión el de camión, etc... Nuestro listado de vehículos es desde el año 1995, si fuese un vehículo mas antiguo o no se encontrase en el listado, póngase en contacto con nostros a través de nuestra página Pregúntanos / Contacto, le responderemos de cómo seleccionar correctamente un vehículo de características similares.</p>
+
+                </div>
+            </div>
+            <div class="collapse" id="faq4">
+                <div class="card card-body mt10">
+                    <p class="text-justify">Si, accediendo a tu área de cliente en el apartado "Solicitar Transporte", verás que puedes añadir todos los vehículos que necesites transportar en un mismo origen y destino. Además si solicitas un transporte con varios vehículos el precio por unidad es más económico.</p>
+                </div>
+            </div>
+
+            <!--row 3-->
+            <div class="row mt20">
+                <div class="col-md-6">
+                    <a class="btn btn-primary btn-faq collapsed" data-toggle="collapse" href="#faq5" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        ¿Qué es el estado del transporte?
+                        <div class="mt20">
+                            <i class="fa" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-primary btn-faq collapsed" data-toggle="collapse" href="#faq6" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        ¿Para qué sirve la fecha de disponibilidad?
+                        <div class="mt20">
+                            <i class="fa" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="collapse" id="faq5">
+                <div class="card card-body mt10">
+                    <p class="text-justify">En este apartado, has de indicar si el vehículo esta en condiciones de arrancar o no. Es importante cerciorase del estado del vehículo, ya que si el vehículo arranca, el camión que lo va a transportar es un camión plataforma con capacidad de 9 vehículos y en el caso de que no arranque lo transportará un camión grúa con capacidad para un vehículo. En el caso que se indique que el vehículo arranca y el transportista vaya al lugar de recogida y no arranque, el transporte no se podrá realizar y correrán a cargo del cliente los gastos ocasionados por el desplazamiento.</p>
+                </div>
+            </div>
+            <div class="collapse" id="faq6">
+                <div class="card card-body mt10">
+                    <p class="text-justify">La fecha de disponibilidad, es el día en el cual el vehículo está disponible para ser recogido. A partir de la fecha que indiques, empezarán a contar los días laborables estimados para la recogida del vehículo.</p>
+                </div>
+            </div>
+
+
+            <!--row 4-->
+            <div class="row mt20">
+                <div class="col-md-6">
+                    <a class="btn btn-primary btn-faq collapsed" data-toggle="collapse" href="#faq7" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        ¿Qué es el tiempo estimado de entrega?
+                        <div class="mt20">
+                            <i class="fa" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-primary btn-faq collapsed" data-toggle="collapse" href="#faq8" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        ¿Puedo modificar la dirección de entrega o destino?
+                        <div class="mt20">
+                            <i class="fa" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="collapse" id="faq7">
+                <div class="card card-body mt10">
+                        <p class="text-justify">El tiempo estimado de entrega, es una aproximación del tiempo para la recepción del vehículo. Este tiempo dependerá de la disponibilidad de los transportistas y en el caso de Baleares y Canarias de la disponibilidad para embarcar el vehículo.</p>
+                </div>
+            </div>
+            <div class="collapse" id="faq8">
+                <div class="card card-body mt10">
+                    <p class="text-justify">Los datos introducidos en el momento de solicitar un transporte, únicamente se pueden modificar cuando el transporte está en proceso. Para la modificación de los datos de recogida o de entrega de un transporte en proceso, hay que enviarnos un email con el identificador del transporte y los datos a modificar, en el momento en que lo recibamos, nos pondremos en contacto para realizar los cambios solicitados.</p>
+                </div>
+            </div>
+
+            <!--row 5-->
+            <div class="row mt20">
+                <div class="col-md-6">
+                    <a class="btn btn-primary btn-faq collapsed" data-toggle="collapse" href="#faq9" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        ¿Puedo modificar la dirección de entrega o destino?
+                        <div class="mt20">
+                            <i class="fa" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-primary btn-faq collapsed" data-toggle="collapse" href="#faq10" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        ¿Está asegurada la carga?
+                        <div class="mt20">
+                            <i class="fa" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="collapse" id="faq9">
+                <div class="card card-body mt10">
+                    <p class="text-justify">Los datos introducidos en el momento de solicitar un transporte, únicamente se pueden modificar cuando el transporte está en proceso. Para la modificación de los datos de recogida o de entrega de un transporte en proceso, hay que enviarnos un email con el identificador del transporte y los datos a modificar, en el momento en que lo recibamos, nos pondremos en contacto para realizar los cambios solicitados.</p>
+                </div>
+            </div>
+            <div class="collapse" id="faq10">
+                <div class="card card-body mt10">
+                        <p class="text-justify"> Si, la carga está asegurada, dependiendo del vehículo. El seguro para vehículos usados cubre, condiciones CMR, condiciones L.O.T.T ley 15/2009 que comprenden, vuelco, incendio o robo del camión con los coches. Nuestro seguro de vehículos nuevos incluido en la contratación es todo riesgo, condiciones CMR, condiciones L.O.T.T ley 15/2009. El seguro no cubre bienes personales depositados dentro del vehículo. Éstos deben ser retirados y no viajar con la carga (tampoco en cabina del camión). El conductor no podrá ser responsable de su custodia.</p>
+                </div>
+            </div>
+
+            <!--row 6-->
+            <div class="row mt20">
+                <div class="col-md-6">
+                    <a class="btn btn-primary btn-faq collapsed" data-toggle="collapse" href="#faq11" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        ¿Puedo solicitar un transporte urgente?
+                        <div class="mt20">
+                            <i class="fa" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-primary btn-faq collapsed" data-toggle="collapse" href="#faq12" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        ¿Cómo funciona el transporte a Baleares?
+                        <div class="mt20">
+                            <i class="fa" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="collapse" id="faq11">
+                <div class="card card-body mt10">
+                    <p class="text-justify">Realizamos transportes urgentes con un tiempo estimado de recogida de 3 días, aunque actualmente esta opción no está disponible en la página y si lo necesita tendrá que solicitar presupuesto en el apartado contacto.</p>
+                </div>
+            </div>
+            <div class="collapse" id="faq12">
+                <div class="card card-body mt10">
+                    <p class="text-justify">Se desarrolla en camión y barco, el transportista recoge el vehículo en el lugar de recogida y lo traslada al puerto, una vez que está el vehículo en el puerto, se carga en el barco y al llegar al puerto de destino otro camión lo recoge y realiza la entrega del mismo. En el precio indicado de la página está incluido todo el trayecto, desde el lugar de recogida, hasta el lugar de entrega indicados. El tiempo estimado de 7 días, dependerá de la disponibilidad del transporte marítimo.</p>
+                </div>
+            </div>
+
+
+            <!--row 7-->
+            <div class="row mt20">
+                <div class="col-md-6">
+                    <a class="btn btn-primary btn-faq collapsed" data-toggle="collapse" href="#faq13" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        ¿Que hace falta para realizar un transporte a Canarias?
+                        <div class="mt20">
+                            <i class="fa" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <a class="btn btn-primary btn-faq collapsed" data-toggle="collapse" href="#faq14" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        ¿Puedo solicitar transportes para fuera de España?
+                        <div class="mt20">
+                            <i class="fa" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="collapse" id="faq13">
+                <div class="card card-body mt10">
+                    <p class="text-justify">Para transportar un vehículo a Canarias, es necesario realizar un DUA de exportación en la península y a la llegada a Canarias un DUA de importación, en el que se reflejarán los impuestos Canarios que hay que abonar y si estas exentos de los mismos por cambio de residencia. De todas formas, desde Transportauto, disponemos de agentes aduaneros que se encargan de realizarlo para que el cliente no tenga que preocuparse de nada. La gestión aduanera está incluida en el precio del transporte.</p>
+
+                </div>
+            </div>
+            <div class="collapse" id="faq14">
+                <div class="card card-body mt10">
+                    <p class="text-justify">Actualmente transportamos vehículos a toda Europa, aunque no disponemos de tarifas en la página, por este motivo, si usted necesita solicitar un transporte para fuera de España, solicite presupuesto en el apartado INTERNACIONAL de la página.</p>
+                </div>
+            </div>
+
+
+            <!--row 8-->
+            <div class="row mt20">
+                <div class="col-md-3"></div>
+                <div class="col-md-6">
+                    <a class="btn btn-primary btn-faq collapsed" data-toggle="collapse" href="#faq15" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        Pagos/Facturas
+                        <div class="mt20">
+                            <i class="fa" aria-hidden="true"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3"></div>
+            </div>
+
+            <div class="collapse" id="faq15">
+                <div class="card card-body mt10">
+                    <p class="text-justify">Actualmente disponemos de tres métodos de pagos para el transporte, se pueden realizar con tarjeta (visa, mastercard, maestro, etc…), pago por paypal o mediante transferencia bancaria. Una vez que haya realizado el pago, recibirá la factura correspondiente del servicio contratado por email, con el detalle del envío (origen, destino, matricula, etc…). Puede consultar su factura también en su área privada cuando lo desee.</p>
+                </div>
+            </div>
+
+        </div>
+        <!--7. **************************************FAQ movil************************************************************************************-->
+        <div id="preguntas-mv">
+
+                    <a class="btn btn-primary btn-faq text-left collapsed" data-toggle="collapse" href="#faq1-mv" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa" aria-hidden="true"></i>   ¿Cómo calculo la tarifa para mi localidad?
+                    </a>
+                    <div class="collapse" id="faq1-mv">
+                        <div class="card card-body mt10">
+                            <p class="text-justify">
+                                Nuestro servicio de transporte es puerta a puerta. La tarificación es provincial, es decir, los precios se calculan dependiendo de la provincia donde se encuentre la localidad de origen y la de destino. Para calcular el precio del transporte en el área pública no es necesario por lo tanto indicar las localidades. Las localidades sólo se solicitarán cuando se quiera formalizar el pedido de transporte en su área privada.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <a class="btn btn-primary btn-faq text-left collapsed" data-toggle="collapse" href="#faq2-mv" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa" aria-hidden="true"></i> ¿Cómo contrato un transporte?
+                    </a>
+
+                    <div class="collapse" id="faq2-mv">
+                        <div class="card card-body mt10">
+                            <p class="text-justify">Para la contratación de un transporte, es necesario darse de alta en la página. Una vez que estés dado de alta y hayas introducido el usuario y la contraseña en el "Área cliente" accederás a tu administración. Sólo tienes que rellenar los datos del transporte en el apartado "Solicitar Transporte", añadir el/los vehículo/s y verás el resumen del transporte. Podrás pagarlo por Paypal/tarjeta o guardarlo si lo deseas para finalizarlo posteriormente.</p>
+                        </div>
+                    </div>
+
+
+                    <a class="btn btn-primary btn-faq text-left collapsed" data-toggle="collapse" href="#faq3-mv" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa" aria-hidden="true"></i> ¿Qué hago si mi modelo de vehículo no aparece?
+                    </a>
+                    <div class="collapse" id="faq3-mv">
+                        <div class="card card-body mt10">
+                            <p class="text-justify">Si es un vehículo comercial, tendrá que seleccionar primero el icono de la furgoneta en la página principal, así mismo, si fuese un camión el de camión, etc... Nuestro listado de vehículos es desde el año 1995, si fuese un vehículo mas antiguo o no se encontrase en el listado, póngase en contacto con nostros a través de nuestra página Pregúntanos / Contacto, le responderemos de cómo seleccionar correctamente un vehículo de características similares.</p>
+
+                        </div>
+                    </div>
+
+
+                    <a class="btn btn-primary btn-faq text-left collapsed" data-toggle="collapse" href="#faq4-mv" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa" aria-hidden="true"></i> ¿Puedo solicitar un transporte con varios vehículos?
+                    </a>
+
+                    <div class="collapse" id="faq4-mv">
+                        <div class="card card-body mt10">
+                            <p class="text-justify">Si, accediendo a tu área de cliente en el apartado "Solicitar Transporte", verás que puedes añadir todos los vehículos que necesites transportar en un mismo origen y destino. Además si solicitas un transporte con varios vehículos el precio por unidad es más económico.</p>
+                        </div>
+                    </div>
+
+
+                    <a class="btn btn-primary btn-faq text-left collapsed"  data-toggle="collapse" href="#faq5-mv" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa" aria-hidden="true"></i> ¿Qué es el estado del transporte?
+                    </a>
+                    <div class="collapse" id="faq5-mv">
+                        <div class="card card-body mt10">
+                            <p class="text-justify">En este apartado, has de indicar si el vehículo esta en condiciones de arrancar o no. Es importante cerciorase del estado del vehículo, ya que si el vehículo arranca, el camión que lo va a transportar es un camión plataforma con capacidad de 9 vehículos y en el caso de que no arranque lo transportará un camión grúa con capacidad para un vehículo. En el caso que se indique que el vehículo arranca y el transportista vaya al lugar de recogida y no arranque, el transporte no se podrá realizar y correrán a cargo del cliente los gastos ocasionados por el desplazamiento.</p>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-primary btn-faq text-left collapsed" data-toggle="collapse" href="#faq6-mv" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa" aria-hidden="true"></i>  ¿Para qué sirve la fecha de disponibilidad?
+                    </a>
+                    <div class="collapse" id="faq6-mv">
+                            <div class="card card-body mt10">
+                                <p class="text-justify">La fecha de disponibilidad, es el día en el cual el vehículo está disponible para ser recogido. A partir de la fecha que indiques, empezarán a contar los días laborables estimados para la recogida del vehículo.</p>
+                            </div>
+                    </div>
+
+                    <a class="btn btn-primary btn-faq text-left collapsed" data-toggle="collapse" href="#faq7-mv" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa" aria-hidden="true"></i> ¿Qué es el tiempo estimado de entrega?
+                    </a>
+
+                     <div class="collapse" id="faq7-mv">
+                         <div class="card card-body mt10">
+                             <p class="text-justify">El tiempo estimado de entrega, es una aproximación del tiempo para la recepción del vehículo. Este tiempo dependerá de la disponibilidad de los transportistas y en el caso de Baleares y Canarias de la disponibilidad para embarcar el vehículo.</p>
+                         </div>
+                     </div>
+
+                    <a class="btn btn-primary btn-faq text-left collapsed" data-toggle="collapse" href="#faq8-mv" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa" aria-hidden="true"></i>    ¿Puedo modificar la dirección de entrega o destino?
+
+                    </a>
+
+                     <div class="collapse" id="faq8-mv">
+                         <div class="card card-body mt10">
+                             <p class="text-justify">Los datos introducidos en el momento de solicitar un transporte, únicamente se pueden modificar cuando el transporte está en proceso. Para la modificación de los datos de recogida o de entrega de un transporte en proceso, hay que enviarnos un email con el identificador del transporte y los datos a modificar, en el momento en que lo recibamos, nos pondremos en contacto para realizar los cambios solicitados.</p>
+                         </div>
+                     </div>
+
+                    <a class="btn btn-primary btn-faq text-left collapsed" data-toggle="collapse" href="#faq9-mv" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa" aria-hidden="true"></i>  ¿Puedo modificar la dirección de entrega o destino?
+                    </a>
+
+                    <div class="collapse" id="faq9-mv">
+                        <div class="card card-body mt10">
+                            <p class="text-justify">Los datos introducidos en el momento de solicitar un transporte, únicamente se pueden modificar cuando el transporte está en proceso. Para la modificación de los datos de recogida o de entrega de un transporte en proceso, hay que enviarnos un email con el identificador del transporte y los datos a modificar, en el momento en que lo recibamos, nos pondremos en contacto para realizar los cambios solicitados.</p>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-primary btn-faq text-left collapsed" data-toggle="collapse" href="#faq10-mv" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa" aria-hidden="true"></i> ¿Está asegurada la carga?
+                    </a>
+
+                    <div class="collapse" id="faq10-mv">
+                        <div class="card card-body mt10">
+                            <p class="text-justify"> Si, la carga está asegurada, dependiendo del vehículo. El seguro para vehículos usados cubre, condiciones CMR, condiciones L.O.T.T ley 15/2009 que comprenden, vuelco, incendio o robo del camión con los coches. Nuestro seguro de vehículos nuevos incluido en la contratación es todo riesgo, condiciones CMR, condiciones L.O.T.T ley 15/2009. El seguro no cubre bienes personales depositados dentro del vehículo. Éstos deben ser retirados y no viajar con la carga (tampoco en cabina del camión). El conductor no podrá ser responsable de su custodia.</p>
+                        </div>
+                    </div>
+
+
+                    <a class="btn btn-primary btn-faq text-left collapsed" data-toggle="collapse" href="#faq11-mv" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa" aria-hidden="true"></i> ¿Puedo solicitar un transporte urgente?
+                    </a>
+
+                    <div class="collapse" id="faq11-mv">
+                        <div class="card card-body mt10">
+                                <p class="text-justify">Realizamos transportes urgentes con un tiempo estimado de recogida de 3 días, aunque actualmente esta opción no está disponible en la página y si lo necesita tendrá que solicitar presupuesto en el apartado contacto.</p>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-primary btn-faq text-left collapsed" data-toggle="collapse" href="#faq12-mv" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa" aria-hidden="true"></i> ¿Cómo funciona el transporte a Baleares?
+                    </a>
+
+                    <div class="collapse" id="faq12-mv">
+                            <div class="card card-body mt10">
+                                <p class="text-justify">Se desarrolla en camión y barco, el transportista recoge el vehículo en el lugar de recogida y lo traslada al puerto, una vez que está el vehículo en el puerto, se carga en el barco y al llegar al puerto de destino otro camión lo recoge y realiza la entrega del mismo. En el precio indicado de la página está incluido todo el trayecto, desde el lugar de recogida, hasta el lugar de entrega indicados. El tiempo estimado de 7 días, dependerá de la disponibilidad del transporte marítimo.</p>
+                            </div>
+                    </div>
+
+
+                    <a class="btn btn-primary btn-faq text-left collapsed" data-toggle="collapse" href="#faq13-mv" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa" aria-hidden="true"></i> ¿Que hace falta para realizar un transporte a Canarias?
+                    </a>
+
+                    <div class="collapse" id="faq13-mv">
+                        <div class="card card-body mt10">
+                            <p class="text-justify">Para transportar un vehículo a Canarias, es necesario realizar un DUA de exportación en la península y a la llegada a Canarias un DUA de importación, en el que se reflejarán los impuestos Canarios que hay que abonar y si estas exentos de los mismos por cambio de residencia. De todas formas, desde Transportauto, disponemos de agentes aduaneros que se encargan de realizarlo para que el cliente no tenga que preocuparse de nada. La gestión aduanera está incluida en el precio del transporte.</p>
+                        </div>
+                    </div>
+
+                    <a class="btn btn-primary btn-faq text-left collapsed" data-toggle="collapse" href="#faq14-mv" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa" aria-hidden="true"></i>  ¿Puedo solicitar transportes para fuera de España?
+                    </a>
+
+                     <div class="collapse" id="faq14-mv">
+                            <div class="card card-body mt10">
+                                <p class="text-justify">Actualmente transportamos vehículos a toda Europa, aunque no disponemos de tarifas en la página, por este motivo, si usted necesita solicitar un transporte para fuera de España, solicite presupuesto en el apartado INTERNACIONAL de la página.</p>
+                            </div>
+                     </div>
+
+
+                    <a class="btn btn-primary btn-faq text-left collapsed" data-toggle="collapse" href="#faq15-mv" role="button" aria-expanded="false" aria-controls="collapseExample">
+                        <i class="fa" aria-hidden="true"></i> Pagos/Facturas
+                    </a>
+
+                    <div class="collapse" id="faq15-mv">
+                        <div class="card card-body mt10">
+                            <p class="text-justify">Actualmente disponemos de tres métodos de pagos para el transporte, se pueden realizar con tarjeta (visa, mastercard, maestro, etc…), pago por paypal o mediante transferencia bancaria. Una vez que haya realizado el pago, recibirá la factura correspondiente del servicio contratado por email, con el detalle del envío (origen, destino, matricula, etc…). Puede consultar su factura también en su área privada cuando lo desee.</p>
+                        </div>
+                    </div>
+
+        </div>
+    </div>
+</section>
+
+<!--5. FOOTER-->
+<footer>
+    <div class="background-footer-3">
+        <div class="container-fluid">
+            <div class="row align-items-center">
+                <div class="col-md-2">
+                    <p class="white-color text-center">&copy; 2019 Copyright Transportauto S.L </p>
+                </div>
+                <div class="col-md-8 text-center">
+                    <ul class="list-inline mb0">
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="condiciones_generales.html">
+                                <strong>Condiciones generales</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="aviso_legal.html">
+                                <strong>Aviso Legal</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="faq.html">
+                                <strong>FAQ's</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="politica_cookies.html">
+                                <strong>Política de Cookies</strong>
+                            </a>
+                        </li>
+                        <li class="list-inline-item">
+                            <a class="white-color-link" href="politica_de_privacidad.html">
+                                <strong>Política de Privacidad</strong>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-2">
+                    <img class="img-fluid" src="../../img/publica/pago_sm.png" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!--JS-->
+<script src="../../vendor/jquery-3.2.1.slim.min.js" ></script>
+<script src="../../vendor/popper.min.js"></script>
+<script src="../../vendor/bootstrap-4.0.0-dist/js/bootstrap.min.js" ></script>
+<script src="../../js/publica/main.js"></script>
+
+<!--chat zoopin de prueba-->
+<script id="ze-snippet" src="https://static.zdassets.com/ekr/snippet.js?key=67a67bcf-2ea9-4168-a124-f502f67d607e"> </script>
+<!-- End of  Zendesk Widget script -->
+
+<!--END JS-->
+</body>
+</html>
