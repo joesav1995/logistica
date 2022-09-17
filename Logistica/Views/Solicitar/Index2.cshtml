@@ -273,50 +273,151 @@
                                             foreach (var item in Model)
                                             {
                                                 @Html.Hidden("datoClaseVehiculo", item.claseVehiculo)
-                                                
-                                                <tr>
-                                                    <td>
-                                                        @Html.DisplayFor(m => item.tipoVehiculo)
 
-                                                    </td>
+                                                if (item.claseVehiculo == "Turismo-Comercial")
+                                                {
+                                                    <tr>
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.tipoVehiculo)
 
-                                                    <td>
-                                                        @Html.DisplayFor(m => item.marcaTurismoComercial)
+                                                        </td>
 
-                                                    </td>
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.marcaTurismoComercial)
 
-                                                    <td>
-                                                        @Html.DisplayFor(m => item.modeloTurismoComercial)
+                                                        </td>
 
-                                                    </td>
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.modeloTurismoComercial)
 
-                                                    <td>
-                                                        @Html.DisplayFor(m => item.aniosTurismoComercial)
+                                                        </td>
 
-                                                    </td>
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.aniosTurismoComercial)
 
-                                                    <td>
-                                                        @Html.DisplayFor(m => item.versionTurismosComercial)
+                                                        </td>
 
-                                                    </td>
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.versionTurismosComercial)
 
-                                                    <td>
-                                                        @Html.DisplayFor(m => item.matriculaTurismosComercial)
+                                                        </td>
 
-                                                    </td>
-                                                    <td>
-                                                        <form action="Index2" method="post">
-                                                            <!--Html.HiddenFor(m=>item.id,new { Name="id",Value = item.id })-->
-                                                            @Html.Hidden("id", item.id)
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.matriculaTurismosComercial)
 
-                                                            <input type="hidden" name="accion" value="Eliminar" />
-                                                            <button id="btnEliminar" class="btn btn-delete" type="submit"><i class="fas fa-trash-alt" data-toggle="tooltip" data-placement="top" title="Eliminar dirección" onclick="activarCrear()"></i></button>
-                                                        </form>
+                                                        </td>
+                                                        <td>
+                                                            <form action="Index2" method="post">
+                                                                <!--Html.HiddenFor(m=>item.id,new { Name="id",Value = item.id })-->
+                                                                @Html.Hidden("id", item.id)
+
+                                                                <input type="hidden" name="accion" value="Eliminar" />
+                                                                <button id="btnEliminar" class="btn btn-delete" type="submit"><i class="fas fa-trash-alt" data-toggle="tooltip" data-placement="top" title="Eliminar dirección" onclick="activarCrear()"></i></button>
+                                                            </form>
 
 
-                                                    </td>
+                                                        </td>
 
-                                                </tr>
+                                                    </tr>
+
+                                                }
+
+
+                                                if (item.claseVehiculo == "Autocaravana" || item.claseVehiculo == "Industrial" || item.claseVehiculo == "Tractor")
+                                                {
+                                                    <tr>
+
+
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.marcaTurismoComercial)
+
+                                                        </td>
+
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.modeloTurismoComercial)
+
+                                                        </td>
+
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.alto)
+
+                                                        </td>
+
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.largo)
+
+                                                        </td>
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.peso)
+
+                                                        </td>
+
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.matriculaTurismosComercial)
+
+                                                        </td>
+                                                        <td>
+                                                            <form action="Index2" method="post">
+                                                                <!--Html.HiddenFor(m=>item.id,new { Name="id",Value = item.id })-->
+                                                                @Html.Hidden("id", item.id)
+
+                                                                <input type="hidden" name="accion" value="Eliminar" />
+                                                                <button id="btnEliminar" class="btn btn-delete" type="submit"><i class="fas fa-trash-alt" data-toggle="tooltip" data-placement="top" title="Eliminar dirección" onclick="activarCrear()"></i></button>
+                                                            </form>
+
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                }
+
+                                                if (item.claseVehiculo == "Moto")
+                                                {
+                                                    <tr>
+                                                        
+
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.marcaTurismoComercial)
+
+                                                        </td>
+
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.modeloTurismoComercial)
+
+                                                        </td>
+
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.aniosTurismoComercial)
+
+                                                        </td>
+
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.versionTurismosComercial)
+
+                                                        </td>
+
+                                                        <td>
+                                                            @Html.DisplayFor(m => item.matriculaTurismosComercial)
+
+                                                        </td>
+                                                        <td>
+                                                            <form action="Index2" method="post">
+                                                                <!--Html.HiddenFor(m=>item.id,new { Name="id",Value = item.id })-->
+                                                                @Html.Hidden("id", item.id)
+
+                                                                <input type="hidden" name="accion" value="Eliminar" />
+                                                                <button id="btnEliminar" class="btn btn-delete" type="submit"><i class="fas fa-trash-alt" data-toggle="tooltip" data-placement="top" title="Eliminar dirección" onclick="activarCrear()"></i></button>
+                                                            </form>
+
+
+                                                        </td>
+
+                                                    </tr>
+
+                                                }
+
+
                                             }
 
 

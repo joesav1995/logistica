@@ -2,7 +2,7 @@
 
 window.addEventListener('load',
     function () {
-        document.getElementById("btnCrear").disabled = false;
+       
 
         var myHeaders = new Headers();
         myHeaders.append("Accept", "application/json, text/plain, /");
@@ -40,20 +40,40 @@ window.addEventListener('load',
                     });
             })
         turismoComercial();
-        /*switch (document.getElementById("datoClaseVehiculo").value) {
-            case "Industrial":
-                document.getElementById("btnCrear").setAttribute('disabled', '')
-                break;
-            case "Autocaravana":
-                document.getElementById("btnCrear").disabled = true;
-                break;
-            case "Tractor":
-                document.getElementById("btnCrear").disabled = true;
-                break;
-            default:
-                document.getElementById("btnCrear").removeAttribute('disabled');
-                break;
-        }*/
+        try {
+            switch (document.getElementById("datoClaseVehiculo").value) {
+                case "Turismo-Comercial":
+                    document.getElementById("otrosVehiculos").classList.add("invisible");
+                    document.getElementById("Moto").classList.add("invisible");
+                    document.getElementById("Turismo-Comercial").classList.remove("invisible");
+                    break;
+                case "Industrial":
+                    document.getElementById("otrosVehiculos").classList.remove("invisible");
+                    document.getElementById("Moto").classList.add("invisible");
+                    document.getElementById("Turismo-Comercial").classList.add("invisible");
+                    break;
+                case "Autocaravana":
+                    document.getElementById("otrosVehiculos").classList.remove("invisible");
+                    document.getElementById("Moto").classList.add("invisible");
+                    document.getElementById("Turismo-Comercial").classList.add("invisible");
+                    break;
+                case "Tractor":
+                    document.getElementById("otrosVehiculos").classList.remove("invisible");
+                    document.getElementById("Moto").classList.add("invisible");
+                    document.getElementById("Turismo-Comercial").classList.add("invisible");
+                    break;
+                case "Moto":
+                    document.getElementById("otrosVehiculos").classList.add("invisible");
+                    document.getElementById("Moto").classList.remove("invisible");
+                    document.getElementById("Turismo-Comercial").classList.add("invisible");
+                    break;
+            }
+
+        } catch (error) {
+
+        }
+        
+        
        
     });
 var tipoVehiculo = document.getElementById("tipoVehiculo");
@@ -90,30 +110,7 @@ tipoVehiculo.addEventListener('change',
                     //document.getElementById("vehiculoMoto").classList.add("invisible");
                     indusCaravaTractor();
                    
-                    /*try {
-
-                        if (document.getElementById("datoClaseVehiculo").value == "Industrial") {
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-
-                        if (document.getElementById("datoClaseVehiculo").value == "Turismo-Comercial") {
-
-                        } else {
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-                        if (document.getElementById("datoClaseVehiculo").value == "Autocaravana") {
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-
-                        if (document.getElementById("datoClaseVehiculo").value == "Tractor") {
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-                        if (document.getElementById("datoClaseVehiculo").value == "Moto") {
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-                    } catch (error) {
-
-                    }*/
+                   
                     api("http://apiveh.transportauto.es/api/vehiculos/marcas/Industrial", "Industrial");
                     //.log("Industrial");
                     break;
@@ -124,29 +121,7 @@ tipoVehiculo.addEventListener('change',
 
                     //document.getElementById("vehiculoMoto").classList.add("invisible");
                     indusCaravaTractor();
-                    /*try {
-
-                        if (document.getElementById("datoClaseVehiculo").value == "Industrial") {
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-
-                        if (document.getElementById("datoClaseVehiculo").value == "Turismo-Comercial") {
-
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-                        if (document.getElementById("datoClaseVehiculo").value == "Autocaravana") {
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-
-                        if (document.getElementById("datoClaseVehiculo").value == "Tractor") {
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-                        if (document.getElementById("datoClaseVehiculo").value == "Moto") {
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-                    } catch (error) {
-
-                    }*/
+                    
                     api("http://apiveh.transportauto.es/api/vehiculos/marcas/Autocaravana", "Autocaravana");
                     console.log("Autocaravana");
                     break;
@@ -157,30 +132,7 @@ tipoVehiculo.addEventListener('change',
 
                     //document.getElementById("vehiculoMoto").classList.add("invisible");
                     indusCaravaTractor();
-                    /*try {
-
-                        if (document.getElementById("datoClaseVehiculo").value == "Industrial") {
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-
-                        if (document.getElementById("datoClaseVehiculo").value == "Turismo-Comercial") {
-
-                        } else {
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-                        if (document.getElementById("datoClaseVehiculo").value == "Autocaravana") {
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-
-                        if (document.getElementById("datoClaseVehiculo").value == "Tractor") {
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-                        if (document.getElementById("datoClaseVehiculo").value == "Moto") {
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-                    } catch (error) {
-
-                    }*/
+                    
                     api("http://apiveh.transportauto.es/api/vehiculos/marcas/Tractor", "Tractor");
                     //console.log("Tractor");
                     break;
@@ -191,16 +143,7 @@ tipoVehiculo.addEventListener('change',
 
                     //document.getElementById("vehiculoMoto").classList.remove("invisible");
                     moto();
-                    /*try {
-
-                        if (document.getElementById("datoClaseVehiculo").value == "Moto") {
-
-                        } else {
-                            document.getElementById("btnCrear").setAttribute('disabled', '')
-                        }
-                    } catch (error) {
-
-                    }*/
+                    
                     api("http://apiveh.transportauto.es/api/vehiculos/marcas/Moto", "Moto");
                     //console.log("Moto");
                     break;
@@ -474,7 +417,14 @@ function api(url,tipo) {
 }
 function turismoComercial() {
     var html = "";
+    var datoClaseVehi = "";
 
+    try {
+        datoClaseVehi = document.getElementById("datoClaseVehiculo").value;
+
+    } catch (error) {
+
+    }
     document.getElementById("vehiculos").innerHTML = html;
    
     html += "<div id='vehiculo1'class='item-vehicules-contract '>";
@@ -527,8 +477,13 @@ function turismoComercial() {
             html += "</div>";*/
             html += "<div class='col-md-6 col-xl-12 plr2 text-right'>";
                 html += "<input class='form-control' name='accion' type='hidden' value='Crear' placeholder='' />";
-                html += "<button id='btnCrear' type='submit' class='btn btn-sm btnAgregar mt0 fit-content' data-toggle='tooltip' data-placement='top' title='Añadir vehiculo'> <i class='fas fa-plus'></i> Añadir vehiculo</button>";
-            html += "</div>";
+                //html += "<button id='btnCrear' type='submit' class='btn btn-sm btnAgregar mt0 fit-content' data-toggle='tooltip' data-placement='top' title='Añadir vehiculo'> <i class='fas fa-plus'></i> Añadir vehiculo</button>";
+                if (datoClaseVehi == "Industrial" || datoClaseVehi == "Autocaravana" || datoClaseVehi == "Tractor"  || datoClaseVehi == "Moto") {
+                    html += "<button id='btnCrear' disabled type='submit' class='btn btn-sm btnAgregar mt0 fit-content' data-toggle='tooltip' data-placement='top' title='Añadir vehiculo'> <i class='fas fa-plus'></i> Añadir vehiculo</button>";
+                } else {
+                    html += "<button id='btnCrear'  type='submit' class='btn btn-sm btnAgregar mt0 fit-content' data-toggle='tooltip' data-placement='top' title='Añadir vehiculo'> <i class='fas fa-plus'></i> Añadir vehiculo</button>";
+                }
+    html += "</div>";
         html += "</div>";
     html += "</div>";
     
@@ -588,11 +543,11 @@ function indusCaravaTractor() {
 
             html += "<div class='col-md-6 col-xl-12 plr2 text-right'>";
                 html += "<input class='form-control' name='accion' type='hidden' value='Crear' placeholder='' />";
-    if (datoClaseVehi == "Industrial" || datoClaseVehi == "Autocaravana" || datoClaseVehi == "Tractor" || datoClaseVehi == "Turismo-Comercial" || datoClaseVehi == "Moto") {
-                html += "<button id='btnCrear' disabled type='submit' class='btn btn-sm btnAgregar mt0 fit-content' data-toggle='tooltip' data-placement='top' title='Añadir vehiculo'> <i class='fas fa-plus'></i> Añadir vehiculo</button>";
-            } else {
-                html += "<button id='btnCrear'  type='submit' class='btn btn-sm btnAgregar mt0 fit-content' data-toggle='tooltip' data-placement='top' title='Añadir vehiculo'> <i class='fas fa-plus'></i> Añadir vehiculo</button>";
-            }
+                if (datoClaseVehi == "Industrial" || datoClaseVehi == "Autocaravana" || datoClaseVehi == "Tractor" || datoClaseVehi == "Turismo-Comercial" || datoClaseVehi == "Moto") {
+                    html += "<button id='btnCrear' disabled type='submit' class='btn btn-sm btnAgregar mt0 fit-content' data-toggle='tooltip' data-placement='top' title='Añadir vehiculo'> <i class='fas fa-plus'></i> Añadir vehiculo</button>";
+                } else {
+                    html += "<button id='btnCrear'  type='submit' class='btn btn-sm btnAgregar mt0 fit-content' data-toggle='tooltip' data-placement='top' title='Añadir vehiculo'> <i class='fas fa-plus'></i> Añadir vehiculo</button>";
+                }
     
             html += "</div>";
         html += "</div>";
@@ -608,21 +563,28 @@ function activarCrear() {
 }
 function moto() {
     var html = "";
+    var datoClaseVehi = "";
 
+    try {
+        datoClaseVehi = document.getElementById("datoClaseVehiculo").value;
+
+    } catch (error) {
+
+    }
     document.getElementById("vehiculos").innerHTML = html;
     html += "<div id='vehiculo1'class='item-vehicules-contract '>";
         html += "<div class='row anti-row'>";
             
             html += "<div class='col-md-6 plr2'>";
                 html += "<label>Marca</label>";
-                html += "<select id='marcaMoto' class='form-control' onchange='selectaModelo()'>";
+                html += "<select id='marcaMoto' name='marcaTurismoComercial' class='form-control' onchange='selectaModelo()'>";
                     html += "<option value='' disabled selected>Selecciona...</option>";
                    
                 html += "</select>";
             html += "</div>";
             html += "<div class='col-md-6 plr2'>";
                 html += "<label>Modelo</label>";
-                html += "<select id='modeloMoto' class='form-control' onchange='selectAniosMoto()'>";
+                html += "<select id='modeloMoto' name='modeloTurismoComercial' class='form-control' onchange='selectAniosMoto()'>";
                     html += "<option value='' disabled selected>Selecciona...</option>";
                     
             html += "</select>";
@@ -631,29 +593,34 @@ function moto() {
         html += "<div class='row anti-row mb-3'>";
             html += "<div class='col-md-4 plr2'>";
                 html += "<label>Año</label>";
-                html += "<select id='anioMoto' class='form-control' onchange='selectVersion()'>";
+                 html += "<select id='anioMoto' name='aniosTurismoComercial' class='form-control' onchange='selectVersion()'>";
                     html += "<option value='' disabled selected>Selecciona...</option>";
                     
                 html += "</select>";
             html += "</div>";
             html += "<div class='col-md-4 plr2'>";
                 html += "<label>Versión</label>";
-                html += "<select id='versionMoto' class='form-control' >";
+                html += "<select id='versionMoto' name='versionTurismosComercial' class='form-control' >";
                     html += "<option value='' disabled selected>Selecciona...</option>";
                     
                     html += "</select>";
             html += "</div>";
             html += "<div class='col-md - 4 plr2'>";
                 html += "<label>Matrícula</label>";
-                html += "<input class='form-control' type='text' placeholder='' />";
+                html += "<input class='form-control' name='matriculaTurismosComercial' type='text' placeholder='' />";
             html += "</div>";
         html += "</div>";
         html += "<div class='row anti-row mb-3'>";
    
             html += "<div class='col-md-6 col-xl-12 plr2 text-right'>";
                 html += "<input class='form-control' name='accion' type='hidden' value='Crear' placeholder='' />";
-                html += "<button id='btnCrear' type='submit' class='btn btn-sm btnAgregar mt0 fit-content' data-toggle='tooltip' data-placement='top' title='Añadir vehiculo'> <i class='fas fa-plus'></i> Añadir vehiculo</button>";
-            html += "</div>";
+                //html += "<button id='btnCrear' type='submit' class='btn btn-sm btnAgregar mt0 fit-content' data-toggle='tooltip' data-placement='top' title='Añadir vehiculo'> <i class='fas fa-plus'></i> Añadir vehiculo</button>";
+                if (datoClaseVehi == "Industrial" || datoClaseVehi == "Autocaravana" || datoClaseVehi == "Tractor" || datoClaseVehi == "Turismo-Comercial" ) {
+                    html += "<button id='btnCrear' disabled type='submit' class='btn btn-sm btnAgregar mt0 fit-content' data-toggle='tooltip' data-placement='top' title='Añadir vehiculo'> <i class='fas fa-plus'></i> Añadir vehiculo</button>";
+                } else {
+                    html += "<button id='btnCrear'  type='submit' class='btn btn-sm btnAgregar mt0 fit-content' data-toggle='tooltip' data-placement='top' title='Añadir vehiculo'> <i class='fas fa-plus'></i> Añadir vehiculo</button>";
+                }
+    html += "</div>";
         html += "</div>";
     html += "</div>";
 

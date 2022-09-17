@@ -182,8 +182,8 @@ function llenamosVehiculos(element) {
         switch (elementVehiculos.claseVehiculo) {
             case "Turismo-Comercial":
                 document.getElementById("moto").classList.add("invisible");
-                document.getElementById("otrosVehiculos").classList.add("invisible")
-                document.getElementById("turismoComercial").classList.remove("invisible")
+                document.getElementById("otrosVehiculos").classList.add("invisible");
+                document.getElementById("turismoComercial").classList.remove("invisible");
 
                 htmlFilas += "<tr>";
                     htmlFilas += "<td>" + elementVehiculos.id + "</td>";
@@ -197,23 +197,32 @@ function llenamosVehiculos(element) {
                 break
             case "Industrial":
                 document.getElementById("moto").classList.add("invisible");
-                document.getElementById("turismoComercial").classList.add("invisible")
-                document.getElementById("otrosVehiculos").classList.remove("invisible")
+                document.getElementById("turismoComercial").classList.add("invisible");
+                document.getElementById("otrosVehiculos").classList.remove("invisible");
                 break
             case "Autocaravana":
                 document.getElementById("moto").classList.add("invisible");
-                document.getElementById("turismoComercial").classList.add("invisible")
-                document.getElementById("otrosVehiculos").classList.remove("invisible")
+                document.getElementById("turismoComercial").classList.add("invisible");
+                document.getElementById("otrosVehiculos").classList.remove("invisible");
                 break
             case "Tractor":
                 document.getElementById("moto").classList.add("invisible");
-                document.getElementById("turismoComercial").classList.add("invisible")
-                document.getElementById("otrosVehiculos").classList.remove("invisible")
+                document.getElementById("turismoComercial").classList.add("invisible");
+                document.getElementById("otrosVehiculos").classList.remove("invisible");
                 break
             case "Moto":
                 document.getElementById("otrosVehiculos").classList.add("invisible");
-                document.getElementById("turismoComercial").classList.add("invisible")
-                document.getElementById("moto").classList.remove("invisible")
+                document.getElementById("turismoComercial").classList.add("invisible");
+                document.getElementById("moto").classList.remove("invisible");
+
+                htmlFilas += "<tr>";
+                    htmlFilas += "<td>" + elementVehiculos.id + "</td>";
+                    htmlFilas += "<td>" + elementVehiculos.marcaTurismoComercial + "</td>";
+                    htmlFilas += "<td>" + elementVehiculos.modeloTurismoComercial + "</td>";
+                    htmlFilas += "<td>" + elementVehiculos.aniosTurismoComercial + "</td>";
+                    htmlFilas += "<td>" + elementVehiculos.versionTurismosComercial + "</td>";
+                    htmlFilas += "<td>" + elementVehiculos.matriculaTurismosComercial + "</td>";
+                htmlFilas += "</tr>";
                 break
         }
 
